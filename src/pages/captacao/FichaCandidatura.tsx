@@ -3,7 +3,7 @@
    Simulador e o resumo do edital. */
 import { usarCentral } from "../../store/central";
 import {
-  ligarCandidatura, moverCandidatura, nomeCandidatura, porId,
+  definirResultado, ligarCandidatura, moverCandidatura, nomeCandidatura, porId,
   rascunhosDaCandidatura, salvarRascunho, salvarRegistro,
 } from "../../store/mutacoes";
 import { abrirRascunho, fecharDetalhe } from "../../store/navegacao";
@@ -12,7 +12,7 @@ import { documentosPorMecanismo } from "../../lib/documentos";
 import { badgeTarefa, nomeEquipe, projetoArtistaDe } from "../../lib/nomes";
 import { novoRascunho, pctRascunho } from "../../lib/simulador/motor";
 import { registroDe } from "../../data";
-import { ESFERAS, ETAPAS_PIPELINE } from "../../types";
+import { ESFERAS, ETAPA_RESULTADO, ETAPAS_PIPELINE } from "../../types";
 import { clonar, url } from "../../utils";
 
 export function FichaCandidatura({ id }: { id: string }) {
@@ -50,12 +50,23 @@ export function FichaCandidatura({ id }: { id: string }) {
         <div>
           <h2>{edital?.nome || "—"}</h2>
           <span className="muted" style={{ fontSize: 12.5 }}>{projetoArtistaDe(c)} · pleiteado {c.valor || "—"}</span>
-          <div style={{ display: "flex", alignItems: "center", gap: 10, marginTop: 6 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 10, marginTop: 6, flexWrap: "wrap" }}>
             <button className="btn ghost sm" onClick={() => moverCandidatura(c, -1)}>◀</button>
             <span className="badge b-type" style={{ fontSize: 12 }}>{ETAPAS_PIPELINE[c.etapa]}</span>
             <button className="btn ghost sm" onClick={() => moverCandidatura(c, 1)}>▶</button>
-            {c.result === "ok" && <span className="badge st-ok">aprovado</span>}
-            {c.result === "no" && <span className="badge st-no">reprovado</span>}
+            {c.etapa === ETAPA_RESULTADO && (
+              <span className="resultado">
+                <button className={"badge st-ok" + (c.result === "ok" ? " on" : "")} title="marcar aprovado"
+                  onClick={() => definirResultado(c, c.result === "ok" ? undefined : "ok")}>aprovado</button>
+                <button className={"badge st-no" + (c.result === "no" ? " on" : "")} title="marcar reprovado"
+                  onClick={() => definirResultado(c, c.result === "no" ? undefined : "no")}>reprovado</button>
+              </span>
+            )}
+            {c.etapa === ETAPA_RESULTADO && c.result === "ok" && (
+              <button className="btn sm" onClick={() => moverCandidatura(c, 1)}>→ mover para Em execução</button>
+            )}
+            {c.etapa !== ETAPA_RESULTADO && c.result === "ok" && <span className="badge st-ok">aprovado</span>}
+            {c.etapa !== ETAPA_RESULTADO && c.result === "no" && <span className="badge st-no">reprovado</span>}
           </div>
           {c.linkDrive && (
             <div style={{ marginTop: 7 }}>

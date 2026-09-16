@@ -22,6 +22,9 @@ export const ETAPAS_PIPELINE = [
   "Aguardando resultado", "Aprovado / Reprovado", "Em execução", "Prestação de contas",
 ] as const;
 
+/** Índice da etapa "Aprovado / Reprovado" — onde o resultado é marcado. */
+export const ETAPA_RESULTADO = 5;
+
 export const ESFERAS: Record<EsferaEdital, { rotulo: string; classe: string }> = {
   fed: { rotulo: "Federal", classe: "e-fed" },
   est: { rotulo: "Estadual", classe: "e-est" },

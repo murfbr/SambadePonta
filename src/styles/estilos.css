@@ -580,3 +580,23 @@ th.th-ord.on{color:var(--accent)} th.th-ord.on .seta{opacity:1}
 .modal .radio input{width:auto;flex:none;margin-top:2px;accent-color:var(--accent)}
 .modal .radio b{color:var(--ink)}
 .erro-import{color:var(--no);font-size:12.5px;font-weight:600}
+
+/* ===== resultado da candidatura (etapa Aprovado / Reprovado) ===== */
+.resultado{display:inline-flex;gap:4px}
+.resultado button.badge{border:0;cursor:pointer;font-family:inherit;opacity:.4}
+.resultado button.badge:hover{opacity:.75}
+.resultado button.badge.on{opacity:1;outline:1.5px solid currentColor;outline-offset:1px}
+
+/* ===== exclusão com impacto, acervo e checklists editáveis ===== */
+.btn.perigo{background:var(--no);color:#fff}
+.badge.clicavel{cursor:pointer}
+.badge.clicavel:hover{filter:brightness(.94)}
+.rm{border:0;background:none;color:var(--faint);cursor:pointer;font-size:15px;line-height:1;padding:2px 7px;border-radius:6px;flex:0 0 auto}
+.rm:hover{background:var(--noS);color:var(--no)}
+.add-linha{display:flex;gap:8px;align-items:center;margin-top:12px}
+.add-linha input{flex:1;border:1px solid var(--line);border-radius:7px;padding:7px 10px;font:inherit;font-size:13px;background:#fff;color:var(--ink);outline:none;min-width:0}
+.add-linha input:focus{border-color:var(--accent)}
+.bloco-edt{width:100%;font:inherit;font-size:13px;line-height:1.55;padding:9px 11px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);resize:vertical;outline:none}
+.bloco-edt:focus{border-color:var(--accent)}
+.bloco-edt-f{display:flex;gap:8px;align-items:center;margin-top:8px}
+.bloco-edt-f .hint{margin-right:auto}

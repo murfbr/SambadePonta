@@ -10,5 +10,6 @@ export const projeto: EntidadeSpec = {
     { chave: "tipo", rotulo: "Tipo", tipo: "select", fonte: ["Carnaval", "Álbum", "Single", "Videoclipe", "Turnê", "Circulação", "Show", "Outro"] },
     { chave: "meta", rotulo: "Meta de captação" },
     { chave: "ano", rotulo: "Janela / ano" },
+    { chave: "equipeIds", rotulo: "Equipe alocada", tipo: "multi", fonte: "equipe" },
   ],
 };

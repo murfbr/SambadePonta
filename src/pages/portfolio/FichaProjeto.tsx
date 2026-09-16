@@ -1,6 +1,7 @@
 /* Ficha do projeto: visão geral, candidaturas, checklist de produção
-   (com giro de status no clique), equipe alocada e tarefas ligadas. */
-import type { ReactNode } from "react";
+   (giro de status no clique, adicionar e remover itens), equipe alocada e
+   tarefas ligadas. */
+import { useState, type ReactNode } from "react";
 import { usarCentral } from "../../store/central";
 import { porId, salvarRegistro } from "../../store/mutacoes";
 import { abrirDetalhe, fecharDetalhe, mudarSubAba } from "../../store/navegacao";
@@ -17,6 +18,7 @@ export function FichaProjeto({ id, sub }: { id: string; sub: string }) {
   const { painel } = usarCentral();
   const p = porId("projetos", id)!;
   const cands = painel.candidaturas.filter((c) => c.projetoId === p.id);
+  const [novoItem, setNovoItem] = useState("");
 
   /** Alterna o status de um item de produção (a fazer → em andamento → feito). */
   function girarProducao(indice: number) {
@@ -24,6 +26,21 @@ export function FichaProjeto({ id, sub }: { id: string; sub: string }) {
     const ordem = ["fazer", "and", "feito"];
     const atual = copia.producao[indice];
     atual.status = ordem[(ordem.indexOf(atual.status) + 1) % 3];
+    salvarRegistro("projetos", copia);
+  }
+
+  function adicionarProducao() {
+    const texto = novoItem.trim();
+    if (!texto) return;
+    const copia = clonar(p);
+    copia.producao = [...(copia.producao || []), { texto, status: "fazer" }];
+    salvarRegistro("projetos", copia);
+    setNovoItem("");
+  }
+
+  function removerProducao(indice: number) {
+    const copia = clonar(p);
+    copia.producao.splice(indice, 1);
     salvarRegistro("projetos", copia);
   }
 
@@ -69,23 +86,31 @@ export function FichaProjeto({ id, sub }: { id: string; sub: string }) {
           <div className="docitem" key={i}>
             <span style={{ flex: 1 }}>{item.texto}</span>
             <span
-              className={"badge " + (item.status === "feito" ? "pill-ok" : item.status === "and" ? "st-prev" : "b-type")}
-              style={{ cursor: "pointer" }}
+              className={"badge clicavel " + (item.status === "feito" ? "pill-ok" : item.status === "and" ? "st-prev" : "b-type")}
               title="clique para mudar o status"
               onClick={() => girarProducao(i)}
             >
               {item.status === "feito" ? "feito" : item.status === "and" ? "em andamento" : "a fazer"}
             </span>
+            <button className="rm" title="remover item" onClick={() => removerProducao(i)}>×</button>
           </div>
         ))}
-        {!(p.producao || []).length && <p className="muted" style={{ margin: 0 }}>—</p>}
-        <p className="hint" style={{ marginTop: 12 }}>Necessidades de produção, independentes de edital. Clique no status para avançar.</p>
+        {!(p.producao || []).length && <p className="muted" style={{ margin: 0 }}>nenhum item ainda — adicione abaixo</p>}
+        <div className="add-linha">
+          <input value={novoItem} placeholder="novo item (ex.: fechar orçamento de som)"
+            onChange={(e) => setNovoItem(e.target.value)}
+            onKeyDown={(e) => { if (e.key === "Enter") adicionarProducao(); }} />
+          <button className="btn sm" onClick={adicionarProducao}>+ adicionar</button>
+        </div>
+        <p className="hint" style={{ marginTop: 12 }}>Necessidades de produção, independentes de edital. Clique no status para avançar; itens não concluídos aparecem nas Pendências.</p>
       </div>
     );
   } else if (sub === "equipe") {
     corpo = (
       <div className="panel">
-        <h4>Equipe alocada</h4>
+        <h4>Equipe alocada
+          <span className="act"><button className="btn ghost sm" onClick={() => abrirEdicao("projeto", p.id)}>editar</button></span>
+        </h4>
         {(p.equipeIds || []).map((eqId) => {
           const pessoa = porId("equipe", eqId);
           return pessoa ? (
@@ -95,7 +120,7 @@ export function FichaProjeto({ id, sub }: { id: string; sub: string }) {
             </div>
           ) : null;
         })}
-        {!(p.equipeIds || []).length && <p className="muted" style={{ margin: 0 }}>—</p>}
+        {!(p.equipeIds || []).length && <p className="muted" style={{ margin: 0 }}>ninguém alocado — use o "editar" e marque as pessoas em "Equipe alocada"</p>}
       </div>
     );
   } else if (sub === "tar") {

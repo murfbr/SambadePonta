@@ -5,7 +5,7 @@ import { Banco } from "../services/banco";
 import { clonar } from "../utils";
 import { obterEstado } from "./central";
 import {
-  ETAPAS_PIPELINE, STATUS_TAREFA,
+  ETAPA_RESULTADO, ETAPAS_PIPELINE, STATUS_TAREFA,
   type Candidatura, type ColecaoPainel, type DadosPainel, type Ficha,
   type Julgamento, type Rascunho, type Regra, type StatusTarefa, type Tarefa,
 } from "../types";
@@ -42,11 +42,19 @@ export function porId<C extends ColecaoPainel>(colecao: C, id: string): DadosPai
   return (obterEstado().painel[colecao] as DadosPainel[C]).find((x) => x.id === id);
 }
 
-/** Move a candidatura no pipeline; sair de "Aprovado / Reprovado" limpa o resultado. */
+/** Move a candidatura no pipeline; VOLTAR para antes de "Aprovado / Reprovado"
+    limpa o resultado (seguir adiante mantém — está em execução porque foi aprovada). */
 export function moverCandidatura(c: Candidatura, direcao: -1 | 1) {
   const copia = clonar(c);
-  copia.etapa = Math.max(0, Math.min(7, copia.etapa + direcao));
-  if (copia.etapa !== 5) delete copia.result;
+  copia.etapa = Math.max(0, Math.min(ETAPAS_PIPELINE.length - 1, copia.etapa + direcao));
+  if (copia.etapa < ETAPA_RESULTADO) delete copia.result;
+  salvarRegistro("candidaturas", copia);
+}
+
+/** Marca (ou desmarca) o resultado da candidatura na etapa "Aprovado / Reprovado". */
+export function definirResultado(c: Candidatura, resultado?: "ok" | "no") {
+  const copia = clonar(c);
+  if (resultado) copia.result = resultado; else delete copia.result;
   salvarRegistro("candidaturas", copia);
 }
 
@@ -85,7 +93,7 @@ export function soltarCartao<C extends ColecaoPainel>(
 export function soltarCandidatura(id: string, etapa: number, antesDeId?: string) {
   soltarCartao("candidaturas", id, (c) => {
     c.etapa = Math.max(0, Math.min(ETAPAS_PIPELINE.length - 1, etapa));
-    if (c.etapa !== 5) delete c.result;
+    if (c.etapa < ETAPA_RESULTADO) delete c.result;
   }, antesDeId);
 }
 

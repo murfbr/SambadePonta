@@ -4,13 +4,14 @@
    abrirNovo()/abrirEdicao() e o modal aparece. */
 import { useMemo, useState } from "react";
 import { Modal, RodapeModal } from "../components/Modal";
-import { BotaoExcluir } from "../components/BotaoExcluir";
+import { ModalExclusao } from "../components/ModalExclusao";
 import { toast } from "../components/Toast";
 import { CampoDoFormulario } from "./CampoDoFormulario";
 import { ENTIDADES } from "./especificacoes";
 import { fecharEdicao, usarEdicao } from "../store/edicao";
 import { usarCentral, obterEstado } from "../store/central";
-import { excluirRegistro, porId, salvarRegistro } from "../store/mutacoes";
+import { porId, salvarRegistro } from "../store/mutacoes";
+import { impactoExclusao, type ImpactoExclusao } from "../store/vinculos";
 import { clonar, uid } from "../utils";
 import type { ColecaoPainel } from "../types";
 
@@ -53,6 +54,9 @@ function ModalDeRegistro() {
     ];
   }, [painel]);
 
+  // Exclusão em duas etapas: primeiro o impacto nos vínculos, depois o destino.
+  const [impacto, setImpacto] = useState<ImpactoExclusao | null>(null);
+
   function salvar() {
     const registro: Record<string, unknown> = editando
       ? { ...clonar(porId(spec.colecao, aberto!.id!) || {}), ...valores }
@@ -61,12 +65,6 @@ function ModalDeRegistro() {
     salvarRegistro(spec.colecao, registro as never);
     fecharEdicao();
     toast("Salvo");
-  }
-
-  function excluir() {
-    excluirRegistro(spec.colecao, aberto!.id!);
-    fecharEdicao();
-    toast("Excluído");
   }
 
   return (
@@ -83,12 +81,31 @@ function ModalDeRegistro() {
         </div>
       ))}
       <RodapeModal>
-        {editando && <BotaoExcluir aoConfirmar={excluir} />}
+        {editando && (
+          <button className="del" onClick={() => setImpacto(impactoExclusao(aberto!.chave, aberto!.id!))}>
+            Excluir
+          </button>
+        )}
         <span className="sp">
           <button className="btn ghost" onClick={fecharEdicao}>Cancelar</button>
           <button className="btn" onClick={salvar}>Salvar</button>
         </span>
       </RodapeModal>
+
+      {impacto && (
+        <ModalExclusao
+          titulo={spec.titulo}
+          nome={String(valores.nome || valores.titulo || "")}
+          impacto={impacto}
+          aoFechar={() => setImpacto(null)}
+          aoExcluir={(destino) => {
+            impacto.excluir(destino);
+            setImpacto(null);
+            fecharEdicao();
+            toast("Excluído");
+          }}
+        />
+      )}
     </Modal>
   );
 }

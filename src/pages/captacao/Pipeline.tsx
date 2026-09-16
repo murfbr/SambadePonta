@@ -4,14 +4,26 @@
    A barra de cima filtra por busca, edital e responsável. */
 import { useState } from "react";
 import { usarCentral } from "../../store/central";
-import { moverCandidatura, soltarCandidatura } from "../../store/mutacoes";
+import { definirResultado, moverCandidatura, soltarCandidatura } from "../../store/mutacoes";
 import { abrirDetalhe } from "../../store/navegacao";
 import { abrirNovo } from "../../store/edicao";
 import { CabecalhoSecao } from "../../components/CabecalhoSecao";
 import { BarraFiltros, CampoBusca, SeletorFiltro } from "../../components/Filtros";
 import { usarArrasto } from "../../lib/arrastar";
 import { editalDe, nomeEdital, nomeEquipe, projetoArtistaDe } from "../../lib/nomes";
-import { ETAPAS_PIPELINE } from "../../types";
+import { ETAPA_RESULTADO, ETAPAS_PIPELINE, type Candidatura } from "../../types";
+
+/** Botões aprovado/reprovado do cartão na etapa "Aprovado / Reprovado". */
+function EscolhaResultado({ c }: { c: Candidatura }) {
+  const opcao = (valor: "ok" | "no", classe: string, rotulo: string) => (
+    <button className={"badge " + classe + (c.result === valor ? " on" : "")}
+      title={"marcar " + rotulo}
+      onClick={(e) => { e.stopPropagation(); definirResultado(c, c.result === valor ? undefined : valor); }}>
+      {rotulo}
+    </button>
+  );
+  return <span className="resultado">{opcao("ok", "st-ok", "aprovado")}{opcao("no", "st-no", "reprovado")}</span>;
+}
 
 export function Pipeline() {
   const { painel } = usarCentral();
@@ -60,8 +72,12 @@ export function Pipeline() {
                     <div className="meta">
                       <span className="dot">{nomeEquipe(c.respId)[0] || "?"}</span>
                       {ed?.prazo && <span className="prazo">⏱ {ed.prazo.replace(/\/2026|\/2027/, "")}</span>}
-                      {c.result === "ok" && <span className="badge st-ok">aprovado</span>}
-                      {c.result === "no" && <span className="badge st-no">reprovado</span>}
+                      {i === ETAPA_RESULTADO
+                        ? <EscolhaResultado c={c} />
+                        : <>
+                          {c.result === "ok" && <span className="badge st-ok">aprovado</span>}
+                          {c.result === "no" && <span className="badge st-no">reprovado</span>}
+                        </>}
                       <span className="navb">
                         <button onClick={(e) => { e.stopPropagation(); moverCandidatura(c, -1); }}>◀</button>
                         <button onClick={(e) => { e.stopPropagation(); moverCandidatura(c, 1); }}>▶</button>
