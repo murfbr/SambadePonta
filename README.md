@@ -75,36 +75,55 @@ gravação, usado no último-ganha da sincronização).
 
 ## Mapa do código
 
+Estrutura padrão de projeto React: `components` (UI compartilhada), `pages`
+(uma tela por arquivo), `forms` (especificações de formulário por entidade),
+`services` (integrações), `store` (estado global), `lib` (regras de negócio
+puras), `types`, `utils`, `data` e `styles`.
+
 ```
 src/
-  tipos.ts               ← todas as entidades documentadas (comece por aqui)
-  estilos.css            ← CSS portado 1:1 do artefato
-  App.tsx                ← casca: login, ambientes, abas, exportar/importar
-  banco/
-    firebase.ts          ← conexão (env) — sem env = modo local
-    banco.ts             ← camada de armazenamento (Firestore ⇄ localStorage)
-    dados.ts             ← estado central, semeadura, mutações, export/import
-    sessao.ts            ← login e-mail/senha
-  estado/
-    navegacao.ts         ← ambiente/aba/ficha aberta (o "Shell")
-    edicao.ts            ← qual modal de registro está aberto
-  blocos/
-    EdicaoRegistro.tsx   ← modal genérico de criar/editar registros do Painel
-    Login.tsx, Toast.tsx
-  ambientes/
-    Painel.tsx           ← Resumo + Pendências
-    Portfolio.tsx        ← Artistas + Projetos (+ fichas)
-    Captacao.tsx         ← Pipeline + Editais (+ fichas)
-    Agenda.tsx           ← Cronograma + Calendário
-    Pessoas.tsx          ← Elenco + Equipe + Contatos
-    Gestao.tsx           ← Reuniões + Tarefas
-    simulador/           ← Mesa, Plataformas, Formulário, Orçamento Salic, Transferência
-    contexto/            ← Geral, Fichas, Regras, Julgamentos, Trocar com o Claude
-  dados/
-    semente-*.json       ← dados iniciais (estado do artefato em set/2026)
-    formularios.json     ← definições dos 6 formulários replicados
-    salic-dados.json     ← catálogos da planilha orçamentária do Salic
-    plataformas.json     ← plataformas + registro de formulários
+  main.tsx / App.tsx       ← entrada e casca (login, aviso, layout, roteadores)
+  components/
+    Modal.tsx              ← modal padrão (usado por todos os modais do site)
+    BotaoExcluir.tsx       ← exclusão com confirmação em dois cliques
+    CabecalhoSecao.tsx, Toast.tsx
+    layout/                ← Cabecalho, BarraAbas, BarraFerramentas
+  forms/
+    especificacoes/        ← um arquivo por entidade (artista.ts, edital.ts...)
+    FormularioRegistro.tsx ← o modal Novo/Editar que desenha qualquer entidade
+    CampoDoFormulario.tsx  ← render de um campo da especificação
+  pages/
+    Login.tsx, RoteadorPainel.tsx
+    painel/                ← Resumo, Pendencias
+    portfolio/             ← ListaArtistas, FichaArtista, ListaProjetos, FichaProjeto
+    captacao/              ← Pipeline, ListaEditais, FichaEdital, FichaCandidatura
+    agenda/                ← Cronograma, Calendario
+    pessoas/               ← Elenco, Equipe, Contatos
+    gestao/                ← Reunioes, FichaReuniao, QuadroTarefas
+    simulador/             ← Simulador, Mesa, Plataformas, Transferencia
+      formulario/          ← Formulario, LateralEtapas, Campo, SecaoInterno
+        campos/            ← um componente por tipo de campo (texto, rádio, docs...)
+      orcamento/           ← PlanilhaOrcamento, ResumoOrcamento, BarraTotais
+    contexto/              ← Contexto, Geral, Fichas, Regras, ModalRegra,
+                             Julgamentos, ModalJulgamento, Trocar, RegrasParaRascunho
+  services/
+    firebase.ts            ← conexão (env) — sem env = modo local
+    banco.ts               ← camada de armazenamento (Firestore ⇄ localStorage)
+    sessao.ts              ← login e-mail/senha
+  store/
+    central.ts             ← estado global (usarCentral) + semeadura
+    mutacoes.ts            ← salvar/excluir registros, rascunhos e docs do Contexto
+    importarExportar.ts    ← pacote .json (aceita o formato do artefato original)
+    navegacao.ts, edicao.ts
+  lib/
+    simulador/motor.ts     ← motor dos formulários replicados (campos, condições, status)
+    simulador/orcamento.ts ← cálculos da planilha Salic
+    contexto/              ← consultas de fichas/regras + bloco "Trocar com o Claude"
+    nomes.ts, agenda.ts, documentos.ts
+  types/                   ← entidades documentadas (painel, simulador, contexto)
+  data/                    ← sementes + formulários + catálogos Salic (estáticos)
+  utils/                   ← ids, datas, dinheiro, clipboard, download
+  styles/estilos.css       ← CSS portado 1:1 do artefato
 ```
 
 ## LGPD
