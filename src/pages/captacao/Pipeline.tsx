@@ -1,30 +1,60 @@
 /* Pipeline de captação: o kanban onde cada cartão é uma candidatura
-   (projeto × edital), movida de etapa pelos botões ◀▶. */
+   (projeto × edital). Arraste o cartão para outra etapa (soltar sobre um
+   cartão insere antes dele); ◀▶ segue funcionando para teclado e toque.
+   A barra de cima filtra por busca, edital e responsável. */
+import { useState } from "react";
 import { usarCentral } from "../../store/central";
-import { moverCandidatura } from "../../store/mutacoes";
+import { moverCandidatura, soltarCandidatura } from "../../store/mutacoes";
 import { abrirDetalhe } from "../../store/navegacao";
 import { abrirNovo } from "../../store/edicao";
 import { CabecalhoSecao } from "../../components/CabecalhoSecao";
+import { BarraFiltros, CampoBusca, SeletorFiltro } from "../../components/Filtros";
+import { usarArrasto } from "../../lib/arrastar";
 import { editalDe, nomeEdital, nomeEquipe, projetoArtistaDe } from "../../lib/nomes";
 import { ETAPAS_PIPELINE } from "../../types";
 
 export function Pipeline() {
   const { painel } = usarCentral();
+  const [busca, setBusca] = useState("");
+  const [filtroEdital, setFiltroEdital] = useState("");
+  const [filtroResp, setFiltroResp] = useState("");
+  const arrasto = usarArrasto<number>(soltarCandidatura);
+
+  const visiveis = painel.candidaturas.filter((c) =>
+    (!filtroEdital || c.editalId === filtroEdital) &&
+    (!filtroResp || c.respId === filtroResp) &&
+    (!busca || (nomeEdital(c) + " " + projetoArtistaDe(c)).toLowerCase().includes(busca.toLowerCase())));
+
   return (
     <>
-      <CabecalhoSecao titulo="Pipeline de captação" sub="cada cartão é uma candidatura (projeto × edital) — clique pra abrir, use ◀▶ pra mover">
+      <CabecalhoSecao titulo="Pipeline de captação" sub="cada cartão é uma candidatura (projeto × edital) — arraste entre as etapas, ou use ◀▶">
         <button className="btn" onClick={() => abrirNovo("candidatura")}>+ Nova candidatura</button>
       </CabecalhoSecao>
+
+      <BarraFiltros mostrando={visiveis.length} total={painel.candidaturas.length}>
+        <CampoBusca valor={busca} aoMudar={setBusca} placeholder="buscar projeto, artista ou edital…" />
+        <SeletorFiltro valor={filtroEdital} aoMudar={setFiltroEdital} rotuloTodos="todos os editais"
+          opcoes={painel.editais.map((e) => ({ valor: e.id, rotulo: e.nome }))} />
+        <SeletorFiltro valor={filtroResp} aoMudar={setFiltroResp} rotuloTodos="qualquer responsável"
+          opcoes={painel.equipe.map((p) => ({ valor: p.id, rotulo: p.nome }))} />
+      </BarraFiltros>
+
       <div className="kanban">
         {ETAPAS_PIPELINE.map((etapa, i) => {
-          const cards = painel.candidaturas.filter((c) => c.etapa === i);
+          const cards = visiveis.filter((c) => c.etapa === i);
           return (
-            <div className="col" key={etapa}>
+            <div className={"col" + (arrasto.alvo === i ? " col-alvo" : "")} key={etapa}
+              {...arrasto.propsColuna(i)}>
               <div className="col-h">{etapa}<span className="cnt">{cards.length}</span></div>
               {cards.map((c) => {
                 const ed = editalDe(c);
                 return (
-                  <div className="kcard" key={c.id} onClick={() => abrirDetalhe("cand", c.id)}>
+                  <div key={c.id}
+                    className={"kcard"
+                      + (arrasto.arrastando === c.id ? " arrastando" : "")
+                      + (arrasto.antesDe === c.id && arrasto.arrastando !== c.id ? " antes-daqui" : "")}
+                    onClick={() => abrirDetalhe("cand", c.id)}
+                    {...arrasto.propsCartao(c.id, i)}>
                     <p className="edt">{nomeEdital(c)}</p>
                     <p className="prj">{projetoArtistaDe(c)}</p>
                     <div className="meta">
@@ -40,7 +70,9 @@ export function Pipeline() {
                   </div>
                 );
               })}
-              {!cards.length && <div style={{ fontSize: 11.5, color: "var(--faint)", padding: 6 }}>—</div>}
+              {!cards.length && (
+                <div className="col-vazia">{arrasto.arrastando ? "solte aqui" : "—"}</div>
+              )}
             </div>
           );
         })}

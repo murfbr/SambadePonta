@@ -3,7 +3,7 @@
 import { useRef, useState, type ChangeEvent } from "react";
 import { usarCentral } from "../../store/central";
 import { excluirRascunho, nomeCandidatura, porId, salvarRascunho } from "../../store/mutacoes";
-import { importarPacote } from "../../store/importarExportar";
+import { analisarPacote } from "../../store/importarExportar";
 import { abrirRascunho } from "../../store/navegacao";
 import { FORMULARIOS, REGISTRO, nomePlataforma } from "../../data";
 import { normalizarRascunho, novoRascunho, resumoRascunho } from "../../lib/simulador/motor";
@@ -59,7 +59,8 @@ export function Mesa({ aoAbrir }: { aoAbrir: () => void }) {
     if (!arquivo) return;
     arquivo.text().then((texto) => {
       try {
-        toast(importarPacote(JSON.parse(texto)));
+        // Aqui na Mesa sempre mescla (o modo com escolha vive no Importar da barra).
+        toast(analisarPacote(JSON.parse(texto)).aplicar("mesclar"));
         setAbaMesa("rasc");
       } catch {
         toast("Não reconheci esse arquivo .json");

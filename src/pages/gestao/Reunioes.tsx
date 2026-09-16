@@ -1,17 +1,29 @@
-/* Reuniões: destaque da próxima, cards de todas, e o link de convite do
-   Google Agenda com participantes e recorrência. */
+/* Reuniões: destaque da próxima, cards de todas (com busca, filtro de status
+   e ordenação), e o link de convite do Google Agenda. */
+import { useState } from "react";
 import { usarCentral } from "../../store/central";
 import { abrirDetalhe } from "../../store/navegacao";
 import { abrirEdicao, abrirNovo } from "../../store/edicao";
 import { CabecalhoSecao } from "../../components/CabecalhoSecao";
+import { BarraFiltros, CampoBusca, SeletorFiltro } from "../../components/Filtros";
 import { emailsConvite, linkGoogleAgenda, nomesParticipantes } from "../../lib/agenda";
-import { formatarData } from "../../utils";
+import { comparar, formatarData } from "../../utils";
 
 export function Reunioes() {
   const { painel } = usarCentral();
-  const reunioes = [...painel.reunioes].sort((a, b) => ((a.data || "9999") < (b.data || "9999") ? -1 : 1));
+  const [busca, setBusca] = useState("");
+  const [filtroStatus, setFiltroStatus] = useState("");
+  const [ordem, setOrdem] = useState("data");
+
+  const reunioes = painel.reunioes.filter((r) =>
+    (!filtroStatus || r.status === filtroStatus) &&
+    (!busca || (r.titulo + " " + r.local + " " + (r.pauta || []).join(" ")).toLowerCase().includes(busca.toLowerCase())));
+  if (ordem === "data") reunioes.sort((a, b) => ((a.data || "9999") < (b.data || "9999") ? -1 : 1));
+  if (ordem === "dataDesc") reunioes.sort((a, b) => ((a.data || "") > (b.data || "") ? -1 : 1));
+  if (ordem === "titulo") reunioes.sort((a, b) => comparar(a.titulo, b.titulo));
+
   const hoje = new Date().toISOString().slice(0, 10);
-  const proxima = reunioes
+  const proxima = painel.reunioes
     .filter((r) => r.status !== "realizada" && (r.proxima || r.data || "") >= hoje)
     .sort((a, b) => ((a.proxima || a.data) < (b.proxima || b.data) ? -1 : 1))[0];
 
@@ -20,6 +32,18 @@ export function Reunioes() {
       <CabecalhoSecao titulo="Reuniões" sub="monte a pauta antes, preencha a ata depois; encaminhamentos viram tarefas">
         <button className="btn" onClick={() => abrirNovo("reuniao")}>+ Nova reunião</button>
       </CabecalhoSecao>
+
+      <BarraFiltros mostrando={reunioes.length} total={painel.reunioes.length}>
+        <CampoBusca valor={busca} aoMudar={setBusca} placeholder="buscar título, local ou pauta…" />
+        <SeletorFiltro valor={filtroStatus} aoMudar={setFiltroStatus} rotuloTodos="todas"
+          opcoes={[{ valor: "agendada", rotulo: "agendadas" }, { valor: "realizada", rotulo: "realizadas" }]} />
+        <SeletorFiltro valor={ordem} aoMudar={setOrdem}
+          opcoes={[
+            { valor: "data", rotulo: "data ↑ (antigas primeiro)" },
+            { valor: "dataDesc", rotulo: "data ↓ (recentes primeiro)" },
+            { valor: "titulo", rotulo: "título A→Z" },
+          ]} />
+      </BarraFiltros>
 
       {proxima && (
         <div className="panel" style={{ borderLeft: "3px solid var(--accent)" }}>
@@ -60,7 +84,11 @@ export function Reunioes() {
             </div>
           );
         })}
-        {!reunioes.length && <p className="muted">Nenhuma reunião ainda. Crie a primeira em "+ Nova reunião".</p>}
+        {!reunioes.length && (
+          <p className="muted">
+            {painel.reunioes.length ? "Nenhuma reunião com esses filtros." : 'Nenhuma reunião ainda. Crie a primeira em "+ Nova reunião".'}
+          </p>
+        )}
       </div>
     </>
   );

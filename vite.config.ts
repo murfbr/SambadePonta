@@ -8,6 +8,8 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
+  // O dev server aceita a porta via variável PORT (útil quando a 5173 está ocupada).
+  server: { port: Number(process.env.PORT) || 5173 },
   build: {
     rollupOptions: {
       output: {

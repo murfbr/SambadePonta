@@ -9,6 +9,13 @@ export const COLECOES_PAINEL: ColecaoPainel[] = [
   "equipe", "elenco", "contatos", "reunioes",
 ];
 
+/** Nomes das coleções do Painel, para o exportar/importar e afins. */
+export const ROTULO_COLECAO: Record<ColecaoPainel, string> = {
+  artistas: "Artistas", projetos: "Projetos", editais: "Editais & fontes",
+  candidaturas: "Candidaturas (pipeline)", tarefas: "Tarefas", equipe: "Equipe do coletivo",
+  elenco: "Elenco / colaboradores", contatos: "Contatos externos", reunioes: "Reuniões",
+};
+
 /** Etapas do pipeline de captação (índice = campo `etapa` da candidatura). */
 export const ETAPAS_PIPELINE = [
   "Prospecção", "Elegível", "Montando documentação", "Inscrito",

@@ -5,9 +5,9 @@ import { Banco } from "../services/banco";
 import { clonar } from "../utils";
 import { obterEstado } from "./central";
 import {
-  STATUS_TAREFA,
+  ETAPAS_PIPELINE, STATUS_TAREFA,
   type Candidatura, type ColecaoPainel, type DadosPainel, type Ficha,
-  type Julgamento, type Rascunho, type Regra, type Tarefa,
+  type Julgamento, type Rascunho, type Regra, type StatusTarefa, type Tarefa,
 } from "../types";
 
 type RegistroPainel = DadosPainel[ColecaoPainel][number];
@@ -48,6 +48,55 @@ export function moverCandidatura(c: Candidatura, direcao: -1 | 1) {
   copia.etapa = Math.max(0, Math.min(7, copia.etapa + direcao));
   if (copia.etapa !== 5) delete copia.result;
   salvarRegistro("candidaturas", copia);
+}
+
+/**
+ * Solta um cartão arrastado num quadro: aplica `mudar` (nova etapa, status ou
+ * responsável) e reposiciona o registro na coleção — antes de `antesDeId` ou no
+ * fim. Só regrava os registros cujo `_ord` de fato mudou.
+ */
+export function soltarCartao<C extends ColecaoPainel>(
+  colecao: C, id: string, mudar: (r: DadosPainel[C][number]) => void, antesDeId?: string,
+) {
+  const lista = obterEstado().painel[colecao] as DadosPainel[C];
+  const original = lista.find((x) => x.id === id);
+  if (!original || id === antesDeId) return;
+  const movido = clonar(original);
+  mudar(movido);
+
+  const resto = lista.filter((x) => x.id !== id);
+  let pos = resto.length;
+  if (antesDeId) {
+    const i = resto.findIndex((x) => x.id === antesDeId);
+    if (i >= 0) pos = i;
+  }
+  const nova = [...resto.slice(0, pos), movido, ...resto.slice(pos)];
+  const agora = new Date().toISOString();
+  nova.forEach((r, i) => {
+    if (r.id !== id && r._ord === i) return;
+    const copia = r.id === id ? movido : clonar(r);
+    copia._ord = i;
+    copia.atualizado = agora;
+    Banco.gravar(colecao, copia.id, copia as unknown as Documento, true);
+  });
+}
+
+/** Solta uma candidatura numa etapa do pipeline (arrastar e soltar). */
+export function soltarCandidatura(id: string, etapa: number, antesDeId?: string) {
+  soltarCartao("candidaturas", id, (c) => {
+    c.etapa = Math.max(0, Math.min(ETAPAS_PIPELINE.length - 1, etapa));
+    if (c.etapa !== 5) delete c.result;
+  }, antesDeId);
+}
+
+/** Solta uma tarefa numa coluna de status do quadro. */
+export function soltarTarefaEmStatus(id: string, status: StatusTarefa, antesDeId?: string) {
+  soltarCartao("tarefas", id, (t) => { t.status = status; }, antesDeId);
+}
+
+/** Solta uma tarefa na coluna de uma pessoa ("" = sem responsável). */
+export function soltarTarefaEmPessoa(id: string, respId: string, antesDeId?: string) {
+  soltarCartao("tarefas", id, (t) => { t.respId = respId; }, antesDeId);
 }
 
 /** Concluir/reabrir uma tarefa pelo checkzinho. */

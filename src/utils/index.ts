@@ -52,6 +52,9 @@ export function dinheiro(v: unknown): number {
 export const BRL = (n: number) =>
   "R$ " + (n || 0).toLocaleString("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
+/** Comparador de textos pt-BR: ignora acentos e caixa, números em ordem natural. */
+export const comparar = new Intl.Collator("pt-BR", { sensitivity: "base", numeric: true }).compare;
+
 /** Texto → slug para nome de arquivo ("Meu Rascunho" → "meu-rascunho"). */
 export const slug = (s: string) =>
   String(s).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "")
