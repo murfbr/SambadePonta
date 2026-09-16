@@ -1,0 +1,413 @@
+{
+ "fichas": {
+  "a1": {
+   "id": "a1",
+   "tipo": "artista",
+   "posicionamento": "Bloco de carnaval de rua em formato de palco na Praia do Leme, ativo desde 2009, que sustenta uma oficina de percussão gratuita para jovens. O argumento central nunca é o desfile: é a formação que o desfile financia.",
+   "argumentos": [
+    "Continuidade: desde 2009, com desfile e oficina todos os anos",
+    "A oficina forma jovens de 12 a 25 anos em ritmos brasileiros, gratuita desde 2025",
+    "Estrutura compartilhada com o Bloco Buster no Leme: cooperação entre blocos, não competição",
+    "Habilitado no Edital do Carnaval Carioca (inscrição nº 232)"
+   ],
+   "julgador": [],
+   "vocabulario": [
+    {
+     "usar": "Oficina de Percussão do Bloco Brasil",
+     "evitar": "escolinha, projeto social"
+    },
+    {
+     "usar": "jovens da comunidade",
+     "evitar": "carentes, menores"
+    },
+    {
+     "usar": "palco na Praia do Leme",
+     "evitar": "evento, festa"
+    }
+   ],
+   "usados": [
+    {
+     "texto": "Texto de apresentação da Oficina (2 anos de atuação, público, formação)",
+     "onde": "Prêmio Ações Locais 2026, via Pedro Buarque",
+     "quando": "set/2026"
+    }
+   ],
+   "cuidados": "A relação com a PPG é informal: não afirmar parceria institucional. O bloco fatura shows por uma PJ, o que conflita com a declaração de coletivo informal (Anexo 5)."
+  },
+  "a5": {
+   "id": "a5",
+   "tipo": "artista",
+   "posicionamento": "Roda de samba que há dez anos ocupa o Largo do Boticário como espaço público de cultura, com mais de 500 apresentações e certificação da Rede Carioca de Rodas de Samba.",
+   "argumentos": [
+    "10 anos e +500 apresentações: número que resolve sozinho o critério de continuidade",
+    "Certificado da Rede Carioca e credenciamento no Edital SMC 02/2024: reconhecimento institucional já dado",
+    "Curadoria artística do Circuito do Samba RJ (Lei do ISS): já articula outras rodas, não só a própria"
+   ],
+   "julgador": [],
+   "vocabulario": [
+    {
+     "usar": "roda de samba",
+     "evitar": "show, evento"
+    },
+    {
+     "usar": "ocupação cultural do Largo do Boticário",
+     "evitar": "apresentação no Largo"
+    }
+   ],
+   "usados": [
+    {
+     "texto": "Texto de trajetória (2015 a 2025) e argumentação territorial",
+     "onde": "Prêmio Ações Locais 2026",
+     "quando": "set/2026"
+    },
+    {
+     "texto": "Proposta do Circuito do Samba RJ, Linha 3",
+     "onde": "Edital ISS 2026 (SIIPC)",
+     "quando": "2026"
+    }
+   ],
+   "cuidados": ""
+  },
+  "a4": {
+   "id": "a4",
+   "tipo": "artista",
+   "posicionamento": "Coletivo de mulheres ambulantes do Centro do Rio que, desde 2018, transforma garagens e ruas em espaço de festa, trabalho e renda, e mantém a Cozinha Delas.",
+   "argumentos": [
+    "Protagonismo de mulheres ambulantes: quem organiza é quem trabalha na rua",
+    "Reconhecimento como patrimônio imaterial da cidade (2026) e menção honrosa da Câmara",
+    "Cozinha Delas: a ação social nasce da própria festa, não é anexo"
+   ],
+   "julgador": [],
+   "vocabulario": [
+    {
+     "usar": "ambulantes",
+     "evitar": "camelôs, informais"
+    },
+    {
+     "usar": "Alinny Gomes, precursora do movimento",
+     "evitar": "fundadora, dona"
+    }
+   ],
+   "usados": [
+    {
+     "texto": "Portfólio cultural, clipping e texto de apresentação",
+     "onde": "Prêmio Ações Locais 2026, via Alinny Gomes",
+     "quando": "set/2026"
+    }
+   ],
+   "cuidados": "Conferir número da lei/PL do patrimônio imaterial antes de citar."
+  },
+  "p13": {
+   "id": "p13",
+   "tipo": "projeto",
+   "posicionamento": "Formação gratuita em ritmos brasileiros para jovens, no Teatro Cândido Mendes, sustentada pelo Bloco Brasil desde 2009.",
+   "argumentos": [
+    "Continuidade comprovável (aulas semanais, turmas anuais)",
+    "Gratuidade desde 2025 como decisão do bloco, não como exigência de edital",
+    "Jovens formados já tocam e trabalham no bloco: ciclo completo formação → trabalho"
+   ],
+   "julgador": [],
+   "vocabulario": [],
+   "usados": [
+    {
+     "texto": "Inscrição completa (portfólio + formulário)",
+     "onde": "Prêmio Ações Locais 2026",
+     "quando": "08/09/2026"
+    }
+   ],
+   "cuidados": "Resolver antes de qualquer nova inscrição como coletivo informal: a PJ que fatura os shows do bloco."
+  },
+  "p10": {
+   "id": "p10",
+   "tipo": "projeto",
+   "posicionamento": "Projeto coletivo de 9 blocos para o Carnaval 2027, em três níveis: pré-carnaval em espaço fixo, desfiles territoriais gratuitos e encontros de formação.",
+   "argumentos": [
+    "Escala: 9 blocos e 9 territórios num único projeto",
+    "Formação institucional dos blocos (ambiente, memória, futuro) como legado além do desfile",
+    "Culminância em 2028: projeto de dois ciclos, não de um carnaval"
+   ],
+   "julgador": [],
+   "vocabulario": [
+    {
+     "usar": "desfiles territoriais",
+     "evitar": "eventos"
+    },
+    {
+     "usar": "encontros de formação",
+     "evitar": "reuniões, palestras"
+    }
+   ],
+   "usados": [],
+   "cuidados": "Escopo ainda preliminar; anuências dos 9 blocos não colhidas. Não apresentar como fechado."
+  },
+  "ed2": {
+   "id": "ed2",
+   "tipo": "edital",
+   "posicionamento": "Prêmio de reconhecimento a coletivos que já atuam nos territórios há 2+ anos. Não é projeto: é comprovação de trajetória.",
+   "julgador": [
+    "Nota = portfólio (100) + Escuta presencial (100); 50 pontos na 1ª etapa já convocam para a Escuta",
+    "Pesa continuidade e território mais do que inovação",
+    "Coletivo informal representado por PF é elegível, mas a declaração de não constituição jurídica (Anexo 5) tem de ser verdadeira"
+   ],
+   "argumentos": [],
+   "vocabulario": [
+    {
+     "usar": "atuação no território",
+     "evitar": "projeto"
+    },
+    {
+     "usar": "reconhecimento",
+     "evitar": "financiamento"
+    }
+   ],
+   "usados": [
+    {
+     "texto": "3 candidaturas do coletivo: Oficina de Percussão, Garagem Delas, Largo do Boticário",
+     "onde": "2026",
+     "quando": "08/09/2026"
+    }
+   ],
+   "cuidados": "Sem orçamento e sem prestação de contas: qualquer texto que fale em 'execução do projeto' está no registro errado."
+  },
+  "ed4": {
+   "id": "ed4",
+   "tipo": "edital",
+   "posicionamento": "Aprovar o projeto dá o direito de captar de empresas com dedução de IR. Não é dinheiro na conta: o texto precisa convencer o parecerista e, depois, um patrocinador.",
+   "julgador": [
+    "Parecer técnico avalia adequação orçamentária e coerência entre objetivos, metas e contrapartidas",
+    "Contrapartidas de acesso (ingressos gratuitos ou populares, ações formativas) são obrigatórias",
+    "Coletivo sem CNPJ não é proponente direto; PF, MEI e PJ têm tetos diferentes"
+   ],
+   "argumentos": [],
+   "vocabulario": [
+    {
+     "usar": "proponente",
+     "evitar": "produtor"
+    },
+    {
+     "usar": "contrapartida",
+     "evitar": "brinde"
+    }
+   ],
+   "usados": [
+    {
+     "texto": "28 projetos anteriores da ANLEAL (1999 a 2025), acervo no Arquivo Rouanet do Rival",
+     "onde": "Salic",
+     "quando": "histórico"
+    }
+   ],
+   "cuidados": "O histórico de 28 projetos é acervo de consulta, não ficha: buscar lá exemplos de parecer, não copiar texto."
+  },
+  "ed1": {
+   "id": "ed1",
+   "tipo": "edital",
+   "posicionamento": "Edital multilinguagem do SESI-RJ; na música, 10 videoclipes de R$ 20 mil para fonogramas inéditos.",
+   "julgador": [
+    "Ineditismo do fonograma é critério de corte",
+    "Acessibilidade do produto (legendagem descritiva, janela de Libras) entra como compromisso do proponente",
+    "Autodeclaração de diversidade pesa na classificação"
+   ],
+   "argumentos": [],
+   "vocabulario": [],
+   "usados": [
+    {
+     "texto": "3 videoclipes inscritos: Vem casar comigo, Zé; Mestre Moa; Cama de Areia",
+     "onde": "2026",
+     "quando": "03/09/2026"
+    }
+   ],
+   "cuidados": ""
+  }
+ },
+ "regras": {
+  "r1": {
+   "id": "r1",
+   "texto": "Não usar travessão em textos de edital. Vírgulas, parênteses ou dois-pontos no lugar.",
+   "escopo": {
+    "tipo": "geral"
+   },
+   "tipoRegra": "estilo",
+   "fonte": {
+    "tipo": "experiencia",
+    "ref": "no meio cultural o travessão denuncia texto de IA"
+   },
+   "status": "vigente"
+  },
+  "r2": {
+   "id": "r2",
+   "texto": "Nunca usar 'surdo' ou 'mudo'. Sempre 'PCD' ou 'pessoa com deficiência' seguido do tipo (auditiva, na fala, visual).",
+   "escopo": {
+    "tipo": "geral"
+   },
+   "tipoRegra": "estilo",
+   "fonte": {
+    "tipo": "experiencia",
+    "ref": "decisão do coletivo"
+   },
+   "status": "vigente"
+  },
+  "r3": {
+   "id": "r3",
+   "texto": "Escrever a justificativa a partir da continuidade e do território (anos de atuação, lugar, público que volta), não a partir da novidade.",
+   "escopo": {
+    "tipo": "edital",
+    "id": "ed2"
+   },
+   "tipoRegra": "prioridade",
+   "fonte": {
+    "tipo": "edital",
+    "ref": "critérios de pontuação do portfólio"
+   },
+   "status": "vigente"
+  },
+  "r4": {
+   "id": "r4",
+   "texto": "Não descrever orçamento, cronograma de execução nem metas de produção: o prêmio não tem prestação de contas.",
+   "escopo": {
+    "tipo": "edital",
+    "id": "ed2"
+   },
+   "tipoRegra": "proibicao",
+   "fonte": {
+    "tipo": "edital",
+    "ref": "natureza do prêmio (TEC sem prestação)"
+   },
+   "status": "vigente"
+  },
+  "r5": {
+   "id": "r5",
+   "texto": "Antes de assinar o Anexo 5 (não constituição jurídica), confirmar que nenhuma PJ fatura em nome do coletivo.",
+   "escopo": {
+    "tipo": "artista",
+    "id": "a1"
+   },
+   "tipoRegra": "obrigatorio",
+   "fonte": {
+    "tipo": "julgamento",
+    "ref": "j1"
+   },
+   "status": "duvida"
+  },
+  "r6": {
+   "id": "r6",
+   "texto": "Toda proposta precisa de contrapartida de acesso explícita (ingressos gratuitos ou a preço popular, ou ação formativa) ligada a uma meta numérica.",
+   "escopo": {
+    "tipo": "edital",
+    "id": "ed4"
+   },
+   "tipoRegra": "obrigatorio",
+   "fonte": {
+    "tipo": "norma",
+    "ref": "IN 29/2026, a confirmar o artigo"
+   },
+   "status": "duvida"
+  },
+  "r8": {
+   "id": "r8",
+   "texto": "Não afirmar parceria institucional com a PPG: a relação é informal. Falar em 'jovens da comunidade que tocam no bloco'.",
+   "escopo": {
+    "tipo": "artista",
+    "id": "a1"
+   },
+   "tipoRegra": "proibicao",
+   "fonte": {
+    "tipo": "experiencia",
+    "ref": "relação real com a comunidade"
+   },
+   "status": "vigente"
+  },
+  "r9": {
+   "id": "r9",
+   "texto": "Tratar o Circuito como projeto de dois ciclos (2027 e culminância em 2028) em qualquer texto, mesmo quando o edital só cobre um ano.",
+   "escopo": {
+    "tipo": "projeto",
+    "id": "p10"
+   },
+   "tipoRegra": "dica",
+   "fonte": {
+    "tipo": "experiencia",
+    "ref": "escopo preliminar de ago/2026"
+   },
+   "status": "vigente"
+  },
+  "r10": {
+   "id": "r10",
+   "texto": "Fonograma inédito: não inscrever música já lançada em qualquer plataforma.",
+   "escopo": {
+    "tipo": "edital",
+    "id": "ed1"
+   },
+   "tipoRegra": "proibicao",
+   "fonte": {
+    "tipo": "edital",
+    "ref": "linha Inéditos"
+   },
+   "status": "vigente"
+  },
+  "r11": {
+   "id": "r11",
+   "texto": "Descrever a versão única acessível (legendagem descritiva + janela de Libras) como parte do produto, não como anexo opcional.",
+   "escopo": {
+    "tipo": "edital",
+    "id": "ed1"
+   },
+   "tipoRegra": "dica",
+   "fonte": {
+    "tipo": "experiencia",
+    "ref": "inscrições de set/2026"
+   },
+   "status": "vigente"
+  }
+ },
+ "julg": {
+  "j1": {
+   "id": "j1",
+   "edital": "ed2",
+   "projeto": "p13",
+   "ano": "2026",
+   "resultado": "aguardando",
+   "nota": "",
+   "resumo": "Inscrição da Oficina de Percussão como coletivo informal representado pelo Pedro Buarque. Ainda sem resultado; o registro já vale pelo problema encontrado na montagem.",
+   "fortes": [
+    "Continuidade desde 2009 fácil de comprovar",
+    "Gratuidade desde 2025 como decisão própria"
+   ],
+   "fracos": [
+    "A PJ que fatura os shows do bloco conflita com a declaração do Anexo 5",
+    "Portfólio da oficina separado do portfólio do bloco ainda não existe"
+   ],
+   "licoes": [
+    {
+     "texto": "Resolver a situação jurídica do coletivo antes de qualquer edital de reconhecimento",
+     "regra": "r5"
+    },
+    {
+     "texto": "Montar um portfólio só da oficina, com fotos, turmas e datas",
+     "regra": ""
+    }
+   ]
+  },
+  "j3": {
+   "id": "j3",
+   "edital": "ed1",
+   "projeto": "",
+   "ano": "2026",
+   "resultado": "aguardando",
+   "nota": "",
+   "resumo": "Três videoclipes inscritos no Mosaico Rio em 03/09/2026 (Ellen Motta, Jean Charnaux, Forró de Rabeca). Aguardando resultado; registrar o que os textos apostaram para comparar depois com o parecer.",
+   "fortes": [
+    "Versão única acessível apresentada como parte do produto",
+    "Autodeclaração de diversidade assinada onde cabia"
+   ],
+   "fracos": [
+    "Fichas técnicas de fonograma com trajetórias incompletas em um dos três"
+   ],
+   "licoes": [
+    {
+     "texto": "Fechar a ficha técnica do fonograma antes de escrever o argumento",
+     "regra": ""
+    }
+   ]
+  }
+ }
+}

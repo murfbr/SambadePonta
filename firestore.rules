@@ -1,0 +1,15 @@
+rules_version = '2';
+
+// Regras de segurança da Central do Coletivo.
+// Cole no console do Firebase: Firestore Database → Rules → Publish.
+//
+// Modelo de acesso combinado: quem tem conta (criada pelo coletivo no console,
+// Authentication → Users) edita tudo; quem não tem conta não lê nada.
+// As contas são o "muro" — não há papéis nem auto-cadastro.
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{colecao}/{documento} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}

@@ -1,0 +1,3347 @@
+{
+ "artistas": [
+  {
+   "id": "a1",
+   "nome": "Bloco Brasil",
+   "tipo": "Bloco de carnaval (formato palco)",
+   "enq": "Coletivo sem CNPJ (a definir)",
+   "cnpj": "—",
+   "mun": "Rio de Janeiro (Pedra do Leme)",
+   "bio": "Bloco de carnaval de rua em formato de palco na Pedra do Leme (Praça Almirante Júlio de Noronha). “Filhote do Monobloco” — muitos integrantes vêm da oficina do Monobloco. Do marchinha a Beatles e James Brown, com samba oficial próprio, “Laura”.",
+   "tags": [
+    "carnaval",
+    "Leme",
+    "palco",
+    "Monobloco"
+   ],
+   "det": {
+    "geral": {
+     "Local": "Pedra do Leme (Praça Almirante Júlio de Noronha), Zona Sul",
+     "Origem": "Filhote do Monobloco (oficina)",
+     "Repertório": "MPB + internacional (marchinhas, Beatles, James Brown)",
+     "Samba oficial": "“Laura”",
+     "Habilitação": "Edital do Carnaval Carioca — inscrição nº 232 (“O Som do Carnaval Carioca”)",
+     "Custo 2025": "~R$ 77 mil",
+     "Seguidores": "5.864 (Instagram)",
+     "Oficina de percussão": "terças 18h (Ipanema)",
+     "Escopo": "co-produz o Palco do Leme (Brasil + Buster; meta 4 blocos)",
+     "Formato jurídico": "a definir"
+    },
+    "portfolio": [
+     {
+      "ano": "2025",
+      "texto": "Desfile no Palco do Leme (custo de referência ~R$ 77 mil)"
+     },
+     {
+      "ano": "2026",
+      "texto": "Habilitado no Edital de Cultura do Carnaval Carioca (inscrição nº 232)"
+     },
+     {
+      "ano": "2026",
+      "texto": "Baile BB 2026 — planilha de produção no acervo"
+     }
+    ],
+    "docs": [
+     {
+      "nome": "Manual de Marca v1 (rascunho)",
+      "status": "ok"
+     },
+     {
+      "nome": "Portfólio / histórico (2+ anos)",
+      "status": "ok"
+     },
+     {
+      "nome": "Comprovação de 2+ anos de atuação",
+      "status": "pend"
+     },
+     {
+      "nome": "Descritivo do bloco",
+      "status": "ok"
+     },
+     {
+      "nome": "RG e CPF do representante",
+      "status": "pend"
+     },
+     {
+      "nome": "Comprovante de residência (Rio)",
+      "status": "pend"
+     },
+     {
+      "nome": "Dados bancários",
+      "status": "pend"
+     },
+     {
+      "nome": "Percurso do desfile (Leme)",
+      "status": "pend"
+     },
+     {
+      "nome": "Portfólio cultural (pdf + pptx + html)",
+      "status": "ok"
+     },
+     {
+      "nome": "Clipping de imprensa (html)",
+      "status": "ok"
+     },
+     {
+      "nome": "Input list + mapa de palco + repertório 2026",
+      "status": "ok"
+     },
+     {
+      "nome": "Docs de gestão 01–09 (Gestao 2026/)",
+      "status": "ok"
+     },
+     {
+      "nome": "Fotos release (16) + artigos de imprensa",
+      "status": "ok"
+     }
+    ],
+    "fotos": 16,
+    "links": [
+     {
+      "rotulo": "Instagram",
+      "url": "@blocobrasil"
+     },
+     {
+      "rotulo": "Pasta no Drive (acervo)",
+      "url": "https://drive.google.com/drive/folders/1DVPq8dewpxWpLzdlTIXc_UDejx3jRDfN"
+     }
+    ],
+    "marca": {
+     "cores": [
+      "#12965A",
+      "#FFC400",
+      "#1A6FB0",
+      "#F2603C"
+     ],
+     "logo": "Bloco Brasil",
+     "fonte": "—",
+     "obs": "v1 (rascunho): verde/amarelo/azul + vermelho sobre base creme #FBF8F0."
+    }
+   }
+  },
+  {
+   "id": "a2",
+   "nome": "Samba de Ponta",
+   "tipo": "Roda de samba",
+   "enq": "Coletivo (a confirmar)",
+   "cnpj": "—",
+   "mun": "Rio de Janeiro (Praça Tiradentes / Centro)",
+   "bio": "Roda de samba nascida na Praça Tiradentes, na defesa do Bar do Nanam (pós-pandemia). Independente, há ~4 anos ocupa praças, bares e ruas do Rio. Guiada por Oxóssi; integrantes da Zona Norte ligados à Umbanda.",
+   "tags": [
+    "samba",
+    "roda",
+    "Oxóssi",
+    "Praça Tiradentes"
+   ],
+   "det": {
+    "geral": {
+     "Origem": "Pós-pandemia, em defesa do Bar do Nanam (Praça Tiradentes)",
+     "Guia": "Oxóssi (Umbanda)",
+     "Repertório": "Samba, pagode, forró, axé e MPB",
+     "Integrantes": "Igor, Debô, Fernandinho, Biju + convidados",
+     "Reconhecimento": "Moção da Câmara Municipal do Rio (set/2025)",
+     "Redes": "@sambadepontaoficial",
+     "Proponente (Sesc Pulsar)": "Diogo Faria Filgueiras — CNPJ 59.928.108/0001-91"
+    },
+    "portfolio": [
+     {
+      "ano": "2025",
+      "texto": "Moção de reconhecimento da Câmara Municipal do Rio (set)"
+     },
+     {
+      "ano": "2024",
+      "texto": "Apresentação no Espaço Luiz Gama (Centro)"
+     },
+     {
+      "ano": "—",
+      "texto": "Citado no “Roteiro do Samba” (guia das melhores rodas); temporadas na Lapa"
+     },
+     {
+      "ano": "2026",
+      "texto": "Inscrição no Sesc Pulsar 2026/27 (Projeto Samba de Ponta) — docs no acervo"
+     }
+    ],
+    "docs": [
+     {
+      "nome": "Mídia kit + release (site próprio)",
+      "status": "ok"
+     },
+     {
+      "nome": "Rider técnico",
+      "status": "ok"
+     },
+     {
+      "nome": "CPF dos integrantes (RG e nascimento já cadastrados)",
+      "status": "pend"
+     },
+     {
+      "nome": "Dados bancários",
+      "status": "pend"
+     },
+     {
+      "nome": "Portfólio SdP 2026 (pptx)",
+      "status": "ok"
+     },
+     {
+      "nome": "Riders 2025/26 (pasta riders/, 16 arquivos)",
+      "status": "ok"
+     },
+     {
+      "nome": "Minibios dos integrantes (Sesc Pulsar, 5)",
+      "status": "ok"
+     },
+     {
+      "nome": "Planilha orçamentária (Sesc Pulsar)",
+      "status": "ok"
+     },
+     {
+      "nome": "Contrato-modelo do grupo",
+      "status": "ok"
+     },
+     {
+      "nome": "Marca (SVG/PNG)",
+      "status": "ok"
+     },
+     {
+      "nome": "Merch (docx)",
+      "status": "ok"
+     }
+    ],
+    "fotos": 0,
+    "links": [
+     {
+      "rotulo": "Instagram",
+      "url": "@sambadepontaoficial"
+     },
+     {
+      "rotulo": "Site (apresentação)",
+      "url": "samba-de-ponta"
+     },
+     {
+      "rotulo": "Pasta no Drive (acervo)",
+      "url": "https://drive.google.com/drive/folders/1wIqcHvwGuvsT4hzOsiAqlu_vo7-svABg"
+     }
+    ],
+    "marca": {
+     "cores": [
+      "#12965A",
+      "#D9A441",
+      "#1F2A33"
+     ],
+     "logo": "Samba de Ponta",
+     "fonte": "—",
+     "obs": "Cores/flecha de Oxóssi (verde e dourado)."
+    }
+   }
+  },
+  {
+   "id": "a3",
+   "nome": "Simpatia é Quase Amor",
+   "tipo": "Bloco de carnaval",
+   "enq": "PJ · Associação (a confirmar)",
+   "cnpj": "a confirmar (bloco tradicional desde 1985)",
+   "mun": "Rio de Janeiro (Ipanema)",
+   "bio": "Um dos maiores blocos de rua do Rio. Desfila na Praça General Osório, Ipanema, desde 1985. Público de dezenas a centenas de milhares. Cores amarelo e lilás.",
+   "tags": [
+    "carnaval",
+    "Ipanema",
+    "samba",
+    "tradicional"
+   ],
+   "det": {
+    "geral": {
+     "Fundação": "1984 (1º desfile em 1985)",
+     "Local": "Praça General Osório, Ipanema",
+     "Público": "~100–170 mil",
+     "Desfile": "sábado pré-carnaval e domingo, ~16h",
+     "Escola-madrinha": "Mangueira",
+     "Grupo musical": "Bloco de Embalo",
+     "Cores": "amarelo e lilás",
+     "Seguidores": "11,2 mil (Instagram)",
+     "Batizado": "por Aldir; apadrinhado por Albino Pinheiro e Dona Zica"
+    },
+    "portfolio": [
+     {
+      "ano": "1985",
+      "texto": "Primeiro desfile (~300 pessoas)"
+     },
+     {
+      "ano": "2015",
+      "texto": "Auge de público (~170 mil)"
+     },
+     {
+      "ano": "2026",
+      "texto": "Inscrições Sesc Pulsar e Petrobras 2026; anuência assinada no Fluxos Fluminenses"
+     }
+    ],
+    "docs": [
+     {
+      "nome": "Estatuto / CNPJ",
+      "status": "pend"
+     },
+     {
+      "nome": "Portfólio histórico",
+      "status": "ok"
+     },
+     {
+      "nome": "Cadastro Riotur (anos anteriores)",
+      "status": "ok"
+     },
+     {
+      "nome": "Minibios dos integrantes (Sesc Pulsar, 15)",
+      "status": "ok"
+     },
+     {
+      "nome": "Planilha orçamentária (Sesc Pulsar)",
+      "status": "ok"
+     },
+     {
+      "nome": "Roteiro de apresentação",
+      "status": "ok"
+     },
+     {
+      "nome": "Romaneio Belmonte 2026",
+      "status": "ok"
+     },
+     {
+      "nome": "Projeto-base Rouanet + orçamentos (Parece que foi hoje)",
+      "status": "ok"
+     },
+     {
+      "nome": "Contexto e pesquisa (livro, camisetas, Petrobras 2026)",
+      "status": "ok"
+     }
+    ],
+    "fotos": 0,
+    "links": [
+     {
+      "rotulo": "Instagram",
+      "url": "@blocosimpatiaequaseamor"
+     },
+     {
+      "rotulo": "Wikipédia",
+      "url": "pt.wikipedia.org/wiki/Simpatia_É_Quase_Amor"
+     },
+     {
+      "rotulo": "Pasta no Drive (acervo)",
+      "url": "https://drive.google.com/drive/folders/1y5AjX7xyKURyH8ucsYCyqDtzo6be8IIo"
+     }
+    ],
+    "marca": {
+     "cores": [
+      "#F2C230",
+      "#8E5AA6"
+     ],
+     "logo": "Simpatia é Quase Amor",
+     "fonte": "—",
+     "obs": "Amarelo e lilás (inspiração no Engov)."
+    }
+   }
+  },
+  {
+   "id": "a4",
+   "nome": "Garagem Delas",
+   "tipo": "Coletivo cultural (mulheres ambulantes)",
+   "enq": "Coletivo sem CNPJ",
+   "cnpj": "—",
+   "mun": "Rio de Janeiro (Centro / AP1)",
+   "bio": "Coletivo de mulheres ambulantes do Centro do Rio, desde 2018 — transforma garagens e ruas em cultura, trabalho e renda; contrata mulheres para funções antes negadas a elas. Inclui a Cozinha Delas.",
+   "tags": [
+    "mulheres",
+    "ambulantes",
+    "cultura popular",
+    "carnaval",
+    "Centro"
+   ],
+   "det": {
+    "geral": {
+     "Fundação": "2018 (7+ anos)",
+     "Representante": "Aline Gomes",
+     "Território": "Centro / AP1",
+     "Atuação": "samba, forró, festa junina, blocos + Cozinha Delas",
+     "Redes": "@agaragemdelas"
+    },
+    "portfolio": [
+     {
+      "ano": "2018",
+      "texto": "Fundação — ocupação de garagens e ruas do Centro"
+     },
+     {
+      "ano": "2022",
+      "texto": "Reportagem no Brasil de Fato; artigo na Revista ORGANICOM"
+     },
+     {
+      "ano": "2024",
+      "texto": "Roda de samba pelo combate à transfobia (O Dia)"
+     },
+     {
+      "ano": "2025",
+      "texto": "Artigo na Revista Anagramas; menção honrosa da Câmara Municipal"
+     },
+     {
+      "ano": "2026",
+      "texto": "Reconhecimento como patrimônio imaterial da cidade"
+     }
+    ],
+    "docs": [
+     {
+      "nome": "Portfólio (fotos e números)",
+      "status": "pend"
+     },
+     {
+      "nome": "Lista de integrantes",
+      "status": "pend"
+     },
+     {
+      "nome": "Anexo 4 — Declaração de Representação",
+      "status": "pend"
+     },
+     {
+      "nome": "Anexo 5 — Não Constituição Jurídica",
+      "status": "pend"
+     },
+     {
+      "nome": "Dados do representante",
+      "status": "pend"
+     }
+    ],
+    "fotos": 0,
+    "links": [
+     {
+      "rotulo": "Instagram",
+      "url": "@agaragemdelas"
+     },
+     {
+      "rotulo": "Brasil de Fato (2022)",
+      "url": "brasildefato.com.br/…"
+     },
+     {
+      "rotulo": "Pasta no Drive (acervo)",
+      "url": "https://drive.google.com/drive/folders/1pd02UEC0mE4BxRoOFT03Z1ohtDH310R-"
+     }
+    ],
+    "marca": {
+     "cores": [
+      "#B4472E",
+      "#F4EFE2"
+     ],
+     "logo": "Garagem Delas",
+     "fonte": "—",
+     "obs": "Referência: vermelho + creme, tipografia bold (sem manual oficial)."
+    }
+   }
+  },
+  {
+   "id": "a5",
+   "nome": "Sambótica",
+   "tipo": "Roda de samba",
+   "enq": "Coletivo (a confirmar)",
+   "cnpj": "—",
+   "mun": "Rio de Janeiro (Largo do Boticário, Cosme Velho / AP2)",
+   "bio": "Roda de samba criada em 2015 no Largo do Boticário — ocupação cultural do espaço público via samba de rua. 10 anos, +500 apresentações, integrante da Rede Carioca de Rodas de Samba.",
+   "tags": [
+    "samba",
+    "roda",
+    "Largo do Boticário",
+    "Cosme Velho",
+    "Rede Carioca"
+   ],
+   "det": {
+    "geral": {
+     "Fundação": "2015 (10 anos)",
+     "Integrantes": "Nina Rosa (voz), Miguel Serbeto e Leo Carvalho (cavaco), Alberto Americano (7 cordas), Jeferson Souza (flauta), Romulo/Rodrigo/Lucas (percussão)",
+     "Estilo": "Samba de raiz + choro, MPB, forró",
+     "Local": "Largo do Boticário (base); circula pela cidade",
+     "Números": "+500 shows, ~400 mil público, 47,6 mil seguidores",
+     "Redes": "@sambotica.oficial"
+    },
+    "portfolio": [
+     {
+      "ano": "2015",
+      "texto": "Criação no Largo do Boticário; nasce o Espaço Botica"
+     },
+     {
+      "ano": "2016",
+      "texto": "Festival Botica; matéria O Globo"
+     },
+     {
+      "ano": "2022",
+      "texto": "Entrada na Rede Carioca de Rodas de Samba"
+     },
+     {
+      "ano": "2024",
+      "texto": "Certificado da Rede Carioca (23/11); credenciado no Edital SMC 02/2024 (25/11)"
+     },
+     {
+      "ano": "2025",
+      "texto": "92 apresentações; convidados MPB-4 e Nelson Rufino; temporada na Zona Portuária"
+     },
+     {
+      "ano": "2027",
+      "texto": "Curadoria artística do Circuito do Samba RJ (Lei do ISS — inscrito em 2026 via CRIVO, aguardando resultado)"
+     }
+    ],
+    "docs": [
+     {
+      "nome": "Portfólio (31 págs, clipping desde 2016)",
+      "status": "ok"
+     },
+     {
+      "nome": "Certificado Rede Carioca / credenciamento",
+      "status": "ok"
+     },
+     {
+      "nome": "Anexo 4 — Declaração de Representação",
+      "status": "pend"
+     },
+     {
+      "nome": "Anexo 5 (se coletivo informal)",
+      "status": "pend"
+     },
+     {
+      "nome": "Dados do representante",
+      "status": "pend"
+     }
+    ],
+    "fotos": 0,
+    "links": [
+     {
+      "rotulo": "Instagram",
+      "url": "@sambotica.oficial"
+     },
+     {
+      "rotulo": "E-mail",
+      "url": "sambotica.oficial@gmail.com"
+     },
+     {
+      "rotulo": "YouTube",
+      "url": "canal Sambotica"
+     },
+     {
+      "rotulo": "Pasta no Drive (acervo)",
+      "url": "https://drive.google.com/drive/folders/1KuCUB8Mwi1RjNULyhARt9OEUY8yvzt5Q"
+     }
+    ],
+    "marca": {
+     "cores": [
+      "#00A86B",
+      "#1F2A33",
+      "#D9A441"
+     ],
+     "logo": "Sambótica",
+     "fonte": "—",
+     "obs": "A confirmar."
+    }
+   }
+  },
+  {
+   "id": "a6",
+   "nome": "Psicodelícia",
+   "tipo": "Banda / grupo musical",
+   "enq": "a confirmar",
+   "cnpj": "—",
+   "mun": "Rio de Janeiro",
+   "bio": "“O baile caleidoscópio” — banda de seis músicos que recombina jazz, MPB, rock, pop, forró e samba, em duas frentes: instrumental e cantada.",
+   "tags": [
+    "banda",
+    "instrumental",
+    "psicodelia",
+    "caleidoscópio"
+   ],
+   "det": {
+    "geral": {
+     "Integrantes": "6 músicos",
+     "Frentes": "Instrumental (espectro frio) e Cantada (espectro quente)",
+     "Estilo": "jazz, MPB, rock, pop, forró, samba recombinados",
+     "Palco": "Circo Voador (alvo)"
+    },
+    "portfolio": [
+     {
+      "ano": "2026",
+      "texto": "Manual de marca v3 — direção caleidoscópio (em desenvolvimento)"
+     }
+    ],
+    "docs": [
+     {
+      "nome": "Manual de marca",
+      "status": "ok"
+     },
+     {
+      "nome": "Release / portfólio",
+      "status": "pend"
+     }
+    ],
+    "fotos": 0,
+    "links": [
+     {
+      "rotulo": "Pasta no Drive (acervo)",
+      "url": "https://drive.google.com/drive/folders/1mQ6c4nzZL3x_PMQZgoX9qA9iwdy4vFxC"
+     }
+    ],
+    "marca": {
+     "cores": [
+      "#E5197D",
+      "#F7941E",
+      "#FFD400",
+      "#8DC63F",
+      "#12B6CF",
+      "#6A35B8"
+     ],
+     "logo": "Psicodelícia",
+     "fonte": "Baloo 2 / Space Grotesk",
+     "obs": "Mandala caleidoscópica sobre fundo índigo #160A2E; cores só em tesselação/gradiente."
+    }
+   }
+  },
+  {
+   "id": "a7",
+   "nome": "Thales Browne",
+   "tipo": "Artista individual (saxofonista)",
+   "enq": "PF (a confirmar)",
+   "cnpj": "—",
+   "mun": "Rio de Janeiro (Tijuca)",
+   "bio": "Saxofonista, agitador cultural e artista de rua, tijucano — formado na rua e no metrô. Versátil: do metrô ao casamento, do bloco à serenata. Encara a folia como conscientização coletiva.",
+   "tags": [
+    "sax",
+    "artista de rua",
+    "carnaval",
+    "charanga",
+    "forró"
+   ],
+   "det": {
+    "geral": {
+     "Instrumento": "Sax alto / sax de bambu",
+     "Base": "Tijuca, Rio de Janeiro",
+     "Projetos": "Charanga Talismã, Meu Doce Acabou Hoje, Banda Jussara, Trio Rapina, Braba Igual à Mãe, Esquina da Poesia",
+     "Instagram": "@thales.browne (13,2 mil)"
+    },
+    "portfolio": [
+     {
+      "ano": "2013",
+      "texto": "Sax de bambu; começa a tocar nos vagões do metrô"
+     },
+     {
+      "ano": "2016",
+      "texto": "Funda o bloco Meu Doce Acabou Hoje"
+     },
+     {
+      "ano": "2017",
+      "texto": "Funda a Charanga Talismã (@charangatalisma, 19,7 mil)"
+     },
+     {
+      "ano": "2020",
+      "texto": "Matéria de página inteira no O Globo; viraliza tocando o samba da Mangueira no metrô"
+     },
+     {
+      "ano": "2021",
+      "texto": "Repostado por Gilberto Gil tocando “Drão” (#GilberteSe); cria as serenatas Esquina da Poesia"
+     },
+     {
+      "ano": "2025",
+      "texto": "Cria o bloco Braba Igual à Mãe (homenagem a Fernanda Torres)"
+     },
+     {
+      "ano": "2026",
+      "texto": "Despedida de 10 anos do Meu Doce Acabou Hoje — vaquinha de R$ 25.572 (448 doadores)"
+     }
+    ],
+    "docs": [
+     {
+      "nome": "Logo (4 variações: cor/branco/preto/horizontal)",
+      "status": "ok"
+     },
+     {
+      "nome": "Mídia kit / portfólio",
+      "status": "pend"
+     },
+     {
+      "nome": "Release de imprensa",
+      "status": "pend"
+     },
+     {
+      "nome": "Acervo de fotos e vídeos",
+      "status": "ok"
+     }
+    ],
+    "fotos": 0,
+    "links": [
+     {
+      "rotulo": "Instagram",
+      "url": "@thales.browne"
+     },
+     {
+      "rotulo": "Charanga Talismã",
+      "url": "@charangatalisma"
+     },
+     {
+      "rotulo": "Meu Doce Acabou Hoje",
+      "url": "@meudoceacabouhoje"
+     },
+     {
+      "rotulo": "Banda Jussara",
+      "url": "@bandajussara"
+     },
+     {
+      "rotulo": "Pasta no Drive (acervo)",
+      "url": "https://drive.google.com/drive/folders/1PVav6LJurHTkO1twHsmVzMud-91OK4wj"
+     }
+    ],
+    "marca": {
+     "cores": [
+      "#1F2A33"
+     ],
+     "logo": "Thales Browne (4 variações)",
+     "fonte": "—",
+     "obs": "Logos principais (cor/branco/preto) + horizontal no acervo."
+    }
+   }
+  },
+  {
+   "id": "a8",
+   "nome": "Ellen Motta",
+   "tipo": "Artista individual (cantora/compositora)",
+   "enq": "PF (a confirmar)",
+   "cnpj": "—",
+   "mun": "Rio de Janeiro",
+   "bio": "Cantora e compositora que “transforma fé em som e sentimento em melodia” — terreiro, rua e celebração. Samba e pagode com raiz na tradição espiritual carioca (umbanda, candomblé).",
+   "tags": [
+    "samba",
+    "pagode",
+    "umbanda",
+    "autoral",
+    "música"
+   ],
+   "det": {
+    "geral": {
+     "Estilo": "Samba/pagode + matrizes afro-religiosas",
+     "Spotify": "~12,1 mil ouvintes/mês",
+     "Destaques": "Zé Pilintra de Santa Tereza, Quarta-feira de cinzas, Jogo da Vida, Madrugada",
+     "Redes": "@mottaellen"
+    },
+    "portfolio": [
+     {
+      "ano": "2025",
+      "texto": "Álbuns “Casal sem Vergonha” e “Boa Noite Exu e Pombogira”"
+     },
+     {
+      "ano": "2026",
+      "texto": "Lançamento “Eu Só Quero Seu Dinheiro”"
+     }
+    ],
+    "docs": [
+     {
+      "nome": "Música de trabalho + áudio",
+      "status": "pend"
+     },
+     {
+      "nome": "Letra da música",
+      "status": "pend"
+     },
+     {
+      "nome": "Argumento do videoclipe",
+      "status": "pend"
+     },
+     {
+      "nome": "Ficha técnica (fonograma e videoclipe)",
+      "status": "pend"
+     },
+     {
+      "nome": "Histórico + clipping",
+      "status": "pend"
+     },
+     {
+      "nome": "Declaração de direitos autorais",
+      "status": "pend"
+     }
+    ],
+    "fotos": 0,
+    "links": [
+     {
+      "rotulo": "Spotify",
+      "url": "open.spotify.com/artist/3JQ7BrYzhou2360V7tp7k0"
+     },
+     {
+      "rotulo": "Instagram",
+      "url": "@mottaellen"
+     },
+     {
+      "rotulo": "TikTok",
+      "url": "@mottaellen"
+     },
+     {
+      "rotulo": "YouTube",
+      "url": "@ellenmotta"
+     },
+     {
+      "rotulo": "Pasta no Drive (acervo)",
+      "url": "https://drive.google.com/drive/folders/1q7yARiVCR--rsLWsOD4m7jnqTQ2KrKn1"
+     }
+    ],
+    "marca": {
+     "cores": [
+      "#1F2A33"
+     ],
+     "logo": "Ellen Motta",
+     "fonte": "—",
+     "obs": "A definir."
+    }
+   }
+  },
+  {
+   "id": "a9",
+   "nome": "Bloco Pra Iaiá",
+   "tipo": "Bloco de carnaval",
+   "enq": "a confirmar",
+   "cnpj": "—",
+   "mun": "Rio de Janeiro",
+   "bio": "Bloco de carnaval de rua — “prepara uma avenida que a gente vai passar!”. Referência à banda Los Hermanos.",
+   "tags": [
+    "carnaval",
+    "Los Hermanos",
+    "rua"
+   ],
+   "det": {
+    "geral": {
+     "Seguidores": "6.751 (Instagram)",
+     "Posts": "372",
+     "Tema": "Los Hermanos (referência)",
+     "Links": "beacons.ai/blocopraiaia",
+     "Redes": "@blocopraiaia"
+    },
+    "portfolio": [],
+    "docs": [],
+    "fotos": 0,
+    "links": [
+     {
+      "rotulo": "Instagram",
+      "url": "@blocopraiaia"
+     },
+     {
+      "rotulo": "Beacons",
+      "url": "beacons.ai/blocopraiaia"
+     },
+     {
+      "rotulo": "Pasta no Drive (acervo)",
+      "url": "https://drive.google.com/drive/folders/1TqrT2IgWphnsOzDpJxAKa6o6m6iV7VbR"
+     }
+    ],
+    "marca": {
+     "cores": [
+      "#1F2A33"
+     ],
+     "logo": "Bloco Pra Iaiá",
+     "fonte": "—",
+     "obs": "a confirmar"
+    }
+   }
+  },
+  {
+   "id": "a10",
+   "nome": "Meu Doce Acabou Hoje",
+   "tipo": "Bloco / coletivo de carnaval",
+   "enq": "a confirmar",
+   "cnpj": "—",
+   "mun": "Rio de Janeiro (Santa Teresa / Tijuca)",
+   "bio": "Coletivo de carnaval (também Gota Serena e Cartela Nova) que desfila na Quarta-feira de Cinzas em Santa Teresa desde 2016. Em 2026, despedida de 10 anos. Ligado ao Thales Browne.",
+   "tags": [
+    "carnaval",
+    "Santa Teresa",
+    "coletivo"
+   ],
+   "det": {
+    "geral": {
+     "Seguidores": "12,8 mil (Instagram)",
+     "Coletivos": "Meu Doce · Gota Serena · Cartela Nova",
+     "Desde": "2016",
+     "Marco": "despedida de 10 anos (2026)",
+     "Redes": "@meudoceacabouhoje"
+    },
+    "portfolio": [
+     {
+      "ano": "2026",
+      "texto": "Cortejo de despedida — 10 anos (vaquinha ~R$ 25,5 mil)"
+     }
+    ],
+    "docs": [],
+    "fotos": 0,
+    "links": [
+     {
+      "rotulo": "Instagram",
+      "url": "@meudoceacabouhoje"
+     },
+     {
+      "rotulo": "Vakinha (despedida)",
+      "url": "vakinha.com.br/…"
+     },
+     {
+      "rotulo": "Pasta no Drive (acervo)",
+      "url": "https://drive.google.com/drive/folders/1JY2CMaXPRJOHwrMKLd2fduDkNGQwHPTG"
+     }
+    ],
+    "marca": {
+     "cores": [
+      "#1F2A33"
+     ],
+     "logo": "Meu Doce Acabou Hoje",
+     "fonte": "—",
+     "obs": "a confirmar"
+    }
+   }
+  },
+  {
+   "id": "a11",
+   "nome": "Camisa 7",
+   "tipo": "Bloco de carnaval (samba)",
+   "enq": "a confirmar",
+   "cnpj": "—",
+   "mun": "Rio de Janeiro (Vila Isabel)",
+   "bio": "Bloco de samba direto de Vila Isabel, desde 2022 — “do templo do futebol ao templo do samba”.",
+   "tags": [
+    "carnaval",
+    "samba",
+    "Vila Isabel"
+   ],
+   "det": {
+    "geral": {
+     "Seguidores": "3.633 (Instagram)",
+     "Bairro": "Vila Isabel — Zona Norte",
+     "Fundação": "2022",
+     "Origem": "músicos locais de Vila Isabel — resgate do espaço pela própria comunidade musical",
+     "Trajeto": "Maracanã → Vila Isabel",
+     "Identidade": "samba e futebol, marcas do bairro",
+     "Mote": "Do templo do futebol ao templo do samba",
+     "Redes": "@blococamisa7_",
+     "Proponente (Sesc Pulsar)": "Victor Henrique Marques Belart — CNPJ 20.549.103/0001-12"
+    },
+    "portfolio": [
+     {
+      "ano": "2025/26",
+      "texto": "Inscrições com anexos assinados no acervo (Sesc Pulsar; anuência no Fluxos Fluminenses)"
+     }
+    ],
+    "docs": [
+     {
+      "nome": "ANEXO I por integrante (12, c/ assinados)",
+      "status": "ok"
+     },
+     {
+      "nome": "Anexos II e III + Carta proposta (assinados)",
+      "status": "ok"
+     },
+     {
+      "nome": "Anexo XV — direitos autorais (Sesc, assinado)",
+      "status": "ok"
+     },
+     {
+      "nome": "Minibios dos integrantes (Sesc Pulsar, 7)",
+      "status": "ok"
+     },
+     {
+      "nome": "CNPJ + currículo do Belart (proponente)",
+      "status": "ok"
+     },
+     {
+      "nome": "Fotos do bloco (4)",
+      "status": "ok"
+     },
+     {
+      "nome": "Portfólio / release do bloco",
+      "status": "pend"
+     }
+    ],
+    "fotos": 4,
+    "links": [
+     {
+      "rotulo": "Instagram",
+      "url": "@blococamisa7_"
+     },
+     {
+      "rotulo": "Pasta no Drive (acervo)",
+      "url": "https://drive.google.com/drive/folders/1tn067TqYShdvMfp4ymY6-CSgk5d5Cnu8"
+     }
+    ],
+    "marca": {
+     "cores": [
+      "#1F2A33"
+     ],
+     "logo": "Camisa 7",
+     "fonte": "—",
+     "obs": "a confirmar"
+    }
+   }
+  },
+  {
+   "id": "a12",
+   "nome": "Vamo ET",
+   "tipo": "Bloco de carnaval",
+   "enq": "a confirmar",
+   "cnpj": "—",
+   "mun": "Rio de Janeiro (Glória)",
+   "bio": "“ET do Carnaval” — Grêmio Recreativo Absurdo de Magia Vamo E.T., bloco de rua da Glória desde 2009. Repertório 100% autoral e o Boneco E.T. como símbolo. 💚👽🛸",
+   "tags": [
+    "carnaval",
+    "rua",
+    "autoral",
+    "Glória",
+    "VamoET"
+   ],
+   "det": {
+    "geral": {
+     "Nome oficial": "Grêmio Recreativo Absurdo de Magia Vamo E.T.",
+     "Desde": "2009 (o Boneco E.T. surgiu em 05/12/2009) — 15º desfile",
+     "Local": "Praça do Russel (“Praça do Cabeção do Getúlio”), Glória — Zona Sul",
+     "Desfile": "Terça-feira de Carnaval",
+     "Repertório": "100% autoral — marchinhas e sambas; temas: carnaval, espaço sideral, irreverência e crítica social",
+     "Símbolo": "Boneco E.T. de pelúcia (1,30 m, 13 kg) — releitura do E.T. de Spielberg",
+     "Comunidade": "foliões se chamam “etesudos, etesudas, etesudes”",
+     "Associação": "associado ao “Coreto” — Associação de Blocos; desfile registrado na Riotur",
+     "Público": "~2.000 no desfile; oficinas 15×30 → ~2.450 direto, ~5 mil indireto",
+     "Imprensa": "Encontro com Fátima Bernardes (Globo); jornais O Globo e O Dia; Prêmio Melhor Clipe (júri popular) — Festival Clipes e Bandas 2012",
+     "Seguidores": "5.602 (Instagram)",
+     "Redes": "@bloco.vamoet · FB /BlocoVAMO.ET"
+    },
+    "portfolio": [
+     {
+      "ano": "2009",
+      "texto": "Nasce o Boneco E.T. (05/12) — persona que circulou pelos blocos da cidade"
+     },
+     {
+      "ano": "2012",
+      "texto": "Prêmio Melhor Clipe (júri popular) no Festival Clipes e Bandas"
+     },
+     {
+      "ano": "2019",
+      "texto": "Desfile e pré-carnaval (registros em YouTube/IG)"
+     },
+     {
+      "ano": "2020",
+      "texto": "Desfile na Glória"
+     },
+     {
+      "ano": "2022",
+      "texto": "Desfiles: Aterro (Quiosque 09) e Bola Preta c/ samba SIBC; pré-carnaval com a Garagem Delas"
+     },
+     {
+      "ano": "2023",
+      "texto": "Desfile e ensaios; participação no Encontro com Fátima Bernardes"
+     },
+     {
+      "ano": "2024",
+      "texto": "Desfile registrado na Riotur (13/02); pré-carnaval Bola Preta"
+     },
+     {
+      "ano": "2025",
+      "texto": "Temporada nov/2024–mar/2025: oficinas de música/adereços/figurino + desfile na Praça do Russel"
+     }
+    ],
+    "docs": [
+     {
+      "nome": "Projeto Vamo E.T. (texto-base p/ edital)",
+      "status": "ok"
+     },
+     {
+      "nome": "Apresentação/pesquisa histórica (clipping de mídia)",
+      "status": "ok"
+     }
+    ],
+    "fotos": 0,
+    "links": [
+     {
+      "rotulo": "Instagram",
+      "url": "https://www.instagram.com/bloco.vamoet/"
+     },
+     {
+      "rotulo": "Facebook",
+      "url": "https://www.facebook.com/BlocoVAMO.ET"
+     },
+     {
+      "rotulo": "Pasta no Drive (acervo)",
+      "url": "https://drive.google.com/drive/folders/1-Mwhj-KB3mEp2RVZDFyuEFMVGc2V_NnR"
+     }
+    ],
+    "marca": {
+     "cores": [
+      "#12965A",
+      "#1F2A33"
+     ],
+     "logo": "Vamo ET",
+     "fonte": "—",
+     "obs": "identidade verde/alienígena (💚👽🛸)"
+    }
+   }
+  },
+  {
+   "id": "a13",
+   "nome": "Bloco 442",
+   "tipo": "Bloco de carnaval (brass band)",
+   "enq": "a confirmar",
+   "cnpj": "—",
+   "mun": "Rio de Janeiro",
+   "bio": "Brass band + bloco de carnaval — “um redemoinho de cores, música e folia”. Também toca em casamentos.",
+   "tags": [
+    "carnaval",
+    "brass band",
+    "samba"
+   ],
+   "det": {
+    "geral": {
+     "Seguidores": "29,7 mil (Instagram)",
+     "Formato": "Brass band + bloco",
+     "Repertório": "hits carnavalescos e clássicos do samba, com bateria frenética",
+     "Serviços": "Carnaval, shows e casamentos",
+     "Contato": "contato@bloco442.com",
+     "Redes": "@bloco442"
+    },
+    "portfolio": [],
+    "docs": [],
+    "fotos": 0,
+    "links": [
+     {
+      "rotulo": "Instagram",
+      "url": "@bloco442"
+     },
+     {
+      "rotulo": "Benfeitoria",
+      "url": "benfeitoria.com"
+     },
+     {
+      "rotulo": "Pasta no Drive (acervo)",
+      "url": "https://drive.google.com/drive/folders/1Izo3ajemSJkiVdqd9R3SY3IJDAvFaXkO"
+     }
+    ],
+    "marca": {
+     "cores": [
+      "#1F2A33"
+     ],
+     "logo": "Bloco 442",
+     "fonte": "—",
+     "obs": "a confirmar"
+    }
+   }
+  },
+  {
+   "id": "a14",
+   "nome": "Sofridão",
+   "tipo": "Bloco / baile de carnaval",
+   "enq": "a confirmar",
+   "cnpj": "—",
+   "mun": "Rio de Janeiro",
+   "bio": "Bloco/baile de sofrência, pisadinha, sertanejo e funk. Faz o “Sextou do Sofridão”, o Arraia e edições de carnaval.",
+   "tags": [
+    "sofrência",
+    "pisadinha",
+    "funk",
+    "carnaval"
+   ],
+   "det": {
+    "geral": {
+     "Seguidores": "8.299 (Instagram)",
+     "Estilo": "Sofrência, pisadinha, sertanejo e funk",
+     "Eventos": "Sextou do Sofridão · Arraia Sofridão · carnaval",
+     "Links": "shotgun.live",
+     "Redes": "@blocosofridao"
+    },
+    "portfolio": [],
+    "docs": [],
+    "fotos": 0,
+    "links": [
+     {
+      "rotulo": "Instagram",
+      "url": "@blocosofridao"
+     },
+     {
+      "rotulo": "Pasta no Drive (acervo)",
+      "url": "https://drive.google.com/drive/folders/1aywBL96KUvlyLkKgJJBYOTwqTjnkFOCQ"
+     }
+    ],
+    "marca": {
+     "cores": [
+      "#1F2A33"
+     ],
+     "logo": "Sofridão",
+     "fonte": "—",
+     "obs": "a confirmar"
+    }
+   }
+  },
+  {
+   "id": "a15",
+   "nome": "Forró de Rabeca (Dany Souto)",
+   "tipo": "Banda (forró-choro-jazz)",
+   "enq": "a confirmar",
+   "cnpj": "—",
+   "mun": "Rio de Janeiro (Lapa)",
+   "bio": "Banda movida pela rabeca, liderada por Dany Souto (voz e rabeca), desde 2013. Das rodas na Rua do Ouvidor ao Circo Voador e à Virada Cultural de SP; álbum de estreia via edital Retomada Cultural RJ.",
+   "tags": [
+    "forró",
+    "choro",
+    "jazz",
+    "rabeca",
+    "Lapa"
+   ],
+   "det": {
+    "geral": {
+     "Líder": "Dany Souto (voz e rabeca) — multi-instrumentista (violão, cavaco, rabeca); do Samba de Malês (1º lugar no SAMBRAHMA 2007) e do Bip Bip; passou pela SUPLEI (lei de incentivo/RJ)",
+     "Desde": "2013",
+     "Estilo": "Forró-Choro-Jazz (rabeca); rodas semanais",
+     "Formação": "Dany Souto (voz/rabeca), Marcelo Bruno (baixo/voz), Rodrigo Pacato (percussão/voz), André Bitto (sanfona), Potyra Castro (percussão/voz), Nayara Danielly (sax/flauta), Diane Terra (zabumba/voz)",
+     "Palcos": "Circo Voador · Virada Cultural SP · Arraiá da Praça da Harmonia · Rua do Ouvidor/Lapa (até 1.500/semana) · Pedra do Leme (~3.000)",
+     "Reconhecimento": "3 indicações ao Prêmio Profissionais da Música (2020)",
+     "Fomento": "álbum de estreia via edital Retomada Cultural RJ (2020)"
+    },
+    "portfolio": [
+     {
+      "ano": "2013",
+      "texto": "Formação do Forró de Rabeca; rodas na Rua do Ouvidor (Lapa)"
+     },
+     {
+      "ano": "2019",
+      "texto": "Turnê solo de Dany Souto na Europa (Portugal/França)"
+     },
+     {
+      "ano": "2020",
+      "texto": "3 indicações ao Prêmio Profissionais da Música; álbum de estreia (edital Retomada Cultural RJ)"
+     },
+     {
+      "ano": "atual",
+      "texto": "Rodas de Forró-Choro-Jazz semanais com participações convidadas"
+     }
+    ],
+    "docs": [
+     {
+      "nome": "Release/Portfólio Forró de Rabeca (2023 + resumido)",
+      "status": "ok"
+     },
+     {
+      "nome": "Release/Portfólio Dany Souto (solo)",
+      "status": "ok"
+     },
+     {
+      "nome": "Ficha técnica / minibiografias (7 integrantes)",
+      "status": "ok"
+     }
+    ],
+    "fotos": 0,
+    "links": [
+     {
+      "rotulo": "Pasta no Drive (acervo)",
+      "url": "https://drive.google.com/drive/folders/1HMN3pY8KCLzk0vBePx7E8JvhT445eiC0"
+     }
+    ],
+    "marca": {
+     "cores": [
+      "#8A4B2A",
+      "#E0A75E"
+     ],
+     "logo": "Forró de Rabeca",
+     "fonte": "—",
+     "obs": "a confirmar"
+    }
+   }
+  },
+  {
+   "id": "a16",
+   "nome": "Jean Charnaux",
+   "tipo": "Artista solo (violonista/compositor/arranjador)",
+   "enq": "a confirmar",
+   "cnpj": "—",
+   "mun": "Rio de Janeiro",
+   "bio": "Violonista, compositor e arranjador (1987). Mestre em performance pela UFRJ, com aperfeiçoamento na Los Angeles Music Academy (EUA). Compõe para violão, canta e escreve arranjos para orquestra sinfônica; parcerias com Fátima Guedes, Guinga, Júlia Mestre e Danilo Cutrim.",
+   "tags": [
+    "violão",
+    "MPB",
+    "instrumental",
+    "compositor",
+    "arranjador"
+   ],
+   "det": {
+    "geral": {
+     "Nascimento": "1987",
+     "Formação": "Mestre em performance musical (UFRJ) · aperfeiçoamento na Los Angeles Music Academy (EUA)",
+     "Atuação": "Violão, composição, canto e arranjo (inclusive para orquestra sinfônica)",
+     "Prêmio": "Finalista do 26º Prêmio da Música Brasileira — categoria Revelação, com o álbum “Matrizes” (2014)",
+     "Parcerias": "Fátima Guedes, Guinga, Marcus Tardelli; nova geração: Júlia Mestre e Danilo Cutrim (Forfun)",
+     "Selo": "“Inquieto” (2025) pela UNXT (filial da Universal Music Group)",
+     "Destaque": "“Inquieto” alcançou alta classificação em playlist editorial internacional do Spotify",
+     "Redes": "@jeancharnaux · jeancharnaux.com"
+    },
+    "portfolio": [
+     {
+      "ano": "2014",
+      "texto": "Álbum “Matrizes” — finalista do 26º Prêmio da Música Brasileira (Revelação)"
+     },
+     {
+      "ano": "2015–2017",
+      "texto": "Turnês solo pela Europa (Alemanha, Itália, França); destaque no festival Brazilian Guitar Night — Mainz, Edenkoben e Cochem"
+     },
+     {
+      "ano": "2019–2020",
+      "texto": "Dois álbuns com Danilo Cutrim pelo projeto DaBossa"
+     },
+     {
+      "ano": "2025",
+      "texto": "2º álbum autoral solo “Inquieto” (UNXT/Universal); alta classificação em playlist editorial internacional do Spotify"
+     },
+     {
+      "ano": "palcos",
+      "texto": "Theatro Municipal (RJ), Teatro Bradesco (SP), Sesc Vila Mariana e Belenzinho (SP) — ao lado de Emílio Santiago, João Bosco, Ana Carolina, Leila Pinheiro, Zélia Duncan e Mônica Salmaso"
+     }
+    ],
+    "docs": [
+     {
+      "nome": "Site oficial / portfólio",
+      "status": "ok"
+     }
+    ],
+    "fotos": 0,
+    "links": [
+     {
+      "rotulo": "Site",
+      "url": "https://www.jeancharnaux.com/"
+     },
+     {
+      "rotulo": "Instagram",
+      "url": "https://www.instagram.com/jeancharnaux"
+     },
+     {
+      "rotulo": "Spotify",
+      "url": "https://open.spotify.com/artist/5Ll9VJiJWBtGoGohsL75bO"
+     },
+     {
+      "rotulo": "YouTube",
+      "url": "https://www.youtube.com/jeancharnaux"
+     },
+     {
+      "rotulo": "Pasta no Drive (acervo)",
+      "url": "https://drive.google.com/drive/folders/1zkpqVmYZXbjWaANSciasexFAHXlKeDv9"
+     }
+    ],
+    "marca": {
+     "cores": [
+      "#2E2A44",
+      "#C9A24B"
+     ],
+     "logo": "Jean Charnaux",
+     "fonte": "—",
+     "obs": "a confirmar"
+    }
+   }
+  }
+ ],
+ "projetos": [
+  {
+   "id": "p1",
+   "nome": "Carnaval 2027",
+   "artistaId": "a1",
+   "tipo": "Carnaval",
+   "meta": "a definir",
+   "ano": "2027",
+   "producao": [
+    {
+     "texto": "Decidir formato jurídico (coletivo/MEI/associação)",
+     "status": "and"
+    },
+    {
+     "texto": "Montar portfólio de 2 anos",
+     "status": "fazer"
+    },
+    {
+     "texto": "Definir percurso e concentração no Leme",
+     "status": "fazer"
+    },
+    {
+     "texto": "Filiar-se a uma Liga (via incentivo Riotur)",
+     "status": "fazer"
+    }
+   ],
+   "equipeIds": [
+    "eq2",
+    "eq1"
+   ]
+  },
+  {
+   "id": "p2",
+   "nome": "Temporada 2026",
+   "artistaId": "a2",
+   "tipo": "Circulação",
+   "meta": "a definir",
+   "ano": "2026",
+   "producao": [
+    {
+     "texto": "Organizar release e portfólio",
+     "status": "fazer"
+    },
+    {
+     "texto": "Mapear casas e datas",
+     "status": "and"
+    },
+    {
+     "texto": "Site do Samba de Ponta",
+     "status": "and"
+    }
+   ],
+   "equipeIds": [
+    "eq5",
+    "eq2"
+   ]
+  },
+  {
+   "id": "p7",
+   "nome": "Ponta de Lança (evento)",
+   "artistaId": "a2",
+   "tipo": "Evento",
+   "meta": "—",
+   "ano": "2026",
+   "producao": [
+    {
+     "texto": "Edição 01/08/2026 — fechada (prejuízo R$ 3.156)",
+     "status": "feito"
+    },
+    {
+     "texto": "Rever custo fixo p/ próxima edição",
+     "status": "fazer"
+    }
+   ],
+   "equipeIds": [
+    "eq2",
+    "eq5"
+   ]
+  },
+  {
+   "id": "p3",
+   "nome": "“Parece que foi hoje”",
+   "artistaId": "a3",
+   "tipo": "Show / circuito",
+   "meta": "R$ 1.250.000",
+   "ano": "2026/27",
+   "producao": [
+    {
+     "texto": "Projeto base Rouanet + comercial",
+     "status": "and"
+    },
+    {
+     "texto": "Orçamento (circuito 5 praças)",
+     "status": "and"
+    },
+    {
+     "texto": "Aprovação em lei de incentivo",
+     "status": "fazer"
+    }
+   ],
+   "equipeIds": [
+    "eq2"
+   ]
+  },
+  {
+   "id": "p4",
+   "nome": "Garagem Delas",
+   "artistaId": "a4",
+   "tipo": "Prêmio",
+   "meta": "R$ 30.000",
+   "ano": "2026",
+   "producao": [
+    {
+     "texto": "Inscrição enviada no Prêmio Ações Locais (08/09/2026)",
+     "status": "feito"
+    },
+    {
+     "texto": "Se classificada: Escuta presencial (Aline + uma ambulante fundadora), ~20 min de fala + 10 de perguntas",
+     "status": "fazer"
+    },
+    {
+     "texto": "Levantar nº do PL/lei do patrimônio imaterial e a data/foto da menção honrosa da Câmara",
+     "status": "fazer"
+    }
+   ],
+   "equipeIds": [
+    "eq2"
+   ]
+  },
+  {
+   "id": "p5",
+   "nome": "Largo do Boticário",
+   "artistaId": "a5",
+   "tipo": "Prêmio / credenciamento",
+   "meta": "R$ 30–40 mil",
+   "ano": "2026",
+   "producao": [
+    {
+     "texto": "Inscrição enviada no Prêmio Ações Locais (08/09/2026)",
+     "status": "feito"
+    },
+    {
+     "texto": "Credenciamento Rodas de Samba (SMC 02/2024) obtido",
+     "status": "feito"
+    },
+    {
+     "texto": "Se classificada: Escuta presencial",
+     "status": "fazer"
+    }
+   ],
+   "equipeIds": [
+    "eq5"
+   ]
+  },
+  {
+   "id": "p6",
+   "nome": "Lançamento / identidade",
+   "artistaId": "a6",
+   "tipo": "Show",
+   "meta": "a definir",
+   "ano": "2026/27",
+   "producao": [
+    {
+     "texto": "Fechar manual de marca",
+     "status": "and"
+    },
+    {
+     "texto": "Release e portfólio",
+     "status": "fazer"
+    }
+   ],
+   "equipeIds": [
+    "eq3",
+    "eq5"
+   ]
+  },
+  {
+   "id": "p8",
+   "nome": "Mídia kit & desenvolvimento",
+   "artistaId": "a7",
+   "tipo": "Desenvolvimento",
+   "meta": "a definir",
+   "ano": "2026",
+   "producao": [
+    {
+     "texto": "Finalizar mídia kit / portfólio",
+     "status": "and"
+    },
+    {
+     "texto": "Release de imprensa",
+     "status": "fazer"
+    },
+    {
+     "texto": "Organizar acervo de fotos e vídeos",
+     "status": "and"
+    },
+    {
+     "texto": "Definir handles atuais dos parceiros",
+     "status": "fazer"
+    }
+   ],
+   "equipeIds": [
+    "eq2",
+    "eq6"
+   ]
+  },
+  {
+   "id": "p9",
+   "nome": "Vem casar comigo, Zé",
+   "artistaId": "a8",
+   "tipo": "Videoclipe",
+   "meta": "R$ 20.000",
+   "ano": "2026/27",
+   "producao": [
+    {
+     "texto": "Inscrição enviada no Mosaico Rio (03/09/2026)",
+     "status": "feito"
+    },
+    {
+     "texto": "Autodeclaração de diversidade (Anexo XIII v3, LGBTQIAPN+) assinada",
+     "status": "feito"
+    },
+    {
+     "texto": "Se aprovado: produzir o clipe em versão única acessível (legendagem descritiva + janela de Libras)",
+     "status": "fazer"
+    }
+   ],
+   "equipeIds": [
+    "eq3",
+    "eq6"
+   ]
+  },
+  {
+   "id": "p10",
+   "nome": "Circuito Blocos da Cidade",
+   "artistaId": "a1",
+   "tipo": "Coletivo — Rouanet (pré-carnaval + desfiles + formação)",
+   "meta": "escopo preliminar (ago/2026)",
+   "ano": "2027",
+   "producao": [
+    {
+     "texto": "Projeto coletivo com 9 blocos: Simpatia, Bloco Brasil, Pra Iaiá, Meu Doce, Camisa 7, Vamo ET, Sofridão, 442 e Bloco Virtual",
+     "status": "and"
+    },
+    {
+     "texto": "3 níveis: pré-carnaval em espaço fixo (2 fins de semana) · 9 desfiles territoriais gratuitos · 3 encontros de formação",
+     "status": "and"
+    },
+    {
+     "texto": "Validar escopo e colher anuências dos 9 blocos",
+     "status": "fazer"
+    },
+    {
+     "texto": "Definir orçamento Rouanet, proponente e enquadramento",
+     "status": "fazer"
+    },
+    {
+     "texto": "Mapear territórios/percursos dos 9 desfiles",
+     "status": "fazer"
+    },
+    {
+     "texto": "Estruturar os 3 encontros (ambiente · memória · futuro institucional)",
+     "status": "fazer"
+    },
+    {
+     "texto": "Culminância prevista para 2028",
+     "status": "and"
+    }
+   ],
+   "equipeIds": []
+  },
+  {
+   "id": "p11",
+   "nome": "Editais 2026 (Sesc Pulsar + Fluxos)",
+   "artistaId": "a11",
+   "tipo": "Captação",
+   "meta": "a definir",
+   "ano": "2026",
+   "producao": [],
+   "equipeIds": [
+    "eq2"
+   ]
+  },
+  {
+   "id": "p12",
+   "nome": "Circuito do Samba RJ",
+   "artistaId": "a5",
+   "tipo": "Circulação",
+   "meta": "R$ 683.090",
+   "ano": "2027",
+   "producao": [
+    {
+     "texto": "Inscrição finalizada no SIIPC (Edital ISS 2026, Linha 3)",
+     "status": "feito"
+    },
+    {
+     "texto": "6 edições mai–nov/2027: Arena Dicró, Areninhas Renato Russo / Herbert Vianna / Jacob do Bandolim, Beco da Cultura e Renascença Clube",
+     "status": "fazer"
+    },
+    {
+     "texto": "Curadoria artística: Sambótica (articulação das rodas convidadas)",
+     "status": "and"
+    },
+    {
+     "texto": "Se aprovado: captar patrocínio ISS (projeto habilitado a captar, não é dinheiro na conta)",
+     "status": "fazer"
+    }
+   ],
+   "equipeIds": [
+    "eq2"
+   ]
+  },
+  {
+   "id": "p13",
+   "nome": "Oficina de Percussão",
+   "artistaId": "a1",
+   "tipo": "Formação",
+   "meta": "R$ 30.000",
+   "ano": "2026",
+   "producao": [
+    {
+     "texto": "Inscrição enviada no Prêmio Ações Locais (08/09/2026)",
+     "status": "feito"
+    },
+    {
+     "texto": "Resolver a declaração do Anexo 5 diante da PJ que fatura os shows do bloco",
+     "status": "fazer"
+    },
+    {
+     "texto": "Se classificada: Escuta presencial (Pedro + um professor)",
+     "status": "fazer"
+    },
+    {
+     "texto": "Confirmar dia e mês exatos da fundação (ano 2009 confirmado)",
+     "status": "fazer"
+    }
+   ],
+   "equipeIds": [
+    "eq2",
+    "eq1"
+   ]
+  },
+  {
+   "id": "p14",
+   "nome": "Mestre Moa",
+   "artistaId": "a16",
+   "tipo": "Videoclipe",
+   "meta": "R$ 20.000",
+   "ano": "2026/27",
+   "producao": [
+    {
+     "texto": "Inscrição enviada no Mosaico Rio (03/09/2026)",
+     "status": "feito"
+    },
+    {
+     "texto": "Se aprovado: gravar o capoeirista em luz negra com pintura neon (azul, amarelo e branco do Afoxé Badauê)",
+     "status": "fazer"
+    },
+    {
+     "texto": "Se aprovado: versão única acessível (legendagem descritiva + janela de Libras)",
+     "status": "fazer"
+    }
+   ],
+   "equipeIds": [
+    "eq3",
+    "eq6"
+   ]
+  },
+  {
+   "id": "p15",
+   "nome": "Cama de Areia",
+   "artistaId": "a15",
+   "tipo": "Videoclipe",
+   "meta": "R$ 20.000",
+   "ano": "2026/27",
+   "producao": [
+    {
+     "texto": "Inscrição enviada no Mosaico Rio (03/09/2026)",
+     "status": "feito"
+    },
+    {
+     "texto": "Se aprovado: gravar em película (forró + samba-chula)",
+     "status": "fazer"
+    },
+    {
+     "texto": "Completar trajetórias de João Paulo Bittencourt e Rodrigo Cirne para a ficha do fonograma",
+     "status": "fazer"
+    }
+   ],
+   "equipeIds": [
+    "eq3",
+    "eq6"
+   ]
+  }
+ ],
+ "editais": [
+  {
+   "id": "ed1",
+   "nome": "Mosaico Rio 2026/27 — Música (Firjan SESI)",
+   "esfera": "est",
+   "mec": "Fomento direto",
+   "area": "Música — videoclipe (Inéditos)",
+   "eleg": [
+    "PJ",
+    "MEI (RJ)"
+   ],
+   "teto": "R$ 20.000 (10+10 selecionados)",
+   "prazo": "encerrado (03/09/2026)",
+   "prazoIso": "2026-09-03",
+   "status": "closed",
+   "verif": "11/09/2026",
+   "orgao": "Firjan SESI (paraestatal, RJ)",
+   "objeto": "Edital multilinguagem do SESI-RJ. A faixa de música contempla 10 videoclipes de R$ 20 mil para fonogramas inéditos (linha “Inéditos”); também há cênicas, artes visuais e literatura (R$ 8 mil–100 mil).",
+   "publico": "PJ e MEI com sede no Estado do RJ.",
+   "comoInscrever": "Inscrição online no portal do Mosaico Rio (Firjan SESI). Anexar proposta, ficha técnica e portfólio.",
+   "contrapartidas": "Ações de difusão/formação definidas no edital.",
+   "docsExig": [
+    "Música de trabalho (áudio + letra)",
+    "Argumento/sinopse do videoclipe",
+    "Ficha técnica do fonograma",
+    "Ficha técnica do videoclipe",
+    "Histórico do artista + clipping",
+    "Declaração de direitos autorais",
+    "Autodeclaração de diversidade"
+   ],
+   "linkEdital": "",
+   "linkDrive": "https://drive.google.com/drive/folders/1l7cuUZy9ZR6MhF6GsCq8U-zy-Sr7_xaa",
+   "obs": "Encerrado. O coletivo inscreveu 3 videoclipes: “Vem casar comigo, Zé” (Ellen Motta), “Mestre Moa” (Jean Charnaux) e “Cama de Areia” (Forró de Rabeca). Textos, fichas e defesas nos dossiês do Project (mosaico-firjan-*). Aguardando resultado."
+  },
+  {
+   "id": "ed2",
+   "nome": "Prêmio Ações Locais (PNAB / Cultura Viva)",
+   "esfera": "mun",
+   "mec": "Fomento direto",
+   "area": "Territorial · exige 2+ anos de atuação",
+   "eleg": [
+    "Coletivo (repr. por PF)",
+    "OSC / Ponto de Cultura"
+   ],
+   "teto": "R$ 30k (coletivo) · R$ 40k (CNPJ)",
+   "prazo": "encerrado (08/09/2026, prorrogado)",
+   "prazoIso": "2026-09-08",
+   "status": "closed",
+   "verif": "11/09/2026",
+   "orgao": "Secretaria Municipal de Cultura do Rio (SMC) — PNAB + Cultura Viva",
+   "objeto": "Premiação a coletivos, grupos e Pontos de Cultura que já atuam nos territórios. Fomento direto — dinheiro na conta via Termo de Execução Cultural (TEC), sem passar por empresa.",
+   "publico": "Coletivos representados por PF (com declaração dos integrantes), grupos e Pontos de Cultura / OSC. Exige comprovação de 2+ anos de atuação.",
+   "comoInscrever": "Inscrição pela plataforma da SMC / Carioca Digital. Prazo prorrogado até 08/09/2026.",
+   "contrapartidas": "Relatório de execução (prestação de contas simplificada do TEC).",
+   "docsExig": [
+    "Formulário de inscrição",
+    "Portfólio comprobatório (2+ anos)",
+    "Comprovação anterior a ago/2024",
+    "Anexo 4 — Declaração do Coletivo (todos assinam)",
+    "Anexo 5 — Não Constituição Jurídica (se coletivo informal)",
+    "RG/CPF do representante",
+    "Comprovante de residência",
+    "Dados bancários"
+   ],
+   "linkEdital": "",
+   "linkDrive": "https://drive.google.com/drive/folders/1baZc6aJfxF_Ct5fGu9ZCoPCdPmJU-gwm",
+   "obs": "Encerrado. O coletivo inscreveu 3 candidaturas: Oficina de Percussão (Bloco Brasil), Garagem Delas e Largo do Boticário (Sambótica). Prêmio de reconhecimento: sem orçamento e sem prestação de contas. Nota = portfólio (100 pts) + Escuta presencial (100 pts); ≥50 pts na 1ª etapa convoca para a Escuta e pré-certifica como Ponto de Cultura. Aguardando resultado."
+  },
+  {
+   "id": "ed3",
+   "nome": "Rouanet nas Favelas 2",
+   "esfera": "fed",
+   "mec": "Renúncia + direto",
+   "area": "Música/hip-hop/afro",
+   "eleg": [
+    "PJ (com/sem fins)"
+   ],
+   "teto": "até R$ 200k",
+   "prazo": "13/10/2026",
+   "prazoIso": "2026-10-13",
+   "status": "open",
+   "verif": "17/08/2026",
+   "orgao": "MinC + Instituto Cultural Vale + CUFA",
+   "objeto": "Edital regional da Rouanet para projetos de favelas: música, hip-hop, cênicas, afro e audiovisual. Teto de R$ 200 mil por projeto.",
+   "publico": "PJ com ou sem fins lucrativos, com sede na cidade.",
+   "comoInscrever": "Inscrição no sistema do edital (janela 15/08–13/10/2026).",
+   "contrapartidas": "Contrapartidas Rouanet (ingressos gratuitos/populares, ações formativas).",
+   "docsExig": [
+    "Projeto técnico",
+    "Planilha orçamentária",
+    "Portfólio",
+    "Documentos do proponente (PJ)",
+    "Comprovação de sede/atuação no território"
+   ],
+   "linkEdital": "",
+   "linkDrive": "",
+   "obs": ""
+  },
+  {
+   "formId": "salic-proposta",
+   "id": "ed4",
+   "nome": "Rouanet — janela SALIC",
+   "esfera": "fed",
+   "mec": "Renúncia fiscal",
+   "area": "Todas",
+   "eleg": [
+    "PF",
+    "MEI",
+    "PJ"
+   ],
+   "teto": "tetos IN 29",
+   "prazo": "31/10/2026",
+   "prazoIso": "2026-10-31",
+   "status": "open",
+   "verif": "17/08/2026",
+   "orgao": "Ministério da Cultura (PRONAC/SALIC) — IN nº 29/2026",
+   "objeto": "Mecanismo geral da Lei Rouanet: aprovar o projeto dá o direito de captar de empresas (dedução de IR). Não é dinheiro na conta — exige esforço comercial de captação. Janela de propostas 1º/fev a 31/out.",
+   "publico": "PF (até R$ 500 mil), MEI (até R$ 1,5 mi), PJ cultural (tetos por segmento até R$ 6–15 mi). Coletivo sem CNPJ não é proponente direto.",
+   "comoInscrever": "Cadastro e submissão no sistema SALIC (salic.cultura.gov.br).",
+   "contrapartidas": "Mín. 10% de ingressos gratuitos, 20% a preço popular; ações formativas p/ 10% do público.",
+   "docsExig": [
+    "Projeto técnico",
+    "Planilha orçamentária detalhada",
+    "Portfólio",
+    "Documentos do proponente",
+    "Cartas de anuência"
+   ],
+   "linkEdital": "salic.cultura.gov.br",
+   "linkDrive": "",
+   "obs": ""
+  },
+  {
+   "id": "ed5",
+   "nome": "Cadastro de blocos Carnaval 2027 (Riotur)",
+   "esfera": "mun",
+   "mec": "Incentivo público",
+   "area": "Carnaval",
+   "eleg": [
+    "Blocos cadastrados"
+   ],
+   "teto": "R$ 5k–50k",
+   "prazo": "~ago/set 2026",
+   "prazoIso": "",
+   "status": "prev",
+   "verif": "17/08/2026",
+   "orgao": "Riotur / Prefeitura do Rio (Portaria Riotur 321/2025)",
+   "objeto": "Cadastro anual dos blocos + incentivo escalonado por porte: até 3 mil foliões R$ 5 mil; 3–10 mil R$ 25 mil; +10 mil R$ 50 mil (em 2 parcelas). Desde 2026, autoriza o bloco a buscar patrocínio próprio com aval da Riotur.",
+   "publico": "Blocos com filiação a liga independente OU reconhecimento como patrimônio cultural OU CNPJ 3+ anos com 5+ desfiles; e cadastro protocolado no ano anterior.",
+   "comoInscrever": "Cadastro pelo sistema jeap.rio/BLO e Carioca Digital (ver dossiê cadastro-riotur-blocos-2027). Abre ~ago/set 2026 — MONITORAR.",
+   "contrapartidas": "Usos permitidos do incentivo: fantasias/adereços, aluguel de trio elétrico, cachê de músicos, direitos autorais e transporte.",
+   "docsExig": [
+    "Cadastro no Carioca Digital / jeap.rio",
+    "RG/CNH do representante",
+    "Foto do representante",
+    "Percurso + concentração/dispersão",
+    "Público estimado (faixa CBMERJ)",
+    "Autorizações estaduais (PM/PC/CBM)"
+   ],
+   "linkEdital": "riotur.prefeitura.rio",
+   "linkDrive": "",
+   "obs": "Confirmar no formulário 2027 se Público Estimado virou seleção por faixa CBMERJ (NT 5-05)."
+  },
+  {
+   "id": "ed6",
+   "nome": "Folia RJ / Bloco nas Ruas RJ (SECEC-RJ)",
+   "esfera": "est",
+   "mec": "Fomento direto",
+   "area": "Carnaval",
+   "eleg": [
+    "MEI / PJ (cat. A/B)",
+    "Associação / Liga (cat. C)"
+   ],
+   "teto": "R$ 30k (A/B) · R$ 130k (C)",
+   "prazo": "~out/nov 2026",
+   "prazoIso": "",
+   "status": "prev",
+   "verif": "17/08/2026",
+   "orgao": "SECEC-RJ (Lei 10.730/2025 — Programa de Incentivo aos Blocos)",
+   "objeto": "Editais estaduais anuais para blocos, na plataforma Desenvolve Cultura. Em 2026: R$ 20 mi em 5 editais, prêmios de até R$ 150 mil, com categoria própria afro/afoxés e foco no interior (Folias Fluminenses).",
+   "publico": "MEI/PJ (categorias A/B); Associação/Liga (categoria C).",
+   "comoInscrever": "Inscrição na plataforma Desenvolve Cultura (SECEC-RJ). Abre tipicamente out/nov.",
+   "contrapartidas": "Definidas por edital.",
+   "docsExig": [
+    "Projeto do bloco",
+    "Documentos do proponente (MEI/PJ/associação)",
+    "Comprovação de desfiles anteriores",
+    "Planilha orçamentária"
+   ],
+   "linkEdital": "",
+   "linkDrive": "",
+   "obs": "Calendário estadual imprevisível em 2026 (defeso eleitoral + crise no RJ)."
+  },
+  {
+   "id": "ed7",
+   "nome": "Ambev “Brinde à Rua” 2027",
+   "esfera": "priv",
+   "mec": "Patrocínio",
+   "area": "Carnaval",
+   "eleg": [
+    "Blocos cadastrados"
+   ],
+   "teto": "R$ 10k–20k",
+   "prazo": "~nov 2026",
+   "prazoIso": "",
+   "status": "prev",
+   "verif": "17/08/2026",
+   "orgao": "Ambev (via Prosas)",
+   "objeto": "Patrocínio de marca a blocos cadastrados: R$ 10 mil a R$ 20 mil por bloco. No Carnaval 2026 abriu em nov/dez 2025 — provável reabertura ~nov/2026 para 2027.",
+   "publico": "Blocos cadastrados na Prefeitura, com aval da Riotur para patrocínio próprio.",
+   "comoInscrever": "Inscrição na plataforma Prosas (prosas.com.br) quando abrir.",
+   "contrapartidas": "Ativação de marca / visibilidade conforme regras do patrocinador.",
+   "docsExig": [
+    "Media kit do bloco (público, trajeto, redes)",
+    "Cadastro na Prefeitura/Riotur",
+    "Documentos do proponente"
+   ],
+   "linkEdital": "prosas.com.br",
+   "linkDrive": "",
+   "obs": "Atenção ao conflito com patrocínio de marca concorrente da Ambev (ver dossiê Riotur/Ambev)."
+  },
+  {
+   "id": "ed8",
+   "nome": "Lei do ISS-Rio (Produtor)",
+   "esfera": "mun",
+   "mec": "Renúncia fiscal",
+   "area": "Todas",
+   "eleg": [
+    "PJ carioca 2+ anos"
+   ],
+   "teto": "até R$ 1,68 mi",
+   "prazo": "Edital 2026: inscrição finalizada (31/05/2026)",
+   "prazoIso": "",
+   "status": "closed",
+   "verif": "10/09/2026",
+   "orgao": "Prefeitura do Rio — Lei 5.553/2013 (ISS)",
+   "objeto": "Maior lei municipal de incentivo do país (renúncia de ISS, até 20% do imposto da empresa). O Edital do Produtor habilita projetos a captar; teto de R$ 1,68 mi por projeto.",
+   "publico": "PJ constituída no município do Rio há 2+ anos, com finalidade cultural. PF/MEI/OSC ficam de fora deste mecanismo.",
+   "comoInscrever": "Sistema SIIPC — leideincentivo.rio.rj.gov.br (Módulo Produtores). Edital 2026 encerrado; ciclo anual, monitorar a próxima janela.",
+   "contrapartidas": "Contrapartidas culturais/sociais definidas no edital.",
+   "docsExig": [
+    "Projeto cultural",
+    "Planilha orçamentária",
+    "Portfólio",
+    "Documentos da PJ (2+ anos, sede no Rio)",
+    "Cadastro de Produtor Cultural (Carioca Digital)"
+   ],
+   "linkEdital": "portaldoiss.rio.gov.br",
+   "linkDrive": "",
+   "obs": "INSCRITO no Edital 2026: projeto \"Circuito do Samba RJ\" (candidatura c15), proponente CRIVO Gestão Artística Ltda — finalizado no sistema, aguardando resultado. Linha 3 (Produção Cultural na Rede Municipal de Cultura). Referência: 30% do orçamento ISS = R$ 204.927. Formulário completo e espelho no acervo/Project."
+  },
+  {
+   "id": "ed9",
+   "nome": "Sesc Pulsar 2026/27",
+   "esfera": "est",
+   "mec": "Fomento direto",
+   "area": "Música",
+   "eleg": [
+    "PJ",
+    "MEI",
+    "PF"
+   ],
+   "teto": "—",
+   "prazo": "resultado 18/08/2026",
+   "prazoIso": "2026-08-18",
+   "status": "closed",
+   "verif": "02/09/2026",
+   "orgao": "Sesc RJ",
+   "objeto": "Edital do Sesc RJ (R$ 36 mi) para artes visuais, audiovisual, circo, dança, teatro, literatura e música — inclui rodas de samba, forró, choro e DJs.",
+   "publico": "PJ, MEI e PF.",
+   "comoInscrever": "Portal do Sesc RJ. Inscrições encerraram em março; resultado em 18/08/2026.",
+   "contrapartidas": "Definidas no edital.",
+   "docsExig": [
+    "Projeto",
+    "Portfólio",
+    "Documentos do proponente"
+   ],
+   "linkEdital": "",
+   "linkDrive": "",
+   "obs": "Encerrado. Recorrente (bienal) — próxima janela ~jan–mar. Inscrições 2026 do coletivo: Samba de Ponta, Simpatia e Camisa 7 (docs nas pastas SESC PULSAR de cada artista no acervo). Resultado previsto p/ 18/08 — conferir e registrar."
+  },
+  {
+   "id": "ed10",
+   "nome": "Pró-Carioca Linguagens",
+   "esfera": "mun",
+   "mec": "Fomento direto",
+   "area": "Multi",
+   "eleg": [
+    "PJ",
+    "MEI",
+    "PF",
+    "Coletivo"
+   ],
+   "teto": "R$ 25k–200k",
+   "prazo": "encerrado",
+   "prazoIso": "",
+   "status": "closed",
+   "verif": "17/08/2026",
+   "orgao": "SMC-Rio (FOCA / Pró-Carioca — PNAB + Tesouro municipal)",
+   "objeto": "R$ 25 mi / 162 projetos em 10 linguagens (cultura urbana, música, cultura popular, carnaval). Projetos de R$ 25 mil a R$ 200 mil.",
+   "publico": "PJ, MEI, PF (pesquisa) e coletivos via entidade.",
+   "comoInscrever": "Plataforma da SMC / Carioca Digital.",
+   "contrapartidas": "Relatório de execução (TEC).",
+   "docsExig": [
+    "Projeto",
+    "Plano de trabalho",
+    "Portfólio",
+    "Documentos do proponente"
+   ],
+   "linkEdital": "",
+   "linkDrive": "",
+   "obs": "Encerrado. Recorrente — acompanhar a próxima edição do Pró-Carioca."
+  },
+  {
+   "id": "ed11",
+   "nome": "FEC Cultura Sustentável",
+   "esfera": "est",
+   "mec": "Fomento direto",
+   "area": "Multi",
+   "eleg": [
+    "PF",
+    "MEI",
+    "PJ",
+    "OSC"
+   ],
+   "teto": "R$ 20k–300k",
+   "prazo": "encerrado",
+   "prazoIso": "",
+   "status": "closed",
+   "verif": "17/08/2026",
+   "orgao": "SECEC-RJ / Fundo Estadual de Cultura (FEC)",
+   "objeto": "Pacote Cultura Sustentável (~R$ 31 mi): artesanato, cultura e ecologia, moda, gastronomia, Cultura e Fé, Mobilidades. Faixas de R$ 20 mil a R$ 300 mil.",
+   "publico": "PF, MEI, PJ e OSC (conforme o edital).",
+   "comoInscrever": "Plataforma da SECEC-RJ.",
+   "contrapartidas": "Definidas por edital.",
+   "docsExig": [
+    "Projeto",
+    "Portfólio",
+    "Documentos do proponente"
+   ],
+   "linkEdital": "",
+   "linkDrive": "",
+   "obs": "Encerrado."
+  },
+  {
+   "id": "ed12",
+   "nome": "PNAB Fluxos Fluminenses",
+   "esfera": "est",
+   "mec": "Fomento direto",
+   "area": "Multi",
+   "eleg": [
+    "PJ",
+    "MEI",
+    "Coletivo"
+   ],
+   "teto": "R$ 100k",
+   "prazo": "encerrado",
+   "prazoIso": "",
+   "status": "closed",
+   "verif": "02/09/2026",
+   "orgao": "SECEC-RJ (PNAB Ciclo 2)",
+   "objeto": "Fluxos Fluminenses 2026: R$ 22,5 mi, 225 vagas de R$ 100 mil em dança, teatro, música, artes visuais e patrimônio.",
+   "publico": "PJ, MEI, Coletivo.",
+   "comoInscrever": "Plataforma da SECEC-RJ.",
+   "contrapartidas": "Relatório de execução (TEC).",
+   "docsExig": [
+    "Projeto",
+    "Plano de trabalho",
+    "Portfólio",
+    "Documentos do proponente"
+   ],
+   "linkEdital": "",
+   "linkDrive": "https://drive.google.com/drive/folders/1FfQlKu1eCs1p07ZoD6bCrgPBvItMDbWs",
+   "obs": "Encerrado. Inscrição 2026 no acervo: anexos 03/04/07/08 preenchidos + anuências (Anexo 09) assinadas de Camisa 7 e Simpatia — 00_Editais/Inscricoes 2026 - Fluxos SESC SESEC. Conferir resultado."
+  },
+  {
+   "id": "ed13",
+   "nome": "Riotur 2025 (incentivo)",
+   "esfera": "mun",
+   "mec": "Incentivo público",
+   "area": "Carnaval",
+   "eleg": [
+    "Blocos"
+   ],
+   "teto": "R$ 5k–50k",
+   "prazo": "executado",
+   "prazoIso": "",
+   "status": "closed",
+   "verif": "17/08/2026",
+   "orgao": "Riotur / Prefeitura do Rio",
+   "objeto": "Edição 2025 do incentivo aos blocos (R$ 5k / 25k / 50k por porte). Já executado — referência do modelo que se repete em 2027 (ver ed5).",
+   "publico": "Blocos cadastrados.",
+   "comoInscrever": "—",
+   "contrapartidas": "—",
+   "docsExig": [],
+   "linkEdital": "",
+   "linkDrive": "",
+   "obs": "Executado. A rodada atual é o cadastro 2027 (ed5)."
+  },
+  {
+   "id": "ed14",
+   "nome": "Renner Cultural (via Prosas)",
+   "esfera": "priv",
+   "mec": "Patrocínio",
+   "area": "Moda/lifestyle + cultura",
+   "eleg": [
+    "PJ",
+    "Projeto em lei de incentivo (ICMS-RJ/Rouanet)"
+   ],
+   "teto": "até 80% do projeto",
+   "prazo": "~09/09/2026 (150 dias antes do carnaval)",
+   "prazoIso": "2026-09-09",
+   "status": "open",
+   "verif": "21/08/2026",
+   "orgao": "Instituto Lojas Renner (via Prosas)",
+   "objeto": "Patrocínio via lei de incentivo (ICMS-RJ/Rouanet), cobre até 80% do projeto. Aplicado ao “Parece que foi hoje” (Simpatia é Quase Amor).",
+   "publico": "PJ com projeto já aprovado em lei de incentivo (ICMS-RJ ou Rouanet).",
+   "comoInscrever": "Inscrição na plataforma Prosas (prosas.com.br). Prazo ~09/09/2026 (150 dias antes do carnaval).",
+   "contrapartidas": "Contrapartidas de marca / lei de incentivo.",
+   "docsExig": [
+    "Projeto aprovado em lei de incentivo",
+    "Planilha orçamentária",
+    "Portfólio/media kit",
+    "Documentos da PJ proponente"
+   ],
+   "linkEdital": "prosas.com.br",
+   "linkDrive": "",
+   "obs": "Tarefa aberta: protocolar patrocínio Renner (150 dias)."
+  },
+  {
+   "id": "ed15",
+   "nome": "Credenciamento Rodas de Samba (SMC 02/2024)",
+   "esfera": "mun",
+   "mec": "Credenciamento",
+   "area": "Roda de samba",
+   "eleg": [
+    "Rodas de samba"
+   ],
+   "teto": "—",
+   "prazo": "resultado 25/11/2024",
+   "prazoIso": "",
+   "status": "closed",
+   "verif": "21/08/2026",
+   "orgao": "SMC-Rio (Edital SMC 02/2024)",
+   "objeto": "Credenciamento de rodas de samba da cidade. A Sambótica foi credenciada (resultado 25/11/2024).",
+   "publico": "Rodas de samba.",
+   "comoInscrever": "—",
+   "contrapartidas": "—",
+   "docsExig": [
+    "Cadastro da roda",
+    "Portfólio/clipping",
+    "Documentos do representante"
+   ],
+   "linkEdital": "",
+   "linkDrive": "",
+   "obs": "Encerrado. Sambótica credenciada (candidatura c6)."
+  },
+  {
+   "id": "ed16",
+   "nome": "MICSUL 2026 (MinC nº 8/2026)",
+   "esfera": "fed",
+   "mec": "Fomento / intercâmbio",
+   "area": "Multi (inclui música)",
+   "eleg": [
+    "PJ",
+    "Coletivo (repr.)"
+   ],
+   "teto": "participação em Assunção (bolsa)",
+   "prazo": "inscrições encerradas — não seguimos",
+   "prazoIso": "",
+   "status": "closed",
+   "verif": "21/08/2026",
+   "orgao": "MinC (Chamamento nº 8/2026)",
+   "objeto": "Mercado de Indústrias Culturais do Sul (MICSUL) — intercâmbio, com participação em Assunção (bolsa).",
+   "publico": "PJ, Coletivo (representado por PF).",
+   "comoInscrever": "Sistema do MinC.",
+   "contrapartidas": "—",
+   "docsExig": [
+    "Projeto de intercâmbio",
+    "Portfólio",
+    "Documentos do proponente"
+   ],
+   "linkEdital": "",
+   "linkDrive": "",
+   "obs": "Inscrições encerradas — não seguimos. Anexos guardados no Drive (00_Editais/MICSUL)."
+  },
+  {
+   "id": "ed17",
+   "nome": "Brasilidades & Futuros (Futuros/Petrobras)",
+   "esfera": "priv",
+   "mec": "Chamada pública / contratação direta",
+   "area": "Multi (música, cênicas, visuais)",
+   "eleg": [
+    "ver regulamento (no acervo)"
+   ],
+   "teto": "Música até R$ 50k · cênicas até R$ 170k · visuais R$ 100–300k",
+   "prazo": "encerrado (20/05/2026 · resultado 09/07/2026)",
+   "prazoIso": "",
+   "status": "closed",
+   "verif": "02/09/2026",
+   "orgao": "Centro Cultural Futuros – Arte e Tecnologia (Petrobras), Flamengo/RJ",
+   "objeto": "Seleção de até 30 projetos de todo o Brasil para a programação ago/2026–abr/2027 do centro. Contratação direta, sem exigência de lei de incentivo. Aceita trabalhos já apresentados fora, mas inéditos na cidade do RJ.",
+   "publico": "Música (prioridade: instrumental contemporâneo e experimental), artes cênicas e artes visuais.",
+   "comoInscrever": "Site brasilidadesefuturos.futuros.org.br (janela 2026 encerrada).",
+   "contrapartidas": "Apresentações gratuitas na programação do centro (música: mín. 1h; cênicas: 12 apresentações; visuais: temporada 30–45 dias).",
+   "docsExig": [
+    "Projeto",
+    "Portfólio"
+   ],
+   "linkEdital": "https://brasilidadesefuturos.futuros.org.br/",
+   "linkDrive": "https://drive.google.com/drive/folders/1FfQlKu1eCs1p07ZoD6bCrgPBvItMDbWs",
+   "obs": "Regulamento no acervo (00_Editais/Inscricoes 2026 - Fluxos SESC SESEC). Chamada por ciclo de programação — monitorar a próxima janela em futuros.org.br."
+  }
+ ],
+ "candidaturas": [
+  {
+   "id": "c1",
+   "projetoId": "p13",
+   "editalId": "ed2",
+   "etapa": 4,
+   "respId": "eq2",
+   "valor": "R$ 30.000",
+   "docs": [
+    {
+     "nome": "Formulário na plataforma (15 campos narrativos)",
+     "ok": true
+    },
+    {
+     "nome": "Portfólio com registros datados (ao menos 1 anterior a abr/2024)",
+     "ok": true
+    },
+    {
+     "nome": "Anexo 4 assinado pelos 6 integrantes (RG, órgão, nascimento e CPF)",
+     "ok": true
+    },
+    {
+     "nome": "Só se selecionada (habilitação): Anexo 5, certidões e dados bancários",
+     "ok": false
+    }
+   ],
+   "linkDrive": "https://drive.google.com/drive/folders/1baZc6aJfxF_Ct5fGu9ZCoPCdPmJU-gwm"
+  },
+  {
+   "id": "c2",
+   "projetoId": "p1",
+   "editalId": "ed5",
+   "etapa": 0,
+   "respId": "eq1",
+   "valor": "R$ 5k–50k",
+   "docs": [
+    {
+     "nome": "Cadastro no Carioca Digital",
+     "ok": false
+    },
+    {
+     "nome": "RG/CNH do representante",
+     "ok": false
+    },
+    {
+     "nome": "Foto do representante",
+     "ok": false
+    },
+    {
+     "nome": "Percurso + concentração/dispersão (Leme)",
+     "ok": false
+    },
+    {
+     "nome": "Público estimado",
+     "ok": false
+    },
+    {
+     "nome": "Autorizações estaduais (PM/PC/CBM)",
+     "ok": false
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "projetoId": "p1",
+   "editalId": "ed6",
+   "etapa": 0,
+   "respId": "eq1",
+   "valor": "R$ 30.000"
+  },
+  {
+   "id": "c4",
+   "projetoId": "p4",
+   "editalId": "ed2",
+   "etapa": 4,
+   "respId": "eq2",
+   "valor": "R$ 30.000",
+   "docs": [
+    {
+     "nome": "Formulário na plataforma (15 campos narrativos)",
+     "ok": true
+    },
+    {
+     "nome": "Portfólio em PDF (2 artigos acadêmicos, imprensa, patrimônio imaterial)",
+     "ok": true
+    },
+    {
+     "nome": "Anexo 4 assinado pelas integrantes",
+     "ok": true
+    },
+    {
+     "nome": "Só se selecionada (habilitação): Anexo 5, certidões e dados bancários",
+     "ok": false
+    }
+   ],
+   "linkDrive": "https://drive.google.com/drive/folders/1baZc6aJfxF_Ct5fGu9ZCoPCdPmJU-gwm"
+  },
+  {
+   "id": "c5",
+   "projetoId": "p5",
+   "editalId": "ed2",
+   "etapa": 4,
+   "respId": "eq5",
+   "valor": "R$ 30–40 mil",
+   "docs": [
+    {
+     "nome": "Formulário na plataforma",
+     "ok": true
+    },
+    {
+     "nome": "Portfólio (31 págs, clipping desde 2016)",
+     "ok": true
+    },
+    {
+     "nome": "Anexo 4 assinado; representante e categoria definidos",
+     "ok": true
+    },
+    {
+     "nome": "Só se selecionada (habilitação): Anexo 5, certidões e dados bancários",
+     "ok": false
+    }
+   ],
+   "linkDrive": "https://drive.google.com/drive/folders/1baZc6aJfxF_Ct5fGu9ZCoPCdPmJU-gwm"
+  },
+  {
+   "id": "c6",
+   "projetoId": "p5",
+   "editalId": "ed15",
+   "etapa": 5,
+   "respId": "eq1",
+   "valor": "—",
+   "result": "ok"
+  },
+  {
+   "id": "c7",
+   "projetoId": "p3",
+   "editalId": "ed4",
+   "etapa": 2,
+   "respId": "",
+   "valor": "R$ 1.250.000"
+  },
+  {
+   "id": "c8",
+   "projetoId": "p3",
+   "editalId": "ed14",
+   "etapa": 1,
+   "respId": "",
+   "valor": "até 80% do projeto"
+  },
+  {
+   "id": "c9",
+   "projetoId": "p6",
+   "editalId": "ed4",
+   "etapa": 0,
+   "respId": "eq3",
+   "valor": "a definir"
+  },
+  {
+   "id": "c10",
+   "projetoId": "p9",
+   "editalId": "ed1",
+   "etapa": 4,
+   "respId": "eq3",
+   "valor": "R$ 20.000",
+   "docs": [
+    {
+     "nome": "Música de trabalho (áudio + letra)",
+     "ok": true
+    },
+    {
+     "nome": "Argumento/sinopse do videoclipe",
+     "ok": true
+    },
+    {
+     "nome": "Ficha técnica do fonograma",
+     "ok": true
+    },
+    {
+     "nome": "Ficha técnica do videoclipe",
+     "ok": true
+    },
+    {
+     "nome": "Histórico do artista + clipping",
+     "ok": true
+    },
+    {
+     "nome": "Declaração de direitos autorais",
+     "ok": true
+    },
+    {
+     "nome": "Autodeclaração de diversidade (Anexo XIII)",
+     "ok": true
+    }
+   ],
+   "linkDrive": "https://drive.google.com/drive/folders/1l7cuUZy9ZR6MhF6GsCq8U-zy-Sr7_xaa"
+  },
+  {
+   "id": "c11",
+   "projetoId": "p2",
+   "editalId": "ed9",
+   "etapa": 4,
+   "respId": "eq2",
+   "valor": "—",
+   "docs": [
+    {
+     "nome": "Planilha orçamentária SdP",
+     "ok": true
+    },
+    {
+     "nome": "Minibios (5 integrantes)",
+     "ok": true
+    },
+    {
+     "nome": "Anexo XV — direitos autorais",
+     "ok": true
+    }
+   ]
+  },
+  {
+   "id": "c12",
+   "projetoId": "p3",
+   "editalId": "ed9",
+   "etapa": 4,
+   "respId": "eq2",
+   "valor": "—",
+   "docs": [
+    {
+     "nome": "Planilha orçamentária Simpatia",
+     "ok": true
+    },
+    {
+     "nome": "Minibios (15 integrantes)",
+     "ok": true
+    }
+   ]
+  },
+  {
+   "id": "c13",
+   "projetoId": "p11",
+   "editalId": "ed9",
+   "etapa": 4,
+   "respId": "eq2",
+   "valor": "—",
+   "docs": [
+    {
+     "nome": "Anexo XV assinado (direitos autorais)",
+     "ok": true
+    },
+    {
+     "nome": "Minibios (todos)",
+     "ok": true
+    },
+    {
+     "nome": "CNPJ Belart",
+     "ok": true
+    }
+   ]
+  },
+  {
+   "id": "c14",
+   "projetoId": "p11",
+   "editalId": "ed12",
+   "etapa": 4,
+   "respId": "eq2",
+   "valor": "R$ 100.000",
+   "docs": [
+    {
+     "nome": "Anexo 03 — Objeto",
+     "ok": true
+    },
+    {
+     "nome": "Anexo 04 — Proposta",
+     "ok": true
+    },
+    {
+     "nome": "Anexo 07 — Planilha orçamentária",
+     "ok": true
+    },
+    {
+     "nome": "Anexo 08 — Cronograma",
+     "ok": true
+    },
+    {
+     "nome": "Anexo 09 — Anuência Camisa 7 (assinada)",
+     "ok": true
+    },
+    {
+     "nome": "Anexo 09 — Anuência Simpatia (assinada)",
+     "ok": true
+    }
+   ]
+  },
+  {
+   "id": "c15",
+   "projetoId": "p12",
+   "editalId": "ed8",
+   "etapa": 4,
+   "respId": "eq2",
+   "valor": "R$ 683.090,00",
+   "docs": [
+    {
+     "nome": "Formulário SIIPC finalizado (não pode mais ser alterado)",
+     "ok": true
+    },
+    {
+     "nome": "Orçamento físico-financeiro (pré 24k · prod 555,7k · pós 17,5k · comunicação 85,9k)",
+     "ok": true
+    },
+    {
+     "nome": "Cronograma 2027 (pré mar · prod mai · 6 edições jun–out · pós nov–dez)",
+     "ok": true
+    },
+    {
+     "nome": "Contrapartidas (gratuidade, LIBRAS/PCD, inclusão profissional, sustentabilidade)",
+     "ok": true
+    },
+    {
+     "nome": "Cópia do formulário + espelho no acervo",
+     "ok": true
+    }
+   ]
+  },
+  {
+   "id": "c16",
+   "projetoId": "p14",
+   "editalId": "ed1",
+   "etapa": 4,
+   "respId": "eq3",
+   "valor": "R$ 20.000",
+   "linkDrive": "https://drive.google.com/drive/folders/1l7cuUZy9ZR6MhF6GsCq8U-zy-Sr7_xaa",
+   "docs": [
+    {
+     "nome": "Música de trabalho (áudio + letra)",
+     "ok": true
+    },
+    {
+     "nome": "Argumento/sinopse do videoclipe",
+     "ok": true
+    },
+    {
+     "nome": "Ficha técnica do fonograma",
+     "ok": true
+    },
+    {
+     "nome": "Ficha técnica do videoclipe",
+     "ok": true
+    },
+    {
+     "nome": "Histórico do artista + clipping",
+     "ok": true
+    },
+    {
+     "nome": "Declaração de direitos autorais",
+     "ok": true
+    },
+    {
+     "nome": "Autodeclaração de diversidade (Anexo XIII)",
+     "ok": true
+    }
+   ]
+  },
+  {
+   "id": "c17",
+   "projetoId": "p15",
+   "editalId": "ed1",
+   "etapa": 4,
+   "respId": "eq3",
+   "valor": "R$ 20.000",
+   "linkDrive": "https://drive.google.com/drive/folders/1l7cuUZy9ZR6MhF6GsCq8U-zy-Sr7_xaa",
+   "docs": [
+    {
+     "nome": "Música de trabalho (áudio + letra)",
+     "ok": true
+    },
+    {
+     "nome": "Argumento/sinopse do videoclipe",
+     "ok": true
+    },
+    {
+     "nome": "Ficha técnica do fonograma",
+     "ok": true
+    },
+    {
+     "nome": "Ficha técnica do videoclipe",
+     "ok": true
+    },
+    {
+     "nome": "Histórico do artista + clipping",
+     "ok": true
+    },
+    {
+     "nome": "Declaração de direitos autorais",
+     "ok": true
+    },
+    {
+     "nome": "Autodeclaração de diversidade (Anexo XIII)",
+     "ok": true
+    }
+   ]
+  }
+ ],
+ "tarefas": [
+  {
+   "id": "t1",
+   "titulo": "Protocolar patrocínio Renner (Simpatia) — 150 dias",
+   "respId": "",
+   "origem": "cand:c8",
+   "prazo": "",
+   "status": "and",
+   "obs": "Prazo informado: fim de ago"
+  },
+  {
+   "id": "t2",
+   "titulo": "Finalizar inscrição Ações Locais — Garagem Delas",
+   "respId": "eq2",
+   "origem": "cand:c4",
+   "prazo": "2026-09-08",
+   "status": "feito",
+   "obs": ""
+  },
+  {
+   "id": "t3",
+   "titulo": "Portfólio com fotos e números (Garagem Delas)",
+   "respId": "eq7",
+   "origem": "cand:c4",
+   "prazo": "2026-09-05",
+   "status": "feito",
+   "obs": ""
+  },
+  {
+   "id": "t4",
+   "titulo": "Definir representante e cota — Sambótica",
+   "respId": "eq3",
+   "origem": "cand:c5",
+   "prazo": "2026-09-04",
+   "status": "feito",
+   "obs": ""
+  },
+  {
+   "id": "t6",
+   "titulo": "Aprovar “Parece que foi hoje” em lei de incentivo",
+   "respId": "",
+   "origem": "cand:c7",
+   "prazo": "",
+   "status": "and",
+   "obs": "Prazo informado: set/out"
+  },
+  {
+   "id": "t7",
+   "titulo": "Montar portfólio de 2 anos (Bloco Brasil)",
+   "respId": "eq7",
+   "origem": "cand:c1",
+   "prazo": "2026-09-02",
+   "status": "feito",
+   "obs": ""
+  },
+  {
+   "id": "t8",
+   "titulo": "Rever custo fixo da próxima edição do Ponta de Lança",
+   "respId": "eq2",
+   "origem": "proj:p7",
+   "prazo": "",
+   "status": "feito",
+   "obs": ""
+  },
+  {
+   "id": "t9",
+   "titulo": "Preencher inscrição do Mosaico (Ellen) — quase tudo em branco",
+   "respId": "eq3",
+   "origem": "cand:c10",
+   "prazo": "2026-09-03",
+   "status": "feito",
+   "obs": ""
+  },
+  {
+   "id": "t10",
+   "titulo": "Conferir resultados: Sesc Pulsar (previsto 18/08) e Fluxos Fluminenses — atualizar as candidaturas",
+   "respId": "eq3",
+   "origem": "cand:c11",
+   "prazo": "",
+   "status": "feito",
+   "obs": "Prazo informado: esta semana"
+  },
+  {
+   "id": "t11",
+   "titulo": "Decidir destino dos vídeos brutos (BACKUP SDP/Midias, ~4,7 GB): subir pro Drive ou pasta própria de mídia",
+   "respId": "eq2",
+   "origem": "",
+   "prazo": "",
+   "status": "fazer",
+   "obs": ""
+  },
+  {
+   "id": "t-p7hvq0",
+   "status": "fazer",
+   "titulo": "Cadastrar novos artistas (Alberto, Túlio e Donga/Felipe)",
+   "respId": "eq3",
+   "origem": "",
+   "prazo": "2026-09-11",
+   "obs": ""
+  },
+  {
+   "id": "t-mf05jn",
+   "status": "fazer",
+   "titulo": "Subir os arquivos finais dos 6 editais escritos (Mosaicos e Ações Locais)",
+   "respId": "eq3",
+   "origem": "",
+   "prazo": "2026-09-11",
+   "obs": "Pastas já criadas no acervo: 00_Editais/Mosaico Rio 2026-27 e 00_Editais/Acoes Locais 2026. Regra: a inscrição enviada mora com o edital; o que nascer depois da aprovação vai para 02_Projetos."
+  },
+  {
+   "id": "t-4cfhwd",
+   "status": "fazer",
+   "titulo": "Rever pontos do Painel (Campo de obs em tarefas, data com formato de calendário)",
+   "respId": "eq2",
+   "origem": "",
+   "prazo": "",
+   "obs": ""
+  },
+  {
+   "id": "t-4ele4a",
+   "status": "fazer",
+   "titulo": "Fazer nova varredura dos editais (Editais em aberto, complementar documentação dos existentes)",
+   "respId": "eq2",
+   "origem": "",
+   "prazo": "2026-09-11",
+   "obs": ""
+  },
+  {
+   "id": "t-1zj92z",
+   "status": "fazer",
+   "titulo": "Fazer varredura no Portifólio, artistas e projetos (complementar documentação, informações e etc)",
+   "respId": "eq2",
+   "origem": "",
+   "prazo": "2026-09-11",
+   "obs": ""
+  }
+ ],
+ "equipe": [
+  {
+   "id": "eq1",
+   "nome": "Pedro",
+   "funcoes": [
+    "Produção"
+   ]
+  },
+  {
+   "id": "eq2",
+   "nome": "Antonio",
+   "funcoes": [
+    "Produção"
+   ],
+   "email": "antonionazareth@gmail.com"
+  },
+  {
+   "id": "eq3",
+   "nome": "Lucas",
+   "funcoes": [
+    "Músico"
+   ]
+  },
+  {
+   "id": "eq5",
+   "nome": "Igor",
+   "funcoes": [
+    "Músico"
+   ]
+  },
+  {
+   "id": "eq6",
+   "nome": "William",
+   "funcoes": [
+    "Videomaker"
+   ]
+  },
+  {
+   "id": "eq7",
+   "nome": "Dany Souto",
+   "funcoes": [
+    "Fotógrafo"
+   ],
+   "nomeCompleto": "Daniel Dobbin Souto Barros",
+   "rg": "10076272-3",
+   "nascimento": "1977-04-12"
+  },
+  {
+   "id": "eq8",
+   "nome": "Thales",
+   "funcoes": [
+    "Técnica"
+   ]
+  }
+ ],
+ "elenco": [
+  {
+   "id": "el1",
+   "nome": "Igor Ciancio",
+   "funcao": "Percussão (tantan e conga) · Samba de Ponta",
+   "bio": "Percussionista, produtor de rodas de samba e mestre em Geografia (UFRJ), com pesquisa em Geografia Cultural — rodas de samba e partido alto de improviso nas ruas do Rio. Foi ritmista do Império Serrano e responsável pelo projeto Novos Sambistas (comunidade da 110, zona norte), com aulas de percussão e história do samba. Criado em terreiros, é Ogã, e traz toques de umbanda às apresentações do Samba de Ponta.",
+   "docsStatus": "ok",
+   "nomeCompleto": "Igor Rocha Ciancio",
+   "rg": "217092360",
+   "nascimento": "1994-05-18"
+  },
+  {
+   "id": "el2",
+   "nome": "Debô",
+   "funcao": "Músico · Samba de Ponta",
+   "bio": "Integrante do Samba de Ponta. Proponente da inscrição do grupo no Sesc Pulsar 2026/27 (CNPJ 59.928.108/0001-91).",
+   "docsStatus": "pend",
+   "nomeCompleto": "Diogo Faria Filgueiras"
+  },
+  {
+   "id": "el3",
+   "nome": "Fernandinho da Serrinha",
+   "funcao": "Percussão (caixa e pandeiro) · Samba de Ponta",
+   "bio": "Cria do Morro da Serrinha, formado nos terreiros e batuques locais. Foi ritmista do Império do Futuro por 9 anos e da Império Serrano; participou do Botequim do Império. Fundador e produtor do Samba na Serrinha; fundador, diretor e um dos idealizadores do projeto social Herdeiros da Serrinha; ritmista do Bloco Sargento Pimenta e músico do pagode da Cida. Fundador do Samba de Ponta, lidera a percussão do grupo desde 2021.",
+   "docsStatus": "ok",
+   "nomeCompleto": "Fernando Marcos dos Santos",
+   "rg": "23.809.795-0",
+   "nascimento": "1989-12-15"
+  },
+  {
+   "id": "el4",
+   "nome": "Biju Santiago",
+   "funcao": "Violão · Samba de Ponta",
+   "bio": "Mais de 30 anos de carreira, repertório que transita por todos os gêneros e domínio de diversos instrumentos de corda — uma enciclopédia musical, autodidata. Já acompanhou Cléber Augusto, Isaías Costa, Will Freitas, Rafael França e Leila Omari, e grupos como Coisa Séria, Nosso Grito, Samba do Amigo, Pé de Tereza, Pagode 90 e Balanço do Joaquim.",
+   "docsStatus": "ok",
+   "nomeCompleto": "Anderson de Souza Santiago",
+   "rg": "125987206",
+   "nascimento": "1981-09-16"
+  },
+  {
+   "id": "el5",
+   "nome": "Nina Rosa",
+   "funcao": "Voz · Sambótica",
+   "bio": "Integrante do Sambótica.",
+   "docsStatus": "pend"
+  },
+  {
+   "id": "el6",
+   "nome": "Miguel Serbeto",
+   "funcao": "Cavaco · Sambótica",
+   "bio": "Integrante do Sambótica.",
+   "docsStatus": "pend"
+  },
+  {
+   "id": "el7",
+   "nome": "Alberto Americano",
+   "funcao": "7 cordas · Sambótica",
+   "bio": "Integrante do Sambótica.",
+   "docsStatus": "pend"
+  },
+  {
+   "id": "el8",
+   "nome": "Jeferson Souza",
+   "funcao": "Flauta · Sambótica",
+   "bio": "Integrante do Sambótica.",
+   "docsStatus": "pend"
+  },
+  {
+   "id": "el9",
+   "nome": "João da Serrinha",
+   "nomeCompleto": "João Luiz dos Santos Costa",
+   "funcao": "Percussão geral · Samba de Ponta",
+   "email": "",
+   "rg": "12663521-8",
+   "cpf": "",
+   "nascimento": "1984-07-06",
+   "bio": "Percussionista, na noite carioca desde os 14 anos. Idealizador do tradicional Samba na Serrinha e do Fala Serrinha; integrou as principais rodas de samba do Rio (Samba das Rosalinas, Mercado Palmares, Roda das Rodas, Pede Teresa, Sambótica, Samba de Ponta e muitas outras). Acompanhou Will Freitas, Bira da Vila, Andréia Caffé, Itamar Trindade e outros; tocou no bloco Flor de Lis e toca no Bangalafumenga.",
+   "docsStatus": "ok"
+  },
+  {
+   "id": "el10",
+   "nome": "Mestre Wallan",
+   "nomeCompleto": "Wallan Conceição Amaral",
+   "funcao": "Percussão (surdo) · Samba de Ponta",
+   "email": "",
+   "rg": "201035003",
+   "cpf": "",
+   "nascimento": "1979-12-25",
+   "bio": "Cria da quadra da Vila Isabel, começou aos 10 anos. Mestre de Bateria da Unidos de Vila Isabel de 2012 a 2017, com o título de Melhor Bateria em 2013. Já acompanhou Martinho da Vila, Arlindo Cruz, Paulinho da Viola, Sivuca, Martinália, Elba Ramalho, Fernanda Abreu, Belo e Anitta, e integrou as bandas dos programas da Xuxa (Globo e Record) e do Esquenta (Regina Casé).",
+   "docsStatus": "ok"
+  },
+  {
+   "id": "el11",
+   "nome": "Leon Miguel",
+   "nomeCompleto": "Leon de Oliveira Miguel",
+   "funcao": "Percussão · Camisa 7",
+   "email": "",
+   "rg": "27.831.296-2",
+   "cpf": "",
+   "nascimento": "1994-02-14",
+   "bio": "Músico, pesquisador, professor, produtor e diretor musical. Há quase 20 anos no Maracutaia, hoje regente do bloco. Fundou em 2014 o bloco AGYTOÊ (música afro-baiana) e coordena sua oficina de ritmos (10 anos em 2026, na Fundição Progresso). Co-diretor musical da Charanga Talismã; ritmista da Estação Primeira de Mangueira desde 2019. Pesquisa manifestações e ritmos populares periféricos com foco na percussão afro-ameríndia.",
+   "docsStatus": "ok"
+  },
+  {
+   "id": "el12",
+   "nome": "Jessica Queiroz",
+   "nomeCompleto": "Jessica Sousa Santos Queiroz",
+   "funcao": "Performance · Camisa 7",
+   "email": "",
+   "rg": "26932403-4",
+   "cpf": "",
+   "nascimento": "1991-04-30",
+   "bio": "Natural de Caxias, cria da Penha, formada em Dança pela UFRJ; no carnaval de rua desde 2014. Co-gestora, coreógrafa, dançarina e curadora do bloco Amigos da Onça. Idealizadora do projeto Corpo Solto (dança com foco no rebolado via funk carioca); ministrou aulas de funk em 6 países e 12+ cidades na Europa. Integrante do coletivo de house dance Bonde do Jack (espetáculo BPM — Batidas Por Minuto).",
+   "docsStatus": "ok"
+  },
+  {
+   "id": "el13",
+   "nome": "Pedro Aune",
+   "nomeCompleto": "Pedro Christiano Waddington Aune",
+   "funcao": "Baixo · Camisa 7",
+   "email": "",
+   "rg": "13075147-2",
+   "cpf": "",
+   "nascimento": "1980-12-14",
+   "bio": "Contrabaixista e tubista, bacharel em contrabaixo, mestre e doutor em música pela UniRio. Atuou com Ney Matogrosso, Áurea Martins, Alaide Costa, Marcos Sacramento, Gilson Peranzzetta, Mauricio Carrilho e Rio Jazz Orquestra, entre outros. 1º lugar no Concurso de Contrabaixo Sandrino Santoro (música popular). Atualmente na direção musical e trilha ao vivo de \"O Céu da Língua\", de Gregório Duvivier.",
+   "docsStatus": "ok"
+  },
+  {
+   "id": "el14",
+   "nome": "Iara Romano",
+   "nomeCompleto": "Iara Sabato Romano",
+   "funcao": "Percussão · Camisa 7",
+   "email": "",
+   "rg": "210463980",
+   "cpf": "",
+   "nascimento": "1995-11-01",
+   "bio": "Cantora e ritmista carioca com raízes no maracatu, coco de roda e samba. Por seis anos integrou o grupo Coconomã (Circo Voador, Galpão Ladeira das Artes; abriu shows de Xangai e Alessandra Leão). Há mais de 10 anos toca no carnaval de rua em blocos como Agytoê, OrunMilá, Charanga Talismã e Maracutaia. Há três anos integra a bateria da Estação Primeira de Mangueira, no xequerê.",
+   "docsStatus": "ok"
+  },
+  {
+   "id": "el15",
+   "nome": "Dudu Rezende",
+   "nomeCompleto": "Eduardo Rezende Feijó de Almeida",
+   "funcao": "Sopros · Camisa 7",
+   "email": "",
+   "rg": "27.156.057-5",
+   "cpf": "",
+   "nascimento": "1994-10-30",
+   "bio": "Produtor musical, arranjador, saxofonista/multi-instrumentista e professor. Sax barítono da Foli Griô Orquestra; assinou a direção musical do álbum AJO (2019), indicado ao Latin Grammy. Graduado em Arranjo/MPB na UNIRIO. Professor de sax na Orquestra Voadora, arranjador/regente da Charanga Talismã; tocou no Cordão do Boitatá e Amigos da Onça. Lançou o álbum Tambor Grande com o babalorixá Dofono de Omolu e André Magalhães.",
+   "docsStatus": "ok"
+  },
+  {
+   "id": "el16",
+   "nome": "Pablo Beato",
+   "nomeCompleto": "Pablo Adriane Beato",
+   "funcao": "Trombone · Camisa 7",
+   "email": "",
+   "rg": "12.067.687-9",
+   "cpf": "",
+   "nascimento": "1988-09-21",
+   "bio": "Multi-instrumentista preto da Baixada Fluminense; começou aos 9 anos em banda de escola (Magé), passando por percussão, cordas e sopros. Curso técnico na Escola de Música Villa-Lobos; festivais como Vale do Café, Festival Internacional de Trombones da UNIRIO e Festival Brasil–Alemanha. Músico da Banda da Guarda Municipal de Itaboraí; bacharelando em Trombone na UNIRIO.",
+   "docsStatus": "ok"
+  },
+  {
+   "id": "el17",
+   "nome": "Bela Ciavatta",
+   "nomeCompleto": "Isabela Ferreira Ciavatta",
+   "funcao": "Percussão · Camisa 7",
+   "email": "",
+   "rg": "277690236",
+   "cpf": "",
+   "nascimento": "1996-11-30",
+   "bio": "Cantora, compositora e percussionista carioca. Em três anos de carreira solo passou por Circo Voador (abriu Mart'nália e Perotá Chingó), Teatro Rival e festivais como Doce Maravilha e Rock The Mountain (2024). Integrou a turnê nacional de Lucy Alves (2023); cofundou a banda Tocaia. Diretora da bateria da Charanga Talismã e integrante da bateria da Mangueira — 3ª mulher da história da escola a tocar caixa. Prepara o primeiro álbum (2026).",
+   "docsStatus": "ok"
+  },
+  {
+   "id": "el18",
+   "nome": "Beto Barros",
+   "nomeCompleto": "Roberto Valeriano Barros dos Santos",
+   "funcao": "Percussão · Simpatia é Quase Amor",
+   "email": "",
+   "rg": "10975674-2",
+   "cpf": "",
+   "nascimento": "1979-05-08",
+   "bio": "Começou aos 10 anos na bateria mirim da Mocidade Unida de Jacarepaguá. Mestre de bateria da Mocidade Unida da Cidade de Deus por ~11 anos e presidente da escola por dois períodos. Atualmente é mestre de bateria do Simpatia é Quase Amor e desenvolve projeto de percussão para crianças na Cidade de Deus.",
+   "docsStatus": "ok"
+  },
+  {
+   "id": "el19",
+   "nome": "Bidu Campeche",
+   "nomeCompleto": "Robson Severo Garcia",
+   "funcao": "Percussão · Simpatia é Quase Amor",
+   "email": "",
+   "rg": "1076587011",
+   "cpf": "",
+   "nascimento": "1982-03-25",
+   "bio": "Percussionista com atuação destacada no samba: tocou com Paulinho da Viola, Monarco, Nelson Sargento e Elza Soares; turnês internacionais (Europa, Clube do Choro de Paris). Cofundador do Tucaninho Musical, iniciativa bilíngue Brasil/França com projetos para a Embaixada da França e Aliança Francesa. Professor de percussão com foco na linguagem rítmica brasileira.",
+   "docsStatus": "ok"
+  },
+  {
+   "id": "el20",
+   "nome": "Binho",
+   "nomeCompleto": "Robson Luiz da Silva (a confirmar — a ficha veio com os dados do Mestre Penha)",
+   "funcao": "Mestre de bateria · Simpatia é Quase Amor",
+   "email": "",
+   "rg": "",
+   "cpf": "",
+   "nascimento": "",
+   "bio": "Percussionista; começou na ala mirim da Mocidade Unida de Jacarepaguá e na bateria mirim do Império do Futuro (com Pretinho da Serrinha). Passou por baterias como Acadêmicos da Rocinha, Tradição, União da Ilha, Grande Rio, Viradouro, Estácio de Sá, Portela e Porto da Pedra. Tocou nos blocos Simpatia é Quase Amor, Escravos da Mauá e Imprensa Que Eu Gamo. ATENÇÃO: a ficha técnica original veio com nome/RG/nascimento do Mestre Penha — pedir os dados corretos.",
+   "docsStatus": "pend"
+  },
+  {
+   "id": "el21",
+   "nome": "Dudu Oliveira",
+   "nomeCompleto": "Eduardo Coelho de Oliveira",
+   "funcao": "Sopros · Simpatia é Quase Amor",
+   "email": "",
+   "rg": "21.110.848-5",
+   "cpf": "",
+   "nascimento": "1986-11-05",
+   "bio": "(A minibio na ficha técnica veio incompleta — completar.)",
+   "docsStatus": "ok"
+  },
+  {
+   "id": "el22",
+   "nome": "Erik Castro",
+   "nomeCompleto": "Erik Teixeira de Castro",
+   "funcao": "Percussão · Simpatia é Quase Amor",
+   "email": "",
+   "rg": "29882671-0",
+   "cpf": "",
+   "nascimento": "1998-03-21",
+   "bio": "Mestre de bateria da Série Ouro. Começou em 2010 na Coroado de Jacarepaguá e se formou na Mocidade Unida da Cidade de Deus. Desfilou por Grande Rio, Paraíso do Tuiuti, São Clemente e Renascer; blocos Simpatia É Quase Amor e Imprensa Que Eu Gamo (com Mestre Penha). Mestre do Arrastão de Cascadura (2019), diretor na Em Cima da Hora (2022) e, desde 2023, mestre da União do Parque Acari, com acesso à Série Ouro.",
+   "docsStatus": "ok"
+  },
+  {
+   "id": "el23",
+   "nome": "Fernando Teixeira",
+   "nomeCompleto": "Fernando Teixeira de Jesus",
+   "funcao": "Percussão · Simpatia é Quase Amor",
+   "email": "",
+   "rg": "24398225-3",
+   "cpf": "",
+   "nascimento": "1992-01-31",
+   "bio": "Percussionista desde os 13 anos. Fez shows com Maria Lúcia Priolli, bandas de pagode e escolas de samba como Mangueira e Portela, com viagens a Londres, Suíça e Holanda. Atualmente integra as bandas de Alex Ribeiro e Cézar da Gama, entre outras.",
+   "docsStatus": "ok"
+  },
+  {
+   "id": "el24",
+   "nome": "Luiz Augusto",
+   "nomeCompleto": "Luiz Augusto Lima Guimarães",
+   "funcao": "Percussão · Simpatia é Quase Amor",
+   "email": "",
+   "rg": "2079584",
+   "cpf": "",
+   "nascimento": "1983-06-02",
+   "bio": "Percussionista e professor, mestre (2022) e licenciado (2018) em Música pela UNIRIO. Integrou o Moacyr Luz e o Samba do Trabalhador (2005–2023) e o Casuarina (2018–2022); atua com Sururu na Roda, Nilze Carvalho e Leila Pinheiro. Endorser da Contemporânea, com ampla discografia ao lado de grandes nomes da música brasileira.",
+   "docsStatus": "ok"
+  },
+  {
+   "id": "el25",
+   "nome": "Maurício Massunaga",
+   "nomeCompleto": "Maurício Pantoja Massunaga",
+   "funcao": "Violão · Simpatia é Quase Amor",
+   "email": "",
+   "rg": "13022148-4",
+   "cpf": "",
+   "nascimento": "1982-09-21",
+   "bio": "Bacharel em arranjo pela UNIRIO; violão desde os 6 anos, também bandolim. Estudou com Paulo Pedrassoli, Luis Otávio Braga, Josimar Carneiro e Roberto Gnattali. Arranjador de Marina Iris, Ana Costa e Aline Paes; produziu álbuns do EPreta (indicado ao Prêmio da Música Brasileira), Lucio Sanfilippo e Luiz Antônio Simas. Tocou com Leila Pinheiro, Toninho Geraes, Moyseis Marques e participou do álbum \"Dori Caymmi: 80 anos de um cantador\".",
+   "docsStatus": "ok"
+  },
+  {
+   "id": "el26",
+   "nome": "Mestre Penha",
+   "nomeCompleto": "José da Penha Ferreira Nascimento",
+   "funcao": "Mestre de bateria · Simpatia é Quase Amor",
+   "email": "",
+   "rg": "03034918-7",
+   "cpf": "",
+   "nascimento": "1953-12-08",
+   "bio": "Um dos grandes nomes do samba carioca, mais de 50 anos dedicados ao samba. Líder da bateria do Simpatia É Quase Amor há cerca de 40 anos; foi diretor de bateria da Portela. Referência na formação de ritmistas (Morro Azul e projetos pedagógicos). Em 2025, aos 70 anos de vida e 50 de samba, recebeu a Medalha Pedro Ernesto, a mais alta honraria do município do Rio.",
+   "docsStatus": "ok"
+  },
+  {
+   "id": "el27",
+   "nome": "Michele Pinheiro",
+   "nomeCompleto": "Michele Pinheiro Caldas",
+   "funcao": "Passista · Simpatia é Quase Amor",
+   "email": "",
+   "rg": "10465996-6",
+   "cpf": "",
+   "nascimento": "1977-05-05",
+   "bio": "Referência no carnaval de rua: rainha de bateria do Escravos da Mauá por 18 anos, do Imprensa Que Eu Gamo por 10 e do Simpatia É Quase Amor por 20. Há 18 anos dá aulas de percussão (gogó) e samba no Estúdio Mestre Penha. Levou a cultura brasileira a França, Itália, Portugal, Espanha e países da África com o projeto Rio Samba Show.",
+   "docsStatus": "ok"
+  },
+  {
+   "id": "el28",
+   "nome": "Ruterdan",
+   "nomeCompleto": "Ruterdan Pereira Gonçalves",
+   "funcao": "Percussão · Simpatia é Quase Amor",
+   "email": "",
+   "rg": "10960372-0",
+   "cpf": "",
+   "nascimento": "1977-03-21",
+   "bio": "Percussionista com trajetória sólida no carnaval carioca; começou aos 14 anos na Mocidade Unida de Jacarepaguá. Desfilou por Unidos da Tijuca, Salgueiro, Estácio de Sá, Grande Rio e Beija-Flor, entre outras. Shows com Mestre Penha e blocos Simpatia É Quase Amor, Escravos da Mauá, Imprensa Que Eu Gamo e Se Essa Rua Fosse Minha.",
+   "docsStatus": "ok"
+  },
+  {
+   "id": "el29",
+   "nome": "Sandro Salvador",
+   "nomeCompleto": "Sandro Salvador Araújo",
+   "funcao": "Percussão · Simpatia é Quase Amor",
+   "email": "",
+   "rg": "127812584",
+   "cpf": "",
+   "nascimento": "1981-04-28",
+   "bio": "6 anos se apresentando no Carioca da Gema com o grupo Cana de Litro; integrante da Orquestra Republicana e da banda do Concurso Nacional de Marchinhas. Palcos como Democráticos, Rio Scenarium, Semente e Beco do Rato; dividiu palco com Monarco, Wilson Moreira, Wilson das Neves, Nelson Sargento e Moacyr Luz. Festivais internacionais em Madrid, Barcelona, Cannes e Budapeste.",
+   "docsStatus": "ok"
+  },
+  {
+   "id": "el30",
+   "nome": "Sardinha",
+   "nomeCompleto": "Claudio Humberto Vieira Sardinha",
+   "funcao": "Percussão · Simpatia é Quase Amor",
+   "email": "",
+   "rg": "25.614.836-2",
+   "cpf": "",
+   "nascimento": "1993-01-23",
+   "bio": "Começou aos 9 anos no tarol da bateria mirim da Mocidade Unida de Jacarepaguá e nos Aprendizes do Salgueiro. Passou por Salgueiro, Grande Rio, Viradouro, Imperatriz, Beija-Flor e Portela, entre outras. Na noite desde os 14 anos no bloco Simpatia é Quase Amor; idealizador e fundador do grupo 7 Estrelas. Acompanhou Chrigor, Pique Novo, Marquinhos Sensação, Délcio Luiz e Xande de Pilares. Hoje na banda do cantor Rafael Bernini.",
+   "docsStatus": "ok"
+  },
+  {
+   "id": "el31",
+   "nome": "Tomaz",
+   "nomeCompleto": "Tomaz Disitzer Carvalho de Miranda",
+   "funcao": "Voz e cavaquinho · Simpatia é Quase Amor",
+   "email": "",
+   "rg": "217229 (OAB/RJ)",
+   "cpf": "",
+   "nascimento": "1987-07-14",
+   "bio": "Cantor, compositor e arranjador carioca, ligado desde a infância ao Simpatia é Quase Amor — hoje a voz principal do bloco. Lançou o álbum \"Os sambas que me dizem\" (2015). Integra a ala de compositores da Estação Primeira de Mangueira: um dos autores do samba-enredo campeão de 2019 e do samba de 2026 da escola.",
+   "docsStatus": "ok"
+  },
+  {
+   "id": "el32",
+   "nome": "Dany Souto",
+   "nomeCompleto": "Daniel Dobbin Souto Barros",
+   "funcao": "Cantor, rabequista, compositor, arranjador e idealizador · Forró de Rabeca",
+   "email": "",
+   "rg": "10076272-3",
+   "cpf": "",
+   "nascimento": "1977-04-12",
+   "bio": "Iniciou o violão aos 11 anos; aos 18 entrou na Escola de Música Villa-Lobos, começando a carreira no forró (Forró sem Frescura, Saísse e os Bois — abriu shows de Lenine, Geraldo Azevedo e Elba Ramalho). Em 2002 entrou na Escola Portátil de Música e, pesquisando culturas populares, apaixonou-se pela rabeca (Cavalo Marinho, forró). Formou o Forró De Rabeca em 2013 após turnê em Portugal; nova turnê solo pela Europa (PT/FR) em 2019 e, em 2020, primeiro álbum visual com músicas autorais. Segue à frente do grupo nas rodas de forró-choro-jazz.",
+   "docsStatus": "ok"
+  },
+  {
+   "id": "el33",
+   "nome": "Nayara Danielly",
+   "nomeCompleto": "Danielly Botelho Horn",
+   "funcao": "Sax e flauta · Forró de Rabeca",
+   "email": "",
+   "rg": "11316853-8",
+   "cpf": "",
+   "nascimento": "1993-07-03",
+   "bio": "Multi-instrumentista, compositora, educadora, arranjadora e produtora musical, especializada em flauta transversal e saxofone (também teclado, contrabaixo, violão, guitarra e percussões). Trans feminina com orgulho, ativista dos direitos LGBTQIAPN+. Formação na UNESP e no Conservatório de Tatuí (SP); pós em MPB no Conservatório Brasileiro de Música (RJ). Estudou improvisação com Marcelo Martins e harmonia/arranjo com o maestro Vittor Santos. Influências do choro e do forró ao jazz, samba e música moderna.",
+   "docsStatus": "ok"
+  },
+  {
+   "id": "el34",
+   "nome": "Diane Terra",
+   "nomeCompleto": "Diane Feitosa Pinto",
+   "funcao": "Backing vocal e zabumba · Forró de Rabeca",
+   "email": "",
+   "rg": "12097555-2",
+   "cpf": "",
+   "nascimento": "1980-10-22",
+   "bio": "",
+   "docsStatus": "ok"
+  },
+  {
+   "id": "el35",
+   "nome": "Marcelo Bruno",
+   "nomeCompleto": "Marcelo José de Araújo Bruno",
+   "funcao": "Backing vocal, baixo e arranjos · Forró de Rabeca",
+   "email": "",
+   "rg": "25732315-4",
+   "cpf": "",
+   "nascimento": "1971-06-18",
+   "bio": "Baixista, arranjador e parceiro de composições do Forró De Rabeca desde o início. Professor de Educação Musical na Prefeitura do Rio, licenciado em música e bacharelando em composição pela UFRJ; formado na Escola de Música Villa-Lobos (baixo, arranjo e direção musical). Premiado 6 vezes no Festival da Villa-Lobos e 3 no Festival da Petrobras; menções honrosas da UFRJ (2006 e 2008). Com o Brasil de Cara: Melhor Arranjo no Festival de Música e Ecologia da Ilha Grande (2004), 1º lugar no XXVI FEMUPI (2007) e Prêmio Especial do Júri no 21º FUC (2008).",
+   "docsStatus": "ok"
+  },
+  {
+   "id": "el36",
+   "nome": "Rodrigo Pacato",
+   "nomeCompleto": "Rodrigo Moraes Machado da Silva",
+   "funcao": "Backing vocal e percussão · Forró de Rabeca",
+   "email": "",
+   "rg": "019612113-1",
+   "cpf": "",
+   "nascimento": "1979-01-15",
+   "bio": "Músico, produtor musical, diretor cinematográfico, compositor e engenheiro de áudio; estudioso de ritmos globais (choro, folclores afro-cubanos, colombianos e brasileiros). Professor de bateria e percussão no CIEP Nação Mangueirense e na Villa-Lobos. Tocou com Gilberto Gil, Seu Jorge, Jards Macalé, Marcos Valle, BNegão, Banda Black Rio, João Donato, Carlos Malta, Bala Desejo, Maria Gadú e muitos outros; participou da Copa 2010 e das Olimpíadas 2016. Fundador do bloco Toca Rauuul e da Masterizasom; produziu álbuns de Sidão Santos com Seu Jorge e Zola Star.",
+   "docsStatus": "ok"
+  },
+  {
+   "id": "el37",
+   "nome": "Potyra Castro",
+   "nomeCompleto": "Potyra Barros Castro",
+   "funcao": "Backing vocal e percussão · Forró de Rabeca",
+   "email": "",
+   "rg": "24503490-5",
+   "cpf": "",
+   "nascimento": "1989-07-18",
+   "bio": "Cantora e percussionista, herda o talento do pai, Elísio Castro (compositor da Raiz do Sana). Vocalista da Regional Pitaya (forró pé-de-serra feito por mulheres); integra o Forró De Rabeca e o Forró do Bebê (de Bebê Kramer). Oficinas de jongo, maracatu, samba reggae e afoxé com o Sambando no Sana. Foi 10 anos vocalista da Pavio Curto e 3 no trio Forró Maravilhas, circulando por RJ, SP, MG, ES e BA.",
+   "docsStatus": "ok"
+  },
+  {
+   "id": "el38",
+   "nome": "André Bitto",
+   "nomeCompleto": "Andre Staniscia Bitto",
+   "funcao": "Sanfona · Forró de Rabeca",
+   "email": "",
+   "rg": "10043817-8",
+   "cpf": "",
+   "nascimento": "1988-04-24",
+   "bio": "Paulista criado em Londrina (PR), participava da tradicional roda de choro dos irmãos Andrade. Em 2015 veio ao Rio, onde a arte de rua virou seu palco principal — e a sanfona, sua profissão. Integra ForRódaTaylor, Bando Chapéu de Palha e Forró De Rabeca; freelancer no Rapacuia, Trio Ventura e Tradicional Erva Doce. Participou do projeto \"O Vassoureiro\" de Elias Rosa (Teatro Municipal de Niterói) e das gravações do Álbum Visual Daniel Souto e Forró De Rabeca.",
+   "docsStatus": "ok"
+  }
+ ],
+ "contatos": [
+  {
+   "id": "k1",
+   "nome": "Riotur",
+   "tipo": "Órgão público",
+   "ref": "Cadastro de blocos",
+   "contato": "—"
+  },
+  {
+   "id": "k2",
+   "nome": "Firjan SESI",
+   "tipo": "Paraestatal",
+   "ref": "Mosaico Rio",
+   "contato": "—"
+  },
+  {
+   "id": "k3",
+   "nome": "Ambev / Prosas",
+   "tipo": "Patrocinador",
+   "ref": "Brinde à Rua (carnaval)",
+   "contato": "—"
+  },
+  {
+   "id": "k4",
+   "nome": "SECEC-RJ",
+   "tipo": "Órgão público",
+   "ref": "Folia RJ, FEC",
+   "contato": "—"
+  },
+  {
+   "id": "k5",
+   "nome": "Liga de blocos (a definir)",
+   "tipo": "Liga",
+   "ref": "Atalho p/ incentivo Riotur (evita esperar 3 anos de CNPJ)",
+   "contato": "—"
+  },
+  {
+   "id": "k6",
+   "nome": "Mateus Rosé / Sogrape",
+   "tipo": "Marca (patrocínio em prospecção)",
+   "ref": "Projeto de reintrodução no Brasil via blocos",
+   "contato": "—"
+  },
+  {
+   "id": "k7",
+   "nome": "Renner (Renner Cultural)",
+   "tipo": "Patrocinador",
+   "ref": "Via Prosas — Simpatia (carnaval 2027)",
+   "contato": "prosas.com.br"
+  },
+  {
+   "id": "k8",
+   "nome": "Rede Carioca de Rodas de Samba",
+   "tipo": "Rede / parceiro",
+   "ref": "Credenciamento SMC — Sambótica",
+   "contato": "—"
+  },
+  {
+   "id": "k9",
+   "nome": "CRIVO Gestão Artística Ltda",
+   "tipo": "Produtora (proponente ISS)",
+   "ref": "Proponente do Circuito do Samba RJ na Lei do ISS (CNPJ 26.932.932/0001-66) — Alessandro Zoe Martins Lemos (CEO)",
+   "contato": "zoe@crivo.co · (21) 96785-2030"
+  }
+ ],
+ "reunioes": [
+  {
+   "id": "r1",
+   "titulo": "Reunião diária do coletivo",
+   "data": "2026-08-28",
+   "hora": "19:00",
+   "recorrencia": "Diária",
+   "proxima": "2026-08-29",
+   "local": "Online (Meet)",
+   "participanteIds": [
+    "eq2",
+    "eq1"
+   ],
+   "emailsExtra": [],
+   "status": "agendada",
+   "pauta": [
+    "Status das inscrições com prazo em setembro (Mosaico e Ações Locais)",
+    "Divisão de tarefas do portfólio do Bloco Brasil"
+   ],
+   "ata": ""
+  }
+ ]
+}

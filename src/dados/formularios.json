@@ -1,0 +1,6609 @@
+{
+ "fluxo-continuo": {
+  "id": "fluxo-continuo",
+  "nome": "Fluxo Contínuo",
+  "plataforma": "cultura-rio",
+  "nav": "stepper",
+  "extraido": "2026-09-12",
+  "obs": "Estrutura da plataforma: 3 etapas, formulário dentro de iframe.",
+  "etapas": [
+   {
+    "id": "edital",
+    "nome": "Informações do edital",
+    "blocos": [
+     {
+      "t": "Descrição",
+      "campos": [
+       {
+        "t": "info",
+        "html": "<b>Fluxo Contínuo</b> · Editais Cultura Rio (SMC-Rio), edital e=36. Etapas: Informações do edital · Seus dados · Seu projeto/proposta."
+       },
+       {
+        "n": "aceito",
+        "l": "Aceito os termos e condições de participação neste edital?",
+        "t": "rad",
+        "req": 1,
+        "inline": 1,
+        "opts": [
+         "Sim",
+         "Não"
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "dados",
+    "nome": "Seus dados",
+    "blocos": [
+     {
+      "t": "Tipo de Proponente",
+      "campos": [
+       {
+        "n": "tipo_de_pessoa_id",
+        "l": "Tipo:",
+        "t": "sel",
+        "req": 1,
+        "opts": [
+         "Pessoa física",
+         "Pessoa jurídica com fins lucrativos",
+         "Pessoa jurídica sem fins lucrativos",
+         "MEI"
+        ]
+       }
+      ]
+     },
+     {
+      "t": "Pessoa Física",
+      "quando": {
+       "n": "tipo_de_pessoa_id",
+       "v": [
+        "Pessoa física"
+       ]
+      },
+      "campos": [
+       {
+        "n": "nome_pessoa",
+        "l": "Nome:",
+        "t": "txt",
+        "req": 1,
+        "max": 190
+       },
+       {
+        "n": "cpf",
+        "l": "CPF:",
+        "t": "txt",
+        "req": 1,
+        "max": 14,
+        "cls": "curto"
+       },
+       {
+        "n": "documento_pf",
+        "l": "Documento:",
+        "t": "anexo",
+        "req": 1
+       }
+      ]
+     },
+     {
+      "t": "Dados da Empresa",
+      "quando": {
+       "n": "tipo_de_pessoa_id",
+       "v": [
+        "Pessoa jurídica com fins lucrativos",
+        "Pessoa jurídica sem fins lucrativos",
+        "MEI"
+       ]
+      },
+      "campos": [
+       {
+        "n": "razao_social",
+        "l": "Razão social:",
+        "t": "txt",
+        "req": 1,
+        "max": 190
+       },
+       {
+        "n": "cnpj",
+        "l": "CNPJ:",
+        "t": "txt",
+        "req": 1,
+        "max": 18,
+        "cls": "curto"
+       },
+       {
+        "n": "documento_pj",
+        "l": "Documento:",
+        "t": "anexo",
+        "req": 1
+       },
+       {
+        "n": "data_de_nascimento",
+        "l": "Data de fundação:",
+        "t": "txt",
+        "req": 1,
+        "max": 10,
+        "cls": "curto",
+        "dica": "dd/mm/aaaa"
+       },
+       {
+        "n": "nome_fantasia",
+        "l": "Nome fantasia:",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "website",
+        "l": "Website:",
+        "t": "txt",
+        "max": 190
+       }
+      ]
+     },
+     {
+      "t": "Contato",
+      "campos": [
+       {
+        "n": "nome_responsavel",
+        "l": "Nome do responsável:",
+        "t": "txt",
+        "req": 1,
+        "max": 190
+       },
+       {
+        "n": "cargo",
+        "l": "Cargo:",
+        "t": "txt",
+        "req": 1,
+        "max": 190
+       },
+       {
+        "n": "email",
+        "l": "E-mail:",
+        "t": "txt",
+        "req": 1,
+        "max": 190
+       },
+       {
+        "n": "ddi",
+        "l": "Celular, DDI:",
+        "t": "txt",
+        "req": 1,
+        "max": 3,
+        "cls": "curto"
+       },
+       {
+        "n": "telefone",
+        "l": "Celular:",
+        "t": "txt",
+        "req": 1,
+        "max": 20,
+        "cls": "medio"
+       },
+       {
+        "n": "telefone2",
+        "l": "Telefone fixo:",
+        "t": "txt",
+        "max": 20,
+        "cls": "medio"
+       },
+       {
+        "n": "telefone3",
+        "l": "Telefone alternativo:",
+        "t": "txt",
+        "max": 20,
+        "cls": "medio"
+       }
+      ]
+     },
+     {
+      "t": "Endereço",
+      "campos": [
+       {
+        "n": "cep",
+        "l": "CEP:",
+        "t": "txt",
+        "req": 1,
+        "max": 9,
+        "cls": "curto"
+       },
+       {
+        "n": "logradouro",
+        "l": "Logradouro:",
+        "t": "txt",
+        "req": 1,
+        "max": 190
+       },
+       {
+        "n": "numero",
+        "l": "Número:",
+        "t": "txt",
+        "req": 1,
+        "max": 20,
+        "cls": "curto"
+       },
+       {
+        "n": "complemento",
+        "l": "Complemento:",
+        "t": "txt",
+        "max": 100,
+        "cls": "medio"
+       },
+       {
+        "n": "bairro",
+        "l": "Bairro:",
+        "t": "txt",
+        "req": 1,
+        "max": 100,
+        "cls": "medio"
+       },
+       {
+        "n": "municipio",
+        "l": "Município:",
+        "t": "sel",
+        "req": 1,
+        "opts": [
+         "Rio de Janeiro"
+        ]
+       },
+       {
+        "n": "uf_id",
+        "l": "UF:",
+        "t": "sel",
+        "req": 1,
+        "opts": [
+         "RJ"
+        ]
+       },
+       {
+        "n": "estado",
+        "l": "Estado:",
+        "t": "txt",
+        "req": 1,
+        "max": 100,
+        "cls": "medio"
+       }
+      ]
+     },
+     {
+      "t": "Identificação do agente cultural",
+      "tag": "pessoa física",
+      "quando": {
+       "n": "tipo_de_pessoa_id",
+       "v": [
+        "Pessoa física"
+       ]
+      },
+      "campos": [
+       {
+        "n": "campo_361000101",
+        "l": "Nome Social, se houver:",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "campo_361000102",
+        "l": "Apelido/Nome Artístico, se houver:",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "campo_361000103",
+        "l": "Nacionalidade:",
+        "t": "rad",
+        "req": 1,
+        "inline": 1,
+        "opts": [
+         "Brasileiro",
+         "Estrangeiro"
+        ]
+       },
+       {
+        "n": "campo_361000104",
+        "l": "País de origem:",
+        "t": "txt",
+        "req": 1,
+        "max": 190,
+        "quando": {
+         "n": "campo_361000103",
+         "v": [
+          "Estrangeiro"
+         ]
+        }
+       },
+       {
+        "n": "campo_361000105",
+        "l": "RNM/RNE:",
+        "t": "txt",
+        "req": 1,
+        "max": 190,
+        "quando": {
+         "n": "campo_361000103",
+         "v": [
+          "Estrangeiro"
+         ]
+        }
+       },
+       {
+        "n": "campo_361000106",
+        "l": "Data de nascimento:",
+        "t": "txt",
+        "req": 1,
+        "max": 10,
+        "cls": "curto",
+        "dica": "dd/mm/aaaa"
+       },
+       {
+        "n": "campo_361000107",
+        "l": "RG:",
+        "t": "txt",
+        "req": 1,
+        "max": 190,
+        "cls": "medio"
+       },
+       {
+        "n": "campo_361000108",
+        "l": "Órgão expedidor (RG):",
+        "t": "txt",
+        "req": 1,
+        "max": 190,
+        "cls": "medio"
+       },
+       {
+        "n": "campo_361000109",
+        "l": "DDD / WhatsApp, se houver:",
+        "t": "txt",
+        "max": 15,
+        "cls": "curto"
+       },
+       {
+        "n": "campo_361000110",
+        "l": "E-mail:",
+        "t": "txt",
+        "req": 1,
+        "max": 190
+       }
+      ]
+     },
+     {
+      "t": "Dados fiscais",
+      "tag": "pessoa jurídica",
+      "quando": {
+       "n": "tipo_de_pessoa_id",
+       "v": [
+        "Pessoa jurídica com fins lucrativos",
+        "Pessoa jurídica sem fins lucrativos",
+        "MEI"
+       ]
+      },
+      "campos": [
+       {
+        "n": "campo_361000201",
+        "l": "Inscrição municipal:",
+        "t": "txt",
+        "max": 190,
+        "cls": "medio"
+       }
+      ]
+     },
+     {
+      "t": "Representante legal",
+      "tag": "pessoa jurídica",
+      "quando": {
+       "n": "tipo_de_pessoa_id",
+       "v": [
+        "Pessoa jurídica com fins lucrativos",
+        "Pessoa jurídica sem fins lucrativos",
+        "MEI"
+       ]
+      },
+      "campos": [
+       {
+        "n": "campo_361000301",
+        "l": "CPF:",
+        "t": "txt",
+        "req": 1,
+        "max": 15,
+        "cls": "curto"
+       },
+       {
+        "n": "campo_361000302",
+        "l": "RG:",
+        "t": "txt",
+        "req": 1,
+        "max": 190,
+        "cls": "medio"
+       },
+       {
+        "n": "campo_361000303",
+        "l": "Órgão expedidor (RG):",
+        "t": "txt",
+        "req": 1,
+        "max": 190,
+        "cls": "medio"
+       },
+       {
+        "n": "campo_361000304",
+        "l": "E-mail:",
+        "t": "txt",
+        "req": 1,
+        "max": 190
+       },
+       {
+        "n": "campo_361000305",
+        "l": "DDD / Telefone:",
+        "t": "txt",
+        "req": 1,
+        "max": 15,
+        "cls": "medio"
+       },
+       {
+        "n": "campo_361000306",
+        "l": "DDD / Whatsapp (se houver):",
+        "t": "txt",
+        "max": 15,
+        "cls": "medio"
+       },
+       {
+        "n": "campo_361000307",
+        "l": "O AGENTE CULTURAL se faz representar por procurador nomeado?",
+        "t": "rad",
+        "req": 1,
+        "inline": 1,
+        "opts": [
+         "Sim",
+         "Não"
+        ]
+       }
+      ]
+     },
+     {
+      "t": "Território",
+      "campos": [
+       {
+        "n": "campo_361000401",
+        "l": "Em qual Área de Planejamento o agente cultural é residente?",
+        "t": "txt",
+        "req": 1,
+        "max": 190,
+        "cls": "medio"
+       },
+       {
+        "n": "campo_361000402",
+        "l": "O Agente Cultural é morador de Favela da AP 1 ou AP 2?",
+        "t": "rad",
+        "req": 1,
+        "inline": 1,
+        "opts": [
+         "Sim",
+         "Não"
+        ]
+       },
+       {
+        "n": "campo_361000403",
+        "l": "Selecione:",
+        "t": "sel",
+        "req": 1,
+        "opts": [
+         "A.M. DO MORRO DO VIGÁRIO",
+         "A.M. E AMIGOS DE SANTA TEREZA",
+         "A.M. E AMIGOS DO VALE",
+         "AÇUDE DA SOLIDÃO",
+         "ANASTÁCIA",
+         "ANDRÉ CAVALCANTI",
+         "ARRELIA",
+         "AZEVEDO LIMA",
+         "BABILÔNIA",
+         "BARONESA",
+         "BARREIRA DO VASCO",
+         "BECO DA CORUJA",
+         "BISPO",
+         "BORDA DO MATO",
+         "BOREL",
+         "BURACO QUENTE",
+         "CATUMBI",
+         "CERRO-CORÁ",
+         "CHÁCARA DO CÉU",
+         "CHAPÉU MANGUEIRA",
+         "COMUNIDADE DE CLARA NUNES",
+         "COMUNIDADE VILA DOS SONHOS",
+         "CONJUNTO ATAULFO ALVES",
+         "CORÉIA (RA - TIJUCA)",
+         "COROADO (AMAPOLO)",
+         "DO HORTO",
+         "DOUTOR CATRAMBI",
+         "ESTRADA DO SOBERBO (ALTURA DO Nº 176)",
+         "ESTRADA DO SOBERBO (ALTURA DO Nº 267)",
+         "ESTRADA DO TIJUAÇU",
+         "ESTRADA JOAQUIM MAMEDE",
+         "FAZENDA CATETE",
+         "FRANÇA JUNIOR",
+         "FRANCISCO DE CASTRO",
+         "GAMBOA",
+         "GUARARAPES",
+         "HUMAITÁ",
+         "INDIANA",
+         "JAMELÃO",
+         "JÚLIO OTONI",
+         "LADEIRA DOS FUNCIONÁRIOS",
+         "LADEIRA DOS TABAJARAS",
+         "LADEIRA DOS TABAJARAS, Nº 248",
+         "LADEIRA DOS TABAJARAS, Nº 256",
+         "LADEIRA SANTA ISABEL",
+         "LUIZ MARCELINO",
+         "MANGUEIRA (RA - BOTAFOGO)",
+         "MANGUEIRA (RA - SÃO CRISTÓVÃO)",
+         "MARECHAL JARDIM",
+         "MATA MACHADO",
+         "MATINHA (RA - RIO COMPRIDO)",
+         "MATINHA (RA - ROCINHA)",
+         "MOREIRA PINTO",
+         "MORRO AZUL",
+         "MORRO DA CASA BRANCA",
+         "MORRO DA CONCEIÇÃO",
+         "MORRO DA COROA",
+         "MORRO DA FORMIGA",
+         "MORRO DA LIBERDADE",
+         "MORRO DA PROVIDÊNCIA",
+         "MORRO DA SAUDADE",
+         "MORRO DO ANDARAÍ",
+         "MORRO DO BANANAL",
+         "MORRO DO CANTAGALO",
+         "MORRO DO CHACRINHA",
+         "MORRO DO CRUZ",
+         "MORRO DO ESCONDIDINHO",
+         "MORRO DO GARI",
+         "MORRO DO PEC",
+         "MORRO DOS CABRITOS",
+         "MORRO DOS MACACOS",
+         "MORRO DOS PRAZERES",
+         "MORRO DOS TELÉGRAFOS",
+         "MORRO SANTA MARTA",
+         "MORRO SANTOS RODRIGUES",
+         "NOVA DIVINÉIA",
+         "OCIDENTAL FALLET",
+         "PANTANAL (RA - RIO COMPRIDO)",
+         "PARQUE ALEGRIA",
+         "PARQUE BOA ESPERANÇA (RA - PORTUÁRIA)",
+         "PARQUE CANDELÁRIA",
+         "PARQUE CONQUISTA",
+         "PARQUE DOS MINEIROS",
+         "PARQUE HERÉDIA DE SÁ",
+         "PARQUE HORÁCIO CARDOSO FRANCO",
+         "PARQUE JOÃO PAULO II",
+         "PARQUE NOSSA SENHORA DA PENHA",
+         "PARQUE REBOUÇAS",
+         "PARQUE SÃO SEBASTIÃO",
+         "PARQUE VILA ISABEL",
+         "PARQUE VITÓRIA",
+         "PAULA RAMOS",
+         "PAVÃO-PAVÃOZINHO",
+         "PEDRA LISA",
+         "QUINTA DO CAJU",
+         "RATO",
+         "ROCHA MIRANDA",
+         "ROCINHA",
+         "RODO",
+         "RUA ÁLVARO RAMOS, Nº 499",
+         "RUA ÁLVARO RAMOS, Nº 535",
+         "RUA BARTOLOMEU GUSMÃO",
+         "RUA COQUEIROS, Nº 10",
+         "RUA EMILIO BERLA LOTE 14",
+         "RUA FERREIRA DE ARAÚJO",
+         "RUA JOSÉ EUGÊNIO",
+         "RUA PROJETADA A - RIO COMPRIDO",
+         "RUA RODRIGO DA SILVA (ALTURA DO Nº 91)",
+         "RUA RODRIGO DA SILVA (ALTURA DO Nº 910 - CAMINHO SANTO ANDRÉ)",
+         "RUA SILVA TELES, Nº 110",
+         "SALGUEIRO",
+         "SANTA ALEXANDRINA",
+         "SANTO CRISTO",
+         "SAÚDE",
+         "SÃO CARLOS",
+         "SÃO DIOGO",
+         "SÍTIO DA BIQUINHA",
+         "SUMARÉ",
+         "TAVARES BASTOS",
+         "TRAVESSA VISTA ALEGRE",
+         "TUIUTI",
+         "UNIDOS DE SANTA TEREZA",
+         "VALE ENCANTADO",
+         "VIDIGAL",
+         "VILA ANCHIETA",
+         "VILA ARARÁ",
+         "VILA BENJAMIM CONSTANT",
+         "VILA CÂNDIDO",
+         "VILA CANOAS",
+         "VILA DA IMACULADA CONCEIÇÃO",
+         "VILA DO MEXICANO",
+         "VILA ELZA",
+         "VILA MISÉRIA",
+         "VILA PARAÍSO",
+         "VILA PARQUE DA CIDADE",
+         "VILA PEDRA BONITA",
+         "VILA PEREIRA DA SILVA",
+         "VILA SANTA ALEXANDRINA",
+         "VILA SANTA BÁRBARA",
+         "VILA SANTO AMARO",
+         "VILA UNIÃO (RA - SÃO CRISTÓVÃO)",
+         "VILA VITÓRIA (RA - SÃO CRISTÓVÃO)"
+        ],
+        "quando": {
+         "n": "campo_361000402",
+         "v": [
+          "Sim"
+         ]
+        }
+       }
+      ]
+     },
+     {
+      "t": "Perfil do agente cultural",
+      "tag": "pessoa física",
+      "quando": {
+       "n": "tipo_de_pessoa_id",
+       "v": [
+        "Pessoa física"
+       ]
+      },
+      "campos": [
+       {
+        "n": "campo_361000501",
+        "l": "Pertence a algum povo ou comunidade tradicional?",
+        "t": "sel",
+        "req": 1,
+        "opts": [
+         "Não pertence a povos ou comunidades tradicionais.",
+         "Andirobeiros",
+         "Apanhadores de flores sempre vivas",
+         "Benzedeiros",
+         "Caatingueiros",
+         "Caboclos",
+         "Caiçaras",
+         "Catadores de mangaba",
+         "Cipozeiros",
+         "Comunidades de fundos e fechos de pasto",
+         "Comunidades quilombolas",
+         "Extrativistas",
+         "Extrativistas costeiros e marinhos",
+         "Faxinalenses",
+         "Geraizeiros",
+         "Ilhéus",
+         "Juventude de povos e comunidades tradicionais",
+         "Morroquianos",
+         "Pantaneiros",
+         "Pescadores artesanais",
+         "Povo pomerano",
+         "Povos ciganos",
+         "Povos e comunidades de terreiro/de matriz africana",
+         "Povos indígenas",
+         "Quebradeiras de coco babaçu",
+         "Raizeiros",
+         "Retireiros do Araguaia",
+         "Ribeirinhos",
+         "Vazanteiros",
+         "Veredeiros",
+         "Outra comunidade tradicional"
+        ]
+       },
+       {
+        "n": "campo_361000502",
+        "l": "Outra comunidade tradicional:",
+        "t": "txt",
+        "req": 1,
+        "max": 190,
+        "quando": {
+         "n": "campo_361000501",
+         "v": [
+          "Outra comunidade tradicional"
+         ]
+        }
+       },
+       {
+        "n": "campo_361000503",
+        "l": "É mestre ou mestra das culturas tradicionais e populares?",
+        "t": "rad",
+        "req": 1,
+        "inline": 1,
+        "opts": [
+         "Sim",
+         "Não"
+        ]
+       },
+       {
+        "n": "campo_361000504",
+        "l": "Identidade de gênero:",
+        "t": "rad",
+        "req": 1,
+        "opts": [
+         "Mulher cisgênera",
+         "Homem cisgênero",
+         "Mulher transgênera",
+         "Homem transgênero",
+         "Pessoa não binária",
+         "Travesti",
+         "Não desejo informar",
+         "Outra"
+        ]
+       },
+       {
+        "n": "campo_361000505",
+        "l": "Outra identidade de gênero:",
+        "t": "txt",
+        "req": 1,
+        "max": 190,
+        "quando": {
+         "n": "campo_361000504",
+         "v": [
+          "Outra"
+         ]
+        }
+       },
+       {
+        "n": "campo_361000506",
+        "l": "Orientação Sexual:",
+        "t": "rad",
+        "req": 1,
+        "opts": [
+         "Lésbica",
+         "Gay",
+         "Bissexual",
+         "Assexual",
+         "Pansexual",
+         "Heterosexual",
+         "Não desejo informar",
+         "Outro"
+        ]
+       },
+       {
+        "n": "campo_361000507",
+        "l": "Outra orientação sexual:",
+        "t": "txt",
+        "req": 1,
+        "max": 190,
+        "quando": {
+         "n": "campo_361000506",
+         "v": [
+          "Outro"
+         ]
+        }
+       },
+       {
+        "n": "campo_361000508",
+        "l": "Qual é a sua cor ou raça?",
+        "t": "rad",
+        "req": 1,
+        "opts": [
+         "Preta",
+         "Parda",
+         "Indígena",
+         "Amarela",
+         "Branca",
+         "Não desejo informar",
+         "Outro"
+        ]
+       },
+       {
+        "n": "campo_361000509",
+        "l": "Outra cor ou raça:",
+        "t": "txt",
+        "req": 1,
+        "max": 190,
+        "quando": {
+         "n": "campo_361000508",
+         "v": [
+          "Outro"
+         ]
+        }
+       },
+       {
+        "n": "campo_361000510",
+        "l": "Trata-se de pessoa com deficiência?",
+        "t": "rad",
+        "req": 1,
+        "inline": 1,
+        "opts": [
+         "Sim",
+         "Não"
+        ]
+       },
+       {
+        "n": "campo_361000511",
+        "l": "Caso tenha marcado \"sim\", indique o tipo de deficiência:",
+        "t": "rad",
+        "req": 1,
+        "opts": [
+         "Sim, visual",
+         "Sim, auditiva",
+         "Sim, física-motora",
+         "Sim, intelectual",
+         "Sim, Transtorno do Espectro Autista",
+         "Sim, múltipla",
+         "Sim, outra"
+        ],
+        "quando": {
+         "n": "campo_361000510",
+         "v": [
+          "Sim"
+         ]
+        }
+       },
+       {
+        "n": "campo_361000512",
+        "l": "Outra deficiência:",
+        "t": "txt",
+        "req": 1,
+        "max": 190,
+        "quando": {
+         "n": "campo_361000511",
+         "v": [
+          "Sim, outra"
+         ]
+        }
+       },
+       {
+        "n": "campo_361000513",
+        "l": "Principal função no campo artístico-cultural:",
+        "t": "sel",
+        "req": 1,
+        "opts": [
+         "Animador",
+         "Artesão",
+         "Artista",
+         "Assessor de Imprensa",
+         "Assessor(a) de comunicação",
+         "Assistente de comunicação",
+         "Assistente de direção",
+         "Assistente de palco",
+         "Assistente de produção",
+         "Ator/Atriz",
+         "Brincante",
+         "Capoeirista",
+         "Carnavalesco(a)",
+         "Cenógrafo(a)",
+         "Cinegrafista",
+         "Consultor(a)",
+         "Criador(a)",
+         "Curador(a)",
+         "Dançarino(a)",
+         "Desenhista",
+         "Desenvolvedor(a)",
+         "Designer",
+         "DJ",
+         "Editor(a)",
+         "Educador(a) artístico(a)-cultural",
+         "Escritor(a)",
+         "Figurinista",
+         "Gestor de redes sociais",
+         "Gestor(a)",
+         "Instrutor(a)",
+         "Jornalista",
+         "Mestre da Cultura Popular",
+         "Oficineiro(a)",
+         "Pesquisador(a)",
+         "Produtor(a)",
+         "Profissional da crítica",
+         "Programador(a)",
+         "Projecionista",
+         "Redator(a)",
+         "Revisor(a)",
+         "Roadie",
+         "Roteirista",
+         "Técnico(a) audiovisual",
+         "Técnico(a) de iluminação",
+         "Técnico(a) de sonorização",
+         "VJ",
+         "Web-designer",
+         "Bibliotecário(a)",
+         "Museólogo(a)",
+         "Arquivista",
+         "Outro"
+        ]
+       },
+       {
+        "n": "campo_361000514",
+        "l": "Você marcou Outro. Descreva:",
+        "t": "txt",
+        "req": 1,
+        "max": 190,
+        "quando": {
+         "n": "campo_361000513",
+         "v": [
+          "Outro"
+         ]
+        }
+       },
+       {
+        "n": "campo_361000515",
+        "l": "Outra função no campo artístico-cultural:",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "campo_361000516",
+        "l": "Qual é o seu nível de escolaridade?",
+        "t": "rad",
+        "req": 1,
+        "opts": [
+         "Não possui educação formal",
+         "Ensino fundamental incompleto ou equivalente",
+         "Ensino fundamental completo ou equivalente",
+         "Ensino médio incompleto ou equivalente",
+         "Ensino médio completo ou equivalente",
+         "Curso técnico incompleto",
+         "Curso técnico completo",
+         "Ensino superior incompleto ou equivalente",
+         "Ensino superior completo",
+         "Pós-graduação incompleto",
+         "Pós-graduação completo"
+        ]
+       },
+       {
+        "n": "campo_361000517",
+        "l": "Renda média individual (R$):",
+        "t": "rad",
+        "req": 1,
+        "opts": [
+         "Nenhuma renda",
+         "De 1,00 a 500,00",
+         "De 501,00 a 1.000,00",
+         "De 1.001,00 a 2.000,00",
+         "De 2.001,00 a 3.000,00",
+         "De 3.001,00 a 5.000,00",
+         "De 5.001,00 a 10.000,00",
+         "De 10.001,00 a 20.000,00",
+         "De 20.001,00 a 100.000,00",
+         "Acima de 100.000,00"
+        ]
+       },
+       {
+        "n": "campo_361000518",
+        "l": "Há quanto tempo você trabalha no setor cultural?",
+        "t": "rad",
+        "req": 1,
+        "inline": 1,
+        "opts": [
+         "até 2 anos",
+         "de 2 a 5 anos",
+         "de 5 a 10 anos",
+         "mais de 10 anos"
+        ]
+       },
+       {
+        "n": "campo_361000519",
+        "l": "Acessou recursos públicos de fomento à cultura nos últimos 5 (cinco) anos?",
+        "t": "rad",
+        "req": 1,
+        "inline": 1,
+        "opts": [
+         "Sim",
+         "Não"
+        ]
+       },
+       {
+        "n": "campo_361000520",
+        "l": "Indique por quais meios:",
+        "t": "ta",
+        "req": 1,
+        "max": 500,
+        "quando": {
+         "n": "campo_361000519",
+         "v": [
+          "Sim"
+         ]
+        }
+       }
+      ]
+     },
+     {
+      "t": "Perfil do agente cultural",
+      "tag": "pessoa jurídica",
+      "quando": {
+       "n": "tipo_de_pessoa_id",
+       "v": [
+        "Pessoa jurídica com fins lucrativos",
+        "Pessoa jurídica sem fins lucrativos",
+        "MEI"
+       ]
+      },
+      "campos": [
+       {
+        "n": "campo_361000601",
+        "l": "Raça, cor ou etnia do AGENTE CULTURAL:",
+        "t": "rad",
+        "req": 1,
+        "opts": [
+         "Branca",
+         "Preta",
+         "Parda",
+         "Indígena",
+         "Asiática",
+         "Prefiro não declarar"
+        ]
+       },
+       {
+        "n": "campo_361000602",
+        "l": "Gênero do AGENTE CULTURAL:",
+        "t": "rad",
+        "req": 1,
+        "opts": [
+         "Mulher cisgênero",
+         "Homem cisgênero",
+         "Mulher transgênero",
+         "Homem transgênero",
+         "Pessoa não-binária",
+         "Prefiro não declarar"
+        ]
+       },
+       {
+        "n": "campo_361000603",
+        "l": "Orientação Sexual do AGENTE CULTURAL:",
+        "t": "rad",
+        "req": 1,
+        "opts": [
+         "Lésbica",
+         "Gay",
+         "Bissexual",
+         "Assexual",
+         "Pansexual",
+         "Heterossexual",
+         "Não desejo informar",
+         "Outro"
+        ]
+       },
+       {
+        "n": "campo_361000604",
+        "l": "Outra orientação sexual:",
+        "t": "txt",
+        "req": 1,
+        "max": 190,
+        "quando": {
+         "n": "campo_361000603",
+         "v": [
+          "Outro"
+         ]
+        }
+       },
+       {
+        "n": "campo_361000605",
+        "l": "Renda do AGENTE CULTURAL:",
+        "t": "rad",
+        "req": 1,
+        "opts": [
+         "Nenhuma renda",
+         "De 1,00 a 500,00",
+         "De 501,00 a 1.000,00",
+         "De 1.001,00 a 2.000,00",
+         "De 2.001,00 a 3.000,00",
+         "De 3.001,00 a 5.000,00",
+         "De 5.001,00 a 10.000,00",
+         "De 10.001,00 a 20.000,00",
+         "De 20.001,00 a 100.000,00",
+         "Acima de 100.000,00"
+        ]
+       },
+       {
+        "n": "campo_361000606",
+        "l": "Faturamento Anual do AGENTE CULTURAL:",
+        "t": "rad",
+        "req": 1,
+        "opts": [
+         "Até R$81.000,00",
+         "Entre R$81.000,01 e R$360.000,00",
+         "Entre R$360.000,01 e R$1.000.000,00",
+         "Entre R$1.000.000,01 a R$4.800.000,00",
+         "Acima de R$4.800.000,01",
+         "Prefiro não declarar"
+        ]
+       },
+       {
+        "n": "campo_361000607",
+        "l": "Faixa de idade do AGENTE CULTURAL:",
+        "t": "rad",
+        "req": 1,
+        "opts": [
+         "Até 19 anos",
+         "De 20 a 29 anos",
+         "De 30 a 39 anos",
+         "De 40 a 49 anos",
+         "De 50 a 59 anos",
+         "Acima de 60 anos",
+         "Prefiro não declarar"
+        ]
+       },
+       {
+        "n": "campo_361000608",
+        "l": "Escolaridade do AGENTE CULTURAL:",
+        "t": "rad",
+        "req": 1,
+        "opts": [
+         "Não tenho Educação Formal",
+         "Ensino Fundamental Incompleto ou equivalente",
+         "Ensino Fundamental Completo ou equivalente",
+         "Ensino Médio Incompleto ou equivalente",
+         "Ensino Médio Completo ou equivalente",
+         "Curso técnico incompleto",
+         "Curso Técnico Completo",
+         "Ensino Superior Incompleto ou equivalente",
+         "Ensino Superior Completo",
+         "Pós Graduação Completo",
+         "Pós-Graduação Incompleto"
+        ]
+       },
+       {
+        "n": "campo_361000609",
+        "l": "É Pessoa com Deficiência ou há Pessoa com Deficiência no corpo diretivo da Pessoa Jurídica?",
+        "t": "rad",
+        "req": 1,
+        "opts": [
+         "Não",
+         "Sim, visual",
+         "Sim, auditiva",
+         "Sim, física-motora",
+         "Sim, intelectual",
+         "Sim, Transtorno do Espectro Autista",
+         "Sim, múltipla",
+         "Sim, outra"
+        ]
+       },
+       {
+        "n": "campo_361000610",
+        "l": "Outra deficiência:",
+        "t": "txt",
+        "req": 1,
+        "max": 190,
+        "quando": {
+         "n": "campo_361000609",
+         "v": [
+          "Sim, outra"
+         ]
+        }
+       },
+       {
+        "n": "campo_361000611",
+        "l": "É Pessoa Transgênero ou há Pessoa Transgênero no corpo diretivo da Pessoa jurídica?",
+        "t": "rad",
+        "req": 1,
+        "opts": [
+         "Não",
+         "Sim, mulher transgênero",
+         "Sim, homem transgênero",
+         "Sim, pessoa não-binária",
+         "Prefiro não declarar"
+        ]
+       },
+       {
+        "n": "campo_361000612",
+        "l": "Principal área de atuação no campo artístico-cultural:",
+        "t": "sel",
+        "req": 1,
+        "opts": [
+         "Antropologia",
+         "Arqueologia",
+         "Arquitetura-Urbanismo",
+         "Arquivo",
+         "Arte de Rua",
+         "Arte Digital",
+         "Artes Clássicas",
+         "Artes do Espetáculo",
+         "Artes Integradas",
+         "Artes Visuais",
+         "Artesanato",
+         "Audiovisual",
+         "Biblioteca",
+         "Capoeira",
+         "Carnaval",
+         "Cinema",
+         "Circo",
+         "Cultura Afro-brasileira",
+         "Cultura Cigana",
+         "Cultura DEF",
+         "Cultura Digital",
+         "Cultura e Comunicação",
+         "Cultura e Direitos Humanos",
+         "Cultura e Educação",
+         "Cultura e Esporte",
+         "Cultura e Meio Ambiente",
+         "Cultura e Saúde",
+         "Cultura Hip-Hop",
+         "Funk",
+         "Cultura LGBTQIAPN+",
+         "Cultura Negra",
+         "Cultura Popular",
+         "Cultura, Infância e Adolescência",
+         "Cultura dos Povos de Comunidades Tradicionais de Matriz Africana",
+         "Cultura dos Povos Indígenas",
+         "Cultura dos Povos Nômades",
+         "Culturas Estrangeiras",
+         "Culturas Populares",
+         "Culturas Quilombolas",
+         "Dança",
+         "Design",
+         "Direito Autoral",
+         "Economia Criativa",
+         "Economia da Cultura",
+         "Expressões Artísticas Culturais Afro-Brasileiras",
+         "Festas Populares",
+         "Festejos Juninos",
+         "Filosofia",
+         "Fotografia",
+         "Gastronomia",
+         "História e Cultura",
+         "Humor",
+         "Intercâmbio Cultural",
+         "Jogos Eletrônicos",
+         "Jornalismo e Cultura",
+         "Leitura",
+         "Literatura",
+         "Livro",
+         "Mídias Livres",
+         "Mídias Sociais",
+         "Moda",
+         "Museu",
+         "Música",
+         "Música Erudita",
+         "Música Popular",
+         "Novas Mídias",
+         "Patrimônio Imaterial",
+         "Patrimônio Material",
+         "Performance",
+         "Pesquisa em Cultura",
+         "Povos de Terreiro",
+         "Produção e Gestão Cultural",
+         "Quilombola",
+         "Rádio",
+         "Teatro",
+         "Televisão",
+         "Turismo e Cultura",
+         "Outros"
+        ]
+       },
+       {
+        "n": "campo_361000613",
+        "l": "Você marcou Outros. Descreva:",
+        "t": "txt",
+        "req": 1,
+        "max": 190,
+        "quando": {
+         "n": "campo_361000612",
+         "v": [
+          "Outros"
+         ]
+        }
+       },
+       {
+        "n": "campo_361000614",
+        "l": "Outra Principal área de atuação no campo artístico-cultural:",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "campo_361000615",
+        "l": "Principal função no campo artístico-cultural:",
+        "t": "sel",
+        "req": 1,
+        "opts": [
+         "Animador",
+         "Artesão",
+         "Artista",
+         "Assessor de Imprensa",
+         "Assessor(a) de comunicação",
+         "Assistente de comunicação",
+         "Assistente de direção",
+         "Assistente de palco",
+         "Assistente de produção",
+         "Ator/Atriz",
+         "Brincante",
+         "Capoeirista",
+         "Carnavalesco(a)",
+         "Cenógrafo(a)",
+         "Cinegrafista",
+         "Consultor(a)",
+         "Criador(a)",
+         "Curador(a)",
+         "Dançarino(a)",
+         "Desenhista",
+         "Desenvolvedor(a)",
+         "Designer",
+         "DJ",
+         "Editor(a)",
+         "Educador(a) artístico(a)-cultural",
+         "Escritor(a)",
+         "Figurinista",
+         "Gestor de redes sociais",
+         "Gestor(a)",
+         "Instrutor(a)",
+         "Jornalista",
+         "Mestre da Cultura Popular",
+         "Oficineiro(a)",
+         "Pesquisador(a)",
+         "Produtor(a)",
+         "Profissional da crítica",
+         "Programador(a)",
+         "Projecionista",
+         "Redator(a)",
+         "Revisor(a)",
+         "Roadie",
+         "Roteirista",
+         "Técnico(a) audiovisual",
+         "Técnico(a) de iluminação",
+         "Técnico(a) de sonorização",
+         "VJ",
+         "Web-designer",
+         "Bibliotecário(a)",
+         "Museólogo(a)",
+         "Arquivista",
+         "Outro"
+        ]
+       },
+       {
+        "n": "campo_361000616",
+        "l": "Você marcou Outro. Descreva:",
+        "t": "txt",
+        "req": 1,
+        "max": 190,
+        "quando": {
+         "n": "campo_361000615",
+         "v": [
+          "Outro"
+         ]
+        }
+       },
+       {
+        "n": "campo_361000617",
+        "l": "Outra função no campo artístico-cultural:",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "campo_361000618",
+        "l": "Acessou recursos públicos de fomento à cultura nos últimos 5 (cinco) anos?",
+        "t": "rad",
+        "req": 1,
+        "inline": 1,
+        "opts": [
+         "Sim",
+         "Não",
+         "Não sei"
+        ]
+       },
+       {
+        "n": "campo_361000619",
+        "l": "Indique por quais meios:",
+        "t": "ta",
+        "req": 1,
+        "max": 500,
+        "quando": {
+         "n": "campo_361000618",
+         "v": [
+          "Sim"
+         ]
+        }
+       },
+       {
+        "n": "campo_361000620",
+        "l": "A quanto tempo o AGENTE CULTURAL atua no setor cultural?",
+        "t": "rad",
+        "req": 1,
+        "inline": 1,
+        "opts": [
+         "até 2 anos",
+         "de 2 a 5 anos",
+         "de 5 a 10 anos",
+         "mais de 10 anos"
+        ]
+       }
+      ]
+     },
+     {
+      "t": "Vagas reservadas",
+      "campos": [
+       {
+        "n": "campo_361000701",
+        "l": "Deseja concorrer às vagas reservadas?",
+        "t": "rad",
+        "req": 1,
+        "opts": [
+         "Sim, desejo concorrer às vagas destinadas às Pessoas Negras",
+         "Sim, desejo concorrer às vagas destinadas às Pessoas Indígena",
+         "Sim, desejo concorrer às vagas destinadas às Pessoas com Deficiência",
+         "Não desejo concorrer às vagas reservadas",
+         "Não me aplico às vagas reservadas"
+        ]
+       },
+       {
+        "n": "campo_361000702",
+        "l": "Qual a forma de participação escolhida para as vagas reservadas?",
+        "t": "rad",
+        "req": 1,
+        "opts": [
+         "Documentação comprobatória do Agente Cultural Pessoa Física",
+         "Documentação comprobatória do Representante Legal",
+         "Documentações comprobatórias da maioria (50% + 1) do quadro societário",
+         "Documentações comprobatórias da maioria (50% + 1) dos dirigentes"
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "projeto",
+    "nome": "Seu projeto/proposta",
+    "blocos": [
+     {
+      "t": "Resumo",
+      "campos": [
+       {
+        "n": "projeto_nome",
+        "l": "Nome da proposta/projeto:",
+        "t": "txt",
+        "req": 1,
+        "max": 50
+       },
+       {
+        "n": "projeto_area_de_atuacao_id",
+        "l": "Categoria:",
+        "t": "sel",
+        "req": 1,
+        "opts": [
+         "Projetos até R$50.000,00",
+         "Projetos acima de R$50.000,00 até R$200.000,00"
+        ]
+       },
+       {
+        "n": "projeto_valor_solicitado",
+        "l": "Valor solicitado:",
+        "t": "txt",
+        "req": 1,
+        "max": 13,
+        "cls": "curto",
+        "dica": "R$"
+       },
+       {
+        "n": "projeto_valor_total",
+        "l": "Valor total:",
+        "t": "txt",
+        "req": 1,
+        "max": 13,
+        "cls": "curto",
+        "dica": "R$"
+       },
+       {
+        "n": "campo_362000102",
+        "l": "O projeto cultural é inédito ou não inédito?",
+        "t": "rad",
+        "req": 1,
+        "inline": 1,
+        "opts": [
+         "Inédito",
+         "Não inédito"
+        ]
+       },
+       {
+        "n": "campo_362000103",
+        "l": "Indique os principais locais em que o projeto já circulou:",
+        "t": "ta",
+        "req": 1,
+        "max": 500,
+        "quando": {
+         "n": "campo_362000102",
+         "v": [
+          "Não inédito"
+         ]
+        }
+       },
+       {
+        "n": "campo_362000104",
+        "l": "Sinopse:",
+        "t": "ta",
+        "req": 1,
+        "max": 200
+       },
+       {
+        "n": "campo_362000105",
+        "l": "Apresentação:",
+        "t": "ta",
+        "req": 1,
+        "max": 2500
+       },
+       {
+        "n": "campo_362000106",
+        "l": "Objetivo Geral:",
+        "t": "ta",
+        "req": 1,
+        "max": 1000
+       },
+       {
+        "n": "campo_362000107",
+        "l": "Objetivos específicos:",
+        "t": "ta",
+        "req": 1,
+        "max": 1000
+       },
+       {
+        "n": "campo_362000108",
+        "l": "Justificativa:",
+        "t": "ta",
+        "req": 1,
+        "max": 3000
+       },
+       {
+        "n": "campo_362000109",
+        "l": "Caso deseje, anexe, em um único arquivo, materiais complementares que contribuam para a compreensão da concepção do projeto como um todo:",
+        "t": "anexo"
+       },
+       {
+        "n": "campo_362000110",
+        "l": "Quais os principais resultados esperados com a proposta?",
+        "t": "ta",
+        "req": 1,
+        "max": 500
+       },
+       {
+        "n": "campo_362000111",
+        "l": "Locais de Realização:",
+        "t": "ta",
+        "req": 1,
+        "max": 1000
+       },
+       {
+        "n": "campo_362000112",
+        "l": "Público-alvo:",
+        "t": "txt",
+        "req": 1,
+        "max": 190
+       },
+       {
+        "n": "campo_362000113",
+        "l": "Perfil do público:",
+        "t": "ta",
+        "req": 1,
+        "max": 1000
+       },
+       {
+        "n": "campo_362000114",
+        "l": "Estratégia de comunicação e mobilização:",
+        "t": "ta",
+        "req": 1,
+        "max": 1500
+       },
+       {
+        "n": "campo_362000115",
+        "l": "Aproximadamente quantos profissionais farão parte do Projeto Cultural?",
+        "t": "txt",
+        "req": 1,
+        "max": 190,
+        "cls": "curto"
+       },
+       {
+        "n": "campo_362000116",
+        "l": "Ficha técnica e mini bio dos membros da equipe do projeto cultural:",
+        "t": "ta",
+        "req": 1,
+        "max": 2500
+       },
+       {
+        "n": "campo_362000117",
+        "l": "Minibio 1 (opcional):",
+        "t": "ta",
+        "max": 1000
+       },
+       {
+        "n": "campo_362000118",
+        "l": "Minibio 2 (opcional):",
+        "t": "ta",
+        "max": 1000
+       },
+       {
+        "n": "campo_362000119",
+        "l": "Minibio 3 (opcional):",
+        "t": "ta",
+        "max": 1000
+       },
+       {
+        "n": "campo_362000120",
+        "l": "Minibio 4 (opcional):",
+        "t": "ta",
+        "max": 1000
+       },
+       {
+        "n": "campo_362000121",
+        "l": "Minibio 5 (opcional):",
+        "t": "ta",
+        "max": 1000
+       },
+       {
+        "n": "campo_362000122",
+        "l": "Minibio 6 (opcional):",
+        "t": "ta",
+        "max": 1000
+       },
+       {
+        "n": "campo_362000123",
+        "l": "Caso haja mais membros da equipe, anexe no campo abaixo um único documento:",
+        "t": "anexo"
+       },
+       {
+        "n": "campo_362000124",
+        "l": "Acessibilidade:",
+        "t": "ta",
+        "req": 1,
+        "max": 2000
+       },
+       {
+        "n": "campo_362000125",
+        "l": "Estratégias de democratização de acesso:",
+        "t": "ta",
+        "req": 1,
+        "max": 2000
+       }
+      ]
+     },
+     {
+      "t": "Cronograma",
+      "campos": [
+       {
+        "n": "campo_362000201",
+        "l": "Início do Projeto:",
+        "t": "sel",
+        "req": 1,
+        "opts": [
+         "Janeiro",
+         "Fevereiro",
+         "Março",
+         "Abril",
+         "Maio",
+         "Junho",
+         "Julho",
+         "Agosto",
+         "Setembro",
+         "Outubro",
+         "Novembro",
+         "Dezembro"
+        ]
+       },
+       {
+        "n": "campo_362000202",
+        "l": "Término do Projeto:",
+        "t": "sel",
+        "req": 1,
+        "opts": [
+         "Janeiro",
+         "Fevereiro",
+         "Março",
+         "Abril",
+         "Maio",
+         "Junho",
+         "Julho",
+         "Agosto",
+         "Setembro",
+         "Outubro",
+         "Novembro",
+         "Dezembro"
+        ]
+       },
+       {
+        "n": "campo_362000203",
+        "l": "Mês de Estreia:",
+        "t": "sel",
+        "req": 1,
+        "opts": [
+         "Janeiro",
+         "Fevereiro",
+         "Março",
+         "Abril",
+         "Maio",
+         "Junho",
+         "Julho",
+         "Agosto",
+         "Setembro",
+         "Outubro",
+         "Novembro",
+         "Dezembro"
+        ]
+       },
+       {
+        "n": "campo_362000205",
+        "l": "Pré Produção / Preparação, Início:",
+        "t": "sel",
+        "req": 1,
+        "opts": [
+         "Janeiro",
+         "Fevereiro",
+         "Março",
+         "Abril",
+         "Maio",
+         "Junho",
+         "Julho",
+         "Agosto",
+         "Setembro",
+         "Outubro",
+         "Novembro",
+         "Dezembro"
+        ]
+       },
+       {
+        "n": "campo_362000206",
+        "l": "Pré Produção / Preparação, Término:",
+        "t": "sel",
+        "req": 1,
+        "opts": [
+         "Janeiro",
+         "Fevereiro",
+         "Março",
+         "Abril",
+         "Maio",
+         "Junho",
+         "Julho",
+         "Agosto",
+         "Setembro",
+         "Outubro",
+         "Novembro",
+         "Dezembro"
+        ]
+       },
+       {
+        "n": "campo_362000207",
+        "l": "Pré Produção / Preparação, Descrição:",
+        "t": "ta",
+        "req": 1,
+        "max": 500
+       },
+       {
+        "n": "campo_362000209",
+        "l": "Produção / Execução, Início:",
+        "t": "sel",
+        "req": 1,
+        "opts": [
+         "Janeiro",
+         "Fevereiro",
+         "Março",
+         "Abril",
+         "Maio",
+         "Junho",
+         "Julho",
+         "Agosto",
+         "Setembro",
+         "Outubro",
+         "Novembro",
+         "Dezembro"
+        ]
+       },
+       {
+        "n": "campo_362000210",
+        "l": "Produção / Execução, Término:",
+        "t": "sel",
+        "req": 1,
+        "opts": [
+         "Janeiro",
+         "Fevereiro",
+         "Março",
+         "Abril",
+         "Maio",
+         "Junho",
+         "Julho",
+         "Agosto",
+         "Setembro",
+         "Outubro",
+         "Novembro",
+         "Dezembro"
+        ]
+       },
+       {
+        "n": "campo_362000211",
+        "l": "Produção / Execução, Descrição:",
+        "t": "ta",
+        "req": 1,
+        "max": 500
+       },
+       {
+        "n": "campo_362000213",
+        "l": "Pós-produção / Finalização, Início:",
+        "t": "sel",
+        "req": 1,
+        "opts": [
+         "Janeiro",
+         "Fevereiro",
+         "Março",
+         "Abril",
+         "Maio",
+         "Junho",
+         "Julho",
+         "Agosto",
+         "Setembro",
+         "Outubro",
+         "Novembro",
+         "Dezembro"
+        ]
+       },
+       {
+        "n": "campo_362000214",
+        "l": "Pós-produção / Finalização, Término:",
+        "t": "sel",
+        "req": 1,
+        "opts": [
+         "Janeiro",
+         "Fevereiro",
+         "Março",
+         "Abril",
+         "Maio",
+         "Junho",
+         "Julho",
+         "Agosto",
+         "Setembro",
+         "Outubro",
+         "Novembro",
+         "Dezembro"
+        ]
+       },
+       {
+        "n": "campo_362000215",
+        "l": "Pós-produção / Finalização, Descrição:",
+        "t": "ta",
+        "req": 1,
+        "max": 500
+       },
+       {
+        "n": "campo_362000216",
+        "l": "Planilha Orçamentária (ANEXO 4), preenchida de acordo com as orientações do Regulamento:",
+        "t": "anexo",
+        "req": 1
+       },
+       {
+        "n": "campo_362000217",
+        "l": "Qual a classificação indicativa da proposta?",
+        "t": "txt",
+        "req": 1,
+        "max": 190,
+        "cls": "medio"
+       },
+       {
+        "n": "campo_362000218",
+        "l": "A proposta é voltada para o público infantil?",
+        "t": "rad",
+        "req": 1,
+        "inline": 1,
+        "opts": [
+         "Sim",
+         "Não"
+        ]
+       }
+      ]
+     },
+     {
+      "t": "Anexos",
+      "campos": [
+       {
+        "n": "campo_362000301",
+        "l": "Portfólio:",
+        "t": "anexo",
+        "req": 1
+       },
+       {
+        "n": "campo_362000302",
+        "l": "Complemento do Portfólio:",
+        "t": "anexo"
+       },
+       {
+        "n": "campo_362000303",
+        "l": "Documentação complementar:",
+        "t": "anexo"
+       }
+      ]
+     },
+     {
+      "t": "Declarações",
+      "campos": [
+       {
+        "n": "campo_362000401",
+        "l": "Aceite das declarações:",
+        "t": "rad",
+        "req": 1,
+        "inline": 1,
+        "opts": [
+         "De acordo"
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "salic-proposta": {
+  "id": "salic-proposta",
+  "nome": "Proposta cultural · Lei Rouanet",
+  "plataforma": "salic",
+  "nav": "lateral",
+  "extraido": "2026-09-13",
+  "obs": "Estrutura da plataforma: menu lateral esquerdo. Os textos longos têm limite só no contador do Salic (resumo 1000, demais 8000).",
+  "etapas": [
+   {
+    "id": "identificacao",
+    "nome": "Identificação da proposta",
+    "grupo": "Informações iniciais",
+    "blocos": [
+     {
+      "t": "Identificação da Proposta Cultural",
+      "campos": [
+       {
+        "n": "nomeProjeto",
+        "l": "Nome da Proposta Cultural",
+        "t": "txt",
+        "req": 1,
+        "max": 500
+       }
+      ]
+     },
+     {
+      "t": "Tipicidade e seus limites orçamentários",
+      "campos": [
+       {
+        "n": "tpTipicidade",
+        "l": "Tipicidade",
+        "t": "sel",
+        "req": 1,
+        "opts": [
+         "Arte Religiosa",
+         "Cultura Afro-brasileira",
+         "Cultura Urbana",
+         "Culturais Tradicionais e Populares",
+         "Editais Compartilhados",
+         "Editais de Estatais",
+         "Fundos Patrimoniais",
+         "Planos Anuais",
+         "Projetos Especiais",
+         "Projetos Específicos",
+         "Projetos Normais"
+        ]
+       },
+       {
+        "n": "tpTipologia_arte_religiosa",
+        "cod": "tpTipologia",
+        "l": "Tipologia:",
+        "t": "sel",
+        "req": 1,
+        "opts": [
+         "Espiritualidade",
+         "Sagrado e seus símbolos",
+         "Transcendência",
+         "Religiosidade"
+        ],
+        "quando": {
+         "n": "tpTipicidade",
+         "v": [
+          "Arte Religiosa"
+         ]
+        }
+       },
+       {
+        "n": "tpTipologia_cultura_afro_brasileira",
+        "cod": "tpTipologia",
+        "l": "Tipologia:",
+        "t": "sel",
+        "req": 1,
+        "opts": [
+         "Samba",
+         "Jongo",
+         "Carimbó",
+         "Maxixe",
+         "Maculelê",
+         "Maracatu"
+        ],
+        "quando": {
+         "n": "tpTipicidade",
+         "v": [
+          "Cultura Afro-brasileira"
+         ]
+        }
+       },
+       {
+        "n": "tpTipologia_cultura_urbana",
+        "cod": "tpTipologia",
+        "l": "Tipologia:",
+        "t": "sel",
+        "req": 1,
+        "opts": [
+         "Ballroom - LGBTQIAPN+",
+         "Batalhas de rimas",
+         "Estátuas vivas",
+         "Funk e suas expressões cênicas, danças, músicas e bailes",
+         "Hip-Hop (DJ, MC, Breaking, Graffiti, Conhecimento)",
+         "Paredões de som (Reboque)",
+         "Saraus",
+         "Slam de poesia",
+         "Sound Systems - Reagge",
+         "Teatro, Circo e Dança de Rua",
+         "Lambe-Lambe",
+         "Paradas e Cultura do Orgulho LGBTQIAPN+"
+        ],
+        "quando": {
+         "n": "tpTipicidade",
+         "v": [
+          "Cultura Urbana"
+         ]
+        }
+       },
+       {
+        "n": "tpTipologia_culturais_tradicionais_e_populares",
+        "cod": "tpTipologia",
+        "l": "Tipologia:",
+        "t": "sel",
+        "req": 1,
+        "opts": [
+         "Andirobeiras",
+         "Apanhadores de Sempre-vivas",
+         "Caatingueiros",
+         "Caiçaras",
+         "Castanheiras",
+         "Catadores de Mangaba",
+         "Ciganos",
+         "Cipozeiros",
+         "Extrativistas",
+         "Faxinalenses",
+         "Fundo e Fecho de Pasto",
+         "Geraizeiros",
+         "Ilhéus",
+         "Indígenas",
+         "Isqueiros",
+         "Morroquianos",
+         "Pantaneiros",
+         "Pescadores Artesanais",
+         "Piaçaveiros",
+         "Pomeranos",
+         "Povos de Terreiro",
+         "Quebradeiras de Coco Babaçu",
+         "Quilombolas",
+         "Retireiros",
+         "Ribeirinhos",
+         "Seringueiros",
+         "Vazanteiros",
+         "Veredeiros"
+        ],
+        "quando": {
+         "n": "tpTipicidade",
+         "v": [
+          "Culturais Tradicionais e Populares"
+         ]
+        }
+       },
+       {
+        "n": "tpTipologia_editais_compartilhados",
+        "cod": "tpTipologia",
+        "l": "Tipologia:",
+        "t": "sel",
+        "req": 1,
+        "opts": [
+         "Programa Rouanet nas Favelas 2024",
+         "Programa Rouanet Norte 2024 - 2025",
+         "Programa Rouanet Emergencial RS",
+         "Programa Rouanet da Juventude",
+         "Programa Rouanet Nordeste 2025",
+         "Programa Rouanet Festivais Audiovisuais",
+         "Programa Rouanet no Interior",
+         "Programa Rouanet Centro-Oeste - 2026",
+         "Programa Rouanet nas Favelas - 2026"
+        ],
+        "quando": {
+         "n": "tpTipicidade",
+         "v": [
+          "Editais Compartilhados"
+         ]
+        }
+       },
+       {
+        "n": "tpTipologia_editais_de_estatais",
+        "cod": "tpTipologia",
+        "l": "Tipologia:",
+        "t": "sel",
+        "req": 1,
+        "opts": [
+         "Chamada Instituto Cultural Vale 2026"
+        ],
+        "quando": {
+         "n": "tpTipicidade",
+         "v": [
+          "Editais de Estatais"
+         ]
+        }
+       },
+       {
+        "n": "tpTipologia_fundos_patrimoniais",
+        "cod": "tpTipologia",
+        "l": "Tipologia:",
+        "t": "sel",
+        "req": 1,
+        "opts": [
+         "Ampliação de Fundos Patrimônios",
+         "Constituição de Fundos Patrimôniais"
+        ],
+        "quando": {
+         "n": "tpTipicidade",
+         "v": [
+          "Fundos Patrimoniais"
+         ]
+        }
+       },
+       {
+        "n": "tpTipologia_planos_anuais",
+        "cod": "tpTipologia",
+        "l": "Tipologia:",
+        "t": "sel",
+        "req": 1,
+        "opts": [
+         "Plano anual",
+         "Plano bianual",
+         "Plano trienal",
+         "Plano Quadrienal"
+        ],
+        "quando": {
+         "n": "tpTipicidade",
+         "v": [
+          "Planos Anuais"
+         ]
+        }
+       },
+       {
+        "n": "tpTipologia_projetos_especiais",
+        "cod": "tpTipologia",
+        "l": "Tipologia:",
+        "t": "sel",
+        "req": 1,
+        "opts": [
+         "Teatro musical",
+         "Óperas",
+         "Desenvolvimento sustentável de Territórios Criativos",
+         "Festival, bienal, festa ou Feira",
+         "Preservação, digitalização e doação de acervos",
+         "Patrimônio cultural",
+         "Construção, restauração e reforma de museus",
+         "Construção, conservação e implantanção de equipamento cultural"
+        ],
+        "quando": {
+         "n": "tpTipicidade",
+         "v": [
+          "Projetos Especiais"
+         ]
+        }
+       },
+       {
+        "n": "tpTipologia_projetos_especificos",
+        "cod": "tpTipologia",
+        "l": "Tipologia:",
+        "t": "sel",
+        "req": 1,
+        "opts": [
+         "Inclusão da pessoa com deficiência, participação ativa e acessibilidade plena",
+         "Premiações",
+         "Pesquisas",
+         "Concertos sinfônicos",
+         "Desfiles festivos",
+         "Datas comemorativas nacionais c/ calendários específicos: Natal, Ano Novo, Páscoa e Festas Populares",
+         "Açoes de incentivo à leitura",
+         "Espetáculos artísticos / musicais com itinerância mínima em 2 regiões",
+         "Manutenção de grupos e coletivos artístico-culturais e corpos artístico-culturais estáveis",
+         "Projetos educativos, incluindo cursos, oficinas e outras atividades pedagógicas",
+         "Exposições de artes visuais, culturais, com museografia ou acervos de museus",
+         "Plataformas de vídeo sob demanda independentes",
+         "Desenvolvimento sustentável de Territórios Criativos",
+         "Exposições de artes visuais, com museografia ou acervos de museus"
+        ],
+        "quando": {
+         "n": "tpTipicidade",
+         "v": [
+          "Projetos Específicos"
+         ]
+        }
+       },
+       {
+        "n": "tpTipologia_projetos_normais",
+        "cod": "tpTipologia",
+        "l": "Tipologia:",
+        "t": "sel",
+        "req": 1,
+        "opts": [
+         "Projetos normais"
+        ],
+        "quando": {
+         "n": "tpTipicidade",
+         "v": [
+          "Projetos Normais"
+         ]
+        }
+       }
+      ]
+     },
+     {
+      "t": "Informações Específicas · Fundos Patrimoniais",
+      "quando": {
+       "n": "tpTipicidade",
+       "v": [
+        "Fundos Patrimoniais"
+       ]
+      },
+      "campos": [
+       {
+        "n": "cpfCnpjApoiado",
+        "l": "Buscar Apoiado (CNPJ)",
+        "t": "txt",
+        "max": 18,
+        "cls": "curto"
+       },
+       {
+        "n": "cpfCnpjExecutor",
+        "l": "Buscar Executor (CNPJ)",
+        "t": "txt",
+        "max": 18,
+        "cls": "curto"
+       },
+       {
+        "n": "idArea",
+        "l": "Área de Atuação",
+        "t": "sel",
+        "opts": [
+         "Artes Cênicas",
+         "Audiovisual",
+         "Música",
+         "Artes Visuais",
+         "Patrimônio Cultural",
+         "Humanidades",
+         "Artes Integradas",
+         "Museus e Memória"
+        ]
+       },
+       {
+        "n": "banco",
+        "l": "Banco",
+        "t": "txt",
+        "max": 10,
+        "cls": "curto",
+        "dica": "Ex: 001"
+       },
+       {
+        "n": "agencia",
+        "l": "Agência",
+        "t": "txt",
+        "max": 20,
+        "cls": "curto"
+       },
+       {
+        "n": "contaCorrente",
+        "l": "Conta Corrente",
+        "t": "txt",
+        "max": 20,
+        "cls": "curto"
+       },
+       {
+        "n": "cpfCnpjFundo",
+        "l": "CNPJ do Fundo",
+        "t": "txt",
+        "max": 18,
+        "cls": "curto"
+       }
+      ]
+     },
+     {
+      "t": "Informações Complementares",
+      "campos": [
+       {
+        "n": "idTerritorioFavela",
+        "l": "Território de Favela",
+        "t": "ta",
+        "req": 1,
+        "max": 500,
+        "quando": {
+         "n": "tpTipologia_editais_compartilhados",
+         "v": [
+          "Programa Rouanet nas Favelas - 2026"
+         ]
+        },
+        "dica": "No Salic é uma lista de 3.102 territórios (seleção múltipla). Anote aqui os nomes; a seleção precisa ser feita na plataforma."
+       },
+       {
+        "n": "stDataFixa",
+        "l": "Data Fixa",
+        "t": "rad",
+        "inline": 1,
+        "opts": [
+         "Não",
+         "Sim"
+        ]
+       },
+       {
+        "n": "agenciaBancaria",
+        "l": "Agência Bancária",
+        "t": "txt",
+        "req": 1,
+        "max": 5,
+        "cls": "curto",
+        "dica": "Apenas o número da agência (5 dígitos)"
+       },
+       {
+        "n": "areaabrangencia",
+        "l": "É proposta de audiovisual?",
+        "t": "rad",
+        "inline": 1,
+        "opts": [
+         "Não",
+         "Sim"
+        ]
+       },
+       {
+        "n": "stProposta",
+        "l": "Plano Execução Imediata",
+        "t": "sel",
+        "req": 1,
+        "opts": [
+         "Projeto aprovado em editais",
+         "Projeto com contrato de patrocínio",
+         "Projeto normal (10% de captação)",
+         "Plano anual (só quando a tipicidade é Planos Anuais)"
+        ]
+       },
+       {
+        "n": "acaoContinuada",
+        "l": "Projeto de Ação Continuada",
+        "t": "rad",
+        "inline": 1,
+        "opts": [
+         "Não",
+         "Sim"
+        ],
+        "quando": {
+         "n": "tpTipologia_projetos_especiais",
+         "v": [
+          "Festival, bienal, festa ou Feira"
+         ]
+        }
+       },
+       {
+        "n": "nrPronacAnterior",
+        "l": "Número do PRONAC da edição anterior",
+        "t": "txt",
+        "req": 1,
+        "max": 7,
+        "cls": "curto",
+        "quando": {
+         "n": "acaoContinuada",
+         "v": [
+          "Sim"
+         ]
+        }
+       },
+       {
+        "n": "arquivo",
+        "l": "Comprovante do Plano de Execução Imediata",
+        "t": "anexo"
+       }
+      ]
+     },
+     {
+      "t": "Período de Realização",
+      "campos": [
+       {
+        "n": "dtInicioDeExecucao",
+        "l": "Data de Início",
+        "t": "txt",
+        "req": 1,
+        "max": 10,
+        "cls": "curto",
+        "dica": "dd/mm/aaaa"
+       },
+       {
+        "n": "tpProrrogacao",
+        "l": "Prorrogação automática?",
+        "t": "rad",
+        "inline": 1,
+        "opts": [
+         "Sim",
+         "Não"
+        ]
+       },
+       {
+        "n": "dtFinalDeExecucao",
+        "l": "Data Final",
+        "t": "txt",
+        "req": 1,
+        "max": 10,
+        "cls": "curto",
+        "dica": "dd/mm/aaaa"
+       }
+      ]
+     },
+     {
+      "t": "No caso de bem tombado",
+      "campos": [
+       {
+        "n": "nrAtoTombamento",
+        "l": "Número do Ato",
+        "t": "txt",
+        "max": 12,
+        "cls": "curto"
+       },
+       {
+        "n": "dtAtoTombamento",
+        "l": "Data do Ato",
+        "t": "txt",
+        "max": 10,
+        "cls": "curto",
+        "dica": "dd/mm/aaaa"
+       },
+       {
+        "n": "esferaTombamento",
+        "l": "Esfera do Ato",
+        "t": "sel",
+        "opts": [
+         "Municipal",
+         "Estadual",
+         "Federal"
+        ]
+       }
+      ]
+     },
+     {
+      "t": "Resumo da Proposta Cultural",
+      "campos": [
+       {
+        "n": "resumodoprojeto",
+        "l": "Resumo · Pergunta-chave: O QUÊ?",
+        "t": "ta",
+        "req": 1,
+        "max": 1000,
+        "dica": "Descreva o objetivo do projeto em no máximo 5 linhas. O texto deve ser conciso e apresentar de forma clara os produtos que compõem a proposta."
+       }
+      ]
+     },
+     {
+      "t": "Objetivos",
+      "campos": [
+       {
+        "n": "objetivos",
+        "l": "Objetivos",
+        "t": "ta",
+        "req": 1,
+        "max": 8000,
+        "dica": "Objetivo Geral (PARA QUÊ?): o principal resultado que o projeto pretende alcançar. Objetivos específicos (QUAIS? QUANTOS?): todas as ações e produtos que serão oferecidos, mensuráveis e comprováveis na prestação de contas. Separar as duas categorias."
+       }
+      ]
+     },
+     {
+      "t": "Justificativa",
+      "campos": [
+       {
+        "n": "justificativa",
+        "l": "Justificativa · POR QUE A LEI DE INCENTIVO À CULTURA?",
+        "t": "ta",
+        "req": 1,
+        "max": 8000,
+        "dica": "Destaque a necessidade do uso do mecanismo de incentivo, apresentando em quais incisos do Art. 1º da Lei 8.313/91 o projeto se enquadra e quais objetivos do Art. 3º serão alcançados."
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "social",
+    "nome": "Responsabilidade Social",
+    "grupo": "Informações iniciais",
+    "blocos": [
+     {
+      "t": "Acessibilidade",
+      "campos": [
+       {
+        "n": "acessibilidade",
+        "l": "Acessibilidade",
+        "t": "ta",
+        "req": 1,
+        "max": 8000,
+        "dica": "Acessibilidade FÍSICA (locomoção no espaço: banheiros, rampas, guias táteis) e Acessibilidade de CONTEÚDO (Libras, Braille, audiodescrição, legenda descritiva, visita sensorial)."
+       }
+      ]
+     },
+     {
+      "t": "Democratização de Acesso",
+      "campos": [
+       {
+        "n": "democratizacaodeacesso",
+        "l": "Democratização de Acesso",
+        "t": "ta",
+        "req": 1,
+        "max": 8000,
+        "dica": "Forma de distribuição e comercialização dos produtos da proposta, e outras medidas de ampliação de acesso: ensaio aberto, oficinas paralelas, transmissão pela internet."
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "tecnicos",
+    "nome": "Detalhes técnicos",
+    "grupo": "Informações iniciais",
+    "blocos": [
+     {
+      "t": "Detalhes técnicos",
+      "campos": [
+       {
+        "n": "etapadetrabalho",
+        "l": "Etapas de trabalho",
+        "t": "ta",
+        "req": 1,
+        "max": 8000,
+        "dica": "Divida em Pré-produção, Execução e Pós-produção, estimando a duração de cada etapa (dias, semanas ou meses)."
+       },
+       {
+        "n": "fichatecnica",
+        "l": "Ficha técnica",
+        "t": "ta",
+        "req": 1,
+        "max": 8000,
+        "dica": "Qual atividade (mesmo voluntária) o dirigente ou a instituição proponente realizará no projeto, e currículo resumido dos principais participantes."
+       },
+       {
+        "n": "sinopse",
+        "l": "Sinopse da obra",
+        "t": "ta",
+        "req": 1,
+        "max": 8000,
+        "dica": "Conteúdo de todos os produtos que precisam de um breve resumo (seminários, palestras, livros, espetáculos), com classificação indicativa etária."
+       },
+       {
+        "n": "especificacaotecnica",
+        "l": "Especificações técnicas do produto",
+        "t": "ta",
+        "req": 1,
+        "max": 8000,
+        "dica": "Detalhamento técnico de todos os produtos: paginação, duração, material, projeto pedagógico."
+       },
+       {
+        "n": "descricaoatividade",
+        "l": "Descrição da atividade do produto",
+        "t": "ta",
+        "req": 1,
+        "max": 8000,
+        "dica": "Detalhes da atividade cultural não mencionados nos campos anteriores, como a programação do evento."
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "outras",
+    "nome": "Outras informações",
+    "grupo": "Informações iniciais",
+    "blocos": [
+     {
+      "t": "Outras Informações",
+      "campos": [
+       {
+        "n": "estrategiadeexecucao",
+        "l": "Outras Informações",
+        "t": "ta",
+        "max": 8000,
+        "dica": "Informações complementares significativas para a avaliação da proposta. No Salic o campo se chama estrategiadeexecucao."
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "local",
+    "nome": "Local de realização",
+    "blocos": [
+     {
+      "t": "Local de Realização",
+      "campos": [
+       {
+        "t": "info",
+        "html": "No Salic esta tela é uma lista: cada local é um registro (País, UF, Cidade). Se for no exterior, só o país; se for no Brasil, UF e cidade."
+       },
+       {
+        "n": "pais",
+        "l": "País",
+        "t": "txt",
+        "max": 60,
+        "cls": "medio",
+        "dica": "Brasil, salvo exceção"
+       },
+       {
+        "n": "estados",
+        "l": "UF",
+        "t": "sel",
+        "opts": [
+         "AC",
+         "AL",
+         "AM",
+         "AP",
+         "BA",
+         "CE",
+         "DF",
+         "ES",
+         "GO",
+         "MA",
+         "MG",
+         "MS",
+         "MT",
+         "PA",
+         "PB",
+         "PE",
+         "PI",
+         "PR",
+         "RJ",
+         "RN",
+         "RO",
+         "RR",
+         "RS",
+         "SC",
+         "SE",
+         "SP",
+         "TO"
+        ]
+       },
+       {
+        "n": "cidades",
+        "l": "Cidade (lista do RJ; outras UFs, escrever no campo abaixo)",
+        "t": "sel",
+        "opts": [
+         "Angra dos Reis",
+         "Aperibé",
+         "Araruama",
+         "Areal",
+         "Armação dos Búzios",
+         "Arraial do Cabo",
+         "Barra do Piraí",
+         "Barra Mansa",
+         "Belford Roxo",
+         "Bom Jardim",
+         "Bom Jesus do Itabapoana",
+         "Cabo Frio",
+         "Cachoeiras de Macacu",
+         "Cambuci",
+         "Campos dos Goytacazes",
+         "Cantagalo",
+         "Carapebus",
+         "Cardoso Moreira",
+         "Carmo",
+         "Casimiro de Abreu",
+         "Comendador Levy Gasparian",
+         "Conceição de Macabu",
+         "Cordeiro",
+         "Duas Barras",
+         "Duque de Caxias",
+         "Engenheiro Paulo de Frontin",
+         "Guapimirim",
+         "Iguaba Grande",
+         "Itaboraí",
+         "Itaguaí",
+         "Italva",
+         "Itaocara",
+         "Itaperuna",
+         "Itatiaia",
+         "Japeri",
+         "Laje do Muriaé",
+         "Macaé",
+         "Macuco",
+         "Magé",
+         "Mangaratiba",
+         "Maricá",
+         "Mendes",
+         "Mesquita",
+         "Miguel Pereira",
+         "Miracema",
+         "Natividade",
+         "Nilópolis",
+         "Niterói",
+         "Nova Friburgo",
+         "Nova Iguaçu",
+         "Paracambi",
+         "Paraíba do Sul",
+         "Parati",
+         "Paty do Alferes",
+         "Petrópolis",
+         "Pinheiral",
+         "Piraí",
+         "Porciúncula",
+         "Porto Real",
+         "Quatis",
+         "Queimados",
+         "Quissamã",
+         "Resende",
+         "Rio Bonito",
+         "Rio Claro",
+         "Rio das Flores",
+         "Rio das Ostras",
+         "Rio de Janeiro",
+         "Santa Maria Madalena",
+         "Santo Antônio de Pádua",
+         "São Fidélis",
+         "São Francisco de Itabapoana",
+         "São Gonçalo",
+         "São João da Barra",
+         "São João de Meriti",
+         "São José de Ubá",
+         "São José do Vale do Rio Preto",
+         "São Pedro da Aldeia",
+         "São Sebastião do Alto",
+         "Sapucaia",
+         "Saquarema",
+         "Seropédica",
+         "Silva Jardim",
+         "Sumidouro",
+         "Tanguá",
+         "Teresópolis",
+         "Trajano de Moraes",
+         "Três Rios",
+         "Valença",
+         "Varre-Sai",
+         "Vassouras",
+         "Volta Redonda"
+        ],
+        "quando": {
+         "n": "estados",
+         "v": [
+          "RJ"
+         ]
+        }
+       },
+       {
+        "n": "cidades_outras",
+        "l": "Outras cidades / outros locais de realização",
+        "t": "ta",
+        "max": 2000,
+        "dica": "Um local por linha: País · UF · Cidade"
+       }
+      ]
+     },
+     {
+      "t": "Deslocamento",
+      "campos": [
+       {
+        "n": "deslocamentos",
+        "l": "Deslocamentos (origem → destino, quantidade de trechos)",
+        "t": "ta",
+        "max": 2000,
+        "dica": "Um deslocamento por linha. No Salic: País/UF/Cidade de origem, de destino e quantidade de trechos."
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "distribuicao",
+    "nome": "Plano de distribuição",
+    "blocos": [
+     {
+      "t": "Produtos",
+      "campos": [
+       {
+        "t": "info",
+        "html": "No Salic cada produto é cadastrado com Produto principal?, Produto, Área, Segmento e Transmissão em canal aberto?, e depois detalhado com quantidades, preços e distribuição gratuita. As listas de Produto, Área e Segmento não puderam ser copiadas (dependem de tipicidade e tipologia). Anote aqui e selecione na plataforma."
+       },
+       {
+        "n": "prod_principal",
+        "l": "Produto principal (nome, área, segmento, canal aberto?)",
+        "t": "ta",
+        "req": 1,
+        "max": 1000
+       },
+       {
+        "n": "prod_principal_det",
+        "l": "Detalhamento do produto principal (quantidade, inteiras/meias do proponente, preço popular, distribuição gratuita, receita prevista)",
+        "t": "ta",
+        "max": 2000
+       },
+       {
+        "n": "prod_outros",
+        "l": "Outros produtos (um por bloco de linhas, com o mesmo detalhamento)",
+        "t": "ta",
+        "max": 6000
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "orc-produtos",
+    "nome": "Custos por produtos",
+    "grupo": "Orçamento do projeto",
+    "blocos": [
+     {
+      "t": "Planilha de itens",
+      "campos": [
+       {
+        "n": "orcamento",
+        "cod": "planilha orçamentária",
+        "l": "Itens do orçamento",
+        "t": "orc"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "custos",
+    "nome": "Custos vinculados",
+    "grupo": "Orçamento do projeto",
+    "blocos": [
+     {
+      "t": "Custos vinculados / Remuneração",
+      "campos": [
+       {
+        "t": "info",
+        "html": "Percentuais que o Salic aplica sobre o valor do projeto. Padrões: acessibilidade 20%, administração 15%, captação 10% (limite absoluto de R$ 150.000,00). O resultado em reais aparece na planilha."
+       },
+       {
+        "n": "cv_acessibilidade",
+        "cod": "itensCustosVinculados[8198][percentual]",
+        "l": "Custos de acessibilidade, comunicação e divulgação acessíveis",
+        "t": "sel",
+        "req": 1,
+        "opts": [
+         "20%",
+         "19%",
+         "18%",
+         "17%",
+         "16%",
+         "15%",
+         "14%",
+         "13%",
+         "12%",
+         "11%",
+         "10%",
+         "9%",
+         "8%",
+         "7%",
+         "6%",
+         "5%",
+         "4%",
+         "3%",
+         "2%",
+         "1%",
+         "0%"
+        ]
+       },
+       {
+        "n": "cv_administracao",
+        "cod": "itensCustosVinculados[8197][percentual]",
+        "l": "Custos de Administração",
+        "t": "sel",
+        "req": 1,
+        "opts": [
+         "15%",
+         "14%",
+         "13%",
+         "12%",
+         "11%",
+         "10%",
+         "9%",
+         "8%",
+         "7%",
+         "6%",
+         "5%",
+         "4%",
+         "3%",
+         "2%",
+         "1%",
+         "0%"
+        ]
+       },
+       {
+        "n": "cv_captacao",
+        "cod": "itensCustosVinculados[5249][percentual]",
+        "l": "Remuneração para captação de recursos",
+        "t": "sel",
+        "req": 1,
+        "opts": [
+         "10%",
+         "9%",
+         "8%",
+         "7%",
+         "6%",
+         "5%",
+         "4%",
+         "3%",
+         "2%",
+         "1%",
+         "0%"
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "orc-planilha",
+    "nome": "Visualizar planilha",
+    "grupo": "Orçamento do projeto",
+    "blocos": [
+     {
+      "t": "Resumo",
+      "campos": [
+       {
+        "n": "orcamento_resumo",
+        "cod": "planilhaorcamentariageral",
+        "l": "Resumo da planilha",
+        "t": "orcresumo"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "dc-138": {
+  "id": "dc-138",
+  "nome": "138 · Lei de Incentivo ICMS 2026",
+  "plataforma": "desenvolve-cultura",
+  "nav": "lista",
+  "extraido": "2026-09-14",
+  "obs": "Estrutura da plataforma: uma URL por etapa (inscricao/icms/form_projetosNN.php). ICMS-RJ · 12 etapas.",
+  "etapas": [
+   {
+    "id": "a01",
+    "nome": "Sócios",
+    "cod": "01",
+    "blocos": [
+     {
+      "t": "Sócios",
+      "campos": [
+       {
+        "n": "socios",
+        "l": "Sócios da Empresa",
+        "t": "rep",
+        "campos": [
+         {
+          "n": "nomesocio",
+          "l": "Nome completo",
+          "req": 1,
+          "t": "txt",
+          "max": 190
+         },
+         {
+          "n": "cpfsocio",
+          "l": "CPF",
+          "req": 1,
+          "t": "txt",
+          "max": 190
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "a00",
+    "nome": "Proponente",
+    "cod": "00",
+    "blocos": [
+     {
+      "t": "Proponente",
+      "campos": [
+       {
+        "n": "idprojeto2",
+        "l": "Código do Projeto",
+        "dica": "Gerado pela plataforma no momento do cadastro.",
+        "ro": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "titulo",
+        "l": "Nome do Projeto",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "proponente",
+        "l": "Razão Social",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "nomefantasia",
+        "l": "Nome Fantasia da Empresa",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "cpf",
+        "l": "CNPJ",
+        "dica": "Puxado do Meu Perfil, não editável no formulário.",
+        "ro": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "meisn",
+        "l": "MEI?",
+        "ro": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "cpfmei",
+        "l": "CPF responsável do MEI",
+        "ro": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "rg",
+        "l": "Inscrição Estadual",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "orgao",
+        "l": "Inscrição Municipal",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "email",
+        "l": "E-mail",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "email_alternativo",
+        "l": "E-mail alternativo",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "telefone",
+        "l": "Telefone",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "celular",
+        "l": "Celular",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "cep",
+        "l": "CEP",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "endereco",
+        "l": "Endereço",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "numero",
+        "l": "Número",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "complemento",
+        "l": "Complemento",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "bairro",
+        "l": "Bairro",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "municipio",
+        "l": "Município",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "uf",
+        "l": "UF",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "a21",
+    "nome": "Perfil do projeto",
+    "cod": "21",
+    "blocos": [
+     {
+      "t": "Perfil do projeto",
+      "campos": [
+       {
+        "n": "areaproducao[]",
+        "l": "Produção",
+        "t": "rad",
+        "opts": [
+         "Produção Cultural Nacional",
+         "Produção Cultural Estrangeira"
+        ],
+        "inline": 1
+       },
+       {
+        "n": "areacultural[]",
+        "l": "Área Cultural",
+        "t": "rad",
+        "opts": [
+         "Música e Dança",
+         "Teatro e Circo",
+         "Artes Plásticas e Artesanais",
+         "Folclore e Ecologia",
+         "Cinema, Vídeo e Fotografia",
+         "Informação e Documentação",
+         "Acervo e Patrimônio Histórico-Cultural",
+         "Literatura, com prioridade à Língua Portuguesa",
+         "Gastronomia"
+        ]
+       },
+       {
+        "n": "linhaacao",
+        "l": "Linha de Ação",
+        "dica": "No original abre uma janela com as linhas de ação de cada área cultural, e o que você marca cai neste campo de texto. Linhas por área: Música e Dança: Circulação estadual de espetáculos; Exposições, mostras, manifestações culturais; Efeméride municipal; Festivais; Eventos, incluindo feiras e mercados culturais; Premiações; Montagem e temporada de espetáculos; Manutenção de grupos artísticos; Residência artística; Seminários, fóruns e ciclos de palestras; Show/espetáculos; Digitalização e/ou restauração de acervos de acesso público | Teatro e Circo: Circulação estadual de espetáculos; Exposições, mostras, manifestações culturais; Efeméride municipal; Festivais; Eventos, incluindo feiras e mercados culturais; Premiações; Montagem e temporada de espetáculos; Manutenção de grupos artísticos; Residência artística; Seminários, fóruns e ciclos de palestras; Show/espetáculos; Digitalização e/ou restauração de acervos de acesso público | Artes Plásticas e Artesanais: Criação e implantação de obra de arte pública; Exposições, mostras; Manifestações culturais; Efeméride municipal; Festivais; Moda; Designer; Eventos, incluindo feiras, festivais e mercados culturais; Premiações; Circulação estadual de espetáculos; Residência artística; Seminários, fóruns e ciclos de palestras; Show/espetáculos; Digitalização e/ou restauração de acervos de acesso público; Manutenção de grupos artísticos e Residência artística (manutenção mínima de 12 meses) | Folclore e Ecologia: Implantação, modernização, e/ou adequação de equipamentos culturais; Montagem e temporada espetáculos; Premiações; Produção de conteúdos de narrativa transmídia; Produção de softwares destinados à cultura; Residência artística, Seminários, fóruns e ciclos de palestras; Bloco carnavalesco; Escolas de Samba; Efeméride Municipal | Cinema, Vídeo e Fotografia: Desenvolvimento e produção de projeto de jogo eletrônico; Produção de conteúdos de narrativa transmídia; Produção de softwares destinados à cultura; Circulação estadual de programação; Residência artística; Seminários, fóruns e ciclos de palestras; Digitalização e/ou restauração de acervos de acesso público; Manutenção de grupos artísticos e Residência artística (manutenção mínima de 12 meses) | Informação e Documentação: Digitalização e/ou restauração de acervos de acesso público; Exposição, Mostra; Elaboração e publicação de estudos e pesquisas relativos à Cultura; Eventos, incluindo feiras e mercados culturais; moda, designer; Implantação, modernização, e/ou adequação de equipamentos culturais; Aquisição de acervo para instituições culturais de acesso público; Livros, publicações, produção de revistas e periódicos; Programa de conservação de arte pública; Premiações; Produção de conteúdos de narrativa transmídia; Produção de softwares destinados à cultura; Produção e manutenção de portais eletrônicos, revistas (manutenção mínima de 12 meses); Residência artística; seminários, festivais, fóruns e ciclos de palestras | Acervo e Patrimônio Histórico-Cultural: Digitalização e/ou restauração de acervos de acesso público; Exposições, Festivais e Mostras; Elaboração e publicação de estudos e pesquisas relativos à Cultura; Eventos, incluindo feiras e mercados culturais; Implantação de Programa Educativo nos museus; Implantação, modernização, e/ou adequação de equipamentos culturais; Premiações; Livros, publicações, produção de revistas e periódicos; Produção de conteúdos de narrativa transmídia; Residência artística; Seminários, fóruns e ciclos de palestras; Elaboração de Planos Museológicos para os Museus instituídos legalmente; Restauração de acervos de Museus comprovadamente patrimoniados | Literatura, com prioridade à Língua Portuguesa: Eventos, incluindo feiras e mercados culturais; Festivais; Efeméride municipal; Elaboração e publicação de estudos e pesquisas relativos à Cultura; Implantação, modernização, e/ou adequação de equipamentos culturais; Livros, publicações, produção de revistas e periódicos; Premiações; Produção de conteúdos de narrativa transmídia; Residência artística; Seminários, fóruns e ciclos de palestras | Gastronomia: Exposições, mostras, manifestações culturais; Efeméride municipal; Premiações; Circulação estadual de espetáculos; Produção de conteúdos de narrativa transmídia; Residência artística; Seminários, fóruns e ciclos de palestras; Festivais; Eventos, incluindo feiras e mercados culturais",
+        "t": "ta",
+        "max": 2000
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "a02",
+    "nome": "Dados do projeto",
+    "cod": "02",
+    "blocos": [
+     {
+      "t": "Dados do projeto",
+      "campos": [
+       {
+        "n": "campo[571386]",
+        "l": "Resumo",
+        "dica": "Informe objetivamente o que é o projeto, o público a que se destina e onde e quando será realizado.",
+        "t": "ta"
+       },
+       {
+        "n": "campo[571387]",
+        "l": "Descrição",
+        "dica": "Descreva o processo de desenvolvimento do projeto, discorrendo sobre a definição (escolha) do objeto e a equipe envolvida na construção da proposta.",
+        "t": "ta"
+       },
+       {
+        "n": "campo[571388]",
+        "l": "Objetivos",
+        "dica": "Informe para que está sendo apresentado o projeto, referindo-se à meta que se quer atingir ou situação que se quer modificar.",
+        "t": "ta"
+       },
+       {
+        "n": "campo[571389]",
+        "l": "Justificativa",
+        "dica": "Informe a razão da proposta e qual o benefício que trará para a área cultural a que pertence, para o público a que se destina e para a região em que está inserida.",
+        "t": "ta"
+       },
+       {
+        "n": "campo[571390]",
+        "l": "Estratégias de realização",
+        "dica": "Informe as ações a serem empreendidas para que o projeto seja viabilizado de acordo com os objetivos apresentados.",
+        "t": "ta"
+       },
+       {
+        "n": "campo[571391]",
+        "l": "Parcerias",
+        "dica": "Indique quais as pessoas, instituições e empresas que, de alguma forma, contribuirão para a realização do projeto, quando for o caso.",
+        "t": "ta"
+       },
+       {
+        "n": "campo[571392]",
+        "l": "Acessibilidade",
+        "dica": "Informe as estratégias para garantir a acessibilidade às pessoas com deficiência.",
+        "t": "ta"
+       },
+       {
+        "n": "campo[571393]",
+        "l": "Produto cultural",
+        "dica": "Descreva o(s) produto(s) cultural(is) decorrente(s) do projeto com suas especificidades. Informe o resultado do seu projeto (livro: número de páginas, tiragem, valor de venda, distribuição, perfil editorial; oficina com especificações; show musical com especificações; restauro com informações adicionais).",
+        "t": "ta"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "a30",
+    "nome": "Responsável",
+    "cod": "30",
+    "blocos": [
+     {
+      "t": "Responsável",
+      "campos": [
+       {
+        "n": "nome_resp",
+        "l": "Nome do dirigente",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "cpf_resp",
+        "l": "CPF do dirigente",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "rg_resp",
+        "l": "RG do dirigente",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "orgao_rg_resp",
+        "l": "Órgão expedidor do RG do dirigente",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "email_resp",
+        "l": "E-mail do dirigente",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "telefone_resp",
+        "l": "Telefone do dirigente",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "celular_resp",
+        "l": "Celular do dirigente",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "cep_resp",
+        "l": "CEP do dirigente",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "endereco_resp",
+        "l": "Endereço do dirigente",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "numero_resp",
+        "l": "Número",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "complemento_resp",
+        "l": "Complemento",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "bairro_resp",
+        "l": "Bairro do dirigente",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "municipio_resp",
+        "l": "Município do dirigente",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "uf_resp",
+        "l": "UF do dirigente",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "atividades_resp",
+        "l": "Principais atividades culturais do dirigente nos últimos 2 anos",
+        "t": "ta"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "a03",
+    "nome": "Coordenador",
+    "cod": "03",
+    "blocos": [
+     {
+      "t": "Coordenador",
+      "campos": [
+       {
+        "n": "nome_coord",
+        "l": "Nome do coordenador",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "cpf_coord",
+        "l": "CPF do coordenador",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "rg_coord",
+        "l": "RG do coordenador",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "orgao_rg_coord",
+        "l": "Órgão expedidor do RG do coordenador",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "email_coord",
+        "l": "E-mail do coordenador",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "telefone_coord",
+        "l": "Telefone do coordenador",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "celular_coord",
+        "l": "Celular do coordenador",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "cep_coord",
+        "l": "CEP do coordenador",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "endereco_coord",
+        "l": "Endereço do coordenador",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "numero_coord",
+        "l": "Número",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "complemento_coord",
+        "l": "Complemento",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "bairro_coord",
+        "l": "Bairro do coordenador",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "municipio_coord",
+        "l": "Município do coordenador",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "uf_coord",
+        "l": "UF do coordenador",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "atividades_coord",
+        "l": "Principais atividades culturais do coordenador nos últimos 2 anos",
+        "t": "ta"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "a31",
+    "nome": "Equipe",
+    "cod": "31",
+    "blocos": [
+     {
+      "t": "Equipe",
+      "campos": [
+       {
+        "n": "equipe",
+        "l": "Equipe do projeto",
+        "t": "rep",
+        "campos": [
+         {
+          "n": "nome",
+          "l": "Nome completo",
+          "req": 1,
+          "t": "txt",
+          "max": 190
+         },
+         {
+          "n": "funcao",
+          "l": "Função",
+          "req": 1,
+          "t": "txt",
+          "max": 190
+         },
+         {
+          "n": "curriculo",
+          "l": "Mini-currículo",
+          "req": 1,
+          "t": "ta",
+          "max": 1000
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "a04",
+    "nome": "Abrangência",
+    "cod": "04",
+    "blocos": [
+     {
+      "t": "Abrangência",
+      "campos": [
+       {
+        "n": "regioes[]",
+        "l": "Municípios de abrangência",
+        "t": "chk",
+        "grupos": [
+         {
+          "g": "Metropolitana I",
+          "op": [
+           "Rio de Janeiro"
+          ]
+         },
+         {
+          "g": "Metropolitana II",
+          "op": [
+           "Belford Roxo",
+           "Duque de Caxias",
+           "Japeri",
+           "Magé",
+           "Mesquita",
+           "Nilópolis",
+           "Nova Iguaçu",
+           "Paracambi",
+           "Queimados",
+           "São João de Meriti",
+           "Seropédica"
+          ]
+         },
+         {
+          "g": "Metropolitana III",
+          "op": [
+           "Itaboraí",
+           "Maricá",
+           "Niterói",
+           "Rio Bonito",
+           "São Gonçalo",
+           "Tanguá"
+          ]
+         },
+         {
+          "g": "Noroeste Fluminense",
+          "op": [
+           "Aperibé",
+           "Bom Jesus do Itabapoana",
+           "Cambuci",
+           "Italva",
+           "Itaocara",
+           "Itaperuna",
+           "Laje do Muriaé",
+           "Miracema",
+           "Natividade",
+           "Porciúncula",
+           "Santo Antonio de Pádua",
+           "São José de Ubá",
+           "Varre-Sai"
+          ]
+         },
+         {
+          "g": "Serrana",
+          "op": [
+           "Bom Jardim",
+           "Cachoeiras de Macacu",
+           "Cantagalo",
+           "Carmo",
+           "Cordeiro",
+           "Duas Barras",
+           "Guapimirim",
+           "Macuco",
+           "Nova Friburgo",
+           "Petrópolis",
+           "Santa Maria Madalena",
+           "São José do Vale do Rio Preto",
+           "São Sebastião do Alto",
+           "Sumidouro",
+           "Teresópolis",
+           "Trajano de Moraes"
+          ]
+         },
+         {
+          "g": "Médio Paraíba",
+          "op": [
+           "Barra do Piraí",
+           "Barra Mansa",
+           "Itatiaia",
+           "Pinheiral",
+           "Piraí",
+           "Porto Real",
+           "Quatis",
+           "Resende",
+           "Rio Claro",
+           "Rio das Flores",
+           "Valença",
+           "Volta Redonda"
+          ]
+         },
+         {
+          "g": "Norte Fluminense",
+          "op": [
+           "Campos dos Goytacazes",
+           "Carapebus",
+           "Cardoso Moreira",
+           "Conceição de Macabu",
+           "Macaé",
+           "Quissamã",
+           "São Fidélis",
+           "São Francisco de Itabapoana",
+           "São João da Barra"
+          ]
+         },
+         {
+          "g": "Costa Verde",
+          "op": [
+           "Angra dos Reis",
+           "Itaguaí",
+           "Mangaratiba",
+           "Paraty"
+          ]
+         },
+         {
+          "g": "Baixadas Litorâneas",
+          "op": [
+           "Araruama",
+           "Armação dos Búzios",
+           "Arraial do Cabo",
+           "Cabo Frio",
+           "Casimiro de Abreu",
+           "Iguaba Grande",
+           "Rio das Ostras",
+           "São Pedro da Aldeia",
+           "Saquarema",
+           "Silva Jardim"
+          ]
+         },
+         {
+          "g": "Centro Sul Fluminense",
+          "op": [
+           "Areal",
+           "Comendador Levy Gasparian",
+           "Engenheiro Paulo de Frontin",
+           "Mendes",
+           "Miguel Pereira",
+           "Paraíba do Sul",
+           "Paty do Alferes",
+           "Sapucaia",
+           "Três Rios",
+           "Vassouras"
+          ]
+         }
+        ],
+        "filter": 1
+       },
+       {
+        "n": "subregioes[]",
+        "l": "Sub-regiões do município do Rio de Janeiro",
+        "t": "chk",
+        "opts": [
+         "Barra e Jacarepaguá",
+         "Centro e Centro Histórico",
+         "Grande Tijuca",
+         "Grande Méier",
+         "Ilha do Governador",
+         "Zona Sul",
+         "Zona Norte",
+         "Zona Oeste"
+        ]
+       },
+       {
+        "n": "outros_estados",
+        "l": "Se o projeto também for realizado em outros estados, indique-os aqui",
+        "t": "ta"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "a06",
+    "nome": "Recursos",
+    "cod": "06",
+    "blocos": [
+     {
+      "t": "Recursos",
+      "campos": [
+       {
+        "t": "info",
+        "html": "Orçamento geral do projeto. Os campos de valor não somam sozinhos aqui, assim como não somam no original."
+       },
+       {
+        "n": "custo_pessoal",
+        "l": "Pessoal",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "custo_estrutura",
+        "l": "Estrutura",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "custo_logistica",
+        "l": "Logística",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "custo_comunicacao",
+        "l": "Divulgação, mídia e comunicação",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "custo_administrativo",
+        "l": "Despesas administrativas",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "custo_tarifas",
+        "l": "Impostos, tarifas e seguros",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "custo_total",
+        "l": "Total",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "recurso_solicitado",
+        "l": "Recursos solicitados à Lei de Incentivo à Cultura",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "recurso_proveniente",
+        "l": "Recursos provenientes de outras leis de incentivo",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "recurso_proprio",
+        "l": "Recursos próprios do proponente",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "receita_investida",
+        "l": "Receita líquida investida",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "outros_recursos",
+        "l": "Outros recursos",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "total_recursos",
+        "l": "Total de recursos no projeto",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "contemp_lic",
+        "l": "O projeto que está sendo inscrito já foi contemplado pela lei estadual de incentivo à cultura?",
+        "t": "rad",
+        "opts": [
+         "Sim",
+         "Não"
+        ],
+        "inline": 1
+       },
+       {
+        "n": "ano_contemp_lic[]",
+        "l": "Em que anos foi contemplado",
+        "t": "chk",
+        "opts": [
+         "2001",
+         "2002",
+         "2003",
+         "2004",
+         "2005",
+         "2006",
+         "2007",
+         "2008",
+         "2009",
+         "2010",
+         "2011",
+         "2012",
+         "2013",
+         "2014",
+         "2015",
+         "2016",
+         "2017",
+         "2018",
+         "2019",
+         "2020",
+         "2021",
+         "2022",
+         "2023",
+         "2024",
+         "2025",
+         "2026"
+        ]
+       },
+       {
+        "n": "outra_lic",
+        "l": "O projeto já é patrocinado ou está solicitando patrocínio através de outras leis de incentivo?",
+        "t": "rad",
+        "opts": [
+         "Sim",
+         "Não"
+        ],
+        "inline": 1
+       },
+       {
+        "n": "recursos_diretos_rj",
+        "l": "O proponente já recebeu recursos diretos, através de editais ou outros programas da Secretaria de Estado de Cultura do Rio de Janeiro?",
+        "t": "rad",
+        "opts": [
+         "Sim",
+         "Não"
+        ],
+        "inline": 1
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "a07",
+    "nome": "Plano de Distribuição",
+    "cod": "07",
+    "blocos": [
+     {
+      "t": "Plano de Distribuição",
+      "campos": [
+       {
+        "n": "espacos",
+        "l": "Espaço para realização do projeto",
+        "t": "ta"
+       },
+       {
+        "n": "capacidade",
+        "l": "Capacidade de pessoas no espaço de realização",
+        "t": "ta"
+       },
+       {
+        "n": "dt_inicio_exec",
+        "l": "Período de execução, início",
+        "t": "date"
+       },
+       {
+        "n": "dt_fim_exec",
+        "l": "Período de execução, fim",
+        "t": "date"
+       },
+       {
+        "n": "dt_inicio_realiz",
+        "l": "Período de realização do produto cultural, início",
+        "t": "date"
+       },
+       {
+        "n": "dt_fim_realiz",
+        "l": "Período de realização do produto cultural, fim",
+        "t": "date"
+       },
+       {
+        "n": "perfil[]",
+        "l": "Perfil do público",
+        "t": "chk",
+        "opts": [
+         "Infantil",
+         "Juvenil",
+         "Adulto",
+         "Terceira Idade"
+        ]
+       },
+       {
+        "n": "acesso[]",
+        "l": "Acesso",
+        "t": "chk",
+        "opts": [
+         "Gratuito",
+         "Pago"
+        ]
+       },
+       {
+        "n": "comunicacao",
+        "l": "Plano de comunicação",
+        "t": "ta"
+       },
+       {
+        "n": "receita_bruta",
+        "l": "Receita bruta prevista (R$)",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "receita_liquida",
+        "l": "Receita líquida prevista (R$)",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "democratizacao",
+        "l": "Democratização de acesso",
+        "t": "ta"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "a09",
+    "nome": "Anexos",
+    "cod": "09",
+    "blocos": [
+     {
+      "t": "Anexos",
+      "campos": [
+       {
+        "n": "anexos",
+        "l": "Anexos",
+        "t": "docs",
+        "opts": [
+         "Declaração de Intenção de Patrocínio",
+         "Recibo de Patrocínio",
+         "Planilha Orçamentária*",
+         "Currículo da empresa Proponente*",
+         "Declaração de Patrocínio",
+         "Cronograma*",
+         "Plano de Distribuição*",
+         "Plano de Comunicação*",
+         "Certidão negativa ou positiva com efeitos de negativa da Procuradoria Geral do Estado*",
+         "Certidão de Regularidade Fiscal emitida pela Secretaria de Estado de Fazenda e Planejamento*",
+         "Certidão Negativa de Débitos Trabalhistas (CNDT)*",
+         "Certidão Negativa de Débitos Relativos aos Tributos Federais e à Dívida Ativa da União*",
+         "Cópia do Contrato Social ou Estatuto Social com última alteração/última ata*",
+         "Cópia do RG do dirigente ou representante legal do proponente*",
+         "Cópia do CPF do dirigente ou representante legal do proponente*",
+         "Comprovante de inscrição e de situação cadastral no CNPJ*",
+         "Certificado de regularidade de situação relativa ao FGTS*",
+         "Currículo do Coordenador do Projeto*",
+         "Plano Metodológico",
+         "Plano Anual de Atividade Cultural",
+         "Outros"
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "a15",
+    "nome": "Revisar e Enviar",
+    "cod": "15",
+    "blocos": [
+     {
+      "t": "Revisar e Enviar",
+      "campos": [
+       {
+        "t": "info",
+        "html": "<b>Revisar e enviar:</b> só na plataforma. Use a Transferência para colar tudo, revise lá e envie."
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "dc-133": {
+  "id": "dc-133",
+  "nome": "133 · Mobilidade 2026, Módulo I, Apresentações",
+  "plataforma": "desenvolve-cultura",
+  "nav": "lista",
+  "extraido": "2026-09-14",
+  "obs": "Estrutura da plataforma: uma URL por etapa (inscricao/edital-mobilidade2026-apresentacoes/form_projetosNN.php). Chamada Pública 01/2026 · 8 etapas.",
+  "etapas": [
+   {
+    "id": "b00",
+    "nome": "Proponente",
+    "cod": "00",
+    "blocos": [
+     {
+      "t": "Proponente",
+      "campos": [
+       {
+        "n": "idprojeto2",
+        "l": "Código da Proposta",
+        "dica": "Gerado pela plataforma no momento do cadastro.",
+        "ro": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "titulo",
+        "l": "Nome da Proposta",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "proponente",
+        "l": "Razão Social",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "nomefantasia",
+        "l": "Nome Fantasia da Empresa",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "cpf",
+        "l": "CNPJ",
+        "dica": "Puxado do Meu Perfil, não editável no formulário.",
+        "ro": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "meisn",
+        "l": "MEI?",
+        "ro": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "cpfmei",
+        "l": "CPF responsável do MEI",
+        "ro": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "rg",
+        "l": "Inscrição Estadual",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "orgao",
+        "l": "Inscrição Municipal",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "email",
+        "l": "E-mail",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "email_alternativo",
+        "l": "E-mail alternativo",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "telefone",
+        "l": "Telefone",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "celular",
+        "l": "Celular",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "cep",
+        "l": "CEP",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "endereco",
+        "l": "Endereço",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "numero",
+        "l": "Número",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "complemento",
+        "l": "Complemento",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "bairro",
+        "l": "Bairro",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "municipio",
+        "l": "Município",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "uf",
+        "l": "UF",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "b01",
+    "nome": "Sócios",
+    "cod": "01",
+    "blocos": [
+     {
+      "t": "Sócios",
+      "campos": [
+       {
+        "n": "socios",
+        "l": "Sócios da Empresa",
+        "t": "rep",
+        "campos": [
+         {
+          "n": "nomesocio",
+          "l": "Nome completo",
+          "req": 1,
+          "t": "txt",
+          "max": 190
+         },
+         {
+          "n": "cpfsocio",
+          "l": "CPF",
+          "req": 1,
+          "t": "txt",
+          "max": 190
+         },
+         {
+          "n": "cargo",
+          "l": "Ocupante de cargo político",
+          "t": "sel",
+          "opts": [
+           "Não",
+           "Sim"
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "b12",
+    "nome": "Informações Socioeconômicas",
+    "cod": "12",
+    "blocos": [
+     {
+      "t": "Informações Socioeconômicas",
+      "campos": [
+       {
+        "t": "info",
+        "html": "Os dados abaixo serão utilizados apenas para levantamento de indicadores e mapeamento socioeconômico das empresas participantes do Edital. As informações não serão utilizadas em nenhum tipo de avaliação ou habilitação."
+       },
+       {
+        "n": "campo[2234]",
+        "l": "Nome Fantasia do CNPJ",
+        "dica": "Insira o Nome Fantasia de sua empresa, caso haja.",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "campo[2235]",
+        "l": "Data de fundação",
+        "dica": "Insira a data de abertura de sua empresa (formato DD/MM/AAAA).",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "campo[2236]",
+        "l": "Em qual tipo de Pessoa Jurídica seu CNPJ se enquadra?",
+        "t": "rad",
+        "opts": [
+         "MEI - Microempreendedor individual",
+         "EI - Empresário Individual",
+         "EIRELI - Empresa Individual de Responsabilidade Limitada",
+         "Ltda - Sociedade Empresária Limitada",
+         "SLU - Sociedade Limitada Unipessoal",
+         "SS - Sociedade Simples",
+         "SA - Sociedade Anônima",
+         "Entidade sem Fins Lucrativos"
+        ]
+       },
+       {
+        "n": "campo[2237]",
+        "l": "Quantos funcionários seu CNPJ emprega em média mensalmente?",
+        "t": "rad",
+        "opts": [
+         "01 a 04 pessoas",
+         "05 a 19 pessoas",
+         "20 a 99 pessoas",
+         "100 a 499 pessoas",
+         "500 ou mais pessoas",
+         "Prefiro não responder"
+        ]
+       },
+       {
+        "n": "campo[2238][]",
+        "l": "Qual(is) é(são) a(as) forma(s) de contratação dos funcionários da sua empresa?",
+        "t": "chk",
+        "opts": [
+         "CLT",
+         "Contrato PJ (Freelancer)",
+         "Contratação Temporária",
+         "Trabalho Parcial",
+         "Estágio",
+         "Jovem Aprendiz",
+         "Terceirização",
+         "Home Office ou Trabalho Remoto",
+         "Trabalho Intermitente",
+         "Trabalho Autônomo",
+         "Prefiro não responder"
+        ]
+       },
+       {
+        "n": "campo[2239]",
+        "l": "Qual é o salário médio mensal dos funcionários de sua empresa?",
+        "t": "rad",
+        "opts": [
+         "De 01 a 02 salários mínimos",
+         "De 03 a 04 salários mínimos",
+         "Mais de 05 salários mínimos",
+         "Prefiro não responder"
+        ],
+        "inline": 1
+       },
+       {
+        "n": "campo[2240][]",
+        "l": "Nível de escolaridade da média de seus funcionários",
+        "t": "chk",
+        "opts": [
+         "Sem instrução",
+         "Ensino fundamental incompleto",
+         "Ensino fundamental completo",
+         "Ensino médio incompleto",
+         "Ensino médio completo",
+         "Ensino superior incompleto",
+         "Ensino superior completo",
+         "Pós-Graduação lato sensu incompleta",
+         "Pós-Graduação lato sensu completa",
+         "Pós-Graduação stricto sensu incompleta",
+         "Pós-Graduação stricto sensu completa",
+         "Prefiro não responder"
+        ]
+       },
+       {
+        "n": "campo[2241][]",
+        "l": "Qual é a faixa etária média dos seus funcionários?",
+        "t": "chk",
+        "opts": [
+         "18 a 20 anos",
+         "20 a 40 anos",
+         "40 a 60 anos",
+         "Maiores de 60 anos",
+         "Prefiro não responder"
+        ]
+       },
+       {
+        "n": "campo[2242][]",
+        "l": "Em relação à raça, cor ou etnia, a maioria do corpo diretivo da PJ é formado por pessoas que se identificam como",
+        "t": "chk",
+        "opts": [
+         "Amarela",
+         "Branca",
+         "Indígena",
+         "Parda",
+         "Preta",
+         "Outra",
+         "Prefiro não responder"
+        ]
+       },
+       {
+        "n": "campo[2243][]",
+        "l": "Há Pessoas com Deficiência (PCD) no corpo diretivo da PJ?",
+        "t": "chk",
+        "opts": [
+         "Não",
+         "Sim, Auditiva",
+         "Sim, Física",
+         "Sim, Intelectual",
+         "Sim, Múltipla",
+         "Sim, Visual",
+         "Prefiro não responder"
+        ]
+       },
+       {
+        "n": "campo[2244][]",
+        "l": "Em relação a gênero, a maioria do corpo diretivo da PJ é formado por pessoas que se identificam como",
+        "t": "chk",
+        "opts": [
+         "Mulher cisgênero",
+         "Homem cisgênero",
+         "Mulher transgênero",
+         "Homem transgênero",
+         "Pessoa não-binária",
+         "Travesti",
+         "Prefiro não responder"
+        ]
+       },
+       {
+        "n": "campo[2245][]",
+        "l": "Considerando a atuação do seu CNPJ dentro do Setor Cultural, em qual conjunto de atividades sua empresa melhor se inclui?",
+        "t": "chk",
+        "opts": [
+         "Indústria",
+         "Comércio",
+         "Serviços"
+        ]
+       },
+       {
+        "n": "campo[2246][]",
+        "l": "Principal área de atuação da empresa no campo artístico-cultural",
+        "t": "chk",
+        "opts": [
+         "Antropologia",
+         "Arqueologia",
+         "Arquitetura-Urbanismo",
+         "Arquivo",
+         "Arte de Rua",
+         "Arte Digital",
+         "Artes Clássicas",
+         "Artes de Espetáculo",
+         "Artes Integradas",
+         "Artes Visuais",
+         "Artesanato",
+         "Audiovisual",
+         "Capoeira",
+         "Carnaval",
+         "Cinema",
+         "Circo",
+         "Cultura Afro-Brasileira",
+         "Cultura Cigana",
+         "Cultura DEF",
+         "Cultura Digital",
+         "Cultura e Comunicação",
+         "Cultura e Direitos Humanos",
+         "Cultura e Educação",
+         "Cultura e Esporte",
+         "Cultura e Meio Ambiente",
+         "Cultura e Saúde",
+         "Cultura LGBTQIAPN+",
+         "Cultura Negra",
+         "Cultura Popular",
+         "Cultura Hip-Hop e Funk",
+         "Cultura, Infância e Adolescência",
+         "Culturas dos Povos e das Comunidades Tradicionais de Matriz Africana",
+         "Culturas dos Povos Indígenas",
+         "Culturas dos Povos Nômades",
+         "Culturas Estrangeiras",
+         "Culturas Populares",
+         "Culturas Quilombolas",
+         "Dança",
+         "Design",
+         "Direito Autoral",
+         "Economia Criativa",
+         "Economia da Cultura",
+         "Expressões Artísticas Culturais",
+         "Festa Populares",
+         "Festejos Juninos",
+         "Filosofia",
+         "Fotografia",
+         "Gastronomia",
+         "História e Cultura",
+         "Humor",
+         "Intercâmbio e Cultura",
+         "Jogos Eletrônicos",
+         "Jornalismo e Cultura",
+         "Leitura",
+         "Literatura",
+         "Livro",
+         "Mídias Livres",
+         "Mídias Sociais",
+         "Moda",
+         "Museu",
+         "Música",
+         "Música Erudita",
+         "Música Popular",
+         "Novas Mídias",
+         "Patrimônio Imaterial",
+         "Patrimônio Material",
+         "Performance",
+         "Pesquisa em Cultura",
+         "Povos de Terreiro",
+         "Produção e Gestão Cultural",
+         "Quilombola",
+         "Rádio",
+         "Teatro",
+         "Televisão",
+         "Turismo e Cultura",
+         "Outra"
+        ],
+        "filter": 1
+       },
+       {
+        "n": "campo[2247][]",
+        "l": "Seu CNPJ acessou recursos públicos do fomento à cultura nos últimos 5 anos? Caso sim, em quais esferas?",
+        "t": "chk",
+        "opts": [
+         "Não",
+         "Sim, municipal",
+         "Sim, estadual",
+         "Sim, federal",
+         "Sim, privada",
+         "Não sei informar"
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "b31",
+    "nome": "Responsável Pela Execução",
+    "cod": "31",
+    "blocos": [
+     {
+      "t": "Responsável Pela Execução",
+      "campos": [
+       {
+        "n": "nome_resp",
+        "l": "Nome do Responsável pela Execução",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "cpf_resp",
+        "l": "CPF do Responsável pela Execução",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "rg_resp",
+        "l": "RG do Responsável pela Execução",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "orgao_rg_resp",
+        "l": "Órgão expedidor do RG do Responsável pela Execução",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "email_resp",
+        "l": "E-mail do Responsável pela Execução",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "telefone_resp",
+        "l": "Telefone do Responsável pela Execução",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "celular_resp",
+        "l": "Celular do Responsável pela Execução",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "cep_resp",
+        "l": "CEP do Responsável pela Execução",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "endereco_resp",
+        "l": "Endereço do Responsável pela Execução",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "numero_resp",
+        "l": "Número",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "complemento_resp",
+        "l": "Complemento",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "bairro_resp",
+        "l": "Bairro do Responsável pela Execução",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "municipio_resp",
+        "l": "Município do Responsável pela Execução",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "uf_resp",
+        "l": "UF do Responsável pela Execução",
+        "t": "txt",
+        "max": 190
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "b03",
+    "nome": "Dados da Proposta Cultural",
+    "cod": "03",
+    "blocos": [
+     {
+      "t": "Dados da Proposta Cultural",
+      "campos": [
+       {
+        "cod": "titulo",
+        "n": "titulo__b03",
+        "l": "Nome da Proposta",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "campo[571394]",
+        "l": "Nome da obra a ser apresentada",
+        "dica": "Escreva o nome da obra que será apresentada durante a viagem que será realizada pelo proponente.",
+        "t": "ta",
+        "max": 50
+       },
+       {
+        "n": "campo[571395]",
+        "l": "Valor de locomoção",
+        "dica": "Escreva o valor exato requerido para custear a locomoção de sua proposta. Utilize apenas números, pontos e vírgula (exemplo: 00.000,00).",
+        "t": "ta",
+        "max": 15
+       },
+       {
+        "n": "campo[571396]",
+        "l": "Apresentação da proposta cultural",
+        "dica": "Apresente a sua proposta e forneça informações referentes ao processo criativo, às etapas de produção, aos profissionais envolvidos, público-alvo e demais informações.",
+        "t": "ta",
+        "max": 5000
+       },
+       {
+        "n": "campo[571397]",
+        "l": "Link da obra",
+        "dica": "Contendo um vídeo da obra na íntegra, disponibilizada no Youtube ou Google Drive. Caso o link esteja protegido, o proponente deverá prover a senha de acesso.",
+        "t": "ta",
+        "max": 1000
+       },
+       {
+        "n": "campo[571398]",
+        "l": "Período de realização",
+        "dica": "Contendo a data de ida, volta e a data de realização da apresentação de sua obra.",
+        "t": "ta",
+        "max": 500
+       },
+       {
+        "n": "campo[571399]",
+        "l": "Descrição do festival ou evento que fará parte",
+        "dica": "Descreva seu histórico, seus temas e suas características.",
+        "t": "ta",
+        "max": 5000
+       },
+       {
+        "n": "campo[571400]",
+        "l": "Detalhamento da equipe",
+        "dica": "Contendo nomes, funções e justificativa de todos os membros da equipe que realizarão a viagem.",
+        "t": "ta",
+        "max": 5000
+       },
+       {
+        "n": "campo[571401]",
+        "l": "Objetivos (geral e específicos)",
+        "dica": "Descreva para que está sendo apresentada esta proposta cultural, referindo-se à meta que se quer alcançar para cada etapa de realização.",
+        "t": "ta",
+        "max": 5000
+       },
+       {
+        "n": "campo[571402]",
+        "l": "Justificativa",
+        "dica": "Descreva de forma clara e convincente os motivos pelos quais o projeto é relevante, necessário e benéfico. Demonstre a importância do projeto, tanto do ponto de vista artístico quanto cultural.",
+        "t": "ta",
+        "max": 5000
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "b05",
+    "nome": "Equipe",
+    "cod": "05",
+    "blocos": [
+     {
+      "t": "Equipe",
+      "campos": [
+       {
+        "n": "equipe",
+        "l": "Equipe da proposta",
+        "t": "rep",
+        "campos": [
+         {
+          "n": "nome",
+          "l": "Nome",
+          "req": 1,
+          "t": "txt",
+          "max": 190
+         },
+         {
+          "n": "cpf",
+          "l": "CPF",
+          "req": 1,
+          "t": "txt",
+          "max": 190
+         },
+         {
+          "n": "funcao",
+          "l": "Função",
+          "req": 1,
+          "t": "txt",
+          "max": 190
+         },
+         {
+          "n": "curriculo",
+          "l": "Mini-currículo",
+          "req": 1,
+          "t": "ta",
+          "max": 1000
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "b09",
+    "nome": "Anexos",
+    "cod": "09",
+    "blocos": [
+     {
+      "t": "Anexos",
+      "campos": [
+       {
+        "n": "anexos",
+        "l": "Anexos",
+        "t": "docs",
+        "opts": [
+         "Cadastro Nacional da Pessoa Jurídica (Cartão CNPJ)*",
+         "Carta convite oficial*",
+         "Cópia da Identidade do Responsável pela Execução*",
+         "Cópia do CPF do Responsável pela Execução*",
+         "Cópia Simples da Ata de Eleição / Última Alteração Contratual (se for o caso)",
+         "Cópia Simples do Contrato / Estatuto Social",
+         "Cotação das passagens ou do transporte*",
+         "Cronograma de execução*",
+         "Declaração de Uso do Nome Social",
+         "Materiais complementares",
+         "Material do evento*",
+         "Planilha Orçamentária*",
+         "Portfólio de Atuação Artístico e Cultural*",
+         "Procuração Particular do Responsável pela Execução (caso houver)"
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "b15",
+    "nome": "Revisar e Enviar",
+    "cod": "15",
+    "blocos": [
+     {
+      "t": "Revisar e Enviar",
+      "campos": [
+       {
+        "t": "info",
+        "html": "<b>Revisar e enviar:</b> só na plataforma. Use a Transferência para colar tudo, revise lá e envie."
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "dc-134": {
+  "id": "dc-134",
+  "nome": "134 · Mobilidade 2026, Módulo II, Residências",
+  "plataforma": "desenvolve-cultura",
+  "nav": "lista",
+  "extraido": "2026-09-14",
+  "obs": "Estrutura da plataforma: uma URL por etapa (inscricao/edital-mobilidade2026-residencias/form_projetosNN.php). Chamada Pública 01/2026 · 8 etapas.",
+  "etapas": [
+   {
+    "id": "c00",
+    "nome": "Proponente",
+    "cod": "00",
+    "blocos": [
+     {
+      "t": "Proponente",
+      "campos": [
+       {
+        "n": "idprojeto2",
+        "l": "Código da Proposta",
+        "dica": "Gerado pela plataforma no momento do cadastro.",
+        "ro": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "titulo",
+        "l": "Nome da Proposta",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "proponente",
+        "l": "Razão Social",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "nomefantasia",
+        "l": "Nome Fantasia da Empresa",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "cpf",
+        "l": "CNPJ",
+        "dica": "Puxado do Meu Perfil, não editável no formulário.",
+        "ro": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "meisn",
+        "l": "MEI?",
+        "ro": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "cpfmei",
+        "l": "CPF responsável do MEI",
+        "ro": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "rg",
+        "l": "Inscrição Estadual",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "orgao",
+        "l": "Inscrição Municipal",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "email",
+        "l": "E-mail",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "email_alternativo",
+        "l": "E-mail alternativo",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "telefone",
+        "l": "Telefone",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "celular",
+        "l": "Celular",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "cep",
+        "l": "CEP",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "endereco",
+        "l": "Endereço",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "numero",
+        "l": "Número",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "complemento",
+        "l": "Complemento",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "bairro",
+        "l": "Bairro",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "municipio",
+        "l": "Município",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "uf",
+        "l": "UF",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "c01",
+    "nome": "Sócios",
+    "cod": "01",
+    "blocos": [
+     {
+      "t": "Sócios",
+      "campos": [
+       {
+        "n": "socios",
+        "l": "Sócios da Empresa",
+        "t": "rep",
+        "campos": [
+         {
+          "n": "nomesocio",
+          "l": "Nome completo",
+          "req": 1,
+          "t": "txt",
+          "max": 190
+         },
+         {
+          "n": "cpfsocio",
+          "l": "CPF",
+          "req": 1,
+          "t": "txt",
+          "max": 190
+         },
+         {
+          "n": "cargo",
+          "l": "Ocupante de cargo político",
+          "t": "sel",
+          "opts": [
+           "Não",
+           "Sim"
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "c12",
+    "nome": "Informações Socioeconômicas",
+    "cod": "12",
+    "blocos": [
+     {
+      "t": "Informações Socioeconômicas",
+      "campos": [
+       {
+        "t": "info",
+        "html": "Bloco idêntico ao do Módulo I. Os dados servem apenas para indicadores e não entram na avaliação."
+       },
+       {
+        "n": "campo[2234]",
+        "l": "Nome Fantasia do CNPJ",
+        "dica": "Insira o Nome Fantasia de sua empresa, caso haja.",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "campo[2235]",
+        "l": "Data de fundação",
+        "dica": "Insira a data de abertura de sua empresa (formato DD/MM/AAAA).",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "campo[2236]",
+        "l": "Em qual tipo de Pessoa Jurídica seu CNPJ se enquadra?",
+        "t": "rad",
+        "opts": [
+         "MEI - Microempreendedor individual",
+         "EI - Empresário Individual",
+         "EIRELI - Empresa Individual de Responsabilidade Limitada",
+         "Ltda - Sociedade Empresária Limitada",
+         "SLU - Sociedade Limitada Unipessoal",
+         "SS - Sociedade Simples",
+         "SA - Sociedade Anônima",
+         "Entidade sem Fins Lucrativos"
+        ]
+       },
+       {
+        "n": "campo[2237]",
+        "l": "Quantos funcionários seu CNPJ emprega em média mensalmente?",
+        "t": "rad",
+        "opts": [
+         "01 a 04 pessoas",
+         "05 a 19 pessoas",
+         "20 a 99 pessoas",
+         "100 a 499 pessoas",
+         "500 ou mais pessoas",
+         "Prefiro não responder"
+        ]
+       },
+       {
+        "n": "campo[2238][]",
+        "l": "Qual(is) é(são) a(as) forma(s) de contratação dos funcionários da sua empresa?",
+        "t": "chk",
+        "opts": [
+         "CLT",
+         "Contrato PJ (Freelancer)",
+         "Contratação Temporária",
+         "Trabalho Parcial",
+         "Estágio",
+         "Jovem Aprendiz",
+         "Terceirização",
+         "Home Office ou Trabalho Remoto",
+         "Trabalho Intermitente",
+         "Trabalho Autônomo",
+         "Prefiro não responder"
+        ]
+       },
+       {
+        "n": "campo[2239]",
+        "l": "Qual é o salário médio mensal dos funcionários de sua empresa?",
+        "t": "rad",
+        "opts": [
+         "De 01 a 02 salários mínimos",
+         "De 03 a 04 salários mínimos",
+         "Mais de 05 salários mínimos",
+         "Prefiro não responder"
+        ],
+        "inline": 1
+       },
+       {
+        "n": "campo[2240][]",
+        "l": "Nível de escolaridade da média de seus funcionários",
+        "t": "chk",
+        "opts": [
+         "Sem instrução",
+         "Ensino fundamental incompleto",
+         "Ensino fundamental completo",
+         "Ensino médio incompleto",
+         "Ensino médio completo",
+         "Ensino superior incompleto",
+         "Ensino superior completo",
+         "Pós-Graduação lato sensu incompleta",
+         "Pós-Graduação lato sensu completa",
+         "Pós-Graduação stricto sensu incompleta",
+         "Pós-Graduação stricto sensu completa",
+         "Prefiro não responder"
+        ]
+       },
+       {
+        "n": "campo[2241][]",
+        "l": "Qual é a faixa etária média dos seus funcionários?",
+        "t": "chk",
+        "opts": [
+         "18 a 20 anos",
+         "20 a 40 anos",
+         "40 a 60 anos",
+         "Maiores de 60 anos",
+         "Prefiro não responder"
+        ]
+       },
+       {
+        "n": "campo[2242][]",
+        "l": "Em relação à raça, cor ou etnia, a maioria do corpo diretivo da PJ é formado por pessoas que se identificam como",
+        "t": "chk",
+        "opts": [
+         "Amarela",
+         "Branca",
+         "Indígena",
+         "Parda",
+         "Preta",
+         "Outra",
+         "Prefiro não responder"
+        ]
+       },
+       {
+        "n": "campo[2243][]",
+        "l": "Há Pessoas com Deficiência (PCD) no corpo diretivo da PJ?",
+        "t": "chk",
+        "opts": [
+         "Não",
+         "Sim, Auditiva",
+         "Sim, Física",
+         "Sim, Intelectual",
+         "Sim, Múltipla",
+         "Sim, Visual",
+         "Prefiro não responder"
+        ]
+       },
+       {
+        "n": "campo[2244][]",
+        "l": "Em relação a gênero, a maioria do corpo diretivo da PJ é formado por pessoas que se identificam como",
+        "t": "chk",
+        "opts": [
+         "Mulher cisgênero",
+         "Homem cisgênero",
+         "Mulher transgênero",
+         "Homem transgênero",
+         "Pessoa não-binária",
+         "Travesti",
+         "Prefiro não responder"
+        ]
+       },
+       {
+        "n": "campo[2245][]",
+        "l": "Considerando a atuação do seu CNPJ dentro do Setor Cultural, em qual conjunto de atividades sua empresa melhor se inclui?",
+        "t": "chk",
+        "opts": [
+         "Indústria",
+         "Comércio",
+         "Serviços"
+        ]
+       },
+       {
+        "n": "campo[2246][]",
+        "l": "Principal área de atuação da empresa no campo artístico-cultural",
+        "t": "chk",
+        "opts": [
+         "Antropologia",
+         "Arqueologia",
+         "Arquitetura-Urbanismo",
+         "Arquivo",
+         "Arte de Rua",
+         "Arte Digital",
+         "Artes Clássicas",
+         "Artes de Espetáculo",
+         "Artes Integradas",
+         "Artes Visuais",
+         "Artesanato",
+         "Audiovisual",
+         "Capoeira",
+         "Carnaval",
+         "Cinema",
+         "Circo",
+         "Cultura Afro-Brasileira",
+         "Cultura Cigana",
+         "Cultura DEF",
+         "Cultura Digital",
+         "Cultura e Comunicação",
+         "Cultura e Direitos Humanos",
+         "Cultura e Educação",
+         "Cultura e Esporte",
+         "Cultura e Meio Ambiente",
+         "Cultura e Saúde",
+         "Cultura LGBTQIAPN+",
+         "Cultura Negra",
+         "Cultura Popular",
+         "Cultura Hip-Hop e Funk",
+         "Cultura, Infância e Adolescência",
+         "Culturas dos Povos e das Comunidades Tradicionais de Matriz Africana",
+         "Culturas dos Povos Indígenas",
+         "Culturas dos Povos Nômades",
+         "Culturas Estrangeiras",
+         "Culturas Populares",
+         "Culturas Quilombolas",
+         "Dança",
+         "Design",
+         "Direito Autoral",
+         "Economia Criativa",
+         "Economia da Cultura",
+         "Expressões Artísticas Culturais",
+         "Festa Populares",
+         "Festejos Juninos",
+         "Filosofia",
+         "Fotografia",
+         "Gastronomia",
+         "História e Cultura",
+         "Humor",
+         "Intercâmbio e Cultura",
+         "Jogos Eletrônicos",
+         "Jornalismo e Cultura",
+         "Leitura",
+         "Literatura",
+         "Livro",
+         "Mídias Livres",
+         "Mídias Sociais",
+         "Moda",
+         "Museu",
+         "Música",
+         "Música Erudita",
+         "Música Popular",
+         "Novas Mídias",
+         "Patrimônio Imaterial",
+         "Patrimônio Material",
+         "Performance",
+         "Pesquisa em Cultura",
+         "Povos de Terreiro",
+         "Produção e Gestão Cultural",
+         "Quilombola",
+         "Rádio",
+         "Teatro",
+         "Televisão",
+         "Turismo e Cultura",
+         "Outra"
+        ],
+        "filter": 1
+       },
+       {
+        "n": "campo[2247][]",
+        "l": "Seu CNPJ acessou recursos públicos do fomento à cultura nos últimos 5 anos? Caso sim, em quais esferas?",
+        "t": "chk",
+        "opts": [
+         "Não",
+         "Sim, municipal",
+         "Sim, estadual",
+         "Sim, federal",
+         "Sim, privada",
+         "Não sei informar"
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "c31",
+    "nome": "Responsável Pela Execução",
+    "cod": "31",
+    "blocos": [
+     {
+      "t": "Responsável Pela Execução",
+      "campos": [
+       {
+        "n": "nome_resp",
+        "l": "Nome do Responsável pela Execução",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "cpf_resp",
+        "l": "CPF do Responsável pela Execução",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "rg_resp",
+        "l": "RG do Responsável pela Execução",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "orgao_rg_resp",
+        "l": "Órgão expedidor do RG do Responsável pela Execução",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "email_resp",
+        "l": "E-mail do Responsável pela Execução",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "telefone_resp",
+        "l": "Telefone do Responsável pela Execução",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "celular_resp",
+        "l": "Celular do Responsável pela Execução",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "cep_resp",
+        "l": "CEP do Responsável pela Execução",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "endereco_resp",
+        "l": "Endereço do Responsável pela Execução",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "numero_resp",
+        "l": "Número",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "complemento_resp",
+        "l": "Complemento",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "bairro_resp",
+        "l": "Bairro do Responsável pela Execução",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "municipio_resp",
+        "l": "Município do Responsável pela Execução",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "uf_resp",
+        "l": "UF do Responsável pela Execução",
+        "t": "txt",
+        "max": 190
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "c03",
+    "nome": "Dados da Proposta Cultural",
+    "cod": "03",
+    "blocos": [
+     {
+      "t": "Dados da Proposta Cultural",
+      "campos": [
+       {
+        "cod": "titulo",
+        "n": "titulo__c03",
+        "l": "Nome da Proposta",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "campo[571403]",
+        "l": "Título da proposta de residência artística",
+        "dica": "Escreva o título da proposta de residência artística que será executada durante a viagem que será realizada pelo proponente.",
+        "t": "ta",
+        "max": 50
+       },
+       {
+        "n": "campo[571404]",
+        "l": "Valor de locomoção",
+        "dica": "Escreva o valor exato requerido para custear a locomoção de sua proposta. Utilize apenas números, pontos e vírgula (exemplo: 00.000,00).",
+        "t": "ta",
+        "max": 15
+       },
+       {
+        "n": "campo[571405]",
+        "l": "Apresentação da proposta cultural",
+        "dica": "Apresente a sua proposta e forneça informações referentes ao projeto de residência artística, abordando o processo criativo, objetivos, etapas previstas, contexto artístico e demais informações pertinentes.",
+        "t": "ta",
+        "max": 5000
+       },
+       {
+        "n": "campo[571406]",
+        "l": "Período de realização",
+        "dica": "Período de realização da residência artística, contendo datas de ida e volta.",
+        "t": "ta",
+        "max": 500
+       },
+       {
+        "n": "campo[571407]",
+        "l": "Descrição da instituição",
+        "dica": "Descrição da instituição, espaço ou programa de residência artística que acolherá o proponente, incluindo seu histórico, objetivos e características.",
+        "t": "ta",
+        "max": 5000
+       },
+       {
+        "n": "campo[571408]",
+        "l": "Objetivos (geral e específicos)",
+        "dica": "Descreva para que está sendo apresentada esta proposta cultural, referindo-se à meta que se quer alcançar para cada etapa de realização.",
+        "t": "ta",
+        "max": 5000
+       },
+       {
+        "n": "campo[571409]",
+        "l": "Justificativa",
+        "dica": "Descreva de forma clara e convincente os motivos pelos quais o projeto é relevante, necessário e benéfico. Demonstre a importância do projeto, tanto do ponto de vista artístico quanto cultural.",
+        "t": "ta",
+        "max": 5000
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "c05",
+    "nome": "Equipe",
+    "cod": "05",
+    "blocos": [
+     {
+      "t": "Equipe",
+      "campos": [
+       {
+        "n": "equipe",
+        "l": "Equipe da proposta",
+        "t": "rep",
+        "campos": [
+         {
+          "n": "nome",
+          "l": "Nome",
+          "req": 1,
+          "t": "txt",
+          "max": 190
+         },
+         {
+          "n": "cpf",
+          "l": "CPF",
+          "req": 1,
+          "t": "txt",
+          "max": 190
+         },
+         {
+          "n": "funcao",
+          "l": "Função",
+          "req": 1,
+          "t": "txt",
+          "max": 190
+         },
+         {
+          "n": "curriculo",
+          "l": "Mini-currículo",
+          "req": 1,
+          "t": "ta",
+          "max": 1000
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "c09",
+    "nome": "Anexos",
+    "cod": "09",
+    "blocos": [
+     {
+      "t": "Anexos",
+      "campos": [
+       {
+        "n": "anexos",
+        "l": "Anexos",
+        "t": "docs",
+        "opts": [
+         "Cadastro Nacional da Pessoa Jurídica (Cartão CNPJ)*",
+         "Carta de aceite*",
+         "Carta convite oficial",
+         "Cópia da Identidade do Responsável pela Execução*",
+         "Cópia do CPF do Responsável pela Execução*",
+         "Cópia Simples da Ata de Eleição / Última Alteração Contratual (se for o caso)",
+         "Cópia Simples do Contrato / Estatuto Social",
+         "Cotação das passagens ou do transporte*",
+         "Cronograma de execução*",
+         "Declaração de Uso do Nome Social",
+         "Materiais complementares",
+         "Material do evento*",
+         "Planilha Orçamentária*",
+         "Portfólio de Atuação Artístico e Cultural*",
+         "Procuração particular do Responsável pela Execução (se for o caso)"
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "c15",
+    "nome": "Revisar e Enviar",
+    "cod": "15",
+    "blocos": [
+     {
+      "t": "Revisar e Enviar",
+      "campos": [
+       {
+        "t": "info",
+        "html": "<b>Revisar e enviar:</b> só na plataforma. Use a Transferência para colar tudo, revise lá e envie."
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "dc-86": {
+  "id": "dc-86",
+  "nome": "86 · Mapeamento Cultura Viva RJ",
+  "plataforma": "desenvolve-cultura",
+  "nav": "lista",
+  "extraido": "2026-09-14",
+  "obs": "Estrutura da plataforma: uma URL por etapa (inscricao/culturavivarj/form_projetosNN.php). Rede de Pontos de Cultura · 10 etapas.",
+  "etapas": [
+   {
+    "id": "d00",
+    "nome": "Proponente",
+    "cod": "00",
+    "blocos": [
+     {
+      "t": "Proponente",
+      "campos": [
+       {
+        "n": "idprojeto2",
+        "l": "Código",
+        "ro": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "titulo",
+        "l": "Nome do Ponto de Cultura",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "datacriacao",
+        "l": "Qual a data de criação do CNPJ?",
+        "t": "date"
+       },
+       {
+        "n": "proponente",
+        "l": "Razão Social",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "nomefantasia",
+        "l": "Nome Fantasia da Empresa",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "cpf",
+        "l": "CNPJ",
+        "ro": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "meisn",
+        "l": "MEI?",
+        "ro": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "cpfmei",
+        "l": "CPF responsável do MEI",
+        "ro": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "rg",
+        "l": "Inscrição Estadual",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "orgao",
+        "l": "Inscrição Municipal",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "email",
+        "l": "E-mail",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "email_alternativo",
+        "l": "E-mail alternativo",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "telefone",
+        "l": "Telefone",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "celular",
+        "l": "Celular",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "whatsapp",
+        "l": "Deseja participar do grupo do Whatsapp?",
+        "req": 1,
+        "t": "sel",
+        "opts": [
+         "Sim",
+         "Não"
+        ]
+       },
+       {
+        "n": "cep",
+        "l": "CEP",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "endereco",
+        "l": "Endereço",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "numero",
+        "l": "Número",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "complemento",
+        "l": "Complemento",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "bairro",
+        "l": "Bairro",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "municipio",
+        "l": "Município",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "uf",
+        "l": "UF",
+        "req": 1,
+        "t": "txt",
+        "max": 190
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "d01",
+    "nome": "Representante Legal",
+    "cod": "01",
+    "blocos": [
+     {
+      "t": "Representante Legal",
+      "campos": [
+       {
+        "n": "replegal",
+        "l": "Representante Legal",
+        "t": "rep",
+        "campos": [
+         {
+          "n": "nomesocio",
+          "l": "Nome completo",
+          "req": 1,
+          "t": "txt",
+          "max": 190
+         },
+         {
+          "n": "cpfsocio",
+          "l": "CPF",
+          "req": 1,
+          "t": "txt",
+          "max": 190
+         },
+         {
+          "n": "dataeleicao",
+          "l": "Data da última eleição",
+          "req": 1,
+          "t": "date"
+         },
+         {
+          "n": "vigenciadomandato",
+          "l": "Vigência do mandato",
+          "req": 1,
+          "t": "date"
+         },
+         {
+          "n": "cargo",
+          "l": "Ocupante de cargo político",
+          "t": "sel",
+          "opts": [
+           "Não",
+           "Sim"
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "d12",
+    "nome": "Atividades da Instituição",
+    "cod": "12",
+    "blocos": [
+     {
+      "t": "Atividades da Instituição",
+      "campos": [
+       {
+        "t": "info",
+        "html": "Bloco de indicadores da Rede estadual dos Pontos de Cultura. Não entra em avaliação nem habilitação."
+       },
+       {
+        "n": "campo[1192]",
+        "l": "Há quantos anos sua instituição existe?",
+        "t": "rad",
+        "opts": [
+         "02 - 05 anos",
+         "05 - 10 anos",
+         "10 - 15 anos",
+         "15 - 20 anos",
+         "Mais de 20 anos"
+        ]
+       },
+       {
+        "n": "campo[1193]",
+        "l": "Em qual tipo de Pessoa Jurídica seu CNPJ se enquadra?",
+        "t": "rad",
+        "opts": [
+         "Não possuo CNPJ",
+         "Associação",
+         "Coletivo",
+         "Entidade sem Fins Lucrativos",
+         "Federação",
+         "Liga",
+         "MEI - Microempreendedor individual",
+         "Organizações da Sociedade Civil (OSC)",
+         "OS - Organização Social",
+         "OSCIP - Organização da Sociedade Civil de Interesse Público"
+        ]
+       },
+       {
+        "n": "campo[1204]",
+        "l": "Quantos colaboradores sua instituição emprega em média mensalmente?",
+        "t": "rad",
+        "opts": [
+         "00 pessoa",
+         "01 a 04 pessoas",
+         "05 a 19 pessoas",
+         "20 a 99 pessoas",
+         "100 a 499 pessoas",
+         "500 ou mais pessoas",
+         "Prefiro não responder"
+        ]
+       },
+       {
+        "n": "campo[1205][]",
+        "l": "Quais são os tipos de contratação dos colaboradores de sua instituição?",
+        "t": "chk",
+        "opts": [
+         "CLT",
+         "Contratação Temporária",
+         "Contrato de voluntário",
+         "Contrato PJ (Freelancer)",
+         "Estágio",
+         "Home Office ou Trabalho Remoto",
+         "Jovem Aprendiz",
+         "Terceirização",
+         "Trabalho Autônomo",
+         "Trabalho Intermitente",
+         "Trabalho Parcial",
+         "Prefiro não responder",
+         "Não se aplica"
+        ]
+       },
+       {
+        "n": "campo[1206]",
+        "l": "Qual é o salário médio mensal dos colaboradores de sua instituição?",
+        "t": "rad",
+        "opts": [
+         "Não remunerado",
+         "R$1.100,00 a R$2.200,00 (1 a 2 salários mínimos)",
+         "R$2.200,00 a R$4.400,00 (2 a 4 salários mínimos)",
+         "R$4.400,00 a R$11.000,00 (4 a 10 salários mínimos)",
+         "R$11.000,00 a R$22.000,00 (10 a 20 salários mínimos)",
+         "Acima de R$22.000,00 (acima de 20 salários mínimos)",
+         "Prefiro não responder",
+         "Não se aplica"
+        ]
+       },
+       {
+        "n": "campo[1207]",
+        "l": "Nível de escolaridade da média dos colaboradores",
+        "t": "rad",
+        "opts": [
+         "Sem instrução",
+         "Ensino fundamental incompleto",
+         "Ensino fundamental completo",
+         "Ensino médio incompleto",
+         "Ensino médio completo",
+         "Ensino superior incompleto",
+         "Ensino superior completo",
+         "Pós-Graduação lato sensu incompleta",
+         "Pós-Graduação lato sensu completa",
+         "Pós-Graduação stricto sensu incompleta",
+         "Pós-Graduação stricto sensu completa",
+         "Prefiro não responder",
+         "Não se aplica"
+        ]
+       },
+       {
+        "n": "campo[1208]",
+        "l": "Qual é a faixa etária média dos seus colaboradores?",
+        "t": "rad",
+        "opts": [
+         "18 a 24 anos",
+         "25 a 39 anos",
+         "40 a 60 anos",
+         "Mais de 60 anos",
+         "Prefiro não responder",
+         "Não se aplica"
+        ]
+       },
+       {
+        "n": "campo[1089][]",
+        "l": "Em relação a gênero, a maioria do corpo diretivo da PJ é formado por pessoas que se identificam como",
+        "t": "chk",
+        "opts": [
+         "Mulher cisgênero",
+         "Homem cisgênero",
+         "Mulher transgênero",
+         "Homem transgênero",
+         "Pessoa não-binária",
+         "Travesti",
+         "Prefiro não responder",
+         "Não se aplica"
+        ]
+       },
+       {
+        "n": "campo[1209][]",
+        "l": "Sua instituição possui colaboradores de quais raças/cores?",
+        "t": "chk",
+        "opts": [
+         "Amarela",
+         "Branca",
+         "Indígena",
+         "Parda",
+         "Preta",
+         "Outra",
+         "Prefiro não responder",
+         "Não se aplica"
+        ]
+       },
+       {
+        "n": "campo[1210][]",
+        "l": "Existem pessoas com deficiência contratadas na sua instituição?",
+        "t": "chk",
+        "opts": [
+         "Nenhuma",
+         "Deficiência Auditiva",
+         "Deficiência Física",
+         "Deficiência Intelectual/Cognitiva",
+         "Deficiência Motora",
+         "Deficiência Múltipla",
+         "Deficiência Visual"
+        ]
+       },
+       {
+        "n": "campo[1211][]",
+        "l": "Em quais áreas artísticas a sua instituição geralmente atua?",
+        "t": "chk",
+        "opts": [
+         "Audiovisual",
+         "Circo",
+         "Dança",
+         "Leitura e Literatura",
+         "Museu e Memória",
+         "Música",
+         "Teatro",
+         "Outros"
+        ]
+       },
+       {
+        "n": "campo[1212][]",
+        "l": "Sua instituição já recebeu apoio para projetos através de leis de incentivo nos últimos",
+        "t": "chk",
+        "opts": [
+         "3 anos",
+         "6 anos",
+         "9 anos",
+         "12 anos ou mais",
+         "Não recebeu"
+        ]
+       },
+       {
+        "n": "campo[1213]",
+        "l": "Os colaboradores da sua instituição são em maioria",
+        "t": "rad",
+        "opts": [
+         "Homens-Cis",
+         "Homens-Trans",
+         "Mulheres-Cis",
+         "Mulheres-Trans",
+         "Não Binários",
+         "Outros",
+         "Não se aplica"
+        ]
+       },
+       {
+        "n": "campo[1214][]",
+        "l": "Sua instituição tem projetos aptos para captação em Lei de Incentivo? Se sim, em qual esfera?",
+        "t": "chk",
+        "opts": [
+         "Nenhum",
+         "Municipal",
+         "Estadual",
+         "Federal",
+         "Privada"
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "d26",
+    "nome": "Atuação e Articulação",
+    "cod": "26",
+    "blocos": [
+     {
+      "t": "Atuação e Articulação",
+      "campos": [
+       {
+        "n": "campo[1194]",
+        "l": "Qual principal ação estruturante do Ponto/Pontão de Cultura?",
+        "t": "rad",
+        "opts": [
+         "Agente cultura viva",
+         "Conhecimentos tradicionais",
+         "Cultura circense",
+         "Cultura digital",
+         "Cultura e direitos humanos",
+         "Cultura e educação",
+         "Cultura e juventude",
+         "Cultura e meio ambiente",
+         "Cultura e saúde",
+         "Cultura, comunicação e mídia livre",
+         "Cultura, infância e adolescência",
+         "Economia criativa",
+         "Economia solidária",
+         "Intercâmbio e residências artístico-culturais",
+         "Livro, leitura e literatura",
+         "Memória e patrimônio cultural",
+         "Outros"
+        ]
+       },
+       {
+        "n": "campo[1422][]",
+        "l": "Quais as ações secundárias realizadas pelo seu Ponto/Pontão de Cultura?",
+        "t": "chk",
+        "opts": [
+         "Agente cultura viva",
+         "Conhecimentos tradicionais",
+         "Cultura circense",
+         "Cultura digital",
+         "Cultura e direitos humanos",
+         "Cultura e educação",
+         "Cultura e juventude",
+         "Cultura e meio ambiente",
+         "Cultura e saúde",
+         "Cultura, comunicação e mídia livre",
+         "Cultura, infância e adolescência",
+         "Economia criativa",
+         "Economia solidária",
+         "Intercâmbio e residências artístico-culturais",
+         "Livro, leitura e literatura",
+         "Memória e patrimônio cultural",
+         "Outros"
+        ]
+       },
+       {
+        "n": "campo[1195][]",
+        "l": "Quais são as áreas de conhecimento do Ponto/Pontão de Cultura?",
+        "t": "chk",
+        "opts": [
+         "Antropologia",
+         "Arqueologia",
+         "Arquitetura-Urbanismo",
+         "Arquivo",
+         "Arte de Rua",
+         "Arte Digital",
+         "Artes Visuais",
+         "Artesanato",
+         "Audiovisual",
+         "Cinema",
+         "Circo",
+         "Comunicação",
+         "Cultura Cigana",
+         "Cultura Digital",
+         "Cultura Estrangeira (imigrantes)",
+         "Cultura Indígena",
+         "Cultura LGBT",
+         "Cultura Negra",
+         "Cultura Popular",
+         "Dança",
+         "Design",
+         "Direito Autoral",
+         "Economia Criativa",
+         "Educação",
+         "Esporte",
+         "Filosofia",
+         "Fotografia",
+         "Gastronomia",
+         "Gestão Cultural",
+         "História",
+         "Jogos Eletrônicos",
+         "Jornalismo",
+         "Leitura",
+         "Literatura",
+         "Livro",
+         "Meio Ambiente",
+         "Mídias Sociais",
+         "Moda",
+         "Museu",
+         "Música",
+         "Novas Mídias",
+         "Patrimônio Imaterial",
+         "Patrimônio Material",
+         "Pesquisa",
+         "Produção Cultural",
+         "Rádio",
+         "Saúde",
+         "Sociologia",
+         "Teatro",
+         "Televisão",
+         "Turismo",
+         "Outros"
+        ],
+        "filter": 1
+       },
+       {
+        "n": "campo[1196][]",
+        "l": "Quais os públicos que participam das ações do Ponto/Pontão de Cultura?",
+        "t": "chk",
+        "opts": [
+         "Afro-Brasileiros",
+         "Ciganos",
+         "Crianças e Adolescentes",
+         "Estudantes",
+         "Grupos artísticos e culturais independentes",
+         "Grupos assentados de reforma agrária",
+         "Idosos",
+         "Imigrantes",
+         "Indígenas",
+         "Juventude",
+         "LGBT",
+         "Mestres, praticantes, brincantes e grupos culturais populares, urbanos e rurais",
+         "Mulheres",
+         "Pescadores",
+         "Pessoas com deficiência",
+         "Pessoas em situação de sofrimento psíquico",
+         "Pessoas ou grupos vítimas de violência",
+         "População de Baixa Renda",
+         "População de Rua",
+         "População em regime prisional",
+         "População Rural",
+         "População sem teto",
+         "Populações atingida por barragens",
+         "Populações de regiões fronteiriças",
+         "Populações em áreas de vulnerabilidade social",
+         "Povos e Comunidades Tradicionais de Matriz Africana",
+         "Público em Geral",
+         "Quilombolas",
+         "Ribeirinhos",
+         "Outros"
+        ],
+        "filter": 1
+       },
+       {
+        "n": "campo[1197][]",
+        "l": "Especifique a área de experiência e temas que você pode compartilhar conhecimento",
+        "t": "chk",
+        "opts": [
+         "Artes Cênicas",
+         "Artes Visuais",
+         "Artesanato",
+         "Audiovisual",
+         "Capacitação",
+         "Capoeira",
+         "Comunicação Direitos Humanos",
+         "Contador de Histórias",
+         "Cultura Afro",
+         "Cultura Alimentar",
+         "Cultura Digital",
+         "Cultural",
+         "Culturas Indígenas",
+         "Culturas Populares",
+         "Esporte",
+         "Fotografia",
+         "Gastronomia",
+         "Gênero",
+         "Hip Hop",
+         "Internacional",
+         "Juventude",
+         "Literatura",
+         "Meio Ambiente",
+         "Moda",
+         "Música",
+         "Produção",
+         "Software Livre",
+         "Tradição Oral",
+         "Turismo",
+         "Outros"
+        ],
+        "filter": 1
+       },
+       {
+        "n": "campo[1198][]",
+        "l": "O que o Ponto/Pontão de Cultura pode oferecer para a rede de infraestrutura?",
+        "t": "chk",
+        "opts": [
+         "Acesso à internet",
+         "Apartamento",
+         "Bar",
+         "Casa",
+         "Cozinha",
+         "Estúdio",
+         "Galpão",
+         "Garagem",
+         "Gráfica",
+         "Hackerspace",
+         "Jardim",
+         "Laboratório",
+         "Loja",
+         "Palco",
+         "Sala de aula / Auditório",
+         "Teatro",
+         "Não se aplica",
+         "Outros"
+        ]
+       },
+       {
+        "n": "campo[1199][]",
+        "l": "O que o Ponto/Pontão de Cultura pode oferecer para a rede de equipamentos?",
+        "t": "chk",
+        "opts": [
+         "Boom",
+         "Caixa de som",
+         "Câmera filmadora",
+         "Câmera fotográfica",
+         "Computador",
+         "Fone de ouvido",
+         "Impressora",
+         "Instrumento musical",
+         "Mesa de edição",
+         "Mesa de som",
+         "Microfone",
+         "Refletor",
+         "Scanner",
+         "Spot de luz",
+         "Não se aplica",
+         "Outros"
+        ]
+       },
+       {
+        "n": "campo[1200][]",
+        "l": "O que o Ponto/Pontão de Cultura pode oferecer para a rede de Recursos Humanos?",
+        "t": "chk",
+        "opts": [
+         "Ator / Atriz",
+         "Bombeiro",
+         "Captador de Recursos",
+         "Cenógrafo",
+         "Consultor",
+         "Cultural",
+         "Dançarino / Dançarina",
+         "Designer",
+         "Elaborador de Projeto",
+         "Eletricista",
+         "Fotógrafo",
+         "Hacker",
+         "Hidráulico",
+         "Iluminador",
+         "Maquiador",
+         "Médica",
+         "Músico / Musicista",
+         "Oficineiro",
+         "Palestrante",
+         "Pesquisador",
+         "Produtor",
+         "Realizador audiovisual (Videomaker)",
+         "Rede",
+         "Solidária",
+         "Sonorizador",
+         "Não se aplica",
+         "Outros"
+        ],
+        "filter": 1
+       },
+       {
+        "n": "campo[1201][]",
+        "l": "O que o Ponto/Pontão de Cultura pode oferecer para a rede de hospedagem?",
+        "t": "chk",
+        "opts": [
+         "Camping",
+         "Convênio com Rede Hoteleira",
+         "Hospedagem",
+         "Solidária",
+         "Não se aplica",
+         "Outros"
+        ]
+       },
+       {
+        "n": "campo[1202][]",
+        "l": "O que o Ponto/Pontão de Cultura pode oferecer para a rede de deslocamento e transportes?",
+        "t": "chk",
+        "opts": [
+         "Carona, Veículo",
+         "Passagem Aérea",
+         "Passagem Terrestre",
+         "Não se aplica",
+         "Outros"
+        ]
+       },
+       {
+        "n": "campo[1203][]",
+        "l": "O que o Ponto/Pontão de Cultura pode oferecer para a rede de serviços de comunicação?",
+        "t": "chk",
+        "opts": [
+         "Assessoria de Imprensa",
+         "Audiovisual",
+         "Comunitária",
+         "Desenvolvimento Web",
+         "Design",
+         "Fotografia",
+         "Jornalismo",
+         "Mídia",
+         "Produção de Conteúdo e Informação",
+         "Produção de Conteúdo e Mobilização nas Redes Sociais",
+         "Não se aplica",
+         "Outros"
+        ]
+       },
+       {
+        "n": "campo[1217][]",
+        "l": "O que o Ponto/Pontão de Cultura pode oferecer de acessibilidade?",
+        "t": "chk",
+        "opts": [
+         "Audiodescrição",
+         "Janela de Libras nos vídeos apresentados",
+         "Legendas nos vídeos apresentados",
+         "Material em escrita fácil, adaptado para todas as faixas etárias",
+         "Painel em Braile e áudio nos elevadores",
+         "Painel em Braile e áudio nos postes próximos ao local",
+         "Site adaptado para pessoas com deficiência visual",
+         "Site adaptado para pessoas com deficiência auditiva",
+         "Tradutor Intérprete em Libras (TILs)",
+         "Não se aplica",
+         "Outros"
+        ]
+       },
+       {
+        "n": "campo[1218][]",
+        "l": "O que o Ponto/Pontão de Cultura pode oferecer de acessibilidade arquitetônica?",
+        "t": "chk",
+        "opts": [
+         "Balcão inclinado e com altura para usuários de baixa estatura ou usuário de cadeira de rodas",
+         "Banheiros feminino e masculino adaptados",
+         "Bebedouros adaptados",
+         "Corrimão",
+         "Espaço de manobra para cadeiras de rodas",
+         "Faixa sinalizadora de degrau",
+         "Lixeira de fácil manipulação",
+         "Maçanetas, torneiras e descarga de fácil manipulação",
+         "Pias em alturas adequadas para pessoas de baixa estatura e/ou cadeirante",
+         "Piso tátil",
+         "Pisos não escorregadios",
+         "Plataforma de acesso ou elevador",
+         "Portas amplas para acesso de cadeiras de rodas",
+         "Rampa de acesso",
+         "Vaga de estacionamento específica para pessoas com deficiência",
+         "Não se aplica"
+        ]
+       },
+       {
+        "n": "campo[1421]",
+        "l": "Seu Ponto/Pontão de cultura atende pessoas com deficiência? Se sim, quantas?",
+        "t": "rad",
+        "opts": [
+         "Atende até 10 pessoas",
+         "Atende até 20 pessoas",
+         "Atende até 30 pessoas",
+         "Atende até 50 pessoas",
+         "Atende mais de 50 pessoas",
+         "Não se aplica"
+        ]
+       },
+       {
+        "n": "campo[1423]",
+        "l": "Seu Ponto/Pontão de Cultura tem um Mestre ou Mestra da Cultura Popular ou Tradicional?",
+        "t": "rad",
+        "opts": [
+         "Sim",
+         "Não"
+        ],
+        "inline": 1
+       },
+       {
+        "n": "campo[1424][]",
+        "l": "Marque quais os saberes transmitidos pelo Mestre ou Mestra do seu Ponto/Pontão de Cultura",
+        "t": "chk",
+        "opts": [
+         "Alimentação e culinária",
+         "Celebrações, festividades e brincadeiras tradicionais",
+         "Formas de expressão corporais e cênicas",
+         "Formas de expressão literárias e musicais",
+         "Ludicidade",
+         "Manejo tradicional da natureza",
+         "Manufatura de objetos de uso cotidiano",
+         "Práticas de cura e medicina popular",
+         "Saberes relacionados ao conhecimento do passado e lugares simbólicos",
+         "Outros saberes tradicionais não descritos aqui",
+         "Não se aplica"
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "d31",
+    "nome": "Responsável pelas Atividades",
+    "cod": "31",
+    "blocos": [
+     {
+      "t": "Responsável pelas Atividades",
+      "campos": [
+       {
+        "n": "nome_resp",
+        "l": "Nome do Responsável pela Atividade",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "cpf_resp",
+        "l": "CPF do Responsável pela Atividade",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "rg_resp",
+        "l": "RG do Responsável pela Atividade",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "orgao_rg_resp",
+        "l": "Órgão expedidor do RG do Responsável pela Atividade",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "email_resp",
+        "l": "E-mail do Responsável pela Atividade",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "telefone_resp",
+        "l": "Telefone do Responsável pela Atividade",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "celular_resp",
+        "l": "Celular do Responsável pela Atividade",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "cep_resp",
+        "l": "CEP do Responsável pela Atividade",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "endereco_resp",
+        "l": "Endereço do Responsável pela Atividade",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "numero_resp",
+        "l": "Número",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "complemento_resp",
+        "l": "Complemento",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "bairro_resp",
+        "l": "Bairro do Responsável pela Atividade",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "municipio_resp",
+        "l": "Município do Responsável pela Atividade",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "uf_resp",
+        "l": "UF do Responsável pela Atividade",
+        "t": "txt",
+        "max": 190
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "d03",
+    "nome": "Dados do Ponto de Cultura",
+    "cod": "03",
+    "blocos": [
+     {
+      "t": "Dados do Ponto de Cultura",
+      "campos": [
+       {
+        "cod": "titulo",
+        "n": "titulo__d03",
+        "l": "Nome do Ponto de Cultura",
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "categoria",
+        "l": "Categoria",
+        "dica": "Fixada como Mapeamento no cadastro inicial.",
+        "ro": 1,
+        "t": "txt",
+        "max": 190
+       },
+       {
+        "n": "campo2[1191][]",
+        "l": "A instituição já teve Termo de Compromisso Cultural ou Convênio firmado em alguma dessas esferas",
+        "t": "chk",
+        "opts": [
+         "SECEC-RJ",
+         "Ministério da Cultura",
+         "Secretaria Municipal",
+         "Nenhuma das respostas anteriores"
+        ]
+       },
+       {
+        "n": "campo2[1216]",
+        "l": "Qual foi o formato da sua certificação",
+        "t": "rad",
+        "opts": [
+         "Certificação simplificada pelo MinC",
+         "Certificação via edital SECEC-RJ",
+         "Certificação via edital Secretaria Municipal"
+        ],
+        "inline": 1
+       },
+       {
+        "n": "campo2[1215][]",
+        "l": "Tipo de Ponto de Cultura",
+        "t": "chk",
+        "opts": [
+         "Pontão",
+         "Ponto"
+        ]
+       },
+       {
+        "n": "campo[571410]",
+        "l": "Conte um pouco sobre a história do seu Ponto",
+        "dica": "Descreva detalhadamente as características e atividades realizadas em seu ponto de cultura.",
+        "t": "ta",
+        "max": 800
+       },
+       {
+        "n": "campo[571411]",
+        "l": "Ideias e sugestões",
+        "dica": "Espaço livre para envio de ideias, críticas ou sugestões.",
+        "t": "ta",
+        "max": 800
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "d25",
+    "nome": "Mídias",
+    "cod": "25",
+    "blocos": [
+     {
+      "t": "Mídias",
+      "campos": [
+       {
+        "n": "midias",
+        "l": "Mídias do Ponto",
+        "t": "rep",
+        "campos": [
+         {
+          "n": "redesocial",
+          "l": "Rede",
+          "t": "sel",
+          "opts": [
+           "Facebook",
+           "Instagram",
+           "Twitter",
+           "LinkedIn",
+           "Youtube",
+           "Portfólio",
+           "Cultura Digital",
+           "Diáspora",
+           "Flickr",
+           "Site",
+           "Outros"
+          ]
+         },
+         {
+          "n": "url",
+          "l": "URL",
+          "req": 1,
+          "t": "txt",
+          "max": 190
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "d05",
+    "nome": "Equipe",
+    "cod": "05",
+    "blocos": [
+     {
+      "t": "Equipe",
+      "campos": [
+       {
+        "n": "equipe",
+        "l": "Equipe do Ponto de Cultura",
+        "t": "rep",
+        "campos": [
+         {
+          "n": "nome",
+          "l": "Nome",
+          "req": 1,
+          "t": "txt",
+          "max": 190
+         },
+         {
+          "n": "cpf",
+          "l": "CPF",
+          "req": 1,
+          "t": "txt",
+          "max": 190
+         },
+         {
+          "n": "funcao",
+          "l": "Função",
+          "req": 1,
+          "t": "txt",
+          "max": 190
+         },
+         {
+          "n": "contratacao",
+          "l": "Forma de Contratação",
+          "req": 1,
+          "t": "sel",
+          "opts": [
+           "CLT",
+           "MEI",
+           "Voluntário",
+           "Prestador de Serviço",
+           "Outro"
+          ]
+         },
+         {
+          "n": "curriculo",
+          "l": "Mini-currículo",
+          "req": 1,
+          "t": "ta",
+          "max": 1000
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "d09",
+    "nome": "Anexos",
+    "cod": "09",
+    "blocos": [
+     {
+      "t": "Anexos",
+      "campos": [
+       {
+        "n": "anexos",
+        "l": "Anexos",
+        "t": "docs",
+        "opts": [
+         "Carta de representação de coletivo (obrigatória pessoa física)",
+         "Certificação Cultura Viva",
+         "Comprovante de inscrição e de situação cadastral no CNPJ (obrigatório pessoa jurídica)",
+         "Cópia Simples da Ata de Eleição (obrigatório pessoa jurídica)",
+         "Cópia Simples do Estatuto Social (obrigatório pessoa jurídica)",
+         "CPF do representante legal*",
+         "Portfólio*",
+         "RG do representante legal*"
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "d15",
+    "nome": "Revisar e Enviar",
+    "cod": "15",
+    "blocos": [
+     {
+      "t": "Revisar e Enviar",
+      "campos": [
+       {
+        "t": "info",
+        "html": "<b>Revisar e enviar:</b> só na plataforma. Use a Transferência para colar tudo, revise lá e envie."
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

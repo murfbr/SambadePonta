@@ -1,0 +1,118 @@
+{
+ "plataformas": [
+  {
+   "id": "cultura-rio",
+   "nome": "Editais Cultura Rio",
+   "orgao": "Secretaria Municipal de Cultura do Rio · editaisculturario.com.br",
+   "arq": "formulário dentro de iframe (I1)",
+   "porta": "URL direta por edital (e=36)",
+   "codigos": "estáveis, numerados por etapa/bloco/ordem",
+   "limites": "no HTML (maxlength)",
+   "anexos": "só na plataforma",
+   "armadilhas": "rádios agrupados em tabela; sem contador de caracteres; sessão cai sem aviso."
+  },
+  {
+   "id": "desenvolve-cultura",
+   "nome": "Desenvolve Cultura",
+   "orgao": "Secretaria de Estado de Cultura e Economia Criativa · desenvolvecultura.rj.gov.br",
+   "arq": "formulário direto na página, uma URL por etapa",
+   "porta": "cadastro inicial cria a proposta; o formulário só existe depois",
+   "codigos": "campo[571389], específicos do edital",
+   "limites": "variam por edital (ICMS sem limite; Mobilidade 5000; 86 usa 800)",
+   "anexos": "só na plataforma",
+   "armadilhas": "Cloudflare derruba a sessão com pedidos rápidos; rótulo de rádio sem os colchetes do name; bug de rótulo no endereço."
+  },
+  {
+   "id": "salic",
+   "nome": "Salic",
+   "orgao": "Ministério da Cultura · salic.cultura.gov.br",
+   "arq": "menu lateral, 8 telas, planilha orçamentária própria",
+   "porta": "cadastro de proposta; listas em cascata via ajax",
+   "codigos": "nomes de campo; tipologias por id",
+   "limites": "só no contador JavaScript (resumo 1000, demais 8000)",
+   "anexos": "só na plataforma; PDF gerado lá",
+   "armadilhas": "sessão expira em minutos e recarrega a aba; respostas em ISO-8859-1; catálogos de itens dependem de produto × etapa."
+  }
+ ],
+ "registro": [
+  {
+   "id": "fluxo-continuo",
+   "nome": "Fluxo Contínuo",
+   "plataforma": "cultura-rio",
+   "etapas": 3,
+   "campos": 140,
+   "extraido": "12/09/2026",
+   "mapeamento": "atual",
+   "especiais": "cronograma por mês em 3 fases",
+   "migrado": true
+  },
+  {
+   "id": "dc-138",
+   "nome": "138 · Lei de Incentivo ICMS 2026",
+   "plataforma": "desenvolve-cultura",
+   "etapas": 12,
+   "campos": 96,
+   "extraido": "14/09/2026",
+   "mapeamento": "atual",
+   "especiais": "abrangência (92 municípios em regiões), sócios e equipe repetíveis, checklist de anexos",
+   "migrado": true,
+   "antigo": "https://claude.ai/code/artifact/788bcbae-a879-4f11-acd0-5016fb3f2771"
+  },
+  {
+   "id": "dc-133",
+   "nome": "133 · Mobilidade 2026, Módulo I, Apresentações",
+   "plataforma": "desenvolve-cultura",
+   "etapas": 8,
+   "campos": 61,
+   "extraido": "14/09/2026",
+   "mapeamento": "atual",
+   "especiais": "socioeconômicas (78 áreas), equipe repetível",
+   "migrado": true,
+   "antigo": "https://claude.ai/code/artifact/788bcbae-a879-4f11-acd0-5016fb3f2771"
+  },
+  {
+   "id": "dc-134",
+   "nome": "134 · Mobilidade 2026, Módulo II, Residências",
+   "plataforma": "desenvolve-cultura",
+   "etapas": 8,
+   "campos": 59,
+   "extraido": "14/09/2026",
+   "mapeamento": "atual",
+   "especiais": "socioeconômicas (78 áreas), equipe repetível",
+   "migrado": true,
+   "antigo": "https://claude.ai/code/artifact/788bcbae-a879-4f11-acd0-5016fb3f2771"
+  },
+  {
+   "id": "dc-86",
+   "nome": "86 · Mapeamento Cultura Viva RJ",
+   "plataforma": "desenvolve-cultura",
+   "etapas": 10,
+   "campos": 77,
+   "extraido": "14/09/2026",
+   "mapeamento": "atual",
+   "especiais": "mídias, contratação por membro, listas longas com filtro",
+   "migrado": true,
+   "antigo": "https://claude.ai/code/artifact/788bcbae-a879-4f11-acd0-5016fb3f2771"
+  },
+  {
+   "id": "salic-proposta",
+   "nome": "Proposta cultural · Lei Rouanet",
+   "plataforma": "salic",
+   "etapas": 8,
+   "extraido": "13/09/2026",
+   "mapeamento": "parcial",
+   "especiais": "planilha orçamentária (soma automática, catálogo de itens, coluna Bloco, custos vinculados), cascata tipicidade → tipologia",
+   "migrado": true,
+   "campos": 57,
+   "antigo": "https://claude.ai/code/artifact/b8c9bf0a-11b5-4b61-8eaa-a282ec9c2289"
+  }
+ ],
+ "perfisJuridicos": [
+  "",
+  "PF",
+  "MEI",
+  "PJ com fins lucrativos",
+  "PJ sem fins lucrativos",
+  "Coletivo informal representado por PF"
+ ]
+}
