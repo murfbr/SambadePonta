@@ -86,17 +86,39 @@ export const Banco = {
     const parar = onSnapshot(
       collection(db, colecao),
       (snap) => {
-        const mapa: Mapa = {};
-        snap.forEach((d) => { mapa[d.id] = clonar(d.data()) as Documento; });
-        // Documentos com gravação pendente aqui não são sobrescritos pelo snapshot.
-        for (const chave of Object.keys(timers)) {
-          const [c, id] = dividirChave(chave);
-          if (c === colecao && espelho[colecao][id]) mapa[id] = espelho[colecao][id];
+        const remoto: Mapa = {};
+        snap.forEach((d) => { remoto[d.id] = clonar(d.data()) as Documento; });
+
+        // Reconciliação servidor ⇄ espelho local (mesma semântica do artefato):
+        // - gravação em andamento (timer) nunca é sobrescrita;
+        // - documento marcado _novo que não existe no servidor é dele que o
+        //   servidor ainda não sabe → sobe agora (é assim que o que foi criado
+        //   offline, sem permissão ou em modo local chega ao banco);
+        // - existindo dos dois lados, fica o mais recente pelo `atualizado`
+        //   (empate → servidor); local mais novo sobe;
+        // - sem _novo e sumido do servidor = excluído por alguém → cai daqui também.
+        const local = espelho[colecao] || {};
+        const mapa: Mapa = { ...remoto };
+        const subir: string[] = [];
+        for (const [id, docLocal] of Object.entries(local)) {
+          if (timers[colecao + "/" + id]) { mapa[id] = docLocal; continue; }
+          const docRemoto = remoto[id];
+          const nuncaSubiu = Boolean(docLocal._novo);
+          if (!docRemoto) {
+            if (nuncaSubiu) { mapa[id] = docLocal; subir.push(id); }
+            continue;
+          }
+          if (String(docLocal.atualizado || "") > String(docRemoto.atualizado || "")) {
+            mapa[id] = docLocal;
+            subir.push(id);
+          }
         }
+
         espelho[colecao] = mapa;
         salvarEspelho();
         mudarStatus({ texto: snap.metadata.fromCache ? "sincronizando…" : "sincronizado", classe: snap.metadata.fromCache ? "sv" : "ok" });
         avisar(colecao, !snap.metadata.fromCache);
+        subir.forEach((id) => { void this.descarregar(colecao, id); });
       },
       () => mudarStatus({ texto: "banco indisponível — mudanças ficam na fila", classe: "er" }),
     );
@@ -116,6 +138,9 @@ export const Banco = {
    */
   gravar(colecao: string, id: string, documento: Documento, rapido = false) {
     const copia = clonar(documento);
+    // Sem Firebase, tudo nasce _novo: se este navegador um dia entrar no modo
+    // nuvem, a reconciliação do onSnapshot sobe esses documentos sozinha.
+    if (!firebaseAtivo) copia._novo = true;
     (espelho[colecao] = espelho[colecao] || {})[id] = copia;
     salvarEspelho();
     avisar(colecao);
@@ -125,7 +150,7 @@ export const Banco = {
     timers[chave] = setTimeout(() => this.descarregar(colecao, id), rapido ? 50 : 800);
   },
 
-  /** Envia de fato um documento pendente (chamado pelo debounce). */
+  /** Envia de fato um documento pendente (chamado pelo debounce ou pela reconciliação). */
   async descarregar(colecao: string, id: string) {
     const chave = colecao + "/" + id;
     delete timers[chave];
@@ -135,10 +160,19 @@ export const Banco = {
       mudarStatus({ texto: "salvo neste navegador " + hora(), classe: "" });
       return;
     }
+    // A marca _novo é controle interno do espelho — não vai para o Firestore.
+    const paraEnviar = clonar(documento);
+    delete paraEnviar._novo;
     try {
-      await setDoc(doc(db, colecao, id), documento);
+      await setDoc(doc(db, colecao, id), paraEnviar);
+      const atual = (espelho[colecao] || {})[id];
+      if (atual && atual._novo) { delete atual._novo; salvarEspelho(); }
       mudarStatus({ texto: "salvo " + hora(), classe: "ok" });
     } catch {
+      // Não subiu (sem permissão, por exemplo): marca _novo para sobreviver a
+      // recarregamentos e tentar de novo na próxima reconciliação.
+      const atual = (espelho[colecao] || {})[id];
+      if (atual) { atual._novo = true; salvarEspelho(); }
       mudarStatus({ texto: "sem conexão — salvo na fila local", classe: "er" });
     }
   },
@@ -160,11 +194,6 @@ export const Banco = {
     return Object.keys(timers).length > 0;
   },
 };
-
-function dividirChave(chave: string): [string, string] {
-  const i = chave.lastIndexOf("/");
-  return [chave.slice(0, i), chave.slice(i + 1)];
-}
 
 /* Aviso ao fechar a aba com gravações pendentes. */
 window.addEventListener("beforeunload", (e) => {
