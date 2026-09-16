@@ -65,6 +65,9 @@ function traduzirErro(e: unknown): string {
     "auth/too-many-requests": "Muitas tentativas — espere um pouco e tente de novo",
     "auth/network-request-failed": "Sem conexão — verifique a internet",
     "auth/missing-password": "Digite a senha",
+    // Erros de configuração do projeto (aparecem só até o console ser arrumado):
+    "auth/configuration-not-found": "O Authentication ainda não foi ativado no console do Firebase (Authentication → Get started)",
+    "auth/operation-not-allowed": "O login por e-mail/senha está desativado no console do Firebase (Authentication → Sign-in method)",
   };
   return mapa[codigo] || "Não deu para entrar (" + codigo + ")";
 }

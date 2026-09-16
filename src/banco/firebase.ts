@@ -8,6 +8,7 @@ import {
   type Firestore,
 } from "firebase/firestore";
 import { getAuth, type Auth } from "firebase/auth";
+import { getAnalytics, isSupported as analyticsSuportado } from "firebase/analytics";
 
 const env = import.meta.env;
 
@@ -18,6 +19,7 @@ const config = {
   storageBucket: env.VITE_FIREBASE_STORAGE_BUCKET as string | undefined,
   messagingSenderId: env.VITE_FIREBASE_MESSAGING_SENDER_ID as string | undefined,
   appId: env.VITE_FIREBASE_APP_ID as string | undefined,
+  measurementId: env.VITE_FIREBASE_MEASUREMENT_ID as string | undefined,
 };
 
 /** true quando as credenciais do Firebase estão configuradas. */
@@ -34,6 +36,10 @@ if (firebaseAtivo) {
     localCache: persistentLocalCache({ tabManager: persistentMultipleTabManager() }),
   });
   autenticacao = getAuth(app);
+  // Google Analytics (opcional): só liga se houver measurementId e o navegador suportar.
+  if (config.measurementId) {
+    analyticsSuportado().then((ok) => { if (ok && app) getAnalytics(app); }).catch(() => { /* sem analytics, sem drama */ });
+  }
 }
 
 export const db = bancoFirestore;
