@@ -6,7 +6,9 @@ import { useSyncExternalStore } from "react";
 import {
   onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signOut, type User,
 } from "firebase/auth";
-import { auth, firebaseAtivo } from "./firebase";
+import { auth, firebaseAtivo, limparCacheFirestore } from "./firebase";
+import { Banco } from "./banco";
+import { pararDados } from "../store/central";
 
 export interface Sessao {
   /** Ainda esperando o Firebase dizer se há sessão salva. */
@@ -51,8 +53,25 @@ export async function redefinirSenha(email: string) {
   }
 }
 
+/**
+ * Sai da conta. A ordem dos passos importa:
+ * 1. desliga as escutas — senão o corte de permissão mata cada listener com
+ *    erro definitivo e o próximo login fica sem dados;
+ * 2. sobe o que espera na fila do debounce enquanto ainda há permissão (com
+ *    teto de tempo: sem rede, tudo fica no espelho marcado _novo para a volta);
+ * 3. encerra a sessão;
+ * 4. apaga o cache do Firestore — um cache que atravessa a troca de sessão
+ *    podia travar o site em "carregando…" até apagarem os dados do navegador;
+ * 5. recarrega a página: o próximo login começa do zero, e o espelho local
+ *    fica para o site abrir na hora (é o mesmo coletivo, os dados são os mesmos).
+ */
 export async function sair() {
-  if (auth) await signOut(auth);
+  if (!auth) return;
+  pararDados();
+  await Promise.race([Banco.despejar(), new Promise((r) => setTimeout(r, 4000))]);
+  await signOut(auth);
+  await limparCacheFirestore();
+  window.location.reload();
 }
 
 function traduzirErro(e: unknown): string {

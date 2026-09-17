@@ -83,48 +83,71 @@ export const Banco = {
       return () => observadores[colecao].delete(cb);
     }
 
-    const parar = onSnapshot(
-      collection(db, colecao),
-      (snap) => {
-        const remoto: Mapa = {};
-        snap.forEach((d) => { remoto[d.id] = clonar(d.data()) as Documento; });
+    // Escuta em tempo real com religamento: um listener do Firestore que
+    // recebe erro (corte de permissão, token vencido…) morre em definitivo —
+    // é assim que o SDK funciona. Em erro, esperamos e assinamos de novo,
+    // dobrando a espera a cada falha seguida (máximo 30 s).
+    let parar = () => {};
+    let desligado = false;
+    let falhas = 0;
+    let religar: ReturnType<typeof setTimeout> | undefined;
 
-        // Reconciliação servidor ⇄ espelho local (mesma semântica do artefato):
-        // - gravação em andamento (timer) nunca é sobrescrita;
-        // - documento marcado _novo que não existe no servidor é dele que o
-        //   servidor ainda não sabe → sobe agora (é assim que o que foi criado
-        //   offline, sem permissão ou em modo local chega ao banco);
-        // - existindo dos dois lados, fica o mais recente pelo `atualizado`
-        //   (empate → servidor); local mais novo sobe;
-        // - sem _novo e sumido do servidor = excluído por alguém → cai daqui também.
-        const local = espelho[colecao] || {};
-        const mapa: Mapa = { ...remoto };
-        const subir: string[] = [];
-        for (const [id, docLocal] of Object.entries(local)) {
-          if (timers[colecao + "/" + id]) { mapa[id] = docLocal; continue; }
-          const docRemoto = remoto[id];
-          const nuncaSubiu = Boolean(docLocal._novo);
-          if (!docRemoto) {
-            if (nuncaSubiu) { mapa[id] = docLocal; subir.push(id); }
-            continue;
-          }
-          if (String(docLocal.atualizado || "") > String(docRemoto.atualizado || "")) {
-            mapa[id] = docLocal;
-            subir.push(id);
-          }
-        }
+    const ligar = () => {
+      if (desligado || !db) return;
+      parar = onSnapshot(
+        collection(db, colecao),
+        (snap) => {
+          falhas = 0;
+          const remoto: Mapa = {};
+          snap.forEach((d) => { remoto[d.id] = clonar(d.data()) as Documento; });
 
-        espelho[colecao] = mapa;
-        salvarEspelho();
-        mudarStatus({ texto: snap.metadata.fromCache ? "sincronizando…" : "sincronizado", classe: snap.metadata.fromCache ? "sv" : "ok" });
-        avisar(colecao, !snap.metadata.fromCache);
-        subir.forEach((id) => { void this.descarregar(colecao, id); });
-      },
-      () => mudarStatus({ texto: "banco indisponível — mudanças ficam na fila", classe: "er" }),
-    );
+          // Reconciliação servidor ⇄ espelho local (mesma semântica do artefato):
+          // - gravação em andamento (timer) nunca é sobrescrita;
+          // - documento marcado _novo que não existe no servidor é dele que o
+          //   servidor ainda não sabe → sobe agora (é assim que o que foi criado
+          //   offline, sem permissão ou em modo local chega ao banco);
+          // - existindo dos dois lados, fica o mais recente pelo `atualizado`
+          //   (empate → servidor); local mais novo sobe;
+          // - sem _novo e sumido do servidor = excluído por alguém → cai daqui também.
+          const local = espelho[colecao] || {};
+          const mapa: Mapa = { ...remoto };
+          const subir: string[] = [];
+          for (const [id, docLocal] of Object.entries(local)) {
+            if (timers[colecao + "/" + id]) { mapa[id] = docLocal; continue; }
+            const docRemoto = remoto[id];
+            const nuncaSubiu = Boolean(docLocal._novo);
+            if (!docRemoto) {
+              if (nuncaSubiu) { mapa[id] = docLocal; subir.push(id); }
+              continue;
+            }
+            if (String(docLocal.atualizado || "") > String(docRemoto.atualizado || "")) {
+              mapa[id] = docLocal;
+              subir.push(id);
+            }
+          }
+
+          espelho[colecao] = mapa;
+          salvarEspelho();
+          mudarStatus({ texto: snap.metadata.fromCache ? "sincronizando…" : "sincronizado", classe: snap.metadata.fromCache ? "sv" : "ok" });
+          avisar(colecao, !snap.metadata.fromCache);
+          subir.forEach((id) => { void this.descarregar(colecao, id); });
+        },
+        () => {
+          mudarStatus({ texto: "banco indisponível — tentando reconectar…", classe: "er" });
+          religar = setTimeout(ligar, Math.min(30000, 1000 * 2 ** falhas++));
+        },
+      );
+    };
+    ligar();
+
     // Entrega o que já existe no espelho enquanto o primeiro snapshot não chega.
     cb(espelho[colecao], false);
-    return () => { observadores[colecao].delete(cb); parar(); };
+    return () => {
+      desligado = true;
+      clearTimeout(religar);
+      observadores[colecao].delete(cb);
+      parar();
+    };
   },
 
   /** Estado atual de uma coleção (mapa id → documento). */
@@ -175,6 +198,27 @@ export const Banco = {
       if (atual) { atual._novo = true; salvarEspelho(); }
       mudarStatus({ texto: "sem conexão — salvo na fila local", classe: "er" });
     }
+  },
+
+  /**
+   * Sobe agora tudo o que espera no debounce (usado no logout, antes do signOut,
+   * enquanto ainda há permissão). Cada pendente é marcado _novo no espelho antes
+   * da tentativa: se a subida não completar (sem rede, página recarregando),
+   * a reconciliação do próximo login sobe o documento em vez de descartá-lo.
+   */
+  async despejar() {
+    const pendentes = Object.keys(timers);
+    for (const chave of pendentes) {
+      clearTimeout(timers[chave]);
+      const corte = chave.indexOf("/");
+      const documento = (espelho[chave.slice(0, corte)] || {})[chave.slice(corte + 1)];
+      if (documento) documento._novo = true;
+    }
+    if (pendentes.length) salvarEspelho();
+    await Promise.all(pendentes.map((chave) => {
+      const corte = chave.indexOf("/");
+      return this.descarregar(chave.slice(0, corte), chave.slice(corte + 1));
+    }));
   },
 
   async apagar(colecao: string, id: string) {

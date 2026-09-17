@@ -16,7 +16,9 @@ import sementeContexto from "../data/semente-contexto.json";
 
 /** Tudo o que o site mostra, num objeto só. */
 export interface EstadoCentral {
-  /** true quando as 13 coleções já responderam (do servidor ou do modo local). */
+  /** true quando dá para mostrar o site: as 13 coleções confirmadas pelo
+      servidor (ou modo local), OU todas respondidas com dados de visita
+      anterior (espelho/cache) enquanto a sincronização termina ao fundo. */
   pronto: boolean;
   painel: DadosPainel;
   rascunhos: Record<string, Rascunho>;
@@ -53,41 +55,73 @@ const ordenado = <T,>(mapa: Record<string, unknown>): T[] =>
   (Object.values(mapa) as (T & { _ord?: number })[])
     .sort((a, b) => (a._ord || 0) - (b._ord || 0));
 
-const confirmadas = new Set<string>();
+const confirmadas = new Set<string>(); // responderam com dado do servidor (ou modo local)
+const respondidas = new Set<string>(); // responderam com qualquer coisa (espelho e cache contam)
 let semeouPainel = false;
 let semeouContexto = false;
-let iniciado = false;
+let assinaturas: (() => void)[] = [];
 
-/** Liga as 13 coleções. Chamar uma vez, depois do login (ou direto no modo local). */
+const TOTAL_COLECOES = COLECOES_PAINEL.length + 4;
+
+/** Há algo guardado de uma visita anterior (espelho local ou cache)? */
+const temDadosGuardados = () =>
+  COLECOES_PAINEL.some((c) => estado.painel[c].length > 0)
+  || Object.keys(estado.rascunhos).length > 0
+  || Object.keys(estado.fichas).length > 0
+  || Object.keys(estado.regras).length > 0
+  || Object.keys(estado.julgamentos).length > 0;
+
+/** Liga as 13 coleções. Chamar depois do login (ou direto no modo local); é idempotente. */
 export function iniciarDados() {
-  if (iniciado) return;
-  iniciado = true;
+  if (assinaturas.length) return;
 
   for (const colecao of COLECOES_PAINEL) {
-    Banco.assinar(colecao, (mapa, confirmado) => {
+    assinaturas.push(Banco.assinar(colecao, (mapa, confirmado) => {
       estado.painel = { ...estado.painel, [colecao]: ordenado(mapa) } as DadosPainel;
-      aoConfirmar(colecao, confirmado);
+      aoResponder(colecao, confirmado);
       publicar();
-    });
+    }));
   }
-  Banco.assinar("rascunhos", (mapa, confirmado) => {
+  assinaturas.push(Banco.assinar("rascunhos", (mapa, confirmado) => {
     estado.rascunhos = mapa as unknown as Record<string, Rascunho>;
-    aoConfirmar("rascunhos", confirmado);
+    aoResponder("rascunhos", confirmado);
     publicar();
-  });
+  }));
   for (const colecao of ["fichas", "regras", "julgamentos"] as const) {
-    Banco.assinar(colecao, (mapa, confirmado) => {
+    assinaturas.push(Banco.assinar(colecao, (mapa, confirmado) => {
       (estado as unknown as Record<string, unknown>)[colecao] = mapa;
-      aoConfirmar(colecao, confirmado);
+      aoResponder(colecao, confirmado);
       publicar();
-    });
+    }));
   }
 }
 
-function aoConfirmar(colecao: string, confirmado: boolean) {
+/**
+ * Desliga as 13 escutas. Chamado no logout ANTES do signOut: sem isso, o corte
+ * de permissão mata cada listener com erro definitivo, e ao logar de novo nada
+ * volta a escutar — era isso que deixava o site sem carregar os dados.
+ */
+export function pararDados() {
+  assinaturas.forEach((desligar) => desligar());
+  assinaturas = [];
+  confirmadas.clear();
+  respondidas.clear();
+}
+
+function aoResponder(colecao: string, confirmado: boolean) {
+  respondidas.add(colecao);
+  if (confirmado) confirmadas.add(colecao);
+
+  // Pronto de verdade: as 13 confirmadas pelo servidor (ou modo local).
+  // Pronto provisório: as 13 responderam e há dados de visita anterior — mostra
+  // o site já e deixa a sincronização terminar em segundo plano (o indicador do
+  // cabeçalho segue contando a história). Antes, qualquer engasgo do Firestore
+  // prendia a tela em "carregando…" mesmo com tudo no espelho local.
+  estado.pronto = estado.pronto
+    || confirmadas.size >= TOTAL_COLECOES
+    || (respondidas.size >= TOTAL_COLECOES && temDadosGuardados());
+
   if (!confirmado) return;
-  confirmadas.add(colecao);
-  estado.pronto = confirmadas.size >= COLECOES_PAINEL.length + 4;
 
   // Painel vazio nas 9 coleções confirmadas → primeira abertura: semeia.
   if (!semeouPainel && COLECOES_PAINEL.every((c) => confirmadas.has(c))

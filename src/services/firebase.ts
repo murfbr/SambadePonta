@@ -4,8 +4,8 @@
    Com as variáveis, entra o Firestore (com cache offline) e o login por e-mail/senha. */
 import { initializeApp, type FirebaseApp } from "firebase/app";
 import {
-  initializeFirestore, persistentLocalCache, persistentMultipleTabManager,
-  type Firestore,
+  clearIndexedDbPersistence, initializeFirestore, persistentLocalCache,
+  persistentMultipleTabManager, terminate, type Firestore,
 } from "firebase/firestore";
 import { getAuth, type Auth } from "firebase/auth";
 import { getAnalytics, isSupported as analyticsSuportado } from "firebase/analytics";
@@ -44,3 +44,18 @@ if (firebaseAtivo) {
 
 export const db = bancoFirestore;
 export const auth = autenticacao;
+
+/**
+ * Encerra o Firestore e apaga o cache persistente dele (IndexedDB).
+ * Chamado no logout: um cache que atravessa a troca de sessão pode ficar num
+ * estado ruim (snapshots eternamente "do cache", conexão presa) — era o que
+ * prendia o site em "carregando…" até a pessoa apagar os dados do navegador.
+ * Depois desta chamada o `db` não serve mais; quem chama recarrega a página.
+ */
+export async function limparCacheFirestore() {
+  if (!bancoFirestore) return;
+  try {
+    await terminate(bancoFirestore);
+    await clearIndexedDbPersistence(bancoFirestore);
+  } catch { /* outra aba aberta segura o cache — tudo bem, ela continua dona dele */ }
+}
