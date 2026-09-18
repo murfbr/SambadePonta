@@ -30,13 +30,15 @@ const COLECAO_DO_DETALHE: Record<string, ColecaoPainel> = {
 
 export function RoteadorPainel() {
   const nav = usarNavegacao();
-  usarCentral(); // re-renderiza este roteador quando os dados mudam
+  const { pronto } = usarCentral(); // re-renderiza este roteador quando os dados mudam
 
-  // Se o registro da ficha aberta sumiu (excluído em outra aba), volta para a lista.
+  // Se o registro da ficha aberta sumiu (excluído em outra aba, ou link para id
+  // que não existe), volta para a lista — mas só com os dados já carregados,
+  // senão um link profundo fecharia antes de a coleção chegar.
   const detalheValido = nav.detalhe && porId(COLECAO_DO_DETALHE[nav.detalhe.tipo], nav.detalhe.id);
   useEffect(() => {
-    if (nav.detalhe && !detalheValido) fecharDetalhe();
-  }, [nav.detalhe, detalheValido]);
+    if (pronto && nav.detalhe && !detalheValido) fecharDetalhe();
+  }, [pronto, nav.detalhe, detalheValido]);
 
   if (nav.detalhe && detalheValido) {
     switch (nav.detalhe.tipo) {

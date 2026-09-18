@@ -22,7 +22,7 @@ import { ROTULO_RESULTADO, type Ficha, type TipoFicha } from "../../types";
 type ChaveBloco = "posicionamento" | "argumentos" | "julgador" | "vocabulario" | "usados" | "cuidados";
 
 export function TelaFichas({ aoAbrirRegra }: { aoAbrirRegra: (p: PedidoModalRegra) => void }) {
-  const { fichas, regras, julgamentos } = usarCentral();
+  const { pronto, fichas, regras, julgamentos } = usarCentral();
   void fichas; void regras; void julgamentos; // re-render quando qualquer um mudar
   const nav = usarNavegacao();
   const [editando, setEditando] = useState<ChaveBloco | null>(null);
@@ -31,11 +31,12 @@ export function TelaFichas({ aoAbrirRegra }: { aoAbrirRegra: (p: PedidoModalRegr
   const tipos: TipoFicha[] = ["artista", "projeto", "edital"];
   const todas = tipos.flatMap(entidades);
 
-  // Garante uma ficha selecionada válida.
+  // Garante uma ficha selecionada válida — só com os dados carregados, senão
+  // um link profundo (#/contexto/fichas/a5) seria limpo antes de a coleção chegar.
   const selecionada = nav.fichaAberta && entidadePorId(nav.fichaAberta) ? nav.fichaAberta : todas[0]?.id || null;
   useEffect(() => {
-    if (selecionada !== nav.fichaAberta) definirFichaAberta(selecionada);
-  }, [selecionada, nav.fichaAberta]);
+    if (pronto && selecionada !== nav.fichaAberta) definirFichaAberta(selecionada);
+  }, [pronto, selecionada, nav.fichaAberta]);
 
   if (!selecionada) {
     return <p className="vazio">Cadastre artistas, projetos e editais no Painel para ter fichas aqui.</p>;
