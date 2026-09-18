@@ -11,6 +11,7 @@ import { Cabecalho } from "./components/layout/Cabecalho";
 import { BarraAbas } from "./components/layout/BarraAbas";
 import { BarraFerramentas } from "./components/layout/BarraFerramentas";
 import { Toast } from "./components/Toast";
+import { BuscaGlobal } from "./components/BuscaGlobal";
 import { FormularioRegistro } from "./forms/FormularioRegistro";
 import { Login } from "./pages/Login";
 import { RoteadorPainel } from "./pages/RoteadorPainel";
@@ -58,6 +59,7 @@ function Central({ emailUsuario }: { emailUsuario: string | null }) {
       )}
 
       <FormularioRegistro />
+      <BuscaGlobal />
       <Toast />
     </>
   );

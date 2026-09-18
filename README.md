@@ -86,6 +86,7 @@ src/
   components/
     Modal.tsx              ← modal padrão (usado por todos os modais do site)
     BotaoExcluir.tsx       ← exclusão com confirmação em dois cliques
+    BuscaGlobal.tsx        ← paleta de busca em tudo (Ctrl+K)
     CabecalhoSecao.tsx, Toast.tsx
     layout/                ← Cabecalho, BarraAbas, BarraFerramentas
   forms/
@@ -114,11 +115,14 @@ src/
     central.ts             ← estado global (usarCentral) + semeadura
     mutacoes.ts            ← salvar/excluir registros, rascunhos e docs do Contexto
     importarExportar.ts    ← pacote .json (aceita o formato do artefato original)
-    navegacao.ts, edicao.ts
+    navegacao.ts           ← navegação + endereço na URL (#/ambiente/aba/tipo/id)
+    edicao.ts
   lib/
     simulador/motor.ts     ← motor dos formulários replicados (campos, condições, status)
     simulador/orcamento.ts ← cálculos da planilha Salic
     contexto/              ← consultas de fichas/regras + bloco "Trocar com o Claude"
+    busca.ts               ← índice e filtro da busca global
+    prazos.ts              ← urgência de prazos (editais, tarefas, reuniões)
     nomes.ts, agenda.ts, documentos.ts
   types/                   ← entidades documentadas (painel, simulador, contexto)
   data/                    ← sementes + formulários + catálogos Salic (estáticos)

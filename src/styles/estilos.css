@@ -600,3 +600,29 @@ th.th-ord.on{color:var(--accent)} th.th-ord.on .seta{opacity:1}
 .bloco-edt:focus{border-color:var(--accent)}
 .bloco-edt-f{display:flex;gap:8px;align-items:center;margin-top:8px}
 .bloco-edt-f .hint{margin-right:auto}
+
+/* ===== busca global (Ctrl+K) ===== */
+.lupa{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);color:#AEB8C0;border-radius:8px;font:inherit;font-weight:600;font-size:12px;padding:6px 11px;cursor:pointer;align-self:center;margin-right:8px;transition:.15s}
+.lupa:hover{color:#fff;border-color:rgba(255,255,255,.45)}
+.lupa .tecla{font-size:9.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;border:1px solid rgba(255,255,255,.25);border-radius:4px;padding:1px 5px;margin-left:4px;opacity:.8}
+.paleta{background:var(--card);border:1px solid var(--line);border-radius:12px;width:100%;max-width:580px;box-shadow:0 18px 50px rgba(20,16,14,.3);overflow:hidden}
+.paleta input{width:100%;border:0;border-bottom:1px solid var(--line);background:transparent;font:inherit;font-size:15px;padding:14px 16px;outline:none;color:var(--ink)}
+.paleta-lista{max-height:min(430px,62vh);overflow:auto;padding:6px}
+.paleta-item{display:flex;align-items:baseline;gap:8px;padding:8px 10px;border-radius:8px;cursor:pointer;font-size:13px}
+.paleta-item.on{background:var(--accent-soft)}
+.paleta-item .badge{flex:0 0 auto;font-size:9.5px}
+.paleta-item .t{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.paleta-item .s{color:var(--muted);font-size:11.5px;margin-left:auto;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:42%;flex:0 0 auto}
+.paleta-vazia{padding:14px 16px;color:var(--muted);font-size:12.5px}
+.amb-badge{background:var(--accent);color:#fff;border-radius:999px;font-size:9.5px;font-weight:700;padding:1px 6px;margin-left:6px;vertical-align:1px}
+
+/* ===== urgência de prazos ===== */
+.ur-vencido{background:var(--no);color:#fff}
+.ur-hoje{background:var(--accent);color:#fff}
+.ur-d3{background:var(--warnS);color:#8A5A12}
+.ur-d7{background:var(--accent-soft);color:#A64726}
+.ur-futuro{background:transparent;color:var(--muted)}
+.mini.pz{cursor:pointer;border-radius:6px}
+.mini.pz:hover{background:#FBF8F3}
+.mini.pz .pz-t{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mini.pz .pz-d{display:inline-flex;align-items:center;gap:6px;flex:0 0 auto}

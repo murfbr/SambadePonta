@@ -4,6 +4,7 @@ import { usarCentral } from "../../store/central";
 import { CabecalhoSecao } from "../../components/CabecalhoSecao";
 import { eventosAgenda } from "../../lib/agenda";
 import { projetoArtistaDe } from "../../lib/nomes";
+import { CLASSE_URGENCIA, ROTULO_URGENCIA, urgenciaDe } from "../../lib/prazos";
 import { STATUS_EDITAL } from "../../types";
 import { MESES } from "../../utils";
 
@@ -26,6 +27,8 @@ export function Cronograma() {
               const sub = e.candidaturas.length
                 ? e.candidaturas.map(projetoArtistaDe).join(" · ")
                 : "sem candidatura vinculada";
+              // Urgência só para o que ainda está em jogo (não-encerrado, até 7 dias ou vencido).
+              const urgencia = e.status !== "closed" ? urgenciaDe(e.iso) : "futuro";
               return (
                 <div className="ev" key={i}>
                   <div className="d">
@@ -33,6 +36,9 @@ export function Cronograma() {
                     <div className="mm">{MESES[Number(mes) - 1].slice(0, 3)}</div>
                   </div>
                   <div className="body"><div className="t">{e.titulo}</div><div className="s">{sub}</div></div>
+                  {urgencia !== "futuro" && (
+                    <span className={"tag badge " + CLASSE_URGENCIA[urgencia]}>{ROTULO_URGENCIA[urgencia]}</span>
+                  )}
                   <span className={"tag badge " + st.classe}>{st.rotulo}</span>
                 </div>
               );
