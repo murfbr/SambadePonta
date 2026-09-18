@@ -4,7 +4,7 @@
 import { useState, type ReactNode } from "react";
 import { salvarRascunho } from "../../store/mutacoes";
 import { irParaAba } from "../../store/navegacao";
-import { FORMULARIOS } from "../../data";
+import { formularioDe } from "../../data";
 import {
   campos, statusEfetivo, temValor, textoDe, visivel, type CampoAchatado,
 } from "../../lib/simulador/motor";
@@ -17,11 +17,14 @@ const listaTransferivel = (r: Rascunho): CampoAchatado[] =>
   campos(r.form).filter((c) => c.t !== "orcresumo" && visivel(c, r.valores) && temValor(r.valores[c.n]));
 
 export function Transferencia({ rascunho: r }: { rascunho: Rascunho }) {
-  const f = FORMULARIOS[r.form];
+  const f = formularioDe(r.form);
   const lista = listaTransferivel(r);
   const [indice, setIndice] = useState(0);
   const i = Math.min(indice, Math.max(0, lista.length - 1));
   const colados = lista.filter((c) => statusEfetivo(r, c) === "col").length;
+
+  // A definição vem do banco; sem ela ainda, não há o que transferir.
+  if (!f) return <div className="vazio-msg">abrindo os formulários do banco…</div>;
 
   async function copiarEMarcar() {
     const c = lista[i];

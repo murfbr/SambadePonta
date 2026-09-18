@@ -58,6 +58,7 @@ usam **os mesmos nomes do artefato**:
 | `contatos`     | contatos externos                                 |
 | `reunioes`     | reuniões, pauta e ata                             |
 | `rascunhos`    | rascunhos do Simulador (`valores`, `status`, `interno`) |
+| `formularios`  | definições dos formulários replicados (importáveis pela aba Plataformas, sem deploy) |
 | `fichas`       | Contexto: conhecimento de escrita (id = id do Painel) |
 | `regras`       | Contexto: regras com fonte obrigatória            |
 | `julgamentos`  | Contexto: pareceres e lições                      |
@@ -120,12 +121,14 @@ src/
   lib/
     simulador/motor.ts     ← motor dos formulários replicados (campos, condições, status)
     simulador/orcamento.ts ← cálculos da planilha Salic
+    simulador/validarFormulario.ts ← validação do "Importar formulário"
     contexto/              ← consultas de fichas/regras + bloco "Trocar com o Claude"
     busca.ts               ← índice e filtro da busca global
     prazos.ts              ← urgência de prazos (editais, tarefas, reuniões)
     nomes.ts, agenda.ts, documentos.ts
   types/                   ← entidades documentadas (painel, simulador, contexto)
-  data/                    ← sementes + formulários + catálogos Salic (estáticos)
+  data/                    ← catálogos estáticos (Salic, plataformas) + sementes de migração;
+                             as definições de formulário vivem no banco (coleção formularios)
   utils/                   ← ids, datas, dinheiro, clipboard, download
   styles/estilos.css       ← CSS portado 1:1 do artefato
 ```

@@ -1,5 +1,5 @@
 /* Formulário de Edital / fonte de captação — o mais completo do Painel. */
-import { REGISTRO } from "../../data";
+import { registroCompleto } from "../../data";
 import type { EntidadeSpec } from "../tipos";
 
 export const edital: EntidadeSpec = {
@@ -16,8 +16,9 @@ export const edital: EntidadeSpec = {
     { chave: "prazoIso", rotulo: "Prazo (data)", tipo: "date" },
     {
       chave: "formId", rotulo: "Formulário no Simulador", tipo: "opts",
-      fonte: ([["", "— nenhum"]] as [string, string][])
-        .concat(REGISTRO.filter((x) => x.migrado).map((x) => [x.id, x.nome] as [string, string])),
+      // Função: a lista sai do banco na hora de desenhar (formulário importado já aparece).
+      fonte: () => ([["", "— nenhum"]] as [string, string][])
+        .concat(registroCompleto().filter((x) => x.migrado).map((x) => [x.id, x.nome] as [string, string])),
     },
     { chave: "status", rotulo: "Status", tipo: "opts", fonte: [["open", "Aberto"], ["prev", "Previsto"], ["closed", "Encerrado"]] },
     { chave: "objeto", rotulo: "O que financia", tipo: "textarea" },

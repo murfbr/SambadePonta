@@ -18,6 +18,12 @@ type Observador = (m: Mapa, confirmado: boolean) => void;
 
 const CHAVE_LOCAL = "central-coletivo-local-v1";
 
+/** Coleções pesadas que, no MODO NUVEM, ficam fora do espelho localStorage:
+    o cache offline do próprio Firestore (IndexedDB) já as guarda, e mantê-las
+    fora evita inchar (e reserializar a cada tecla) o espelho. No modo local o
+    localStorage É o banco, então elas entram normalmente. */
+const SEM_ESPELHO_NA_NUVEM = new Set(["formularios"]);
+
 /** Texto e cor do indicador "salvo às..." no topo do site. */
 export type StatusSalvamento = { texto: string; classe: "" | "ok" | "sv" | "er" };
 
@@ -32,7 +38,16 @@ function carregarEspelho(): Record<string, Mapa> {
   catch { return {}; }
 }
 function salvarEspelho() {
-  try { localStorage.setItem(CHAVE_LOCAL, JSON.stringify({ colls: espelho })); } catch { /* sem espaço: segue só em memória */ }
+  try {
+    let colls = espelho;
+    if (firebaseAtivo) {
+      colls = {};
+      for (const [colecao, mapa] of Object.entries(espelho)) {
+        if (!SEM_ESPELHO_NA_NUVEM.has(colecao)) colls[colecao] = mapa;
+      }
+    }
+    localStorage.setItem(CHAVE_LOCAL, JSON.stringify({ colls }));
+  } catch { /* sem espaço: segue só em memória */ }
 }
 
 function avisar(colecao: string, confirmado = !firebaseAtivo) {

@@ -1,14 +1,25 @@
 /* Plataformas: a parte de conhecimento do Simulador — como cada sistema funciona
-   (arquitetura, armadilhas) e a tabela do que já está mapeado e migrado. */
-import { PLATAFORMAS, REGISTRO, nomePlataforma } from "../../data";
+   (arquitetura, armadilhas) e a tabela do que já está mapeado. Formulários novos
+   entram pelo "Importar formulário", direto no banco, sem deploy. */
+import { useState } from "react";
+import { usarCentral } from "../../store/central";
+import { PLATAFORMAS, nomePlataforma, registroCompleto } from "../../data";
+import { ModalImportarFormulario } from "./ModalImportarFormulario";
 
 export function Plataformas() {
+  usarCentral(); // re-renderiza quando os formulários do banco chegam ou mudam
+  const [importando, setImportando] = useState(false);
+  const registro = registroCompleto();
+
   return (
     <>
       <div className="shead">
         <div>
           <h2>Plataformas</h2>
           <p className="sub">Como cada sistema funciona e quais formulários já estão mapeados. É a parte de conhecimento do Simulador.</p>
+        </div>
+        <div className="acts">
+          <button className="btn" onClick={() => setImportando(true)}>Importar formulário</button>
         </div>
       </div>
 
@@ -39,7 +50,7 @@ export function Plataformas() {
             </tr>
           </thead>
           <tbody>
-            {REGISTRO.map((x) => (
+            {registro.map((x) => (
               <tr key={x.id}>
                 <td>{x.nome}</td>
                 <td>{nomePlataforma(x.plataforma)}</td>
@@ -58,6 +69,8 @@ export function Plataformas() {
           </tbody>
         </table>
       </div>
+
+      {importando && <ModalImportarFormulario aoFechar={() => setImportando(false)} />}
     </>
   );
 }

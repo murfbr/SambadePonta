@@ -13,7 +13,7 @@ import {
   salvarFicha, salvarJulgamento, salvarRascunho, salvarRegistro, salvarRegra,
 } from "./mutacoes";
 import { COLECOES_PAINEL, type ColecaoPainel, type DadosPainel, type Ficha, type Julgamento, type Rascunho, type Regra } from "../types";
-import { FORMULARIOS, SALIC_DADOS, registroDe } from "../data";
+import { formularioDe, SALIC_DADOS, registroDe } from "../data";
 import { campos as camposDe, normalizarRascunho, novoRascunho } from "../lib/simulador/motor";
 import { linhaVazia } from "../lib/simulador/orcamento";
 
@@ -123,7 +123,7 @@ const aplicarPainel = (novo: DadosPainel, modo: ModoPainel): string =>
 /** Junta um rascunho importado (id novo se já existir um igual). */
 function adicionarRascunhoImportado(r: Rascunho): boolean {
   r = normalizarRascunho(r);
-  if (!FORMULARIOS[r.form]) return false;
+  if (!formularioDe(r.form)) return false;
   if (!r.id || obterEstado().rascunhos[r.id]) r.id = novoRascunho(r.form).id;
   salvarRascunho(r, true);
   return true;

@@ -5,7 +5,7 @@ import { useState } from "react";
 import { usarCentral } from "../../../store/central";
 import { ligarCandidatura, idsDaCandidatura, nomeCandidatura, porId, salvarRascunho } from "../../../store/mutacoes";
 import { irParaAba } from "../../../store/navegacao";
-import { FORMULARIOS, nomePlataforma } from "../../../data";
+import { nomePlataforma } from "../../../data";
 import {
   comoTexto, condicaoOk, resumoRascunho, visivel, type CampoAchatado,
 } from "../../../lib/simulador/motor";
@@ -25,9 +25,25 @@ interface Props {
 }
 
 export function FormularioRascunho({ rascunho: r, vista, etapaAberta, aoMudarVista }: Props) {
-  const { painel } = usarCentral();
+  const { painel, formularios } = usarCentral();
   const [drawerAberto, setDrawerAberto] = useState(false);
-  const f = FORMULARIOS[r.form];
+  const f = formularios[r.form];
+
+  // A definição vem do banco: ou ainda está chegando, ou não existe mesmo.
+  if (!f) {
+    return (
+      <div className="vazio-msg">
+        {Object.keys(formularios).length === 0
+          ? "abrindo os formulários do banco…"
+          : <>Este rascunho usa o formulário <span className="mono">{r.form}</span>, que não está no banco.
+            Importe a definição na aba Plataformas.</>}
+        <div style={{ marginTop: 12 }}>
+          <button className="btn sm" onClick={() => irParaAba("mesa")}>← Voltar à Mesa</button>
+        </div>
+      </div>
+    );
+  }
+
   const s = resumoRascunho(r);
 
   /** Aplica uma mudança no rascunho e salva (grava com debounce). */

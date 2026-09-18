@@ -145,6 +145,8 @@ export interface Formulario {
   extraido?: string;
   obs?: string;
   etapas: EtapaFormulario[];
+  /** Carimbo ISO da gravação no banco (mantido pelo armazenamento). */
+  atualizado?: string;
 }
 
 /** Registro de formulários (o que está mapeado e migrado). */

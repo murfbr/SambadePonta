@@ -1,10 +1,10 @@
 /* Motor do Simulador: funções puras sobre rascunhos e formulários — achatar
    campos, condições de exibição, status efetivo, progresso e texto para
    transferência. Os cálculos do orçamento Salic vivem em ./orcamento. */
-import { FORMULARIOS } from "../../data";
+import { formularioDe } from "../../data";
 import type {
   BlocoFormulario, CampoFormulario, EtapaFormulario, CondicaoQuando,
-  Orcamento, Rascunho, StatusCampo,
+  Formulario, Orcamento, Rascunho, StatusCampo,
 } from "../../types";
 import { num } from "../../utils";
 import { textoOrcamento } from "./orcamento";
@@ -46,20 +46,24 @@ export function normalizarRascunho(r: Rascunho): Rascunho {
   return r;
 }
 
-const cacheCampos: Record<string, CampoAchatado[]> = {};
+/* Cache do achatamento, invalidado por referência: quando a definição muda no
+   banco (reimportada), o objeto do estado é outro e o cache recalcula. */
+const cacheCampos: Record<string, { fonte: Formulario; lista: CampoAchatado[] }> = {};
 
 /** Todos os campos de um formulário, achatados com etapa e bloco. */
 export function campos(form: string): CampoAchatado[] {
-  if (cacheCampos[form]) return cacheCampos[form];
-  const f = FORMULARIOS[form];
+  const f = formularioDe(form);
   if (!f) return [];
+  const cache = cacheCampos[form];
+  if (cache && cache.fonte === f) return cache.lista;
   const saida: CampoAchatado[] = [];
   f.etapas.forEach((e, ei) =>
     e.blocos.forEach((b) =>
       b.campos.forEach((c) => {
         if (c.n) saida.push({ ...c, n: c.n, etapa: e, ei, bloco: b });
       })));
-  return (cacheCampos[form] = saida);
+  cacheCampos[form] = { fonte: f, lista: saida };
+  return saida;
 }
 
 /** Uma condição `quando` está satisfeita para os valores atuais? */
@@ -133,7 +137,8 @@ export function pctRascunho(r: Rascunho): number {
 
 /** Rascunho inteiro como texto (botão "Copiar tudo em texto"). */
 export function comoTexto(r: Rascunho): string {
-  const f = FORMULARIOS[r.form];
+  const f = formularioDe(r.form);
+  if (!f) return r.nome;
   const saida = [r.nome + " · " + f.nome + "\n"];
   f.etapas.forEach((e) => {
     saida.push("= " + e.nome.toUpperCase());

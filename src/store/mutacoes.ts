@@ -6,7 +6,7 @@ import { clonar } from "../utils";
 import { obterEstado } from "./central";
 import {
   ETAPA_RESULTADO, ETAPAS_PIPELINE, STATUS_TAREFA,
-  type Candidatura, type ColecaoPainel, type DadosPainel, type Ficha,
+  type Candidatura, type ColecaoPainel, type DadosPainel, type Ficha, type Formulario,
   type Julgamento, type Rascunho, type Regra, type StatusTarefa, type Tarefa,
 } from "../types";
 
@@ -132,6 +132,11 @@ export function salvarRascunho(r: Rascunho, rapido = false) {
 
 export function excluirRascunho(id: string) {
   Banco.apagar("rascunhos", id);
+}
+
+/** Grava uma definição de formulário (importada na aba Plataformas). */
+export function salvarFormulario(f: Formulario) {
+  Banco.gravar("formularios", f.id, { ...clonar(f), atualizado: new Date().toISOString() }, true);
 }
 
 /** Rascunhos ativos ligados a uma candidatura. */

@@ -34,12 +34,14 @@ export function CampoDoFormulario({ campo: c, valor: v, definir, opcoesOrigem }:
         </select>
       );
 
-    case "opts":
+    case "opts": {
+      const opcoes = typeof c.fonte === "function" ? c.fonte() : (c.fonte as [string, string][]);
       return (
         <select id={id} value={String(v ?? "")} onChange={(e) => definir(e.target.value)}>
-          {(c.fonte as [string, string][]).map(([val, rot]) => <option key={val} value={val}>{rot}</option>)}
+          {opcoes.map(([val, rot]) => <option key={val} value={val}>{rot}</option>)}
         </select>
       );
+    }
 
     case "ref": {
       const lista = listaDe(c.fonte as ColecaoPainel);

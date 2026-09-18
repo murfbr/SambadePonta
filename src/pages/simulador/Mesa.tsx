@@ -5,14 +5,14 @@ import { usarCentral } from "../../store/central";
 import { excluirRascunho, nomeCandidatura, porId, salvarRascunho } from "../../store/mutacoes";
 import { analisarPacote } from "../../store/importarExportar";
 import { abrirRascunho } from "../../store/navegacao";
-import { FORMULARIOS, REGISTRO, nomePlataforma } from "../../data";
+import { nomePlataforma, registroCompleto } from "../../data";
 import { normalizarRascunho, novoRascunho, resumoRascunho } from "../../lib/simulador/motor";
 import { toast } from "../../components/Toast";
 import { baixarArquivo, clonar, relativo, slug } from "../../utils";
 import type { Rascunho } from "../../types";
 
 export function Mesa({ aoAbrir }: { aoAbrir: () => void }) {
-  const { rascunhos } = usarCentral();
+  const { rascunhos, formularios } = usarCentral();
   const [abaMesa, setAbaMesa] = useState<"rasc" | "arq">("rasc");
   const [menuNovo, setMenuNovo] = useState(false);
   const [confirmandoExclusao, setConfirmandoExclusao] = useState<string | null>(null);
@@ -22,7 +22,8 @@ export function Mesa({ aoAbrir }: { aoAbrir: () => void }) {
   const ativos = todos.filter((r) => !r.arquivado);
   const arquivados = todos.filter((r) => r.arquivado);
   const lista = abaMesa === "rasc" ? ativos : arquivados;
-  const migrados = REGISTRO.filter((x) => x.migrado);
+  const registro = registroCompleto();
+  const migrados = registro.filter((x) => x.migrado);
 
   function criarEm(form: string) {
     const r = novoRascunho(form, "Novo rascunho", "");
@@ -111,7 +112,7 @@ export function Mesa({ aoAbrir }: { aoAbrir: () => void }) {
         <span className="l-r">rascunho</span><span className="l-v">revisado</span><span className="l-c">colado na plataforma</span><span>vazio</span>
       </div>
 
-      {REGISTRO.map((x) => {
+      {registro.map((x) => {
         const doGrupo = lista
           .filter((r) => r.form === x.id)
           .sort((a, b) => (b.atualizado || "").localeCompare(a.atualizado || ""));
@@ -176,7 +177,7 @@ export function Mesa({ aoAbrir }: { aoAbrir: () => void }) {
                   </div>
                 );
               })}
-              {abaMesa === "rasc" && FORMULARIOS[x.id] && (
+              {abaMesa === "rasc" && formularios[x.id] && (
                 <div className="card novo" onClick={() => criarEm(x.id)}>+ novo rascunho neste formulário</div>
               )}
             </div>

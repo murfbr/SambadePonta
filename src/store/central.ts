@@ -1,18 +1,18 @@
-/* Estado central do site: as nove coleções do Painel, os rascunhos do Simulador
-   e as três coleções do Contexto, sempre em dia com o banco (ou o localStorage).
-   Os componentes leem tudo pelo hook `usarCentral()`; as mudanças passam pelas
-   funções de ./mutacoes — nunca escrevendo no Firestore diretamente.
+/* Estado central do site: as nove coleções do Painel, os rascunhos e os
+   FORMULÁRIOS do Simulador e as três coleções do Contexto, sempre em dia com o
+   banco (ou o localStorage). Os componentes leem tudo pelo hook `usarCentral()`;
+   as mudanças passam pelas funções de ./mutacoes — nunca no Firestore direto.
 
    Semeadura: na primeira abertura com o banco vazio, entra o conteúdo de
-   src/data/semente-*.json (o estado real do artefato em setembro/2026). */
+   src/data/*.json (o estado real do artefato em setembro/2026) — carregado por
+   import() dinâmico, para as sementes não pesarem no bundle de quem já tem banco. */
 import { useSyncExternalStore } from "react";
 import { Banco } from "../services/banco";
 import { clonar } from "../utils";
 import {
-  COLECOES_PAINEL, type DadosPainel, type Ficha, type Julgamento, type Rascunho, type Regra,
+  COLECOES_PAINEL, type DadosPainel, type Ficha, type Formulario,
+  type Julgamento, type Rascunho, type Regra,
 } from "../types";
-import sementePainel from "../data/semente-painel.json";
-import sementeContexto from "../data/semente-contexto.json";
 
 /** Tudo o que o site mostra, num objeto só. */
 export interface EstadoCentral {
@@ -22,6 +22,9 @@ export interface EstadoCentral {
   pronto: boolean;
   painel: DadosPainel;
   rascunhos: Record<string, Rascunho>;
+  /** Definições dos formulários do Simulador — vêm do banco (fora do `pronto`:
+      o Painel abre sem elas; o Simulador espera se for preciso). */
+  formularios: Record<string, Formulario>;
   fichas: Record<string, Ficha>;
   regras: Record<string, Regra>;
   julgamentos: Record<string, Julgamento>;
@@ -30,7 +33,7 @@ export interface EstadoCentral {
 let estado: EstadoCentral = {
   pronto: false,
   painel: { artistas: [], projetos: [], editais: [], candidaturas: [], tarefas: [], equipe: [], elenco: [], contatos: [], reunioes: [] },
-  rascunhos: {}, fichas: {}, regras: {}, julgamentos: {},
+  rascunhos: {}, formularios: {}, fichas: {}, regras: {}, julgamentos: {},
 };
 
 const assinantes = new Set<() => void>();
@@ -59,6 +62,7 @@ const confirmadas = new Set<string>(); // responderam com dado do servidor (ou m
 const respondidas = new Set<string>(); // responderam com qualquer coisa (espelho e cache contam)
 let semeouPainel = false;
 let semeouContexto = false;
+let semeouFormularios = false;
 let assinaturas: (() => void)[] = [];
 
 const TOTAL_COLECOES = COLECOES_PAINEL.length + 4;
@@ -85,6 +89,20 @@ export function iniciarDados() {
   assinaturas.push(Banco.assinar("rascunhos", (mapa, confirmado) => {
     estado.rascunhos = mapa as unknown as Record<string, Rascunho>;
     aoResponder("rascunhos", confirmado);
+    publicar();
+  }));
+  // Formulários do Simulador: fora da contagem do `pronto` (o Painel abre sem
+  // eles) e fora do espelho localStorage no modo nuvem (ver banco.ts). Banco
+  // confirmado vazio na primeira vez → semeia com as definições atuais.
+  assinaturas.push(Banco.assinar("formularios", (mapa, confirmado) => {
+    estado.formularios = mapa as unknown as Record<string, Formulario>;
+    if (confirmado && !semeouFormularios && !Object.keys(mapa).length) {
+      semeouFormularios = true;
+      void import("../data/formularios.json").then(({ default: definicoes }) => {
+        Object.entries(clonar(definicoes) as Record<string, Formulario>).forEach(([id, f]) =>
+          Banco.gravar("formularios", id, { ...(f as unknown as Record<string, unknown>), id }, true));
+      });
+    }
     publicar();
   }));
   for (const colecao of ["fichas", "regras", "julgamentos"] as const) {
@@ -124,28 +142,33 @@ function aoResponder(colecao: string, confirmado: boolean) {
   if (!confirmado) return;
 
   // Painel vazio nas 9 coleções confirmadas → primeira abertura: semeia.
+  // (import dinâmico: a semente só é baixada nesse momento, não no bundle.)
   if (!semeouPainel && COLECOES_PAINEL.every((c) => confirmadas.has(c))
     && COLECOES_PAINEL.every((c) => estado.painel[c].length === 0)) {
     semeouPainel = true;
-    const semente = clonar(sementePainel) as unknown as DadosPainel;
-    for (const c of COLECOES_PAINEL) {
-      (semente[c] || []).forEach((registro, i) => {
-        registro._ord = i;
-        registro.atualizado = new Date().toISOString();
-        Banco.gravar(c, registro.id, registro as unknown as Record<string, unknown> & { id: string }, true);
-      });
-    }
+    void import("../data/semente-painel.json").then(({ default: sementePainel }) => {
+      const semente = clonar(sementePainel) as unknown as DadosPainel;
+      for (const c of COLECOES_PAINEL) {
+        (semente[c] || []).forEach((registro, i) => {
+          registro._ord = i;
+          registro.atualizado = new Date().toISOString();
+          Banco.gravar(c, registro.id, registro as unknown as Record<string, unknown> & { id: string }, true);
+        });
+      }
+    });
   }
 
   // Contexto vazio nas 3 coleções → semeia fichas, regras e julgamentos.
   if (!semeouContexto && ["fichas", "regras", "julgamentos"].every((c) => confirmadas.has(c))
     && !Object.keys(estado.fichas).length && !Object.keys(estado.regras).length) {
     semeouContexto = true;
-    const s = clonar(sementeContexto) as unknown as {
-      fichas: Record<string, Ficha>; regras: Record<string, Regra>; julg: Record<string, Julgamento>;
-    };
-    Object.values(s.fichas || {}).forEach((d) => Banco.gravar("fichas", d.id, d as unknown as Record<string, unknown> & { id: string }, true));
-    Object.values(s.regras || {}).forEach((d) => Banco.gravar("regras", d.id, d as unknown as Record<string, unknown> & { id: string }, true));
-    Object.values(s.julg || {}).forEach((d) => Banco.gravar("julgamentos", d.id, d as unknown as Record<string, unknown> & { id: string }, true));
+    void import("../data/semente-contexto.json").then(({ default: sementeContexto }) => {
+      const s = clonar(sementeContexto) as unknown as {
+        fichas: Record<string, Ficha>; regras: Record<string, Regra>; julg: Record<string, Julgamento>;
+      };
+      Object.values(s.fichas || {}).forEach((d) => Banco.gravar("fichas", d.id, d as unknown as Record<string, unknown> & { id: string }, true));
+      Object.values(s.regras || {}).forEach((d) => Banco.gravar("regras", d.id, d as unknown as Record<string, unknown> & { id: string }, true));
+      Object.values(s.julg || {}).forEach((d) => Banco.gravar("julgamentos", d.id, d as unknown as Record<string, unknown> & { id: string }, true));
+    });
   }
 }

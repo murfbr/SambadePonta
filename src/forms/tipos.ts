@@ -19,8 +19,9 @@ export interface CampoSpec {
   chave: string;
   rotulo: string;
   tipo?: TipoCampoRegistro;
-  /** select: opções; opts: pares [valor, rótulo]; ref/multi: nome da coleção. */
-  fonte?: string[] | [string, string][] | ColecaoPainel;
+  /** select: opções; opts: pares [valor, rótulo] — ou função que os produz na
+      hora (para listas que vêm do banco); ref/multi: nome da coleção. */
+  fonte?: string[] | [string, string][] | ColecaoPainel | (() => [string, string][]);
 }
 
 export interface EntidadeSpec {

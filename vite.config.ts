@@ -19,7 +19,11 @@ export default defineConfig({
             if (id.includes("react")) return "vendor-react";
             return "vendor";
           }
-          if (id.includes("src/data/") && id.endsWith(".json")) return "dados";
+          // Só os catálogos estáticos entram no chunk "dados" (carga inicial).
+          // Sementes e formularios.json são import() dinâmico: cada um vira um
+          // chunk próprio, baixado só na semeadura — agrupar aqui os traria de
+          // volta ao carregamento inicial.
+          if (id.includes("salic-dados.json") || id.includes("plataformas.json")) return "dados";
         },
       },
     },

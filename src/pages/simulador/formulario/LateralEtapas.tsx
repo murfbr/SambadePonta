@@ -1,7 +1,7 @@
 /* Lateral do editor: a seção Interno + as etapas do formulário, com percentual
    preenchido e os agrupadores do menu (Salic). */
 import { porId } from "../../../store/mutacoes";
-import { FORMULARIOS } from "../../../data";
+import { formularioDe } from "../../../data";
 import { pctEtapa } from "../../../lib/simulador/motor";
 import type { Rascunho } from "../../../types";
 
@@ -13,7 +13,8 @@ interface Props {
 }
 
 export function LateralEtapas({ r, vista, etapaAberta, aoMudarVista }: Props) {
-  const f = FORMULARIOS[r.form];
+  const f = formularioDe(r.form);
+  if (!f) return null; // o pai (FormularioRascunho) já mostra o aviso
   const candidatura = porId("candidaturas", r.ref);
   const docsTodos = [...(candidatura?.docs || []), ...r.interno.docs];
   const docsProntos = docsTodos.filter((d) => d.ok).length;
