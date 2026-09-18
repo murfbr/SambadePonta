@@ -616,6 +616,23 @@ th.th-ord.on{color:var(--accent)} th.th-ord.on .seta{opacity:1}
 .paleta-vazia{padding:14px 16px;color:var(--muted);font-size:12.5px}
 .amb-badge{background:var(--accent);color:#fff;border-radius:999px;font-size:9.5px;font-weight:700;padding:1px 6px;margin-left:6px;vertical-align:1px}
 
+/* ===== lixeira e desfazer ===== */
+.toast.on{pointer-events:auto}
+.toast-acao{background:none;border:0;color:var(--gold);font:inherit;font-size:13px;font-weight:700;margin-left:12px;cursor:pointer;text-decoration:underline}
+.toast-acao:hover{color:#fff}
+.lix-item{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin-bottom:8px;box-shadow:var(--shadow)}
+.lix-item .badge{flex:0 0 auto;font-size:9.5px}
+.lix-item .t{font-weight:600;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.lix-item .quando{color:var(--muted);font-size:11.5px;margin-left:auto;flex:0 0 auto}
+.lix-item .btn{flex:0 0 auto}
+.lnk-excluir{border:0;background:none;color:var(--faint);font:inherit;font-size:10.5px;cursor:pointer;margin-left:8px;text-decoration:underline;padding:0}
+.lnk-excluir:hover{color:var(--no)}
+
+/* ===== versões de rascunho ===== */
+.versao-linha{display:flex;align-items:center;gap:10px;padding:9px 0;border-top:1px solid var(--line);font-size:13px}
+.versao-linha .acoes{margin-left:auto;display:inline-flex;gap:6px}
+.versao-texto{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:11.5px;line-height:1.55;max-height:300px;overflow:auto;white-space:pre-wrap;margin:0 0 8px;font-family:inherit}
+
 /* ===== urgência de prazos ===== */
 .ur-vencido{background:var(--no);color:#fff}
 .ur-hoje{background:var(--accent);color:#fff}

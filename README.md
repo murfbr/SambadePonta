@@ -59,6 +59,8 @@ usam **os mesmos nomes do artefato**:
 | `reunioes`     | reuniões, pauta e ata                             |
 | `rascunhos`    | rascunhos do Simulador (`valores`, `status`, `interno`) |
 | `formularios`  | definições dos formulários replicados (importáveis pela aba Plataformas, sem deploy) |
+| `lixeira`      | excluídos com 30 dias para restaurar (chave `colecao__id`, com `_de`/`_apagadoEm`/`_apagadoPor`/`_lote`) |
+| `versoes`      | fotografias automáticas dos rascunhos (fora do espelho; lidas sob demanda no modal Versões) |
 | `fichas`       | Contexto: conhecimento de escrita (id = id do Painel) |
 | `regras`       | Contexto: regras com fonte obrigatória            |
 | `julgamentos`  | Contexto: pareceres e lições                      |
@@ -101,7 +103,7 @@ src/
     captacao/              ← Pipeline, ListaEditais, FichaEdital, FichaCandidatura
     agenda/                ← Cronograma, Calendario
     pessoas/               ← Elenco, Equipe, Contatos
-    gestao/                ← Reunioes, FichaReuniao, QuadroTarefas
+    gestao/                ← Reunioes, FichaReuniao, QuadroTarefas, Lixeira
     simulador/             ← Simulador, Mesa, Plataformas, Transferencia
       formulario/          ← Formulario, LateralEtapas, Campo, SecaoInterno
         campos/            ← um componente por tipo de campo (texto, rádio, docs...)
@@ -122,6 +124,7 @@ src/
     simulador/motor.ts     ← motor dos formulários replicados (campos, condições, status)
     simulador/orcamento.ts ← cálculos da planilha Salic
     simulador/validarFormulario.ts ← validação do "Importar formulário"
+    simulador/versoes.ts   ← fotografias automáticas dos rascunhos (coleção versoes)
     contexto/              ← consultas de fichas/regras + bloco "Trocar com o Claude"
     busca.ts               ← índice e filtro da busca global
     prazos.ts              ← urgência de prazos (editais, tarefas, reuniões)

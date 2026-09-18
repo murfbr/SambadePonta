@@ -1,11 +1,13 @@
 /* Editor de rascunho: barra do topo (nome, candidatura ligada, gaveta de
    regras, stats e ações), a lateral de etapas e o corpo da etapa aberta —
    blocos e campos com condições de exibição, como na plataforma real. */
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { usarCentral } from "../../../store/central";
 import { ligarCandidatura, idsDaCandidatura, nomeCandidatura, porId, salvarRascunho } from "../../../store/mutacoes";
 import { irParaAba } from "../../../store/navegacao";
 import { nomePlataforma } from "../../../data";
+import { talvezFotografar } from "../../../lib/simulador/versoes";
+import { ModalVersoes } from "./ModalVersoes";
 import {
   comoTexto, condicaoOk, resumoRascunho, visivel, type CampoAchatado,
 } from "../../../lib/simulador/motor";
@@ -27,7 +29,12 @@ interface Props {
 export function FormularioRascunho({ rascunho: r, vista, etapaAberta, aoMudarVista }: Props) {
   const { painel, formularios } = usarCentral();
   const [drawerAberto, setDrawerAberto] = useState(false);
+  const [versoesAbertas, setVersoesAbertas] = useState(false);
   const f = formularios[r.form];
+
+  // Fotografa o estado ao abrir o rascunho (no máximo a cada 4 h): a versão
+  // nasce ANTES das edições desta sessão de escrita.
+  useEffect(() => { void talvezFotografar(r); }, [r.id]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // A definição vem do banco: ou ainda está chegando, ou não existe mesmo.
   if (!f) {
@@ -73,6 +80,7 @@ export function FormularioRascunho({ rascunho: r, vista, etapaAberta, aoMudarVis
         <span className="stat">{s.col} colados · {s.rev} revisados · {s.rasc} rascunho · {s.vazio} vazios</span>
         <div className="acts">
           <button className="btn sm" onClick={() => irParaAba("mesa")}>← Mesa</button>
+          <button className="btn sm" onClick={() => setVersoesAbertas(true)}>Versões</button>
           <button className="btn sm" onClick={() => void copiarComAviso(comoTexto(r), "Rascunho copiado em texto")}>Copiar tudo em texto</button>
           <button className="btn sm" onClick={() => irParaAba("transferencia")}>Ir para transferência →</button>
         </div>
@@ -122,6 +130,8 @@ export function FormularioRascunho({ rascunho: r, vista, etapaAberta, aoMudarVis
             )}
         </div>
       </div>
+
+      {versoesAbertas && <ModalVersoes rascunho={r} aoFechar={() => setVersoesAbertas(false)} />}
     </>
   );
 }
