@@ -10,7 +10,7 @@ import { CampoDoFormulario } from "./CampoDoFormulario";
 import { ENTIDADES } from "./especificacoes";
 import { fecharEdicao, usarEdicao } from "../store/edicao";
 import { usarCentral, obterEstado } from "../store/central";
-import { porId, salvarRegistro } from "../store/mutacoes";
+import { emLoteDeExclusao, porId, salvarRegistro } from "../store/mutacoes";
 import { impactoExclusao, type ImpactoExclusao } from "../store/vinculos";
 import { clonar, uid } from "../utils";
 import type { ColecaoPainel } from "../types";
@@ -99,10 +99,10 @@ function ModalDeRegistro() {
           impacto={impacto}
           aoFechar={() => setImpacto(null)}
           aoExcluir={(destino) => {
-            impacto.excluir(destino);
+            // Um lote só: a cascata inteira vira um único toast com Desfazer.
+            emLoteDeExclusao(() => impacto.excluir(destino));
             setImpacto(null);
             fecharEdicao();
-            toast("Excluído");
           }}
         />
       )}

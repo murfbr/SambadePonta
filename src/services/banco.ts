@@ -22,7 +22,7 @@ const CHAVE_LOCAL = "central-coletivo-local-v1";
     o cache offline do próprio Firestore (IndexedDB) já as guarda, e mantê-las
     fora evita inchar (e reserializar a cada tecla) o espelho. No modo local o
     localStorage É o banco, então elas entram normalmente. */
-const SEM_ESPELHO_NA_NUVEM = new Set(["formularios"]);
+const SEM_ESPELHO_NA_NUVEM = new Set(["formularios", "lixeira"]);
 
 /** Texto e cor do indicador "salvo às..." no topo do site. */
 export type StatusSalvamento = { texto: string; classe: "" | "ok" | "sv" | "er" };

@@ -33,6 +33,9 @@ export function usarSessao(): Sessao {
   );
 }
 
+/** E-mail de quem está logado ("" no modo local) — para carimbar quem fez o quê. */
+export const emailSessao = (): string => sessao.usuario?.email || "";
+
 /** Entra com e-mail e senha. Lança erro com mensagem em português se falhar. */
 export async function entrar(email: string, senha: string) {
   if (!auth) throw new Error("Firebase não configurado");

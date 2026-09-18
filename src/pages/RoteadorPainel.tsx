@@ -22,6 +22,7 @@ import { Contatos } from "./pessoas/Contatos";
 import { Reunioes } from "./gestao/Reunioes";
 import { FichaReuniao } from "./gestao/FichaReuniao";
 import { QuadroTarefas } from "./gestao/QuadroTarefas";
+import { Lixeira } from "./gestao/Lixeira";
 import type { ColecaoPainel } from "../types";
 
 const COLECAO_DO_DETALHE: Record<string, ColecaoPainel> = {
@@ -64,6 +65,7 @@ export function RoteadorPainel() {
     case "contatos": return <Contatos />;
     case "reunioes": return <Reunioes />;
     case "quadro": return <QuadroTarefas />;
+    case "lixeira": return <Lixeira />;
     default: return <Resumo />;
   }
 }

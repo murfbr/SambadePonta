@@ -11,7 +11,7 @@ import { Banco } from "../services/banco";
 import { clonar } from "../utils";
 import {
   COLECOES_PAINEL, type DadosPainel, type Ficha, type Formulario,
-  type Julgamento, type Rascunho, type Regra,
+  type ItemLixeira, type Julgamento, type Rascunho, type Regra,
 } from "../types";
 
 /** Tudo o que o site mostra, num objeto só. */
@@ -25,6 +25,8 @@ export interface EstadoCentral {
   /** Definições dos formulários do Simulador — vêm do banco (fora do `pronto`:
       o Painel abre sem elas; o Simulador espera se for preciso). */
   formularios: Record<string, Formulario>;
+  /** Registros excluídos aguardando restauração (também fora do `pronto`). */
+  lixeira: Record<string, ItemLixeira>;
   fichas: Record<string, Ficha>;
   regras: Record<string, Regra>;
   julgamentos: Record<string, Julgamento>;
@@ -33,7 +35,7 @@ export interface EstadoCentral {
 let estado: EstadoCentral = {
   pronto: false,
   painel: { artistas: [], projetos: [], editais: [], candidaturas: [], tarefas: [], equipe: [], elenco: [], contatos: [], reunioes: [] },
-  rascunhos: {}, formularios: {}, fichas: {}, regras: {}, julgamentos: {},
+  rascunhos: {}, formularios: {}, lixeira: {}, fichas: {}, regras: {}, julgamentos: {},
 };
 
 const assinantes = new Set<() => void>();
@@ -103,6 +105,12 @@ export function iniciarDados() {
           Banco.gravar("formularios", id, { ...(f as unknown as Record<string, unknown>), id }, true));
       });
     }
+    publicar();
+  }));
+  // Lixeira: excluídos com 30 dias para restaurar (fora do `pronto` e, no modo
+  // nuvem, fora do espelho localStorage — como os formulários; ver banco.ts).
+  assinaturas.push(Banco.assinar("lixeira", (mapa) => {
+    estado.lixeira = mapa as unknown as Record<string, ItemLixeira>;
     publicar();
   }));
   for (const colecao of ["fichas", "regras", "julgamentos"] as const) {

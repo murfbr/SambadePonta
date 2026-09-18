@@ -215,6 +215,19 @@ export interface Contato {
   atualizado?: string;
 }
 
+/** Documento na lixeira: o registro original (de qualquer coleção) mais as
+    etiquetas de onde veio, quando e quem excluiu. 30 dias para restaurar. */
+export interface ItemLixeira {
+  id: string;
+  /** Coleção de origem ("editais", "rascunhos", "regras"...). */
+  _de: string;
+  _apagadoEm: string;
+  _apagadoPor: string;
+  /** Agrupa o que caiu junto numa exclusão em cascata (o Desfazer restaura o lote). */
+  _lote: string;
+  [campo: string]: unknown;
+}
+
 /** As nove coleções do Painel, na ordem de exibição. */
 export interface DadosPainel {
   artistas: Artista[];

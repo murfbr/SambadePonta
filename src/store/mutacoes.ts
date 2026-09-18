@@ -1,8 +1,11 @@
 /* Mutações e consultas do estado central: criar/atualizar/excluir registros do
    Painel, rascunhos do Simulador e docs do Contexto — sempre via camada Banco,
-   que espelha na hora e grava com debounce. */
+   que espelha na hora e grava com debounce. Excluir nunca apaga de vez: o
+   registro vai para a coleção `lixeira` (30 dias) e o toast oferece Desfazer. */
 import { Banco } from "../services/banco";
-import { clonar } from "../utils";
+import { emailSessao } from "../services/sessao";
+import { toast } from "../components/Toast";
+import { clonar, uid } from "../utils";
 import { obterEstado } from "./central";
 import {
   ETAPA_RESULTADO, ETAPAS_PIPELINE, STATUS_TAREFA,
@@ -12,6 +15,94 @@ import {
 
 type RegistroPainel = DadosPainel[ColecaoPainel][number];
 type Documento = Record<string, unknown> & { id: string };
+
+/* ══════════ Lixeira ══════════ */
+
+/** Chave do documento na lixeira: coleção + id (ids de coleções diferentes não colidem). */
+const chaveLixeira = (colecao: string, id: string) => colecao + "__" + id;
+
+/** Lote de exclusão: uma ação do usuário = um toast com Desfazer, mesmo em cascata. */
+let loteAberto: { id: string; qtd: number } | null = null;
+
+/** Agrupa várias exclusões (cascatas do "levar junto") num Desfazer só. */
+export function emLoteDeExclusao<T>(fazer: () => T): T {
+  if (loteAberto) return fazer();
+  loteAberto = { id: uid("lote"), qtd: 0 };
+  try { return fazer(); } finally { fecharLote(); }
+}
+
+function fecharLote() {
+  const lote = loteAberto;
+  loteAberto = null;
+  if (!lote || !lote.qtd) return;
+  toast(lote.qtd === 1 ? "Foi para a lixeira" : lote.qtd + " registros foram para a lixeira", {
+    acao: {
+      rotulo: "Desfazer",
+      fazer: () => {
+        const n = restaurarLote(lote.id);
+        toast(n === 1 ? "Restaurado" : n + " restaurados");
+      },
+    },
+  });
+}
+
+/** Move um documento para a lixeira (o "excluir" de verdade do site). */
+function moverParaLixeira(colecao: string, id: string) {
+  const documento = Banco.ler(colecao)[id];
+  if (!documento) return;
+  const loteProprio = !loteAberto;
+  if (loteProprio) loteAberto = { id: uid("lote"), qtd: 0 };
+  loteAberto!.qtd++;
+  Banco.gravar("lixeira", chaveLixeira(colecao, id), {
+    ...clonar(documento),
+    _de: colecao,
+    _apagadoEm: new Date().toISOString(),
+    _apagadoPor: emailSessao(),
+    _lote: loteAberto!.id,
+  }, true);
+  void Banco.apagar(colecao, id);
+  if (loteProprio) fecharLote();
+}
+
+/** Devolve um item da lixeira para a coleção de origem. false = o id renasceu lá. */
+export function restaurarDaLixeira(chave: string): boolean {
+  const item = obterEstado().lixeira[chave];
+  if (!item) return false;
+  const destino = item._de;
+  if (Banco.ler(destino)[item.id]) return false; // não sobrescreve um registro recriado
+  const copia = clonar(item) as Record<string, unknown> & { id: string };
+  delete copia._de; delete copia._apagadoEm; delete copia._apagadoPor; delete copia._lote;
+  copia.atualizado = new Date().toISOString();
+  Banco.gravar(destino, copia.id, copia, true);
+  void Banco.apagar("lixeira", chave);
+  return true;
+}
+
+/** Restaura tudo o que caiu junto numa exclusão (o Desfazer do toast). */
+export function restaurarLote(lote: string): number {
+  let n = 0;
+  for (const [chave, item] of Object.entries(obterEstado().lixeira)) {
+    if (item._lote === lote && restaurarDaLixeira(chave)) n++;
+  }
+  return n;
+}
+
+/** Remove um item da lixeira em definitivo (aí sim, sem volta). */
+export function excluirDeVez(chave: string) {
+  void Banco.apagar("lixeira", chave);
+}
+
+export function esvaziarLixeira() {
+  Object.keys(obterEstado().lixeira).forEach((chave) => void Banco.apagar("lixeira", chave));
+}
+
+/** Itens da lixeira com mais de `dias` — limpos ao abrir a tela da Lixeira. */
+export function limparLixeiraAntiga(dias = 30) {
+  const corte = Date.now() - dias * 86400000;
+  for (const [chave, item] of Object.entries(obterEstado().lixeira)) {
+    if (new Date(item._apagadoEm).getTime() < corte) void Banco.apagar("lixeira", chave);
+  }
+}
 
 /* ══════════ Painel ══════════ */
 
@@ -27,14 +118,16 @@ export function salvarRegistro(colecao: ColecaoPainel, registro: RegistroPainel,
 const maiorOrd = (colecao: ColecaoPainel) =>
   obterEstado().painel[colecao].reduce((m, x) => Math.max(m, x._ord || 0), -1);
 
-/** Exclui um registro. Excluir candidatura também limpa as tarefas ligadas a ela. */
+/** Exclui um registro (para a lixeira). Excluir candidatura leva junto as tarefas ligadas. */
 export function excluirRegistro(colecao: ColecaoPainel, id: string) {
-  Banco.apagar(colecao, id);
-  if (colecao === "candidaturas") {
-    obterEstado().painel.tarefas
-      .filter((t) => t.origem === "cand:" + id)
-      .forEach((t) => Banco.apagar("tarefas", t.id));
-  }
+  emLoteDeExclusao(() => {
+    moverParaLixeira(colecao, id);
+    if (colecao === "candidaturas") {
+      obterEstado().painel.tarefas
+        .filter((t) => t.origem === "cand:" + id)
+        .forEach((t) => moverParaLixeira("tarefas", t.id));
+    }
+  });
 }
 
 /** Busca por id em qualquer coleção do Painel. */
@@ -131,12 +224,17 @@ export function salvarRascunho(r: Rascunho, rapido = false) {
 }
 
 export function excluirRascunho(id: string) {
-  Banco.apagar("rascunhos", id);
+  emLoteDeExclusao(() => moverParaLixeira("rascunhos", id));
 }
 
 /** Grava uma definição de formulário (importada na aba Plataformas). */
 export function salvarFormulario(f: Formulario) {
   Banco.gravar("formularios", f.id, { ...clonar(f), atualizado: new Date().toISOString() }, true);
+}
+
+/** Exclui uma definição de formulário (a UI só oferece quando não há rascunho nela). */
+export function excluirFormulario(id: string) {
+  emLoteDeExclusao(() => moverParaLixeira("formularios", id));
 }
 
 /** Rascunhos ativos ligados a uma candidatura. */
@@ -189,8 +287,8 @@ export function salvarFicha(f: Ficha) {
 export function salvarRegra(r: Regra) {
   Banco.gravar("regras", r.id, { ...clonar(r), atualizado: new Date().toISOString() });
 }
-export function excluirRegra(id: string) { Banco.apagar("regras", id); }
+export function excluirRegra(id: string) { emLoteDeExclusao(() => moverParaLixeira("regras", id)); }
 export function salvarJulgamento(j: Julgamento) {
   Banco.gravar("julgamentos", j.id, { ...clonar(j), atualizado: new Date().toISOString() });
 }
-export function excluirJulgamento(id: string) { Banco.apagar("julgamentos", id); }
+export function excluirJulgamento(id: string) { emLoteDeExclusao(() => moverParaLixeira("julgamentos", id)); }

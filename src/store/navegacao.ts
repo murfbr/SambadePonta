@@ -21,7 +21,7 @@ export const AMBIENTES: Ambiente[] = [
   { id: "captacao", rotulo: "Captação", abas: [["pipeline", "Pipeline"], ["editais", "Editais"]] },
   { id: "agenda", rotulo: "Agenda", abas: [["cronograma", "Cronograma"], ["calendario", "Calendário"]] },
   { id: "pessoas", rotulo: "Pessoas", abas: [["elenco", "Elenco / Colaboradores"], ["equipe", "Equipe"], ["contatos", "Contatos externos"]] },
-  { id: "gestao", rotulo: "Gestão", abas: [["reunioes", "Reuniões"], ["quadro", "Tarefas"]] },
+  { id: "gestao", rotulo: "Gestão", abas: [["reunioes", "Reuniões"], ["quadro", "Tarefas"], ["lixeira", "Lixeira"]] },
   { id: "simulador", rotulo: "Simulador", abas: [["mesa", "Mesa"], ["plataformas", "Plataformas"], ["formulario", "Formulário"], ["transferencia", "Transferência"]] },
   { id: "contexto", rotulo: "Contexto", abas: [["geral", "Geral"], ["fichas", "Fichas"], ["regras", "Regras"], ["julgamentos", "Julgamentos"], ["trocar", "Trocar com o Claude"]] },
 ];

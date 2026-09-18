@@ -71,9 +71,8 @@ export function ModalRegra({ pedido, aoFechar }: { pedido: PedidoModalRegra; aoF
   }
 
   function excluir() {
-    excluirRegra(regra.id);
+    excluirRegra(regra.id); // o toast com Desfazer vem da lixeira
     aoFechar();
-    toast("Regra excluída");
   }
 
   const seletorEntidade = () => {

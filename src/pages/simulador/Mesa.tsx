@@ -49,9 +49,8 @@ export function Mesa({ aoAbrir }: { aoAbrir: () => void }) {
 
   function excluir(r: Rascunho) {
     if (confirmandoExclusao !== r.id) { setConfirmandoExclusao(r.id); return; }
-    excluirRascunho(r.id);
+    excluirRascunho(r.id); // o toast com Desfazer vem da lixeira
     setConfirmandoExclusao(null);
-    toast("Excluído");
   }
 
   function aoImportar(e: ChangeEvent<HTMLInputElement>) {
